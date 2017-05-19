@@ -1,0 +1,16 @@
+{
+  "name": "pacman_app",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "start": "node src/index.js",
+    "test": "mocha test"
+  },
+  "dependencies": {
+    "chai": "^3.5.0",
+    "express": "^4.15.3",
+    "mocha": "^3.4.1",
+    "request": "^2.81.0"
+  }
+}
