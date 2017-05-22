@@ -4,13 +4,22 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "start": "node src/index.js",
+    "start": "node dist/index.js",
+    "build": "npm run clean && npm run copy && npm run initiate-html",
+    "copy": "cp -r src/* dist",
+    "clean": "rm -rf dist && mkdir dist",
+    "initiate-html": "npm run minify:html && npm run inline:css",
+    "inline:css": "critical src/indexmin.html --minify --inline --base src/ > dist/index.html",
+    "minify:html": "html-minifier --collapse-whitespace --minify-css -o src/indexmin.html src/index.html",
     "test": "mocha test"
   },
   "dependencies": {
     "chai": "^3.5.0",
+    "critical": "^0.8.4",
     "express": "^4.15.3",
+    "html-minifier": "^3.5.0",
     "mocha": "^3.4.1",
-    "request": "^2.81.0"
+    "request": "^2.81.0",
+    "uglify-js": "^3.0.10"
   }
 }
