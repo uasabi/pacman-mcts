@@ -11,6 +11,7 @@
     "initiate-html": "npm run minify:html && npm run inline:css",
     "inline:css": "critical src/indexmin.html --minify --inline --base src/ > dist/index.html",
     "minify:html": "html-minifier --collapse-whitespace --minify-css -o src/indexmin.html src/index.html",
+    "sync": "node src/index.js & browser-sync start --proxy 'localhost:8080' --files 'src'",
     "test": "mocha test"
   },
   "dependencies": {
@@ -20,6 +21,5 @@
     "html-minifier": "^3.5.0",
     "mocha": "^3.4.1",
     "request": "^2.81.0",
-    "uglify-js": "^3.0.10"
   }
 }
