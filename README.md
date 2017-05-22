@@ -1,5 +1,8 @@
 # Monte Carlo Tree Search Pacman Game
 
+## Running the app
+Run `yarn install` to install node modules, and then `yarn run build` to build the `dist/` directory and `yarn run start` or `yarn run sync` to run directly from the `src/` directory.
+
 ## Pac-man research
 ### Game mechanics
 #### Ghost behaviour
