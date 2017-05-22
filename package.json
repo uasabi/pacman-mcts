@@ -20,6 +20,6 @@
     "express": "^4.15.3",
     "html-minifier": "^3.5.0",
     "mocha": "^3.4.1",
-    "request": "^2.81.0",
+    "request": "^2.81.0"
   }
 }
