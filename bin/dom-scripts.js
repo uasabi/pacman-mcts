@@ -1,13 +1,22 @@
 const {boardSize, noRow, noCol} = require("./boardVars.js");
+const {SpriteClass, pacmanSprite} = require("./defaultsprite.js");
 const {isEdge, positionChanger} = require('./movingscripts.js');
 const mainContainer = document.getElementById('main-container');
 const boardContainer = document.getElementById('board-place');
-const pacmanElement = document.getElementById('pacman-sprite');
-const initialPos = `row-${Math.round((boardSize/noRow)/2)}-col-${Math.round((boardSize/noCol)/2)}`;
-var moveInterval;
-const intervalTime = 1000*1;
 let boardArr = [];
+// for animation
+var stop = false;
+var frameCount = 0;
+var fps, fpsInterval, startTime, now, then, elapsed;
 
+function startAnimating(fps) {
+    fpsInterval = 1000 / fps;
+    then = Date.now();
+    startTime = then;
+    mainLoop();
+}
+
+// board creation
 for (let i = 1; i <= noRow; i ++ ) {
   for (let j = 1; j <= noCol; j++ ) {
     let newDiv = document.createElement('div');
@@ -21,53 +30,42 @@ for (let i = 0; i < boardArr.length; i++ ) {
   boardContainer.append(boardArr[i]);
 }
 
-function SpriteClass(domElement, name, colRow, speed, direction) {
-  this.physicalEntity = domElement;
-  this.name = name;
-  this.position = colRow;
-  this.speed = speed;
-  this.direction = direction;
-}
-
-let pacmanSprite = new SpriteClass(pacmanElement, "Pacman", initialPos, 1, "left");
-
+// affix whichever sprite to the position
 function affixSprite(theSprite) {
   position = theSprite.position;
   sprite = theSprite.physicalEntity;
   let containerForSprite = document.getElementById(position);
   containerForSprite.append(sprite);
 }
-
-function moveSprite(direction) {
-  pacmanSprite.position = positionChanger(direction, pacmanSprite.position);
-  affixSprite(pacmanSprite);
-  autoMoveSprite(direction);
+// update function to make sure sprite is in the right position
+function update() {
+  pacmanSprite.position = positionChanger(pacmanSprite.direction, pacmanSprite.position);
 }
 
-function autoMoveSprite(direction) {
-  clearInterval(moveInterval);
-  moveInterval = setInterval(() => {
-    moveSprite(direction);
-    console.log("moving");
-  }, intervalTime);
-  console.log(direction);
+function mainLoop() {
+  requestAnimationFrame(mainLoop);
+    now = Date.now();
+    elapsed = now - then;
+    // if enough time has elapsed, draw the next frame
+    if (elapsed > fpsInterval) {
+        then = now - (elapsed % fpsInterval);
+        update();
+        affixSprite(pacmanSprite);
+    }
 }
-
-affixSprite(pacmanSprite);
 
 document.addEventListener('keydown', (e) => {
   e = e || window.event;
   if (e.keyCode === 37) {
-    moveSprite("left");
+    pacmanSprite.direction = "left";
   } else if (e.keyCode === 38) {
-    moveSprite("up");
+    pacmanSprite.direction = "up";
   } else if (e.keyCode === 39) {
-    moveSprite("right");
+    pacmanSprite.direction = "right";
   } else if (e.keyCode === 40) {
-    moveSprite("down");
+    pacmanSprite.direction = "down";
+    // e.preventDefault();
   }
-  // left = 37
-  // up = 38
-  // right = 39
-  // down = 40
 });
+
+startAnimating(2);

@@ -10,16 +10,45 @@ module.exports = {
 }
 
 },{}],2:[function(require,module,exports){
+const {noRow, noCol, boardSize} = require('./boardVars.js');
+const pacmanElement = document.getElementById('pacman-sprite');
+const initialPos = `row-${Math.round((boardSize/noRow)/2)}-col-${Math.round((boardSize/noCol)/2)}`;
+
+const SpriteClass = function(domElement, name, colRow, speed, direction) {
+  this.physicalEntity = domElement;
+  this.name = name;
+  this.position = colRow;
+  this.speed = speed;
+  this.direction = direction;
+};
+
+let pacmanSprite = new SpriteClass(pacmanElement, "Pacman", initialPos, 1, "nope");
+
+module.exports = {
+  SpriteClass: SpriteClass,
+  pacmanSprite: pacmanSprite
+}
+
+},{"./boardVars.js":1}],3:[function(require,module,exports){
 const {boardSize, noRow, noCol} = require("./boardVars.js");
+const {SpriteClass, pacmanSprite} = require("./defaultsprite.js");
 const {isEdge, positionChanger} = require('./movingscripts.js');
 const mainContainer = document.getElementById('main-container');
 const boardContainer = document.getElementById('board-place');
-const pacmanElement = document.getElementById('pacman-sprite');
-const initialPos = `row-${Math.round((boardSize/noRow)/2)}-col-${Math.round((boardSize/noCol)/2)}`;
-var moveInterval;
-const intervalTime = 1000*1;
 let boardArr = [];
+// for animation
+var stop = false;
+var frameCount = 0;
+var fps, fpsInterval, startTime, now, then, elapsed;
 
+function startAnimating(fps) {
+    fpsInterval = 1000 / fps;
+    then = Date.now();
+    startTime = then;
+    mainLoop();
+}
+
+// board creation
 for (let i = 1; i <= noRow; i ++ ) {
   for (let j = 1; j <= noCol; j++ ) {
     let newDiv = document.createElement('div');
@@ -33,58 +62,47 @@ for (let i = 0; i < boardArr.length; i++ ) {
   boardContainer.append(boardArr[i]);
 }
 
-function SpriteClass(domElement, name, colRow, speed, direction) {
-  this.physicalEntity = domElement;
-  this.name = name;
-  this.position = colRow;
-  this.speed = speed;
-  this.direction = direction;
-}
-
-let pacmanSprite = new SpriteClass(pacmanElement, "Pacman", initialPos, 1, "left");
-
+// affix whichever sprite to the position
 function affixSprite(theSprite) {
   position = theSprite.position;
   sprite = theSprite.physicalEntity;
   let containerForSprite = document.getElementById(position);
   containerForSprite.append(sprite);
 }
-
-function moveSprite(direction) {
-  pacmanSprite.position = positionChanger(direction, pacmanSprite.position);
-  affixSprite(pacmanSprite);
-  autoMoveSprite(direction);
+// update function to make sure sprite is in the right position
+function update() {
+  pacmanSprite.position = positionChanger(pacmanSprite.direction, pacmanSprite.position);
 }
 
-function autoMoveSprite(direction) {
-  clearInterval(moveInterval);
-  moveInterval = setInterval(() => {
-    moveSprite(direction);
-    console.log("moving");
-  }, intervalTime);
-  console.log(direction);
+function mainLoop() {
+  requestAnimationFrame(mainLoop);
+    now = Date.now();
+    elapsed = now - then;
+    // if enough time has elapsed, draw the next frame
+    if (elapsed > fpsInterval) {
+        then = now - (elapsed % fpsInterval);
+        update();
+        affixSprite(pacmanSprite);
+    }
 }
-
-affixSprite(pacmanSprite);
 
 document.addEventListener('keydown', (e) => {
   e = e || window.event;
   if (e.keyCode === 37) {
-    moveSprite("left");
+    pacmanSprite.direction = "left";
   } else if (e.keyCode === 38) {
-    moveSprite("up");
+    pacmanSprite.direction = "up";
   } else if (e.keyCode === 39) {
-    moveSprite("right");
+    pacmanSprite.direction = "right";
   } else if (e.keyCode === 40) {
-    moveSprite("down");
+    pacmanSprite.direction = "down";
+    // e.preventDefault();
   }
-  // left = 37
-  // up = 38
-  // right = 39
-  // down = 40
 });
 
-},{"./boardVars.js":1,"./movingscripts.js":3}],3:[function(require,module,exports){
+startAnimating(2);
+
+},{"./boardVars.js":1,"./defaultsprite.js":2,"./movingscripts.js":4}],4:[function(require,module,exports){
 const {noRow, noCol, boardSize} = require('./boardVars.js');
 
 const edges = {
@@ -113,7 +131,9 @@ const isEdge = function(direction, position) {
 }
 
 const positionChanger = function(direction, currentPos) {
-  if (direction === "left") {
+  if (direction === "nope") {
+    return currentPos;
+  } else if (direction === "left") {
     if (isEdge(direction,currentPos)) {
       return currentPos.split("-").map((a,index)=>{if(index===3){return noCol;} else {return a;}}).join("-");
     } else {
@@ -149,7 +169,7 @@ module.exports = {
   positionChanger: positionChanger
 }
 
-},{"./boardVars.js":1}],4:[function(require,module,exports){
+},{"./boardVars.js":1}],5:[function(require,module,exports){
 const startUp = require('./dom-scripts.js');
 
-},{"./dom-scripts.js":2}]},{},[4]);
+},{"./dom-scripts.js":3}]},{},[5]);

@@ -26,7 +26,9 @@ const isEdge = function(direction, position) {
 }
 
 const positionChanger = function(direction, currentPos) {
-  if (direction === "left") {
+  if (direction === "nope") {
+    return currentPos;
+  } else if (direction === "left") {
     if (isEdge(direction,currentPos)) {
       return currentPos.split("-").map((a,index)=>{if(index===3){return noCol;} else {return a;}}).join("-");
     } else {
