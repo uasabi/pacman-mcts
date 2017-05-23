@@ -5,7 +5,10 @@ const boardContainer = document.getElementById('board-place');
 const pacmanElement = document.getElementById('pacman-sprite');
 const initialPos = `row-${Math.round((boardSize/noRow)/2)}-col-${Math.round((boardSize/noCol)/2)}`;
 var moveInterval;
+var waitToMove;
 const intervalTime = 1000*1;
+var notMoving = true;
+var currentDir = "stationary";
 let boardArr = [];
 
 for (let i = 1; i <= noRow; i ++ ) {
@@ -39,9 +42,17 @@ function affixSprite(theSprite) {
 }
 
 function moveSprite(direction) {
-  pacmanSprite.position = positionChanger(direction, pacmanSprite.position);
-  affixSprite(pacmanSprite);
-  autoMoveSprite(direction);
+  if (notMoving) {
+    pacmanSprite.position = positionChanger(direction, pacmanSprite.position);
+    affixSprite(pacmanSprite);
+    autoMoveSprite(direction);
+    notMoving = false;
+  } else if (!notMoving && direction !== currentDir) {
+    clearInterval(waitToMove);
+    pacmanSprite.position = positionChanger(direction, pacmanSprite.position);
+    waitToMove = setInterval(affixSprite(pacmanSprite), intervalTime);
+    autoMoveSprite(direction);
+  }
 }
 
 function autoMoveSprite(direction) {
