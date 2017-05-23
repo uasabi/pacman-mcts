@@ -11,10 +11,12 @@
     "initiate-html": "npm run minify:html && npm run inline:css",
     "inline:css": "critical src/indexmin.html --minify --inline --base src/ > dist/index.html",
     "minify:html": "html-minifier --collapse-whitespace --minify-css -o src/indexmin.html src/index.html",
+    "bundle": "browserify bin/script.js -o src/js/main.js",
     "sync": "node src/index.js & browser-sync start --proxy 'localhost:8080' --files 'src'",
     "test": "mocha test"
   },
   "dependencies": {
+    "browserify": "^14.3.0",
     "chai": "^3.5.0",
     "critical": "^0.8.4",
     "express": "^4.15.3",
