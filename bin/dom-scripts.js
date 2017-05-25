@@ -26,7 +26,11 @@ for (let i = 1; i <= noRow; i ++ ) {
     newDiv.classList = "board-tile";
     newDiv.id=`row-${i}-col-${j}`;
     newDiv.textContent = `row ${i}/ col ${j}`;
-    newDiv.setAttribute("style", `height: ${boardCellSize}em; width: ${boardCellSize}em;`);
+    if ( i === 1 || i === noRow || j === 1 || j === noCol ) {
+      newDiv.setAttribute("style", `height: ${boardCellSize}em; width: ${boardCellSize}em; background-color: blue;`);
+    } else {
+      newDiv.setAttribute("style", `height: ${boardCellSize}em; width: ${boardCellSize}em;`);
+    }
     boardArr.push(newDiv);
   }
 }
