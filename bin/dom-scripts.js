@@ -5,9 +5,12 @@ const mainContainer = document.getElementById('main-container');
 const boardContainer = document.getElementById('board-place');
 let boardArr = [];
 // for animation
+const boardCellSize = 4;
 var stop = false;
 var frameCount = 0;
 var fps, fpsInterval, startTime, now, then, elapsed;
+boardContainer.setAttribute("style", `max-width: ${boardCellSize*(noCol+1)}em; min-width: ${boardCellSize*(noCol+1)}em;`);
+pacmanSprite.physicalEntity.setAttribute("style", `max-width: ${boardCellSize*0.5}em;`);
 
 function startAnimating(fps) {
     fpsInterval = 1000 / fps;
@@ -23,9 +26,11 @@ for (let i = 1; i <= noRow; i ++ ) {
     newDiv.classList = "board-tile";
     newDiv.id=`row-${i}-col-${j}`;
     newDiv.textContent = `row ${i}/ col ${j}`;
+    newDiv.setAttribute("style", `height: ${boardCellSize}em; width: ${boardCellSize}em;`);
     boardArr.push(newDiv);
   }
 }
+
 for (let i = 0; i < boardArr.length; i++ ) {
   boardContainer.append(boardArr[i]);
 }

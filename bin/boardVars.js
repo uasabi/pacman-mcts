@@ -1,5 +1,5 @@
-const boardSize = 49;
-const noRow = 7;
+const boardSize = 100;
+const noRow = 10;
 const noCol = boardSize/noRow;
 
 module.exports = {
