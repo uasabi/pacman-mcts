@@ -28,8 +28,13 @@ for (let i = 1; i <= noRow; i ++ ) {
     newDiv.id=`row-${i}-col-${j}`;
     newDiv.textContent = `row ${i}/ col ${j}`;
     if ( i === 1 || i === noRow || j === 1 || j === noCol ) {
-      newDiv.setAttribute("style", `height: ${boardCellSize}em; width: ${boardCellSize}em; background-color: blue;`);
-      newDiv = new BoardClass(newDiv, false, newDiv.id);
+      if (i !== 7 && i !== 8 && i !== 9 && j !== 7 && j !== 8 && j !== 9) {
+        newDiv.setAttribute("style", `height: ${boardCellSize}em; width: ${boardCellSize}em; background-color: blue;`);
+        newDiv = new BoardClass(newDiv, false, newDiv.id);
+      } else {
+        newDiv.setAttribute("style", `height: ${boardCellSize}em; width: ${boardCellSize}em;`);
+        newDiv = new BoardClass(newDiv, true, newDiv.id);
+      }
     } else {
       newDiv.setAttribute("style", `height: ${boardCellSize}em; width: ${boardCellSize}em;`);
       newDiv = new BoardClass(newDiv, true, newDiv.id);
