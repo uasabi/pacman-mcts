@@ -22,20 +22,28 @@ const SpriteClass = function(domElement, name, colRow, speed, direction) {
   this.direction = direction;
 };
 
+const BoardClass = function(domElement, isWall, theId) {
+  this.physicalEntity = domElement;
+  this.id = theId;
+  this.permeable = isWall;
+}
+
 let pacmanSprite = new SpriteClass(pacmanElement, "Pacman", initialPos, 1, "nope");
 
 module.exports = {
   SpriteClass: SpriteClass,
+  BoardClass: BoardClass,
   pacmanSprite: pacmanSprite
 }
 
 },{"./boardVars.js":1}],3:[function(require,module,exports){
 const {boardSize, noRow, noCol} = require("./boardVars.js");
-const {SpriteClass, pacmanSprite} = require("./defaultsprite.js");
+const {SpriteClass, BoardClass, pacmanSprite} = require("./defaultsprite.js");
 const {isEdge, positionChanger} = require('./movingscripts.js');
 const mainContainer = document.getElementById('main-container');
 const boardContainer = document.getElementById('board-place');
 let boardArr = [];
+var boardObj = {};
 // for animation
 const boardCellSize = 4;
 var stop = false;
@@ -60,15 +68,20 @@ for (let i = 1; i <= noRow; i ++ ) {
     newDiv.textContent = `row ${i}/ col ${j}`;
     if ( i === 1 || i === noRow || j === 1 || j === noCol ) {
       newDiv.setAttribute("style", `height: ${boardCellSize}em; width: ${boardCellSize}em; background-color: blue;`);
+      newDiv = new BoardClass(newDiv, false, newDiv.id);
     } else {
       newDiv.setAttribute("style", `height: ${boardCellSize}em; width: ${boardCellSize}em;`);
+      newDiv = new BoardClass(newDiv, true, newDiv.id);
     }
     boardArr.push(newDiv);
+    boardObj[newDiv.id] = newDiv;
   }
 }
+console.log(boardArr);
+console.log(boardObj);
 
 for (let i = 0; i < boardArr.length; i++ ) {
-  boardContainer.append(boardArr[i]);
+  boardContainer.append(boardArr[i].physicalEntity);
 }
 
 // affix whichever sprite to the position
@@ -80,6 +93,12 @@ function affixSprite(theSprite) {
 }
 // update function to make sure sprite is in the right position
 function update() {
+  let isPermeable = checkBoardPermeable(pacmanSprite, pacmanSprite.direction);
+  if (isPermeable === true) {
+    pacmanSprite.direction = pacmanSprite.direction;
+  } else {
+    pacmanSprite.direction = "nope";
+  }
   pacmanSprite.position = positionChanger(pacmanSprite.direction, pacmanSprite.position);
 }
 
@@ -95,16 +114,46 @@ function mainLoop() {
     }
 }
 
+const checkBoardPermeable = function(sprite, direction) {
+  let futurePosition = positionChanger(direction, sprite.position);
+  if (boardObj[futurePosition].permeable === true) {
+    return true;
+  } else {
+    console.log(boardObj[futurePosition].permeable);
+    return false;
+  }
+};
+
 document.addEventListener('keydown', (e) => {
   e = e || window.event;
   if (e.keyCode === 37) {
-    pacmanSprite.direction = "left";
+    let isPermeable = checkBoardPermeable(pacmanSprite, "left");
+    if (isPermeable === true) {
+      pacmanSprite.direction = "left";
+    } else {
+          pacmanSprite.direction = "nope";
+    }
   } else if (e.keyCode === 38) {
-    pacmanSprite.direction = "up";
+    let isPermeable = checkBoardPermeable(pacmanSprite, "up");
+    if (isPermeable === true) {
+      pacmanSprite.direction = "up";
+    } else {
+          pacmanSprite.direction = "nope";
+    }
   } else if (e.keyCode === 39) {
-    pacmanSprite.direction = "right";
+    let isPermeable = checkBoardPermeable(pacmanSprite, "right");
+    if (isPermeable === true) {
+      pacmanSprite.direction = "right";
+    } else {
+          pacmanSprite.direction = "nope";
+    }
   } else if (e.keyCode === 40) {
-    pacmanSprite.direction = "down";
+    let isPermeable = checkBoardPermeable(pacmanSprite, "down");
+    if (isPermeable === true) {
+      pacmanSprite.direction = "down";
+    } else {
+          pacmanSprite.direction = "nope";
+    }
     // e.preventDefault();
   }
 });
@@ -113,6 +162,7 @@ startAnimating(2);
 
 },{"./boardVars.js":1,"./defaultsprite.js":2,"./movingscripts.js":4}],4:[function(require,module,exports){
 const {noRow, noCol, boardSize} = require('./boardVars.js');
+const {boardObj} = require('./dom-scripts.js');
 
 const edges = {
   "left": "1",
@@ -178,7 +228,7 @@ module.exports = {
   positionChanger: positionChanger
 }
 
-},{"./boardVars.js":1}],5:[function(require,module,exports){
+},{"./boardVars.js":1,"./dom-scripts.js":3}],5:[function(require,module,exports){
 const startUp = require('./dom-scripts.js');
 
 },{"./dom-scripts.js":3}]},{},[5]);

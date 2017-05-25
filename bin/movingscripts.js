@@ -1,4 +1,5 @@
 const {noRow, noCol, boardSize} = require('./boardVars.js');
+const {boardObj} = require('./dom-scripts.js');
 
 const edges = {
   "left": "1",

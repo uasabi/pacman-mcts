@@ -10,9 +10,16 @@ const SpriteClass = function(domElement, name, colRow, speed, direction) {
   this.direction = direction;
 };
 
+const BoardClass = function(domElement, isWall, theId) {
+  this.physicalEntity = domElement;
+  this.id = theId;
+  this.permeable = isWall;
+}
+
 let pacmanSprite = new SpriteClass(pacmanElement, "Pacman", initialPos, 1, "nope");
 
 module.exports = {
   SpriteClass: SpriteClass,
+  BoardClass: BoardClass,
   pacmanSprite: pacmanSprite
 }
