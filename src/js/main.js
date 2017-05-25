@@ -162,7 +162,6 @@ startAnimating(2);
 
 },{"./boardVars.js":1,"./defaultsprite.js":2,"./movingscripts.js":4}],4:[function(require,module,exports){
 const {noRow, noCol, boardSize} = require('./boardVars.js');
-const {boardObj} = require('./dom-scripts.js');
 
 const edges = {
   "left": "1",
@@ -228,7 +227,7 @@ module.exports = {
   positionChanger: positionChanger
 }
 
-},{"./boardVars.js":1,"./dom-scripts.js":3}],5:[function(require,module,exports){
+},{"./boardVars.js":1}],5:[function(require,module,exports){
 const startUp = require('./dom-scripts.js');
 
 },{"./dom-scripts.js":3}]},{},[5]);

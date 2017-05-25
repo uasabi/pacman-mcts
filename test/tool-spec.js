@@ -29,7 +29,7 @@ describe("Test suite", function() {
       expect(results).to.equal(false);
     });
     it("Right + maxcol = edge", function() {
-      let results = movingScriptsJs.isEdge("right", "row-2-col-7");
+      let results = movingScriptsJs.isEdge("right", "row-2-col-15");
       expect(results).to.equal(true);
     });
     it("Right + !maxcol = not an edge", function(){
@@ -73,7 +73,7 @@ describe("Test suite", function() {
     });
     it("should skip edges", function() {
       let results = movingScriptsJs.positionChanger("left", "row-4-col-1");
-      expect(results).to.equal("row-4-col-7");
+      expect(results).to.equal("row-4-col-15");
     });
   });
 
