@@ -93,34 +93,13 @@ const checkBoardPermeable = function(sprite, direction) {
 document.addEventListener('keydown', (e) => {
   e = e || window.event;
   if (e.keyCode === 37) {
-    let isPermeable = checkBoardPermeable(pacmanSprite, "left");
-    if (isPermeable === true) {
       pacmanSprite.direction = "left";
-    } else {
-          pacmanSprite.direction = "nope";
-    }
   } else if (e.keyCode === 38) {
-    let isPermeable = checkBoardPermeable(pacmanSprite, "up");
-    if (isPermeable === true) {
       pacmanSprite.direction = "up";
-    } else {
-          pacmanSprite.direction = "nope";
-    }
   } else if (e.keyCode === 39) {
-    let isPermeable = checkBoardPermeable(pacmanSprite, "right");
-    if (isPermeable === true) {
       pacmanSprite.direction = "right";
-    } else {
-          pacmanSprite.direction = "nope";
-    }
   } else if (e.keyCode === 40) {
-    let isPermeable = checkBoardPermeable(pacmanSprite, "down");
-    if (isPermeable === true) {
       pacmanSprite.direction = "down";
-    } else {
-          pacmanSprite.direction = "nope";
-    }
-    // e.preventDefault();
   }
 });
 

@@ -2,3 +2,4 @@ node_modules/
 dist/
 src/indexmin.html
 .DS_Store
+src/.sass-cache

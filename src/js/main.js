@@ -14,18 +14,22 @@ const {noRow, noCol, boardSize} = require('./boardVars.js');
 const pacmanElement = document.getElementById('pacman-sprite');
 const initialPos = `row-${Math.round((boardSize/noRow)/2)}-col-${Math.round((boardSize/noCol)/2)}`;
 
-const SpriteClass = function(domElement, name, colRow, speed, direction) {
-  this.physicalEntity = domElement;
-  this.name = name;
-  this.position = colRow;
-  this.speed = speed;
-  this.direction = direction;
-};
+const SpriteClass = class {
+  constructor(domElement, name, colRow, speed, direction) {
+    this.physicalEntity = domElement;
+    this.name = name;
+    this.position = colRow;
+    this.speed = speed;
+    this.direction = direction;
+  };
+}
 
-const BoardClass = function(domElement, isWall, theId) {
-  this.physicalEntity = domElement;
-  this.id = theId;
-  this.permeable = isWall;
+const BoardClass = class {
+  constructor(domElement, isWall, theId) {
+    this.physicalEntity = domElement;
+    this.id = theId;
+    this.permeable = isWall;
+  }
 }
 
 let pacmanSprite = new SpriteClass(pacmanElement, "Pacman", initialPos, 1, "nope");
@@ -132,33 +136,33 @@ const checkBoardPermeable = function(sprite, direction) {
 document.addEventListener('keydown', (e) => {
   e = e || window.event;
   if (e.keyCode === 37) {
-    let isPermeable = checkBoardPermeable(pacmanSprite, "left");
-    if (isPermeable === true) {
+    // let isPermeable = checkBoardPermeable(pacmanSprite, "left");
+    // if (isPermeable === true) {
       pacmanSprite.direction = "left";
-    } else {
-          pacmanSprite.direction = "nope";
-    }
+    // } else {
+    //       pacmanSprite.direction = "nope";
+    // }
   } else if (e.keyCode === 38) {
-    let isPermeable = checkBoardPermeable(pacmanSprite, "up");
-    if (isPermeable === true) {
+    // let isPermeable = checkBoardPermeable(pacmanSprite, "up");
+    // if (isPermeable === true) {
       pacmanSprite.direction = "up";
-    } else {
-          pacmanSprite.direction = "nope";
-    }
+    // } else {
+    //       pacmanSprite.direction = "nope";
+    // }
   } else if (e.keyCode === 39) {
-    let isPermeable = checkBoardPermeable(pacmanSprite, "right");
-    if (isPermeable === true) {
+    // let isPermeable = checkBoardPermeable(pacmanSprite, "right");
+    // if (isPermeable === true) {
       pacmanSprite.direction = "right";
-    } else {
-          pacmanSprite.direction = "nope";
-    }
+    // } else {
+    //       pacmanSprite.direction = "nope";
+    // }
   } else if (e.keyCode === 40) {
-    let isPermeable = checkBoardPermeable(pacmanSprite, "down");
-    if (isPermeable === true) {
+    // let isPermeable = checkBoardPermeable(pacmanSprite, "down");
+    // if (isPermeable === true) {
       pacmanSprite.direction = "down";
-    } else {
-          pacmanSprite.direction = "nope";
-    }
+    // } else {
+    //       pacmanSprite.direction = "nope";
+    // }
     // e.preventDefault();
   }
 });
