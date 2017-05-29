@@ -1,5 +1,7 @@
 node_modules/
 dist/
 src/indexmin.html
+src/css
 .DS_Store
-src/.sass-cache
+.sass-cache/
+src/js/newalt.js

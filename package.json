@@ -9,10 +9,12 @@
     "copy": "cp -r src/* dist",
     "clean": "rm -rf dist && mkdir dist",
     "initiate-html": "npm run minify:html && npm run inline:css",
+    "compile:sass": "sass --watch src/_sass:src/css",
     "inline:css": "critical src/indexmin.html --minify --inline --base src/ > dist/index.html",
     "minify:html": "html-minifier --collapse-whitespace --minify-css -o src/indexmin.html src/index.html",
-    "bundle": "browserify bin/script.js -o src/js/main.js",
+    "bundle": "browserify src/js/script.js -o dist/js/script.js",
     "sync": "node src/index.js & browser-sync start --proxy 'localhost:8080' --files 'src'",
+    "babelit": "babel --plugins transform-object-rest-spread src/js/danielecode.js > src/js/newalt.js",
     "test": "mocha test"
   },
   "dependencies": {
@@ -23,5 +25,9 @@
     "html-minifier": "^3.5.0",
     "mocha": "^3.4.1",
     "request": "^2.81.0"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.24.1",
+    "babel-plugin-transform-object-rest-spread": "^6.23.0"
   }
 }
