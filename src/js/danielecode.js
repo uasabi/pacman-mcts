@@ -37,7 +37,7 @@ let currentState = {
   pacman: {
     x:5,
     y:5,
-    direction:'left'
+    direction:'nope'
   }
 };
 
@@ -47,9 +47,8 @@ function mainLoop() {
   elapsed = now - then;
   if (elapsed > fpsInterval) {
     then = now - (elapsed % fpsInterval);
-    crunchState(currentState, {type: 'Tick', deltaInMilliseconds: then, input: lastKeyPressed});
+    currentState =  crunchState(currentState, {type: 'Tick', deltaInMilliseconds: then, input: lastKeyPressed});
     renderBoard(currentState, now);
-    lastKeyPressed = 'nope';
   }
 }
 
