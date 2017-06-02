@@ -1,5 +1,4 @@
 let lastKeyPressed = 'nope';
-const {renderBoard} = require('./dom-scripts.js')
 
 let currentState = {
   board: {
