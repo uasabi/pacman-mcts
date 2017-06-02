@@ -11,10 +11,10 @@ const BoardClass = class {
 };
 
 function startAnimating(fps) {
-    fpsInterval = 1000 / fps;
-    then = Date.now();
-    startTime = then;
-    mainLoop();
+  fpsInterval = 1000 / fps;
+  then = Date.now();
+  startTime = then;
+  mainLoop();
 }
 
 const tick = {
@@ -34,16 +34,16 @@ let currentState = {
   pacman: {
     x:5,
     y:5,
-    direction:'nope'
+    direction: 'nope'
   }
 };
 
 const edges = {
-    "left": 1,
-    "up": 1,
-    "right": currentState.board.rows,
-    "down": currentState.board.size/currentState.board.rows
-  };
+  left: 1,
+  up: 1,
+  right: currentState.board.rows,
+  down: currentState.board.size/currentState.board.rows
+};
 
 const isEdge = function(direction, state) {
   const xLoc = state.x;
