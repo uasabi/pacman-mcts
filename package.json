@@ -16,6 +16,7 @@
     "babel": "babel --plugins transform-object-rest-spread src/js/main.js > src/js/dc.js",
     "sync": "node src/index.js & browser-sync start --proxy 'localhost:8080' --files 'src'",
     "babelit": "babel --plugins transform-object-rest-spread src/js/main.js > src/js/newalt.js",
+    "synctest": "babel --plugins transform-object-rest-spread src/js/pre-logic.js > src/js/logic.js && browserify src/js/main.js > src/js/newalt.js && npm run sync",
     "test": "mocha test"
   },
   "dependencies": {

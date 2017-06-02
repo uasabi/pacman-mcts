@@ -2,5 +2,7 @@ node_modules/
 dist/
 src/indexmin.html
 src/css
+src/js/newalt.js
+src/js/logic.js
 .DS_Store
 .sass-cache/
