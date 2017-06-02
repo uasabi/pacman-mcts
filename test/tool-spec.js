@@ -1,8 +1,10 @@
 const expect = require('chai').expect;
+const createDocument = require('./testhelper.js');
 const indexJs = require('../src/index.js');
-const movingScriptsJs = require('../bin/movingscripts.js');
+const mainJs = require('../src/js/newalt.js');
 const request = require('request');
 
+createDocument();
 describe("Test suite", function() {
   describe("trueIsTrue()", function() {
     it("should return true", function() {
@@ -18,63 +20,4 @@ describe("Test suite", function() {
       });
     });
   });
-
-  describe("isEdge()", function() {
-    it("Left + col 1 = edge", function() {
-      let results = movingScriptsJs.isEdge("left", "row-2-col-1");
-      expect(results).to.equal(true);
-    });
-    it("Left + !col1 = not an edge", function(){
-      let results = movingScriptsJs.isEdge("left", "row-2-col-3");
-      expect(results).to.equal(false);
-    });
-    it("Right + maxcol = edge", function() {
-      let results = movingScriptsJs.isEdge("right", "row-2-col-15");
-      expect(results).to.equal(true);
-    });
-    it("Right + !maxcol = not an edge", function(){
-      let results = movingScriptsJs.isEdge("right", "row-2-col-5");
-      expect(results).to.equal(false);
-    });
-    it("Up + row 1 = edge", function() {
-      let results = movingScriptsJs.isEdge("left", "row-1-col-1");
-      expect(results).to.equal(true);
-    });
-    it("Up + !row1 = not an edge", function(){
-      let results = movingScriptsJs.isEdge("left", "row-2-col-3");
-      expect(results).to.equal(false);
-    });
-    it("Down + maxRow = edge", function() {
-      let results = movingScriptsJs.isEdge("left", "row-7-col-1");
-      expect(results).to.equal(true);
-    });
-    it("Down + !maxRow = not an edge", function(){
-      let results = movingScriptsJs.isEdge("left", "row-4-col-3");
-      expect(results).to.equal(false);
-    });
-  });
-
-  describe("positionChanger()", function() {
-    it("should -1 column with left", function() {
-      let results = movingScriptsJs.positionChanger("left", "row-4-col-3");
-      expect(results).to.equal("row-4-col-2");
-    });
-    it("should +1 column with right", function() {
-      let results = movingScriptsJs.positionChanger("right", "row-4-col-3");
-      expect(results).to.equal("row-4-col-4");
-    });
-    it("should -1 row with up", function() {
-      let results = movingScriptsJs.positionChanger("up", "row-4-col-3");
-      expect(results).to.equal("row-3-col-3");
-    });
-    it("should +1 row with down", function() {
-      let results = movingScriptsJs.positionChanger("down", "row-4-col-3");
-      expect(results).to.equal("row-5-col-3");
-    });
-    it("should skip edges", function() {
-      let results = movingScriptsJs.positionChanger("left", "row-4-col-1");
-      expect(results).to.equal("row-4-col-15");
-    });
-  });
-
 });
