@@ -13,9 +13,9 @@
     "inline:css": "critical src/indexmin.html --minify --inline --base src/ > dist/index.html",
     "minify:html": "html-minifier --collapse-whitespace --minify-css -o src/indexmin.html src/index.html",
     "bundle": "browserify src/js/dc.js -o src/js/newalt.js",
-    "babel": "babel --plugins transform-object-rest-spread src/js/danielecode.js > src/js/dc.js",
-    "sync": "npm run babel2 && npm run bundle2 && npm run sync",
-    "babelit": "babel --plugins transform-object-rest-spread src/js/danielecode.js > src/js/newalt.js",
+    "babel": "babel --plugins transform-object-rest-spread src/js/main.js > src/js/dc.js",
+    "sync": "node src/index.js & browser-sync start --proxy 'localhost:8080' --files 'src'",
+    "babelit": "babel --plugins transform-object-rest-spread src/js/main.js > src/js/newalt.js",
     "test": "mocha test"
   },
   "dependencies": {
