@@ -1,6 +1,6 @@
 let then, fpsInterval;
-const { crunchSpriteState,crunchState,checkIfWall,makeBoardPiece,isEdge,lastKeyPressed } = require('./logic.js');
-let {currentState} = require('./logic.js');
+const { crunchSpriteState,crunchState,checkIfWall,makeBoardPiece,isEdge} = require('./logic.js');
+let {currentState, lastKeyPressed} = require('./logic.js');
 const boardContainer = document.getElementById('board-container');
 const pacmanSprite = document.getElementById('pacman-sprite');
 
