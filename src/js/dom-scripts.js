@@ -18,10 +18,8 @@ const tick = {
 };
 
 function buildTheBoard(boardContainer) {
-  console.log("SHuT up");
   boardContainer.setAttribute('style', `min-width: ${currentState.board.rows*currentState.board.cellSize+currentState.board.cellSize}em; max-width: ${currentState.board.rows*currentState.board.cellSize+currentState.board.cellSize}em;`);
   return (size, rows, cols) => {
-    console.log("rebuilding");
     for (let i = 1; i <= rows; i++ ) {
       for (let j = 1; j <= cols; j++ ) {
         let newDiv = document.createElement('div');
@@ -74,14 +72,19 @@ function mainLoop() {
 
 document.addEventListener('keydown', (e)=> {
   e = e || window.event;
-  if ( e.keyCode === 37 ) {
+  switch(e.keyCode) {
+    case 37:
     lastKeyPressed = 'left';
-  } else if ( e.keyCode === 38) {
+    break;
+    case 38:
     lastKeyPressed = 'up';
-  } else if ( e.keyCode === 39) {
+    break;
+    case 39:
     lastKeyPressed = 'right';
-  } else if ( e.keyCode === 40) {
+    break;
+    case 40:
     lastKeyPressed = 'down';
+    break;
   }
 });
 

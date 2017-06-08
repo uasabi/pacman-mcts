@@ -76,42 +76,45 @@ function crunchState(state,action) {
   }
 }
 
-function crunchSpriteState(state,direction) {
-  const isAnEdge = isEdge(direction, state);
-  if (isAnEdge) {
-    switch(direction) {
-      case 'left':
-        return {...state, x: currentState.board.rows};;
-      case 'up':
-        return {...state, y: currentState.board.rows};
-      case 'right':
-        return {...state, x: 1};
-      case 'down':
-        return {...state, y: 1};
-      default:
-        return state;
-      }
-  } else {
-    switch(direction) {
-      case 'left':
-        return {...state, x: state.x - 1};
-      case 'up':
-        return {...state, y: state.y - 1};
-      case 'right':
-        return {...state, x: state.x + 1};
-      case 'down':
-        return {...state, y: state.y + 1};
-      default:
-        return state;
-    }
-  }
+function crunchSprite(parentState) {
+  return (state,direction) => {
+   const isAnEdge = isEdge(direction, state);
+   if (isAnEdge) {
+     switch(direction) {
+       case 'left':
+         return {...state, x: parentState.board.rows};;
+       case 'up':
+         return {...state, y: parentState.board.rows};
+       case 'right':
+         return {...state, x: 1};
+       case 'down':
+         return {...state, y: 1};
+       default:
+         return state;
+       }
+   } else {
+     switch(direction) {
+       case 'left':
+         return {...state, x: state.x - 1};
+       case 'up':
+         return {...state, y: state.y - 1};
+       case 'right':
+         return {...state, x: state.x + 1};
+       case 'down':
+         return {...state, y: state.y + 1};
+       default:
+         return state;
+     }
+   }
+ };
 }
 
-
+const crunchSpriteState = crunchSprite(currentState);
 
 module.exports = {
   crunchSpriteState: crunchSpriteState,
   currentState: currentState,
+  crunchSprite: crunchSprite,
   crunchState: crunchState,
   checkWall: checkWall,
   checkIfWall: checkIfWall,

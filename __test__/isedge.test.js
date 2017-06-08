@@ -37,4 +37,16 @@ test('wall === wall', () => {
   mockBoardObj(12,12,5);
   let checkIfWall = logic.checkWall(fakeState);
   expect(checkIfWall(fakeState.pacman)).toBe(false);
-})
+});
+
+test('pacman doesn\'t go through walls', () => {
+  mockBoardObj(12,12,5);
+  fakeState.pacman = {
+    x: 1,
+    y: 12,
+    direction: "nope"
+  };
+  let checkIfWall = logic.checkWall(fakeState);
+  let crunchSpriteState = logic.crunchSprite(fakeState);
+  expect(logic.crunchState(fakeState, "left")).toBe(fakeState);
+});
