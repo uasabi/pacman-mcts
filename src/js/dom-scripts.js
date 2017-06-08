@@ -52,7 +52,7 @@ function buildTheBoard(boardContainer) {
 const buildBoard = buildTheBoard(document.getElementById('board-container'));
 
 function renderBoard(state) {
-  buildBoard(currentState.board.size, currentState.board.rows, currentState.board.size/currentState.board.rows);
+  buildBoard();
   affixSprite(pacmanSprite, state.pacman);
 }
 
