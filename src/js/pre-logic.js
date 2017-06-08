@@ -41,15 +41,13 @@ const BoardClass = class {
 };
 
 const isEdge = function(direction, state) {
-  const xLoc = state.x;
-  const yLoc = state.y;
-  if (direction === "left" || direction === "right") {
+  if (direction === 'left' || direction === 'right') {
     if (edges[direction] === state.x) {
       return true;
     } else {
       return false;
     }
-  } else if (direction === "up" || direction === "down") {
+  } else if (direction === 'up' || direction === 'down') {
     if (edges[direction] === state.y) {
       return true;
     } else {
@@ -59,8 +57,8 @@ const isEdge = function(direction, state) {
 };
 
 function makeBoardPiece(div,isPermeable,cellsize,divId) {
-  let backgroundColor = isPermeable ? "black" : "blue";
-  div.setAttribute("style", `height: ${cellsize}em; width: ${cellsize}em; background-color: ${backgroundColor};`);
+  let backgroundColor = isPermeable ? 'black' : 'blue';
+  div.setAttribute('style', `height: ${cellsize}em; width: ${cellsize}em; background-color: ${backgroundColor};`);
   div = new BoardClass(div, isPermeable, divId);
   return div;
 }
@@ -76,7 +74,7 @@ const checkIfWall = checkWall(currentState);
 
 function crunchState(state,action) {
   let buildState;
-  const pacManInput = action.input === 'nope' ? state.direction : action.input
+  const pacManInput = action.input === 'nope' ? state.direction : action.input;
   let newPacmanState = crunchSpriteState(state.pacman, pacManInput);
   let isAWall = checkIfWall(newPacmanState);
   if (isAWall) {
@@ -104,42 +102,42 @@ function crunchState(state,action) {
 }
 
 function pickRanDir() {
-  const directions = ["up", "down", "left", "right"];
+  const directions = ['up', 'down', 'left', 'right'];
   let number = Math.floor(Math.random() * directions.length);
   return directions[number];
 }
 
 function crunchSprite(parentState) {
   return (state,direction) => {
-   const isAnEdge = isEdge(direction, state);
-   if (isAnEdge) {
-     switch(direction) {
-       case 'left':
-         return {...state, x: parentState.board.rows};;
-       case 'up':
-         return {...state, y: parentState.board.rows};
-       case 'right':
-         return {...state, x: 1};
-       case 'down':
-         return {...state, y: 1};
-       default:
-         return state;
-       }
-   } else {
-     switch(direction) {
-       case 'left':
-         return {...state, x: state.x - 1};
-       case 'up':
-         return {...state, y: state.y - 1};
-       case 'right':
-         return {...state, x: state.x + 1};
-       case 'down':
-         return {...state, y: state.y + 1};
-       default:
-         return state;
-     }
-   }
- };
+    const isAnEdge = isEdge(direction, state);
+    if (isAnEdge) {
+      switch(direction) {
+      case 'left':
+        return {...state, x: parentState.board.rows};
+      case 'up':
+        return {...state, y: parentState.board.rows};
+      case 'right':
+        return {...state, x: 1};
+      case 'down':
+        return {...state, y: 1};
+      default:
+        return state;
+      }
+    } else {
+      switch(direction) {
+      case 'left':
+        return {...state, x: state.x - 1};
+      case 'up':
+        return {...state, y: state.y - 1};
+      case 'right':
+        return {...state, x: state.x + 1};
+      case 'down':
+        return {...state, y: state.y + 1};
+      default:
+        return state;
+      }
+    }
+  };
 }
 
 const crunchSpriteState = crunchSprite(currentState);
@@ -154,4 +152,4 @@ module.exports = {
   makeBoardPiece: makeBoardPiece,
   isEdge: isEdge,
   lastKeyPressed: lastKeyPressed
-}
+};
