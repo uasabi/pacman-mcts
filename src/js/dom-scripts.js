@@ -2,6 +2,8 @@ let then, fpsInterval;
 const { crunchSpriteState,crunchState,checkIfWall,makeBoardPiece,isEdge} = require('./logic.js');
 let {currentState, lastKeyPressed} = require('./logic.js');
 const pacmanSprite = document.getElementById('pacman-sprite');
+const redSprite = document.getElementById('ghost-sprite-r');
+const orangeSprite = document.getElementById('ghost-sprite-o');
 
 function startAnimating(fps) {
   fpsInterval = 1000 / fps;
@@ -52,6 +54,8 @@ const buildBoard = buildTheBoard(document.getElementById('board-container'));
 function renderBoard(state) {
   buildBoard();
   affixSprite(pacmanSprite, state.pacman);
+  affixSprite(redSprite, state.red);
+  affixSprite(orangeSprite, state.orange);
 }
 
 function affixSprite(sprite, spriteState) {

@@ -12,6 +12,16 @@ let currentState = {
     x:5,
     y:5,
     direction: 'nope'
+  },
+  red: {
+    x: 3,
+    y: 10,
+    direction: 'down'
+  },
+  orange: {
+    x: 10,
+    y: 4,
+    direction: 'down'
   }
 };
 
@@ -65,15 +75,38 @@ function checkWall(state) {
 const checkIfWall = checkWall(currentState);
 
 function crunchState(state,action) {
+  let buildState;
   const pacManInput = action.input === 'nope' ? state.direction : action.input
   let newPacmanState = crunchSpriteState(state.pacman, pacManInput);
   let isAWall = checkIfWall(newPacmanState);
   if (isAWall) {
-    ("at a wall!");
-    return state;
+    buildState = state;
   } else {
-    return {...state, pacman: newPacmanState};
+    buildState = {...state, pacman: newPacmanState};
   }
+  let newGhostState = crunchSpriteState(state.red, state.red.direction);
+  isAWall = checkIfWall(newGhostState);
+  if (isAWall) {
+    let aNewDirection = pickRanDir();
+    buildState = {...buildState, red: {...buildState.red, direction: aNewDirection}};
+  } else {
+    buildState = {...buildState, red: newGhostState};
+  }
+  newGhostState = crunchSpriteState(state.orange, state.orange.direction);
+  isAWall = checkIfWall(newGhostState);
+  if (isAWall) {
+    let aNewDirection = pickRanDir();
+    buildState = {...buildState, orange: {...buildState.orange, direction: aNewDirection}};
+  } else {
+    buildState = {...buildState, orange: newGhostState};
+  }
+  return buildState;
+}
+
+function pickRanDir() {
+  const directions = ["up", "down", "left", "right"];
+  let number = Math.floor(Math.random() * directions.length);
+  return directions[number];
 }
 
 function crunchSprite(parentState) {
