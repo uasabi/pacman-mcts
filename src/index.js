@@ -16,8 +16,8 @@ app.listen(app.get('port'), () => {
 
 const trueIsTrue = function() {
   return true === true;
-}
+};
 
 module.exports = {
   trueIsTrue: trueIsTrue
-}
+};
