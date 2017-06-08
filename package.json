@@ -16,6 +16,7 @@
     "bundle": "browserify src/js/main.js > dist/js/script.js",
     "sync": "node src/index.js & browser-sync start --proxy 'localhost:8080' --files 'src'",
     "src:test": "babel --plugins transform-object-rest-spread src/js/pre-logic.js > src/js/logic.js && browserify src/js/main.js > src/js/script.js && npm run sync",
+    "lint": "./node_modules/.bin/eslint ./*",
     "test": "jest"
   },
   "dependencies": {
@@ -30,6 +31,7 @@
     "babel-cli": "^6.24.1",
     "babel-plugin-transform-object-rest-spread": "^6.23.0",
     "babel-preset-es2015": "^6.24.1",
-    "babel-preset-stage-0": "^6.24.1"
+    "babel-preset-stage-0": "^6.24.1",
+    "eslint": "^3.19.0"
   }
 }
