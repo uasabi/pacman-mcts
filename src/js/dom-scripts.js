@@ -1,5 +1,5 @@
-let then, fpsInterval;
-const { crunchSpriteState,crunchState,checkIfWall,makeBoardPiece,isEdge} = require('./logic.js');
+let then, fpsInterval, startTime;
+const {crunchState,makeBoardPiece} = require('./logic.js');
 let {currentState, lastKeyPressed} = require('./logic.js');
 const pacmanSprite = document.getElementById('pacman-sprite');
 const redSprite = document.getElementById('ghost-sprite-r');
@@ -13,19 +13,13 @@ function startAnimating(fps) {
   mainLoop();
 }
 
-const tick = {
-  type: 'Tick',
-  deltaInMilliseconds: 10000,
-  input: 'up'
-};
-
 function buildTheBoard(boardContainer) {
   boardContainer.setAttribute('style', `min-width: ${currentState.board.rows*currentState.board.cellSize+currentState.board.cellSize}em; max-width: ${currentState.board.rows*currentState.board.cellSize+currentState.board.cellSize}em;`);
   return (size, rows, cols) => {
     for (let i = 1; i <= rows; i++ ) {
       for (let j = 1; j <= cols; j++ ) {
         let newDiv = document.createElement('div');
-        newDiv.classList = "board-tile";
+        newDiv.classList = 'board-tile';
         newDiv.id=`${i}x${j}`;
         // newDiv.textContent = `row ${i}/ col ${j}`;
         if ( i === 1 || i === rows || j === 1 || j === cols ) {
@@ -35,8 +29,8 @@ function buildTheBoard(boardContainer) {
             newDiv = makeBoardPiece(newDiv, true, currentState.board.cellSize, newDiv.id);
           }
         } else {
-            newDiv = makeBoardPiece(newDiv, true, currentState.board.cellSize, newDiv.id);
-          }
+          newDiv = makeBoardPiece(newDiv, true, currentState.board.cellSize, newDiv.id);
+        }
         let boardArr = currentState.board.boardArr;
         let boardObj = currentState.board.boardObj;
         boardArr.push(newDiv);
@@ -44,7 +38,7 @@ function buildTheBoard(boardContainer) {
       }
     }
     for (let i = 0; i < currentState.board.boardArr.length; i++ ) {
-    boardContainer.append(currentState.board.boardArr[i].physicalEntity);
+      boardContainer.append(currentState.board.boardArr[i].physicalEntity);
     }
   };
 }
@@ -65,8 +59,8 @@ function affixSprite(sprite, spriteState) {
 
 function mainLoop() {
   requestAnimationFrame(mainLoop);
-  now = Date.now();
-  elapsed = now - then;
+  let now = Date.now();
+  let elapsed = now - then;
   if (elapsed > fpsInterval) {
     then = now - (elapsed % fpsInterval);
     currentState =  crunchState(currentState, {type: 'Tick', deltaInMilliseconds: then, input: lastKeyPressed}) || currentState;
@@ -77,16 +71,16 @@ function mainLoop() {
 document.addEventListener('keydown', (e)=> {
   e = e || window.event;
   switch(e.keyCode) {
-    case 37:
+  case 37:
     lastKeyPressed = 'left';
     break;
-    case 38:
+  case 38:
     lastKeyPressed = 'up';
     break;
-    case 39:
+  case 39:
     lastKeyPressed = 'right';
     break;
-    case 40:
+  case 40:
     lastKeyPressed = 'down';
     break;
   }
