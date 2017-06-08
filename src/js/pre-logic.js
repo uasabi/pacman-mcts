@@ -1,5 +1,4 @@
 let lastKeyPressed = 'nope';
-const {renderBoard} = require('./dom-scripts.js')
 
 let currentState = {
   board: {
@@ -20,36 +19,27 @@ const edges = {
   left: 1,
   up: 1,
   right: currentState.board.rows,
-  down: currentState.board.size/currentState.board.rows
+  down: currentState.board.size / currentState.board.rows
 };
 
-const BoardClass = class {
+class BoardClass {
   constructor(domElement, isWall, theId) {
     this.physicalEntity = domElement;
     this.id = theId;
     this.permeable = isWall;
   }
-};
+}
 
-const isEdge = function(direction, state) {
-  const xLoc = state.x;
-  const yLoc = state.y;
+function isEdge(direction, state) {
   if (direction === "left" || direction === "right") {
-    if (edges[direction] === state.x) {
-      return true;
-    } else {
-      return false;
-    }
-  } else if (direction === "up" || direction === "down") {
-    if (edges[direction] === state.y) {
-      return true;
-    } else {
-      return false;
-    }
+    return edges[direction] === state.x;
   }
-};
+  else {
+    return edges[direction] === state.y;
+  }
+}
 
-function makeBoardPiece(div,isPermeable,cellsize,divId) {
+function makeBoardPiece(div, isPermeable, cellsize, divId) {
   let backgroundColor = isPermeable ? "black" : "blue";
   div.setAttribute("style", `height: ${cellsize}em; width: ${cellsize}em; background-color: ${backgroundColor};`);
   div = new BoardClass(div, isPermeable, divId);
@@ -61,8 +51,8 @@ function checkIfWall(state) {
   return !currentState.board.boardObj[newPosition].permeable;
 }
 
-function crunchState(state,action) {
-  const pacManInput = action.input === 'nope' ? state.direction : action.input
+function crunchState(state, action) {
+  const pacManInput = action.input === 'nope' ? state.direction : action.input;
   let newPacmanState = crunchSpriteState(state.pacman, pacManInput);
   let isAWall = checkIfWall(newPacmanState);
   if (isAWall) {
