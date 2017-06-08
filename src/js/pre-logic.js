@@ -55,10 +55,14 @@ function makeBoardPiece(div,isPermeable,cellsize,divId) {
   return div;
 }
 
-function checkIfWall(state) {
-  let newPosition = `${state.x}x${state.y}`;
-  return !currentState.board.boardObj[newPosition].permeable;
+function checkWall(state) {
+  return (spriteState) => {
+    let newPosition = `${spriteState.x}x${spriteState.y}`;
+    return !state.board.boardObj[newPosition].permeable;
+  };
 }
+
+const checkIfWall = checkWall(currentState);
 
 function crunchState(state,action) {
   const pacManInput = action.input === 'nope' ? state.direction : action.input
@@ -109,6 +113,7 @@ module.exports = {
   crunchSpriteState: crunchSpriteState,
   currentState: currentState,
   crunchState: crunchState,
+  checkWall: checkWall,
   checkIfWall: checkIfWall,
   makeBoardPiece: makeBoardPiece,
   isEdge: isEdge,
