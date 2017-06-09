@@ -1,1 +1,1 @@
-const startUp = require('./dom-scripts.js');
+require('./dom-scripts.js');

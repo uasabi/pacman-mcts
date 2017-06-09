@@ -27,6 +27,14 @@ module.exports = {
         "semi": [
             "error",
             "always"
-        ]
+        ],
+        "comma-spacing": [
+            "error",
+            {
+                "before": false,
+                "after": true
+            }
+        ],
+        "no-unused-vars": 0
     }
 };

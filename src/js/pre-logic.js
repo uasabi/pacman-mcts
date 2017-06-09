@@ -56,7 +56,7 @@ const isEdge = function(direction, state) {
   }
 };
 
-function makeBoardPiece(div,isPermeable,cellsize,divId) {
+function makeBoardPiece(div, isPermeable, cellsize, divId) {
   let backgroundColor = isPermeable ? 'black' : 'blue';
   div.setAttribute('style', `height: ${cellsize}em; width: ${cellsize}em; background-color: ${backgroundColor};`);
   div = new BoardClass(div, isPermeable, divId);
@@ -72,7 +72,7 @@ function checkWall(state) {
 
 const checkIfWall = checkWall(currentState);
 
-function crunchState(state,action) {
+function crunchState(state, action) {
   let buildState;
   const pacManInput = action.input === 'nope' ? state.direction : action.input;
   let newPacmanState = crunchSpriteState(state.pacman, pacManInput);
@@ -108,7 +108,7 @@ function pickRanDir() {
 }
 
 function crunchSprite(parentState) {
-  return (state,direction) => {
+  return (state, direction) => {
     const isAnEdge = isEdge(direction, state);
     if (isAnEdge) {
       switch(direction) {
