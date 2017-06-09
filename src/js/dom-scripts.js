@@ -1,6 +1,6 @@
 let then, fpsInterval, startTime;
-const {crunchState,makeBoardPiece} = require('./logic.js');
-let {currentState, lastKeyPressed} = require('./logic.js');
+const {crunchState, makeBoardPiece} = require('./logic');
+let {currentState, lastKeyPressed} = require('./logic');
 const pacmanSprite = document.getElementById('pacman-sprite');
 const redSprite = document.getElementById('ghost-sprite-r');
 const orangeSprite = document.getElementById('ghost-sprite-o');
