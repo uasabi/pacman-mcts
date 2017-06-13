@@ -5,8 +5,40 @@ let currentState = {
     size: 144,
     rows: 12,
     cellSize: 4,
-    boardArr: [],
-    boardObj: {}
+    walls: [
+      {x: 0, y: 0},
+      {x: 1, y: 0},
+      {x: 2, y: 0},
+      {x: 3, y: 0},
+      {x: 8, y: 0},
+      {x: 9, y: 0},
+      {x: 10, y: 0},
+      {x: 11, y: 0},
+      {y: 0, x: 0},
+      {y: 1, x: 0},
+      {y: 2, x: 0},
+      {y: 3, x: 0},
+      {y: 8, x: 0},
+      {y: 9, x: 0},
+      {y: 10, x: 0},
+      {y: 11, x: 0},
+      {x: 0, y: 11},
+      {x: 1, y: 11},
+      {x: 2, y: 11},
+      {x: 3, y: 11},
+      {x: 8, y: 11},
+      {x: 9, y: 11},
+      {x: 10, y: 11},
+      {x: 11, y: 11},
+      {y: 0, x: 11},
+      {y: 1, x: 11},
+      {y: 2, x: 11},
+      {y: 3, x: 11},
+      {y: 8, x: 11},
+      {y: 9, x: 11},
+      {y: 10, x: 11},
+      {y: 11, x: 11}
+    ]
   },
   pacman: {
     x:5,
@@ -14,22 +46,22 @@ let currentState = {
     direction: 'nope'
   },
   red: {
-    x: 3,
-    y: 10,
-    direction: 'down'
+    x: 7,
+    y: 11,
+    direction: 'right'
   },
   orange: {
-    x: 10,
-    y: 4,
-    direction: 'down'
+    x: 1,
+    y: 8,
+    direction: 'up'
   }
 };
 
 const edges = {
   left: 1,
   up: 1,
-  right: currentState.board.rows,
-  down: currentState.board.size/currentState.board.rows
+  right: currentState.board.rows - 1,
+  down: currentState.board.rows - 1
 };
 
 const BoardClass = class {
@@ -56,17 +88,54 @@ const isEdge = function(direction, state) {
   }
 };
 
-function makeBoardPiece(div, isPermeable, cellsize, divId) {
-  let backgroundColor = isPermeable ? 'black' : 'blue';
-  div.setAttribute('style', `height: ${cellsize}em; width: ${cellsize}em; background-color: ${backgroundColor};`);
-  div = new BoardClass(div, isPermeable, divId);
-  return div;
+function makeBoardPiece(id, cellsize, isPermeable = true) {
+  const backgroundColor = isPermeable ? 'black' : 'blue';
+  return `
+  <div
+    id='${id}'
+    style='box-sizing: border-box; display: inline-block; margin: 0; padding: 0; height: ${cellsize}em; width: ${cellsize}em; background-color: ${backgroundColor};'
+  >
+  </div>`;
+}
+
+function makePacman(cellsize) {
+  return `
+   <div
+     style='height: ${cellsize}em; width: ${cellsize}em; background-color: black; display: inline-block;'>
+     <svg viewbox='0 0 100 100' id='pacman-sprite'>
+     <use xlink:href='#pacman' />
+     </svg>
+   </div>
+ `;
+}
+
+function makeRed(cellsize) {
+  return `
+    <div
+      style='height: ${cellsize}em; width: ${cellsize}em; background-color: black; display: inline-block;'>
+      <svg viewbox='0 0 100 100' id='pacman-sprite'>
+      <use xlink:href='#red-ghost' />
+      </svg>
+    </div>
+  `;
+}
+
+function makeOrange(cellsize) {
+  return `
+    <div
+      style='height: ${cellsize}em; width: ${cellsize}em; background-color: black; display: inline-block;'>
+      <svg viewbox='0 0 100 100' id='pacman-sprite'>
+      <use xlink:href='#orange-ghost' />
+      </svg>
+    </div>
+  `;
 }
 
 function checkWall(state) {
   return (spriteState) => {
-    let newPosition = `${spriteState.x}x${spriteState.y}`;
-    return !state.board.boardObj[newPosition].permeable;
+    return state.board.walls.find((element) => {
+      return element.x === spriteState.x && element.y === spriteState.y;
+    });
   };
 }
 
@@ -113,13 +182,13 @@ function crunchSprite(parentState) {
     if (isAnEdge) {
       switch(direction) {
       case 'left':
-        return {...state, x: parentState.board.rows};
+        return {...state, x: parentState.board.rows - 1};
       case 'up':
-        return {...state, y: parentState.board.rows};
+        return {...state, y: parentState.board.rows - 1};
       case 'right':
-        return {...state, x: 1};
+        return {...state, x: 0};
       case 'down':
-        return {...state, y: 1};
+        return {...state, y: 0};
       default:
         return state;
       }
@@ -151,5 +220,8 @@ module.exports = {
   checkIfWall: checkIfWall,
   makeBoardPiece: makeBoardPiece,
   isEdge: isEdge,
-  lastKeyPressed: lastKeyPressed
+  lastKeyPressed: lastKeyPressed,
+  makeRed,
+  makeOrange,
+  makePacman
 };
