@@ -5,8 +5,12 @@ let currentState = {
     size: 144,
     rows: 12,
     cellSize: 4,
-    boardArr: [],
-    boardObj: {}
+    walls: [
+      {x: 0, y: 0},
+      {x: 1, y: 0},
+      {x: 2, y: 0},
+      {x: 3, y: 0}
+    ]
   },
   pacman: {
     x:5,
@@ -56,17 +60,59 @@ const isEdge = function(direction, state) {
   }
 };
 
-function makeBoardPiece(div, isPermeable, cellsize, divId) {
-  let backgroundColor = isPermeable ? 'black' : 'blue';
-  div.setAttribute('style', `height: ${cellsize}em; width: ${cellsize}em; background-color: ${backgroundColor};`);
-  div = new BoardClass(div, isPermeable, divId);
-  return div;
+function makeBoardPiece(id, cellsize, isPermeable = true) {
+  let idSlice = id.slice("x");
+  const backgroundColor = `#${idSlice[0]}${idSlice[0]}ff${idSlice[2]}${idSlice[2]}`;
+  console.log(backgroundColor);
+  return `
+  <div
+    id="${id}"
+    style = "height: ${cellsize}em; width: ${cellsize}em; background-color: ${backgroundColor};"
+    class="board-tile"
+  >
+  </div>`;
+}
+
+function makePacman(cellsize) {
+ return `
+   <div
+     style="height: ${cellsize}em; width: ${cellsize}em; background-color: black;"
+     class="board-tile">
+     <svg viewbox="0 0 100 100" id="pacman-sprite">
+     <use xlink:href="#pacman" />
+     </svg>
+   </div>
+ `;
+}
+
+function makeRed(cellsize) {
+  return `
+    <div
+      style="height: ${cellsize}em; width: ${cellsize}em; background-color: black;"
+      class="board-tile">
+      <svg viewbox="0 0 100 100" id="pacman-sprite">
+      <use xlink:href="#red-ghost" />
+      </svg>
+    </div>
+  `;
+}
+
+function makeOrange(cellsize) {
+  return `
+    <div
+      style="height: ${cellsize}em; width: ${cellsize}em; background-color: black;"
+      class="board-tile">
+      <svg viewbox="0 0 100 100" id="pacman-sprite">
+      <use xlink:href="#orange-ghost" />
+      </svg>
+    </div>
+  `;
 }
 
 function checkWall(state) {
   return (spriteState) => {
     let newPosition = `${spriteState.x}x${spriteState.y}`;
-    return !state.board.boardObj[newPosition].permeable;
+    return false;
   };
 }
 
@@ -151,5 +197,8 @@ module.exports = {
   checkIfWall: checkIfWall,
   makeBoardPiece: makeBoardPiece,
   isEdge: isEdge,
-  lastKeyPressed: lastKeyPressed
+  lastKeyPressed: lastKeyPressed,
+  makeRed,
+  makeOrange,
+  makePacman
 };

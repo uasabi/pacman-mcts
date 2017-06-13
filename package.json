@@ -5,7 +5,7 @@
   "license": "MIT",
   "scripts": {
     "start": "node dist/index.js",
-    "build": "npm run clean && npm run copy && npm run initiate-html && npm run babel && npm run bundle",
+    "build": "npm run clean && npm run copy && npm run initiate-html && npm run bundle",
     "copy": "cp -r src/* dist",
     "clean": "rm -rf dist && mkdir dist",
     "initiate-html": "npm run minify:html && npm run inline:css",
@@ -20,6 +20,7 @@
     "test": "jest"
   },
   "dependencies": {
+    "babelify": "^7.3.0",
     "browserify": "^14.3.0",
     "critical": "^0.8.4",
     "express": "^4.15.3",
