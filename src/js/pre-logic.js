@@ -2,8 +2,8 @@ let lastKeyPressed = 'nope';
 
 let currentState = {
   board: {
-    size: 100,
-    rows: 10,
+    size: 144,
+    rows: 12,
     cellSize: 4,
     walls: [
       {x: 0, y: 0},
@@ -104,8 +104,7 @@ function makeBoardPiece(id, cellsize, isPermeable = true) {
   return `
   <div
     id="${id}"
-    style = "height: ${cellsize}em; width: ${cellsize}em; background-color: ${backgroundColor};"
-    class="board-tile"
+    style="box-sizing: border-box; display: inline-block; margin: 0; padding: 0; height: ${cellsize}em; width: ${cellsize}em; background-color: ${backgroundColor};"
   >
   </div>`;
 }

@@ -23,7 +23,7 @@ function buildTheBoard(size, rows, cols) {
   matrix[currentState.orange.y][currentState.orange.x] = makeOrange(currentState.board.cellSize);
 
   return `
-    <div style="max-width: ${(currentState.board.rows * currentState.board.cellSize) + 7}em">
+    <div style="max-width: ${(currentState.board.rows * currentState.board.cellSize) + currentState.board.cellSize}em; min-width: ${(currentState.board.rows * currentState.board.cellSize) + currentState.board.cellSize}em">
     ${matrix.map(it => it.join('')).join('')}
     </div>`;
 }
