@@ -13,9 +13,9 @@ function buildTheBoard(size, rows, cols) {
   const makeColumnForRow = (rowIndex) => Array(cols).fill(0)
   .map((_, columnIndex) => makeBoardPiece(`${rowIndex}x${columnIndex}`, currentState.board.cellSize));
   const matrix = Array(rows).fill(0).map((_, rowIndex) => makeColumnForRow(rowIndex));
-  // currentState.board.walls.forEach(wall => {
-  //   matrix[wall.y][wall.x] = makeBoardPiece(`${wall.y}x${wall.x}`, currentState.board.cellSize, false);
-  // });
+  currentState.board.walls.forEach(wall => {
+    matrix[wall.y][wall.x] = makeBoardPiece(`${wall.y}x${wall.x}`, currentState.board.cellSize, false);
+  });
   matrix[currentState.pacman.y][currentState.pacman.x] = makePacman(currentState.board.cellSize);
   matrix[currentState.red.y][currentState.red.x] = makeRed(currentState.board.cellSize);
   matrix[currentState.orange.y][currentState.orange.x] = makeOrange(currentState.board.cellSize);

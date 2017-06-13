@@ -9,7 +9,35 @@ let currentState = {
       {x: 0, y: 0},
       {x: 1, y: 0},
       {x: 2, y: 0},
-      {x: 3, y: 0}
+      {x: 3, y: 0},
+      {x: 8, y: 0},
+      {x: 9, y: 0},
+      {x: 10, y: 0},
+      {x: 11, y: 0},
+      {y: 0, x: 0},
+      {y: 1, x: 0},
+      {y: 2, x: 0},
+      {y: 3, x: 0},
+      {y: 8, x: 0},
+      {y: 9, x: 0},
+      {y: 10, x: 0},
+      {y: 11, x: 0},
+      {x: 0, y: 11},
+      {x: 1, y: 11},
+      {x: 2, y: 11},
+      {x: 3, y: 11},
+      {x: 8, y: 11},
+      {x: 9, y: 11},
+      {x: 10, y: 11},
+      {x: 11, y: 11},
+      {y: 0, x: 11},
+      {y: 1, x: 11},
+      {y: 2, x: 11},
+      {y: 3, x: 11},
+      {y: 8, x: 11},
+      {y: 9, x: 11},
+      {y: 10, x: 11},
+      {y: 11, x: 11}
     ]
   },
   pacman: {
@@ -105,8 +133,9 @@ function makeOrange(cellsize) {
 
 function checkWall(state) {
   return (spriteState) => {
-    let newPosition = `${spriteState.x}x${spriteState.y}`;
-    return false;
+    return state.board.walls.find((element) => {
+      return element.x === spriteState.x && element.y === spriteState.y;
+    });
   };
 }
 
