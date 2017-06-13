@@ -18,22 +18,22 @@ let currentState = {
     direction: 'nope'
   },
   red: {
-    x: 3,
-    y: 10,
-    direction: 'down'
+    x: 7,
+    y: 11,
+    direction: 'right'
   },
   orange: {
-    x: 10,
-    y: 4,
-    direction: 'down'
+    x: 1,
+    y: 8,
+    direction: 'nope'
   }
 };
 
 const edges = {
   left: 1,
   up: 1,
-  right: currentState.board.rows,
-  down: currentState.board.size/currentState.board.rows
+  right: currentState.board.rows - 1,
+  down: currentState.board.rows - 1
 };
 
 const BoardClass = class {
@@ -97,7 +97,7 @@ function makeBoardPiece(id, cellsize, isPermeable = true) {
     case "11":
       backgroundColor = "yellow";
       break;
-    case "12":
+    case "0":
       backgroundColor = "green";
       break;
   }
@@ -195,13 +195,13 @@ function crunchSprite(parentState) {
     if (isAnEdge) {
       switch(direction) {
       case 'left':
-        return {...state, x: parentState.board.rows};
+        return {...state, x: parentState.board.rows - 1};
       case 'up':
-        return {...state, y: parentState.board.rows};
+        return {...state, y: parentState.board.rows - 1};
       case 'right':
-        return {...state, x: 1};
+        return {...state, x: 0};
       case 'down':
-        return {...state, y: 1};
+        return {...state, y: 0};
       default:
         return state;
       }
