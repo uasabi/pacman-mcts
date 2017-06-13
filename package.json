@@ -16,7 +16,7 @@
     "bundle": "browserify src/js/main.js > dist/js/script.js",
     "sync": "node src/index.js & browser-sync start --proxy 'localhost:8080' --files 'src'",
     "src:test": "babel --plugins transform-object-rest-spread src/js/pre-logic.js > src/js/logic.js && browserify src/js/main.js > src/js/script.js && npm run sync",
-    "lint": "eslint src/js/*.js",
+    "lint": "eslint src/js/",
     "test": "jest"
   },
   "dependencies": {
