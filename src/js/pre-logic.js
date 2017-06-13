@@ -25,7 +25,7 @@ let currentState = {
   orange: {
     x: 1,
     y: 8,
-    direction: 'nope'
+    direction: 'up'
   }
 };
 
@@ -61,61 +61,21 @@ const isEdge = function(direction, state) {
 };
 
 function makeBoardPiece(id, cellsize, isPermeable = true) {
-  let idSlice = id.split("x");
-  let backgroundColor;
-  switch(idSlice[0]) {
-    case "1":
-      backgroundColor = "pink";
-      break;
-    case "2":
-      backgroundColor = "red";
-      break;
-    case "3":
-      backgroundColor = "orange";
-      break;
-    case "4":
-      backgroundColor = "yellow";
-      break;
-    case "5":
-      backgroundColor = "green";
-      break;
-    case "6":
-      backgroundColor = "blue";
-      break;
-    case "7":
-      backgroundColor = "violet";
-      break;
-    case "8":
-      backgroundColor = "pink";
-      break;
-    case "9":
-      backgroundColor = "red";
-      break;
-    case "10":
-      backgroundColor = "orange";
-      break;
-    case "11":
-      backgroundColor = "yellow";
-      break;
-    case "0":
-      backgroundColor = "green";
-      break;
-  }
+  const backgroundColor = isPermeable ? 'black' : 'blue';
   return `
   <div
-    id="${id}"
-    style="box-sizing: border-box; display: inline-block; margin: 0; padding: 0; height: ${cellsize}em; width: ${cellsize}em; background-color: ${backgroundColor};"
+    id='${id}'
+    style='box-sizing: border-box; display: inline-block; margin: 0; padding: 0; height: ${cellsize}em; width: ${cellsize}em; background-color: ${backgroundColor};'
   >
   </div>`;
 }
 
 function makePacman(cellsize) {
- return `
+  return `
    <div
-     style="height: ${cellsize}em; width: ${cellsize}em; background-color: black;"
-     class="board-tile">
-     <svg viewbox="0 0 100 100" id="pacman-sprite">
-     <use xlink:href="#pacman" />
+     style='height: ${cellsize}em; width: ${cellsize}em; background-color: black; display: inline-block;'>
+     <svg viewbox='0 0 100 100' id='pacman-sprite'>
+     <use xlink:href='#pacman' />
      </svg>
    </div>
  `;
@@ -124,10 +84,9 @@ function makePacman(cellsize) {
 function makeRed(cellsize) {
   return `
     <div
-      style="height: ${cellsize}em; width: ${cellsize}em; background-color: black;"
-      class="board-tile">
-      <svg viewbox="0 0 100 100" id="pacman-sprite">
-      <use xlink:href="#red-ghost" />
+      style='height: ${cellsize}em; width: ${cellsize}em; background-color: black; display: inline-block;'>
+      <svg viewbox='0 0 100 100' id='pacman-sprite'>
+      <use xlink:href='#red-ghost' />
       </svg>
     </div>
   `;
@@ -136,10 +95,9 @@ function makeRed(cellsize) {
 function makeOrange(cellsize) {
   return `
     <div
-      style="height: ${cellsize}em; width: ${cellsize}em; background-color: black;"
-      class="board-tile">
-      <svg viewbox="0 0 100 100" id="pacman-sprite">
-      <use xlink:href="#orange-ghost" />
+      style='height: ${cellsize}em; width: ${cellsize}em; background-color: black; display: inline-block;'>
+      <svg viewbox='0 0 100 100' id='pacman-sprite'>
+      <use xlink:href='#orange-ghost' />
       </svg>
     </div>
   `;
