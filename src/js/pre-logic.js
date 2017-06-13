@@ -61,9 +61,46 @@ const isEdge = function(direction, state) {
 };
 
 function makeBoardPiece(id, cellsize, isPermeable = true) {
-  let idSlice = id.slice("x");
-  const backgroundColor = `#${idSlice[0]}${idSlice[0]}ff${idSlice[2]}${idSlice[2]}`;
-  console.log(backgroundColor);
+  let idSlice = id.split("x");
+  let backgroundColor;
+  switch(idSlice[0]) {
+    case "1":
+      backgroundColor = "pink";
+      break;
+    case "2":
+      backgroundColor = "red";
+      break;
+    case "3":
+      backgroundColor = "orange";
+      break;
+    case "4":
+      backgroundColor = "yellow";
+      break;
+    case "5":
+      backgroundColor = "green";
+      break;
+    case "6":
+      backgroundColor = "blue";
+      break;
+    case "7":
+      backgroundColor = "violet";
+      break;
+    case "8":
+      backgroundColor = "pink";
+      break;
+    case "9":
+      backgroundColor = "red";
+      break;
+    case "10":
+      backgroundColor = "orange";
+      break;
+    case "11":
+      backgroundColor = "yellow";
+      break;
+    case "12":
+      backgroundColor = "green";
+      break;
+  }
   return `
   <div
     id="${id}"
