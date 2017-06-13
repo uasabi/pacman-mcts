@@ -2,8 +2,8 @@ let lastKeyPressed = 'nope';
 
 let currentState = {
   board: {
-    size: 144,
-    rows: 12,
+    size: 100,
+    rows: 10,
     cellSize: 4,
     walls: [
       {x: 0, y: 0},
