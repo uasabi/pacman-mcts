@@ -44,7 +44,8 @@ let currentState = {
   pacman: {
     x: 5,
     y: 5,
-    direction: 'nope'
+    direction: 'nope',
+    activeDirection: lastKeyPressed
   },
   red: {
     x: 7,
@@ -221,8 +222,21 @@ function crunchSprite(parentState) {
   };
 }
 
-function collisionDetection(spriteOne, spriteTwo) {
-  return spriteOne.x === spriteTwo.x && spriteOne.y === spriteTwo.y;
+function collisionDetection(spriteOne, pacman) {
+  const opposites = {'left': 'right', 'right': 'left', 'up': 'down', 'down': 'up'};
+  const values = {'left': -1, 'right': 1, 'up': -1, 'down': 1};
+  if (opposites[spriteOne.direction] === pacman.activeDirection) {
+    if (spriteOne.direction === 'left' || spriteOne.direction === 'right') {
+      if (spriteOne.x + values[spriteOne.direction] === pacman.x) {
+        return true;
+      }
+    } else if (spriteOne.direction === 'up' || spriteOne.direction === 'down') {
+      if (spriteOne.y + values[spriteOne.direction] === pacman.y) {
+        return true;
+      }
+    }
+  }
+  return (spriteOne.x === pacman.x && spriteOne.y === pacman.y);
 }
 
 const crunchSpriteState = crunchSprite(currentState);

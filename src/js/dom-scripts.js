@@ -1,4 +1,5 @@
 let then, fpsInterval, startTime;
+let count = 0;
 const {crunchState, makeBoardPiece, makeOrange, makePacman, makeRed} = require('./pre-logic');
 let {currentState, lastKeyPressed} = require('./pre-logic');
 
@@ -10,6 +11,7 @@ function startAnimating(fps) {
 }
 
 function buildTheBoard(size, rows, cols) {
+  count += 1;
   const makeColumnForRow = (rowIndex) => Array(cols).fill(0)
   .map((_, columnIndex) => makeBoardPiece(`${rowIndex}x${columnIndex}`, currentState.board.cellSize));
   const matrix = Array(rows).fill(0).map((_, rowIndex) => makeColumnForRow(rowIndex));
@@ -19,7 +21,8 @@ function buildTheBoard(size, rows, cols) {
   matrix[currentState.pacman.y][currentState.pacman.x] = makePacman(currentState.board.cellSize);
   matrix[currentState.red.y][currentState.red.x] = makeRed(currentState.board.cellSize);
   matrix[currentState.orange.y][currentState.orange.x] = makeOrange(currentState.board.cellSize);
-
+  console.log(currentState.red, "it's a RED STATE", count);
+  console.log(currentState.pacman, "pacMAN staTE", count);
   return `
     <div style='max-width: ${(currentState.board.rows * currentState.board.cellSize) + currentState.board.cellSize}em; min-width: ${(currentState.board.rows * currentState.board.cellSize) + currentState.board.cellSize}em'>
     ${matrix.map(it => it.join('')).join('')}
@@ -52,17 +55,21 @@ document.addEventListener('keydown', (e)=> {
   switch(e.keyCode) {
   case 37:
     lastKeyPressed = 'left';
+    currentState.pacman.activeDirection = lastKeyPressed;
     break;
   case 38:
     lastKeyPressed = 'up';
+    currentState.pacman.activeDirection = lastKeyPressed;
     break;
   case 39:
     lastKeyPressed = 'right';
+    currentState.pacman.activeDirection = lastKeyPressed;
     break;
   case 40:
     lastKeyPressed = 'down';
+    currentState.pacman.activeDirection = lastKeyPressed;
     break;
   }
 });
 
-startAnimating(1);
+startAnimating(0.4);

@@ -112,3 +112,13 @@ test('sprites on same square results in collision', () => {
   let collisionState = {...fakeState, collision: true, pacman: {x: 8, y: 7, direction: 'left'}, red: {x: 8, y: 7, direction: 'right'}, orange: {x: 1, y: 6, direction: 'up'}};
   expect(logic.crunchState(fakeState, {input: 'left'})).toEqual(collisionState);
 });
+
+test('ghosts can catch pacman', () => {
+  let fakeState = {...fakeState, collision: false, pacman: {x: 8, y: 7, direction: 'nope', activeDirection: 'left'}, red: {x: 7, y: 7, direction: 'right'}, orange: {x: 1, y: 7, direction: 'up'}};
+  expect(logic.collisionDetection(fakeState.red, fakeState.pacman)).toBe(true);
+});
+
+test('not every movement is a collision', () => {
+  let fakeState = {...fakeState, collision: false, pacman: {x: 3, y: 7, direction: 'nope', activeDirection: 'left'}, red: {x: 7, y: 7, direction: 'right'}, orange: {x: 1, y: 7, direction: 'up'}};
+  expect(logic.collisionDetection(fakeState.red, fakeState.pacman)).toBe(false);
+});
