@@ -1,6 +1,7 @@
 let lastKeyPressed = 'nope';
 
 let currentState = {
+  collision: false,
   board: {
     size: 144,
     rows: 12,
@@ -209,6 +210,10 @@ function crunchSprite(parentState) {
   };
 }
 
+function collisionDetection(spriteOne, spriteTwo) {
+  return spriteOne.x === spriteTwo.x && spriteOne.y === spriteTwo.y;
+}
+
 const crunchSpriteState = crunchSprite(currentState);
 
 module.exports = {
@@ -221,6 +226,7 @@ module.exports = {
   makeBoardPiece: makeBoardPiece,
   isEdge: isEdge,
   lastKeyPressed: lastKeyPressed,
+  collisionDetection,
   makeRed,
   makeOrange,
   makePacman

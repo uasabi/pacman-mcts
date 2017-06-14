@@ -1,5 +1,6 @@
 const logic = require('../src/js/pre-logic.js');
 let fakeState = {
+  collision: false,
   board: {
     size: 144,
     rows: 12,
@@ -56,6 +57,12 @@ let fakeState = {
   }
 };
 
+test('pacman state updates as expected', () => {
+  let fakeState = {...fakeState, pacman: { x: 5, y: 5, direction: 'right'}, red: {x: 9, y: 9, direction: 'right'}, orange: {x: 2, y: 2, direction: 'right'}};
+  let expectedState = {...fakeState, pacman: { x: 6, y: 5, direction: 'right'}, red: {x: 10, y: 9, direction: 'right'}, orange: {x: 3, y: 2, direction: 'right'}};
+  expect(logic.crunchState(fakeState, {input:'right'})).toEqual(expectedState);
+});
+
 test('normal board piece is ok', () => {
   let expected = `
   <div
@@ -87,10 +94,14 @@ test('wall === wall', () => {
 
 test('state crunches', () => {
   let expectedState = {...fakeState, red: {x:8, y:10, direction: 'right'}, orange: {x:1, y:7, direction: 'up'}};
-  expect(logic.crunchState(fakeState, 'nope')).toEqual(expectedState);
+  expect(logic.crunchState(fakeState, {input:'nope'})).toEqual(expectedState);
 });
 
 test('detects when there\s a collision', () => {
-  let fakeState = {...fakeState, pacman: {x:8, y:10, direction: 'left'}, red: {x:9, y:10, direction: 'right'}};
-  expect(logic.collisionDetect(fakeState.pacman, fakeState.red)).toBe(true);
+  let fakeState = {...fakeState, pacman: {x:8, y:10, direction: 'left'}, red: {x:8, y:10, direction: 'right'}};
+  expect(logic.collisionDetection(fakeState.pacman, fakeState.red)).toBe(true);
+});
+
+test('sprites on same square results in collision', () => {
+
 });
