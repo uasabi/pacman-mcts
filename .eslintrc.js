@@ -36,6 +36,13 @@ module.exports = {
                 "after": true
             }
         ],
+        'key-spacing': [
+          'error',
+          { 
+            beforeColon: false,
+            afterColon: true
+          }
+        ],
         "no-unused-vars": 0
     }
 };
