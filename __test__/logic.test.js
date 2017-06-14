@@ -89,3 +89,8 @@ test('state crunches', () => {
   let expectedState = {...fakeState, red: {x:8, y:10, direction: 'right'}, orange: {x:1, y:7, direction: 'up'}};
   expect(logic.crunchState(fakeState, 'nope')).toEqual(expectedState);
 });
+
+test('detects when there\s a collision', () => {
+  let fakeState = {...fakeState, pacman: {x:8, y:10, direction: 'left'}, red: {x:9, y:10, direction: 'right'}};
+  expect(logic.collisionDetect(fakeState.pacman, fakeState.red)).toBe(true);
+});
