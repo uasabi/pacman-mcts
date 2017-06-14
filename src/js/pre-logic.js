@@ -135,7 +135,7 @@ function checkWall(state) {
   return (spriteState) => {
     return state.board.walls.find((element) => {
       return element.x === spriteState.x && element.y === spriteState.y;
-    });
+    }) !== undefined;
   };
 }
 

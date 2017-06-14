@@ -4,37 +4,63 @@ let fakeState = {
     size: 144,
     rows: 12,
     cellSize: 4,
-    boardArr: [],
-    boardObj: {}
+    walls: [
+      {x: 0, y: 0},
+      {x: 1, y: 0},
+      {x: 2, y: 0},
+      {x: 3, y: 0},
+      {x: 8, y: 0},
+      {x: 9, y: 0},
+      {x: 10, y: 0},
+      {x: 11, y: 0},
+      {y: 0, x: 0},
+      {y: 1, x: 0},
+      {y: 2, x: 0},
+      {y: 3, x: 0},
+      {y: 8, x: 0},
+      {y: 9, x: 0},
+      {y: 10, x: 0},
+      {y: 11, x: 0},
+      {x: 0, y: 11},
+      {x: 1, y: 11},
+      {x: 2, y: 11},
+      {x: 3, y: 11},
+      {x: 8, y: 11},
+      {x: 9, y: 11},
+      {x: 10, y: 11},
+      {x: 11, y: 11},
+      {y: 0, x: 11},
+      {y: 1, x: 11},
+      {y: 2, x: 11},
+      {y: 3, x: 11},
+      {y: 8, x: 11},
+      {y: 9, x: 11},
+      {y: 10, x: 11},
+      {y: 11, x: 11}
+    ]
   },
   pacman: {
     x:5,
     y:5,
     direction: 'nope'
+  },
+  red: {
+    x: 7,
+    y: 11,
+    direction: 'right'
+  },
+  orange: {
+    x: 1,
+    y: 8,
+    direction: 'up'
   }
 };
 
-function mockBoardObj(rows,cols,permeableArea) {
-  for (let i = 0; i <= rows; i++) {
-    for (let j = 0; j <= cols; j++) {
-      let newObj = `${i}x${j}`;
-      if ( i === permeableArea || j === permeableArea) {
-        fakeState.board.boardObj[newObj] = {};
-        fakeState.board.boardObj[newObj].permeable = true;
-      } else {
-        fakeState.board.boardObj[newObj] = {};
-        fakeState.board.boardObj[newObj].permeable = false;
-      }
-    }
-  }
-}
-
 test('returns true if at edge', () => {
-  expect(logic.isEdge('down', {x:5, y:12})).toBe(true);
+  expect(logic.isEdge('down', {x:5, y:11})).toBe(true);
 });
 
 test('wall === wall', () => {
-  mockBoardObj(12,12,5);
   let checkIfWall = logic.checkWall(fakeState);
   expect(checkIfWall(fakeState.pacman)).toBe(false);
 });
