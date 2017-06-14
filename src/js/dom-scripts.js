@@ -1,6 +1,6 @@
 let then, fpsInterval, startTime;
-const {crunchState, makeBoardPiece, makeOrange, makePacman, makeRed} = require('./logic');
-let {currentState, lastKeyPressed} = require('./logic');
+const {crunchState, makeBoardPiece, makeOrange, makePacman, makeRed} = require('./pre-logic');
+let {currentState, lastKeyPressed} = require('./pre-logic');
 
 function startAnimating(fps) {
   fpsInterval = 1000 / fps;

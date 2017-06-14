@@ -12,7 +12,7 @@
     "compile:sass": "sass --watch src/_sass:src/css",
     "inline:css": "critical src/indexmin.html --minify --inline --base src/ > dist/index.html",
     "minify:html": "html-minifier --collapse-whitespace --minify-css -o src/indexmin.html src/index.html",
-    "bundle": "browserify src/js/main.js -o dist/js/script.js -t [ babelify --presets [ es2015 ] --plugins [transform-object-rest-spread]]",
+    "bundle": "browserify src/js/main.js -o dist/js/script.js -t [ babelify --presets [ es2015 ] --plugins transform-object-rest-spread]",
     "sync": "node src/index.js & browser-sync start --proxy 'localhost:8080' --files 'src'",
     "src:test": "npm run babel && npm run bundle && npm run sync",
     "lint": "eslint src/js/",
