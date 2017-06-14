@@ -46,7 +46,7 @@ let fakeState = {
   },
   red: {
     x: 7,
-    y: 11,
+    y: 10,
     direction: 'right'
   },
   orange: {
@@ -55,6 +55,26 @@ let fakeState = {
     direction: 'up'
   }
 };
+
+test('normal board piece is ok', () => {
+  let expected = `
+  <div
+    id='01x04'
+    style='box-sizing: border-box; display: inline-block; margin: 0; padding: 0; height: 3em; width: 3em; background-color: black;'
+  >
+  </div>`;
+  expect(logic.makeBoardPiece('01x04', 3)).toEqual(expected);
+});
+
+test('wall piece is ok', () => {
+  let expected = `
+  <div
+    id='11x01'
+    style='box-sizing: border-box; display: inline-block; margin: 0; padding: 0; height: 3em; width: 3em; background-color: blue;'
+  >
+  </div>`;
+  expect(logic.makeBoardPiece('11x01', 3, false)).toEqual(expected);
+});
 
 test('returns true if at edge', () => {
   expect(logic.isEdge('down', {x:5, y:11})).toBe(true);
@@ -65,14 +85,7 @@ test('wall === wall', () => {
   expect(checkIfWall(fakeState.pacman)).toBe(false);
 });
 
-// test('pacman doesn\'t go through walls', () => {
-//   mockBoardObj(12,12,5);
-//   fakeState.pacman = {
-//     x: 1,
-//     y: 12,
-//     direction: 'nope'
-//   };
-//   let checkIfWall = logic.checkWall(fakeState);
-//   let crunchSpriteState = logic.crunchSprite(fakeState);
-//   expect(logic.crunchState(fakeState, 'left')).toBe(fakeState);
-// });
+test('state crunches', () => {
+  let expectedState = {...fakeState, red: {x:8, y:10, direction: 'right'}, orange: {x:1, y:7, direction: 'up'}};
+  expect(logic.crunchState(fakeState, 'nope')).toEqual(expectedState);
+});
