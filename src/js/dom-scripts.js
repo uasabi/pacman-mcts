@@ -21,8 +21,6 @@ function buildTheBoard(size, rows, cols) {
   matrix[currentState.pacman.y][currentState.pacman.x] = makePacman(currentState.board.cellSize);
   matrix[currentState.red.y][currentState.red.x] = makeRed(currentState.board.cellSize);
   matrix[currentState.orange.y][currentState.orange.x] = makeOrange(currentState.board.cellSize);
-  console.log(currentState.red, "it's a RED STATE", count);
-  console.log(currentState.pacman, "pacMAN staTE", count);
   return `
     <div style='max-width: ${(currentState.board.rows * currentState.board.cellSize) + currentState.board.cellSize}em; min-width: ${(currentState.board.rows * currentState.board.cellSize) + currentState.board.cellSize}em'>
     ${matrix.map(it => it.join('')).join('')}
