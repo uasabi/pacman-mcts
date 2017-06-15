@@ -147,19 +147,32 @@ function crunchState(state, action) {
   if (!state.collision) {
     let buildState;
     const pacManInput = action.input === 'nope' ? state.direction : action.input;
-    const spriteArr = [state.pacman, state.red, state.orange];
-    for (let i=0; i <= spriteArr.length; i++) {
-      let thisSprite = i === 1 ? 'red' : 'orange';
-      let spriteDirection = i === 0 ? pacManInput : spriteArr[i].direction;
-      let newState = crunchSpriteState(spriteArr[i], spriteDirection);
-      let isAWall = checkIfWall(newState);
-      if (isAWall) {
-        let aNewDirection = pickRanDir();
-        buildState += i === 0 ? state : {...buildState, thisSprite: {...thisSprite, direction: aNewDirection}};
-      } else {
-        buildState += i === 0 ? {...state, pacman: newState} : {...buildState, thisSprite: newState};
-      }
+    let newPacmanState = crunchSpriteState(state.pacman, pacManInput);
+    let isAWall = checkIfWall(newPacmanState);
+    if (isAWall) {
+      buildState = state;
+    } else {
+      buildState = {...state, pacman: newPacmanState};
     }
+
+    let newGhostState = crunchSpriteState(state.red, state.red.direction);
+    isAWall = checkIfWall(newGhostState);
+    if (isAWall) {
+      let aNewDirection = pickRanDir();
+      buildState = {...buildState, red: {...buildState.red, direction: aNewDirection}};
+    } else {
+      buildState = {...buildState, red: newGhostState};
+    }
+
+    newGhostState = crunchSpriteState(state.orange, state.orange.direction);
+    isAWall = checkIfWall(newGhostState);
+    if (isAWall) {
+      let aNewDirection = pickRanDir();
+      buildState = {...buildState, orange: {...buildState.orange, direction: aNewDirection}};
+    } else {
+      buildState = {...buildState, orange: newGhostState};
+    }
+
     const orangeCollision = collisionDetection(buildState.orange, buildState.pacman);
     const redCollision = collisionDetection(buildState.red, buildState.pacman);
     if (orangeCollision || redCollision) {
