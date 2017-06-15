@@ -53,19 +53,15 @@ document.addEventListener('keydown', (e)=> {
   switch(e.keyCode) {
   case 37:
     lastKeyPressed = 'left';
-    currentState.pacman.activeDirection = lastKeyPressed;
     break;
   case 38:
     lastKeyPressed = 'up';
-    currentState.pacman.activeDirection = lastKeyPressed;
     break;
   case 39:
     lastKeyPressed = 'right';
-    currentState.pacman.activeDirection = lastKeyPressed;
     break;
   case 40:
     lastKeyPressed = 'down';
-    currentState.pacman.activeDirection = lastKeyPressed;
     break;
   }
 });

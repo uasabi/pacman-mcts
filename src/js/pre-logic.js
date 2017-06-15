@@ -146,6 +146,7 @@ const checkIfWall = checkWall(currentState);
 function crunchState(state, action) {
   if (!state.collision) {
     let buildState;
+    currentState.pacman.activeDirection = action.input;
     const pacManInput = action.input === 'nope' ? state.direction : action.input;
     let newPacmanState = crunchSpriteState(state.pacman, pacManInput);
     let isAWall = checkIfWall(newPacmanState);
@@ -230,13 +231,9 @@ function collisionDetection(spriteOne, pacman) {
   const values = {'left': -1, 'right': 1, 'up': -1, 'down': 1};
   if (opposites[spriteOne.direction] === pacman.activeDirection) {
     if (spriteOne.direction === 'left' || spriteOne.direction === 'right') {
-      if (spriteOne.x + values[spriteOne.direction] === pacman.x) {
-        return true;
-      }
+      return spriteOne.x + values[spriteOne.direction] === pacman.x;
     } else if (spriteOne.direction === 'up' || spriteOne.direction === 'down') {
-      if (spriteOne.y + values[spriteOne.direction] === pacman.y) {
-        return true;
-      }
+      return spriteOne.y + values[spriteOne.direction] === pacman.y;
     }
   }
   return (spriteOne.x === pacman.x && spriteOne.y === pacman.y);
