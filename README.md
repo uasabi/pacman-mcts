@@ -1,5 +1,5 @@
 # Monte Carlo Tree Search Pacman Game
-
+[![Build Status](https://travis-ci.org/uasabi/pacman-mcts.svg?branch=master)](https://travis-ci.org/uasabi/pacman-mcts)
 ## Running the app
 Run `yarn install` to install node modules, and then `yarn run build` to build the `dist/` directory and `yarn run start` or `yarn run sync` to run directly from the `src/` directory.
 
