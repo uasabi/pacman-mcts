@@ -1,6 +1,7 @@
 let then, fpsInterval, startTime;
-const {crunchState, makeBoardPiece, makeOrange, makePacman, makeRed} = require('./logic');
-let {currentState, lastKeyPressed} = require('./logic');
+let count = 0;
+const {crunchState, makeBoardPiece, makeOrange, makePacman, makeRed} = require('./pre-logic');
+let {currentState, lastKeyPressed} = require('./pre-logic');
 
 function startAnimating(fps) {
   fpsInterval = 1000 / fps;
@@ -10,6 +11,7 @@ function startAnimating(fps) {
 }
 
 function buildTheBoard(size, rows, cols) {
+  count += 1;
   const makeColumnForRow = (rowIndex) => Array(cols).fill(0)
   .map((_, columnIndex) => makeBoardPiece(`${rowIndex}x${columnIndex}`, currentState.board.cellSize));
   const matrix = Array(rows).fill(0).map((_, rowIndex) => makeColumnForRow(rowIndex));
@@ -19,7 +21,6 @@ function buildTheBoard(size, rows, cols) {
   matrix[currentState.pacman.y][currentState.pacman.x] = makePacman(currentState.board.cellSize);
   matrix[currentState.red.y][currentState.red.x] = makeRed(currentState.board.cellSize);
   matrix[currentState.orange.y][currentState.orange.x] = makeOrange(currentState.board.cellSize);
-
   return `
     <div style='max-width: ${(currentState.board.rows * currentState.board.cellSize) + currentState.board.cellSize}em; min-width: ${(currentState.board.rows * currentState.board.cellSize) + currentState.board.cellSize}em'>
     ${matrix.map(it => it.join('')).join('')}
@@ -65,4 +66,4 @@ document.addEventListener('keydown', (e)=> {
   }
 });
 
-startAnimating(1);
+startAnimating(0.4);

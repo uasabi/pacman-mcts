@@ -2,7 +2,8 @@ module.exports = {
     "env": {
         "browser": true,
         "es6": true,
-        "node": true
+        "node": true,
+        "jest": true
     },
     "extends": "eslint:recommended",
     "parserOptions": {
@@ -34,6 +35,13 @@ module.exports = {
                 "before": false,
                 "after": true
             }
+        ],
+        'key-spacing': [
+          'error',
+          { 
+            beforeColon: false,
+            afterColon: true
+          }
         ],
         "no-unused-vars": 0
     }
