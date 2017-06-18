@@ -225,6 +225,10 @@ function collisionDetection(spriteOne, pacman) {
 
 const crunchSpriteState = crunchSprite(currentState);
 
+function stateGen() {
+  return [{}, {}, {}];
+}
+
 module.exports = {
   crunchSpriteState: crunchSpriteState,
   currentState: currentState,
@@ -238,5 +242,6 @@ module.exports = {
   collisionDetection,
   makeRed,
   makeOrange,
-  makePacman
+  makePacman,
+  stateGen
 };
