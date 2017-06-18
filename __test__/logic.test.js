@@ -122,3 +122,26 @@ test('not every movement is a collision', () => {
   let fakeState = {...fakeState, collision: false, pacman: {x: 3, y: 7, direction: 'nope', activeDirection: 'left'}, red: {x: 7, y: 7, direction: 'right'}, orange: {x: 1, y: 7, direction: 'up'}};
   expect(logic.collisionDetection(fakeState.red, fakeState.pacman)).toBe(false);
 });
+
+test('create possible states for red and orange based on pacman', () => {
+  let fakeState = {
+    pacman: {
+      x: 5,
+      y: 6,
+      direction: 'nope',
+      activeDirection: 'up'
+    },
+    orange: {
+      x: 3,
+      y: 4,
+      direction: 'right'
+    }
+    red: {
+      x: 3,
+      y: 9,
+      direction: 'left'
+    }
+  };
+  let expected = [{},{},{}];
+  expect(logic.stateGen(fakeState)).toEqual(expected);
+});
