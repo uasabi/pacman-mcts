@@ -92,16 +92,6 @@ test('wall === wall', () => {
   expect(checkIfWall(fakeState.pacman)).toBe(false);
 });
 
-test('state crunches', () => {
-  let expectedState = {...fakeState, red: {x: 8, y: 10, direction: 'right'}, orange: {x: 1, y: 7, direction: 'up'}};
-  expect(logic.crunchState(fakeState, {input: 'nope'})).toEqual(expectedState);
-});
-
-test('detects when there\s a collision', () => {
-  let fakeState = {...fakeState, pacman: {x: 8, y: 10, direction: 'left'}, red: {x: 8, y: 10, direction: 'right'}};
-  expect(logic.collisionDetection(fakeState.pacman, fakeState.red)).toBe(true);
-});
-
 test('if collision is true expect input === ouput', () => {
   let fakeState = {...fakeState, collision: true, pacman: {x: 8, y: 10, direction: 'left'}, red: {x: 8, y: 10, direction: 'right'}};
   expect(logic.crunchState(fakeState, {input: 'nope'})).toEqual(fakeState);
@@ -121,27 +111,4 @@ test('ghosts can catch pacman', () => {
 test('not every movement is a collision', () => {
   let fakeState = {...fakeState, collision: false, pacman: {x: 3, y: 7, direction: 'nope', activeDirection: 'left'}, red: {x: 7, y: 7, direction: 'right'}, orange: {x: 1, y: 7, direction: 'up'}};
   expect(logic.collisionDetection(fakeState.red, fakeState.pacman)).toBe(false);
-});
-
-test('create possible states for red and orange based on pacman', () => {
-  let fakeState = {
-    pacman: {
-      x: 5,
-      y: 6,
-      direction: 'nope',
-      activeDirection: 'up'
-    },
-    orange: {
-      x: 3,
-      y: 4,
-      direction: 'right'
-    },
-    red: {
-      x: 3,
-      y: 9,
-      direction: 'left'
-    }
-  };
-  let expected = [{}, {}, {}];
-  expect(logic.stateGen(fakeState)).toEqual(expected);
 });
