@@ -135,13 +135,13 @@ test('create possible states for red and orange based on pacman', () => {
       x: 3,
       y: 4,
       direction: 'right'
-    }
+    },
     red: {
       x: 3,
       y: 9,
       direction: 'left'
     }
   };
-  let expected = [{},{},{}];
+  let expected = [{}, {}, {}];
   expect(logic.stateGen(fakeState)).toEqual(expected);
 });
