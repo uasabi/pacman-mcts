@@ -244,5 +244,4 @@ module.exports = {
   makeRed,
   makeOrange,
   makePacman,
-  stateGen
 };
