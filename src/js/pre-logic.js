@@ -226,7 +226,7 @@ function collisionDetection(spriteOne, pacman) {
 const crunchSpriteState = crunchSprite(currentState);
 
 function stateGen(state) {
-  return [{}, {}, {}];
+  return [{a: 3}, {a: 6}, { a: 7}];
 }
 
 module.exports = {
