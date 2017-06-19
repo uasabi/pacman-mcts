@@ -66,29 +66,13 @@ const edges = {
   down: currentState.board.rows - 1
 };
 
-const BoardClass = class {
-  constructor(domElement, isWall, theId) {
-    this.physicalEntity = domElement;
-    this.id = theId;
-    this.permeable = isWall;
-  }
-};
-
-const isEdge = function(direction, state) {
+function isEdge(direction, state) {
   if (direction === 'left' || direction === 'right') {
-    if (edges[direction] === state.x) {
-      return true;
-    } else {
-      return false;
-    }
-  } else if (direction === 'up' || direction === 'down') {
-    if (edges[direction] === state.y) {
-      return true;
-    } else {
-      return false;
-    }
+    return edges[direction] === state.x;
+  } else {
+    return edges[direction] === state.y;
   }
-};
+}
 
 function makeBoardPiece(id, cellsize, isPermeable = true) {
   const backgroundColor = isPermeable ? 'black' : 'blue';
@@ -259,5 +243,6 @@ module.exports = {
   collisionDetection,
   makeRed,
   makeOrange,
-  makePacman
+  makePacman,
+  stateGen
 };
