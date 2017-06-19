@@ -242,12 +242,7 @@ function collisionDetection(spriteOne, pacman) {
 const crunchSpriteState = crunchSprite(currentState);
 
 function stateGen(state) {
-  let count = 1;
-  let stateArr = [];
-  while (count < 3) {
-    stateArr.push({});
-  }
-  return stateArr;
+  return [{}, {}, {}];
 }
 
 module.exports = {
