@@ -87,5 +87,9 @@ test('create unique possible states for red and orange based on pacman', () => {
     }
   };
   let expected = logic.stateGen(fakeState);
-  expect(expected[0]).not.toEqual(expected[1]||expected[2]);
+  if (expected[1] !== expected[2]) {
+    expect(expected[0]).not.toEqual(expected[1]||expected[2]);
+  } else {
+    expect(expected[1]).not.toEqual(expected[2]);
+  }
 });
