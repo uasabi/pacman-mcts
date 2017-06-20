@@ -247,8 +247,26 @@ function directionArr() {
   return dirArr;
 }
 
-function stateGen() {
-  return [{}, {}, {}];
+function stateGen(state) {
+  let possibleDirs = directionGen();
+  let multiStates = [];
+  while (multiStates.length < 3) {
+    let pacman, red, orange;
+    for (let i = 0; i < possibleDirs.length; i++) {
+      for (let j = 0; j < possibleDirs[i].length; j++) {
+        if (j === 0) {
+          pacman = crunchSprite(state.pacman, possibleDirs[i][j]);
+        } else if (j === 1) {
+          red = crunchSprite(state.red, possibleDirs[i][j]);
+        } else {
+          orange = crunchSprite(state.orange, possibleDirs[i][j]);
+        }
+      }
+      let newState = {...state, pacman, orange, red};
+      multiStates.push(newState);
+    }
+  }
+  return multiStates;
 }
 
 module.exports = {
