@@ -255,13 +255,11 @@ function stateGen(state) {
   while (multiStates.length < 3) {
     let pacman, red, orange;
     for (let i = 0; i < possibleDirs.length; i++) {
-      let newState = crunchState(state, {input:
-        {
-          pacman: possibleDirs[i][0],
-          red: possibleDirs[i][1],
-          orange: possibleDirs[i][2]
-        }
-      });
+      let newState = crunchState(state, {input: {
+        pacman: possibleDirs[i][0],
+        red: possibleDirs[i][1],
+        orange: possibleDirs[i][2]
+      }});
       multiStates.push(newState);
     }
   }
