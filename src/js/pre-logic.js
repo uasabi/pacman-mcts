@@ -131,7 +131,9 @@ function crunchState(state, action) {
   if (!state.collision) {
     let buildState;
     currentState.pacman.activeDirection = action.input;
-    const pacManInput = action.input === 'nope' ? state.direction : action.input;
+    const pacManInput = action.input.pacman === 'nope' ? state.pacman.direction : action.input.pacman;
+    const redInput = action.input.red === 'nope' ? state.red.direction : action.input.red;
+    const orangeInput = action.input.orange === 'nope' ? state.orange.direction : action.input.orange;
     let newPacmanState = crunchSpriteState(state.pacman, pacManInput);
     let isAWall = checkIfWall(newPacmanState);
     if (isAWall) {
@@ -140,7 +142,7 @@ function crunchState(state, action) {
       buildState = {...state, pacman: newPacmanState};
     }
 
-    let newGhostState = crunchSpriteState(state.red, state.red.direction);
+    let newGhostState = crunchSpriteState(state.red, redInput);
     isAWall = checkIfWall(newGhostState);
     if (isAWall) {
       let aNewDirection = pickRanDir();
@@ -149,7 +151,7 @@ function crunchState(state, action) {
       buildState = {...buildState, red: newGhostState};
     }
 
-    newGhostState = crunchSpriteState(state.orange, state.orange.direction);
+    newGhostState = crunchSpriteState(state.orange, orangeInput);
     isAWall = checkIfWall(newGhostState);
     if (isAWall) {
       let aNewDirection = pickRanDir();
