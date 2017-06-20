@@ -67,8 +67,17 @@ test('detects when there\s a collision', () => {
   expect(logic.collisionDetection(fakeState.pacman, fakeState.red)).toBe(true);
 });
 
-test('create unique possible states for red and orange based on pacman', () => {
-  let fakeState = {
+test('create unique possible sets of directions', () => {
+  let expected = logic.directionGen();
+  if (expected[1] !== expected[2]) {
+    expect(expected[0]).not.toEqual(expected[1]||expected[2]);
+  } else {
+    expect(expected[1]).not.toEqual(expected[2]);
+  }
+});
+
+test('use the directios to generate states', () => {
+  fakeState = {
     pacman: {
       x: 5,
       y: 6,
@@ -87,9 +96,5 @@ test('create unique possible states for red and orange based on pacman', () => {
     }
   };
   let expected = logic.stateGen(fakeState);
-  if (expected[1] !== expected[2]) {
-    expect(expected[0]).not.toEqual(expected[1]||expected[2]);
-  } else {
-    expect(expected[1]).not.toEqual(expected[2]);
-  }
+  expect(expected).toHaveLength(3);
 });

@@ -225,7 +225,7 @@ function collisionDetection(spriteOne, pacman) {
 
 const crunchSpriteState = crunchSprite(currentState);
 
-function stateGen(state) {
+function directionGen() {
   let stateArr = [];
   while (stateArr.length < 3) {
     let nextDir = directionArr();
@@ -247,6 +247,10 @@ function directionArr() {
   return dirArr;
 }
 
+function stateGen() {
+  return [{}, {}, {}];
+}
+
 module.exports = {
   crunchSpriteState: crunchSpriteState,
   currentState: currentState,
@@ -258,6 +262,7 @@ module.exports = {
   isEdge: isEdge,
   lastKeyPressed: lastKeyPressed,
   stateGen,
+  directionGen,
   collisionDetection,
   makeRed,
   makeOrange,
