@@ -231,10 +231,19 @@ function directionGen() {
   let stateArr = [];
   while (stateArr.length < 3) {
     let nextDir = directionArr();
-    if (stateArr.indexOf(nextDir) === -1) {
+    if (stateArr.length === 0) {
       stateArr.push(nextDir);
+    } else {
+      let checkArr = stateArr.map((a) => {
+        return a.join('');
+      });
+      let nextDirJoined = nextDir.join('');
+      if (checkArr.indexOf(nextDirJoined) === -1) {
+        stateArr.push(nextDir);
+      }
     }
   }
+  // return array of unique direction sets
   return stateArr;
 }
 
