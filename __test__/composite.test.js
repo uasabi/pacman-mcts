@@ -128,3 +128,37 @@ test('generate tree with first layer as states and next layer as newly generated
   let nextLayer = Object.keys(expected[firstLayer[0]]);
   expect(firstLayer.length).toEqual(nextLayer.length - 1);
 });
+
+test('deepen tree created to number of layers "n"', () => {
+  let tree = {
+    '0': {
+      '0': { state:
+        { pacman: { x: 5, y: 4, direction: 'nope', activeDirection: 'up' }, orange: { x: 4, y: 5, direction: 'right' }, red: { x: 3, y: 9, direction: 'left' } } },
+      '1': { state:
+        { pacman: { x: 5, y: 6, direction: 'nope', activeDirection: 'up' }, orange: { x: 4, y: 5, direction: 'right' }, red: { x: 4, y: 8, direction: 'left' } } },
+      '2': { state:
+        { pacman: { x: 5, y: 4, direction: 'nope', activeDirection: 'up' }, orange: { x: 2, y: 5, direction: 'right' }, red: { x: 4, y: 10, direction: 'left' } } },
+      state: { pacman: { x: 5, y: 5, direction: 'nope', activeDirection: 'up' }, orange: { x: 4, y: 4, direction: 'right' }, red: { x: 3, y: 10, direction: 'left' } } },
+    '1': {
+      '0': { state:
+        { pacman: { x: 5, y: 6, direction: 'nope', activeDirection: 'up' }, orange: { x: 4, y: 3, direction: 'right' }, red: { x: 1, y: 9, direction: 'left' } } },
+      '1': { state:
+        { pacman: { x: 4, y: 5, direction: 'nope', activeDirection: 'up' }, orange: { x: 5, y: 4, direction: 'right' }, red: { x: 2, y: 10, direction: 'left' } } },
+      '2': { state:
+        { pacman: { x: 5, y: 4, direction: 'nope', activeDirection: 'up' }, orange: { x: 3, y: 4, direction: 'right' }, red: { x: 3, y: 9, direction: 'left' } } },
+      state: { pacman: { x: 5, y: 5, direction: 'nope', activeDirection: 'up' }, orange: { x: 4, y: 4, direction: 'right' }, red: { x: 2, y: 9, direction: 'left' } } },
+    '2': {
+      '0': { state:
+        { pacman: { x: 5, y: 6, direction: 'nope', activeDirection: 'up' }, orange: { x: 3, y: 4, direction: 'right' }, red: { x: 5, y: 9, direction: 'left' } } },
+      '1': { state:
+        { pacman: { x: 6, y: 7, direction: 'nope', activeDirection: 'up' }, orange: { x: 3, y: 2, direction: 'right' }, red: { x: 3, y: 9, direction: 'left' } } },
+      '2': { state: { pacman: { x: 5, y: 8, direction: 'nope', activeDirection: 'up' }, orange: { x: 2, y: 3, direction: 'right' }, red: { x: 4, y: 8, direction: 'left' } } },
+      state: { pacman: { x: 5, y: 7, direction: 'nope', activeDirection: 'up' }, orange: { x: 3, y: 3, direction: 'right' }, red: { x: 4, y: 9, direction: 'left' } } }
+  };
+  let n = 4;
+  let expected = logic.deepenTree(tree, n);
+  let numOfLayers = logic.recursiveKeys(tree);
+  let missingLayers = n - numOfLayers;
+  let newLayers = logic.recursiveKeys(expected);
+  expect(expected).toEqual(numOfLayers + missingLayers);
+});

@@ -291,6 +291,22 @@ function createTree(arr) {
   return treeObj;
 }
 
+function deepenTree(tree, n) {
+  let treeKeys = recursiveKeys(tree);
+  let addition = n - treeKeys;
+  return treeKeys + addition;
+}
+
+function recursiveKeys(obj, keys=Object.keys(obj), layer=0) {
+  if (keys[0] !== 'pacman') {
+    for (let i = 0; i < keys.length; i++) {
+      let newKeys = Object.keys(obj[keys[i]]);
+      recursiveKeys(obj[i], newKeys, layer+=1);
+    }
+  }
+  return layer - 1;
+}
+
 module.exports = {
   crunchSpriteState: crunchSpriteState,
   currentState: currentState,
@@ -307,5 +323,7 @@ module.exports = {
   makeRed,
   makeOrange,
   makePacman,
-  createTree
+  createTree,
+  deepenTree,
+  recursiveKeys
 };
