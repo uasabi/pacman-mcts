@@ -275,6 +275,22 @@ function stateGen(state) {
   return multiStates;
 }
 
+function createTree(arr) {
+  let treeObj = {};
+  for (let i = 0; i < arr.length; i++) {
+    treeObj[i] = {};
+    treeObj[i].state = arr[i];
+    let newStatePossibilities = stateGen(arr[i]);
+    treeObj[i][0]= {};
+    treeObj[i][0].state = newStatePossibilities[0];
+    treeObj[i][1]= {};
+    treeObj[i][1].state = newStatePossibilities[1];
+    treeObj[i][2]= {};
+    treeObj[i][2].state = newStatePossibilities[2];
+  }
+  return treeObj;
+}
+
 module.exports = {
   crunchSpriteState: crunchSpriteState,
   currentState: currentState,
@@ -291,4 +307,5 @@ module.exports = {
   makeRed,
   makeOrange,
   makePacman,
+  createTree
 };
