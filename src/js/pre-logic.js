@@ -66,29 +66,13 @@ const edges = {
   down: currentState.board.rows - 1
 };
 
-const BoardClass = class {
-  constructor(domElement, isWall, theId) {
-    this.physicalEntity = domElement;
-    this.id = theId;
-    this.permeable = isWall;
-  }
-};
-
-const isEdge = function(direction, state) {
+function isEdge(direction, state) {
   if (direction === 'left' || direction === 'right') {
-    if (edges[direction] === state.x) {
-      return true;
-    } else {
-      return false;
-    }
-  } else if (direction === 'up' || direction === 'down') {
-    if (edges[direction] === state.y) {
-      return true;
-    } else {
-      return false;
-    }
+    return edges[direction] === state.x;
+  } else {
+    return edges[direction] === state.y;
   }
-};
+}
 
 function makeBoardPiece(id, cellsize, isPermeable = true) {
   const backgroundColor = isPermeable ? 'black' : 'blue';
@@ -147,7 +131,9 @@ function crunchState(state, action) {
   if (!state.collision) {
     let buildState;
     currentState.pacman.activeDirection = action.input;
-    const pacManInput = action.input === 'nope' ? state.direction : action.input;
+    const pacManInput = action.input.pacman === 'nope' ? state.pacman.direction : action.input.pacman;
+    const redInput = action.input.red === 'nope' ? state.red.direction : action.input.red;
+    const orangeInput = action.input.orange === 'nope' ? state.orange.direction : action.input.orange;
     let newPacmanState = crunchSpriteState(state.pacman, pacManInput);
     let isAWall = checkIfWall(newPacmanState);
     if (isAWall) {
@@ -156,7 +142,7 @@ function crunchState(state, action) {
       buildState = {...state, pacman: newPacmanState};
     }
 
-    let newGhostState = crunchSpriteState(state.red, state.red.direction);
+    let newGhostState = crunchSpriteState(state.red, redInput);
     isAWall = checkIfWall(newGhostState);
     if (isAWall) {
       let aNewDirection = pickRanDir();
@@ -165,7 +151,7 @@ function crunchState(state, action) {
       buildState = {...buildState, red: newGhostState};
     }
 
-    newGhostState = crunchSpriteState(state.orange, state.orange.direction);
+    newGhostState = crunchSpriteState(state.orange, orangeInput);
     isAWall = checkIfWall(newGhostState);
     if (isAWall) {
       let aNewDirection = pickRanDir();
@@ -241,6 +227,54 @@ function collisionDetection(spriteOne, pacman) {
 
 const crunchSpriteState = crunchSprite(currentState);
 
+function directionGen() {
+  let stateArr = [];
+  while (stateArr.length < 3) {
+    let nextDir = directionArr();
+    if (stateArr.length === 0) {
+      stateArr.push(nextDir);
+    } else {
+      let checkArr = stateArr.map((a) => {
+        return a.join('');
+      });
+      let nextDirJoined = nextDir.join('');
+      if (checkArr.indexOf(nextDirJoined) === -1) {
+        stateArr.push(nextDir);
+      }
+    }
+  }
+  // return array of unique direction sets
+  return stateArr;
+}
+
+function directionArr() {
+  let directions = ['up', 'down', 'right', 'left'];
+  let dirArr = [];
+  while (dirArr.length < 3) {
+    let ranNum = Math.floor(Math.random() * directions.length);
+    dirArr.push(directions[ranNum]);
+    directions.splice(ranNum, 1);
+  }
+  return dirArr;
+}
+
+function stateGen(state) {
+  let possibleDirs = directionGen();
+  let multiStates = [];
+  while (multiStates.length < 3) {
+    let pacman, red, orange;
+    for (let i = 0; i < possibleDirs.length; i++) {
+      let newState = crunchState(state, {input: {
+        pacman: possibleDirs[i][0],
+        red: possibleDirs[i][1],
+        orange: possibleDirs[i][2]
+      }});
+      multiStates.push(newState);
+    }
+  }
+  return multiStates;
+}
+
 module.exports = {
   crunchSpriteState: crunchSpriteState,
   currentState: currentState,
@@ -251,8 +285,10 @@ module.exports = {
   makeBoardPiece: makeBoardPiece,
   isEdge: isEdge,
   lastKeyPressed: lastKeyPressed,
+  stateGen,
+  directionGen,
   collisionDetection,
   makeRed,
   makeOrange,
-  makePacman
+  makePacman,
 };

@@ -43,7 +43,11 @@ function mainLoop() {
   let elapsed = now - then;
   if (elapsed > fpsInterval) {
     then = now - (elapsed % fpsInterval);
-    currentState =  crunchState(currentState, {type: 'Tick', deltaInMilliseconds: then, input: lastKeyPressed}) || currentState;
+    currentState =  crunchState(currentState, {type: 'Tick', deltaInMilliseconds: then, input: {
+      pacman: lastKeyPressed,
+      red: 'nope',
+      orange: 'nope'
+    }}) || currentState;
     renderBoard(currentState);
   }
 }
