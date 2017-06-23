@@ -101,28 +101,28 @@ test('use the directions to generate states', () => {
 
 test('generate an object with states as values', () => {
   let stateArr = [ { pacman: { x: 5, y: 7, direction: 'nope', activeDirection: 'up' },
-          orange: { x: 3, y: 3, direction: 'right' },
-          red: { x: 4, y: 9, direction: 'left' } },
-        { pacman: { x: 4, y: 6, direction: 'nope', activeDirection: 'up' },
-          orange: { x: 3, y: 3, direction: 'right' },
-          red: { x: 4, y: 9, direction: 'left' } },
-        { pacman: { x: 5, y: 7, direction: 'nope', activeDirection: 'up' },
-          orange: { x: 3, y: 3, direction: 'right' },
-          red: { x: 2, y: 9, direction: 'left' } } ];
+    orange: { x: 3, y: 3, direction: 'right' },
+    red: { x: 4, y: 9, direction: 'left' } },
+  { pacman: { x: 4, y: 6, direction: 'nope', activeDirection: 'up' },
+    orange: { x: 3, y: 3, direction: 'right' },
+    red: { x: 4, y: 9, direction: 'left' } },
+  { pacman: { x: 5, y: 7, direction: 'nope', activeDirection: 'up' },
+    orange: { x: 3, y: 3, direction: 'right' },
+    red: { x: 2, y: 9, direction: 'left' } } ];
   let expected = logic.createTree(stateArr);
   expect(expected[0].state).toMatchObject(stateArr[0]);
 });
 
 test('generate tree with first layer as states and next layer as newly generated states', () => {
   let stateArr = [ { pacman: { x: 5, y: 7, direction: 'nope', activeDirection: 'up' },
-          orange: { x: 3, y: 3, direction: 'right' },
-          red: { x: 4, y: 9, direction: 'left' } },
-        { pacman: { x: 4, y: 6, direction: 'nope', activeDirection: 'up' },
-          orange: { x: 3, y: 3, direction: 'right' },
-          red: { x: 4, y: 9, direction: 'left' } },
-        { pacman: { x: 5, y: 7, direction: 'nope', activeDirection: 'up' },
-          orange: { x: 3, y: 3, direction: 'right' },
-          red: { x: 2, y: 9, direction: 'left' } } ];
+    orange: { x: 3, y: 3, direction: 'right' },
+    red: { x: 4, y: 9, direction: 'left' } },
+  { pacman: { x: 4, y: 6, direction: 'nope', activeDirection: 'up' },
+    orange: { x: 3, y: 3, direction: 'right' },
+    red: { x: 4, y: 9, direction: 'left' } },
+  { pacman: { x: 5, y: 7, direction: 'nope', activeDirection: 'up' },
+    orange: { x: 3, y: 3, direction: 'right' },
+    red: { x: 2, y: 9, direction: 'left' } } ];
   let expected = logic.createTree(stateArr);
   let firstLayer = Object.keys(expected);
   let nextLayer = Object.keys(expected[firstLayer[0]]);
