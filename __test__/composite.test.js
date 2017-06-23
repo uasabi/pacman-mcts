@@ -76,7 +76,7 @@ test('create unique possible sets of directions', () => {
   }
 });
 
-test('use the directios to generate states', () => {
+test('use the directions to generate states', () => {
   fakeState = {
     pacman: {
       x: 5,
@@ -97,4 +97,8 @@ test('use the directios to generate states', () => {
   };
   let expected = logic.stateGen(fakeState);
   expect(expected).toHaveLength(3);
+});
+
+test('generate an object with states as values', () => {
+  
 });
