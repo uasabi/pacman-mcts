@@ -275,7 +275,7 @@ function stateGen(state) {
   return multiStates;
 }
 
-function createTree(arr) {
+function createTree(arr, n) {
   let treeObj = {};
   for (let i = 0; i < arr.length; i++) {
     treeObj[i] = {};
@@ -287,12 +287,6 @@ function createTree(arr) {
     }
   }
   return treeObj;
-}
-
-function deepenTree(tree, n) {
-  let treeKeys = recursiveKeys(tree);
-  let addition = n - treeKeys;
-  return treeKeys + addition;
 }
 
 function recursiveKeys(obj, keys=Object.keys(obj), layer=0) {
@@ -322,6 +316,5 @@ module.exports = {
   makeOrange,
   makePacman,
   createTree,
-  deepenTree,
   recursiveKeys
 };
