@@ -281,12 +281,10 @@ function createTree(arr) {
     treeObj[i] = {};
     treeObj[i].state = arr[i];
     let newStatePossibilities = stateGen(arr[i]);
-    treeObj[i][0]= {};
-    treeObj[i][0].state = newStatePossibilities[0];
-    treeObj[i][1]= {};
-    treeObj[i][1].state = newStatePossibilities[1];
-    treeObj[i][2]= {};
-    treeObj[i][2].state = newStatePossibilities[2];
+    for (let j = 0; j < 3; j++) {
+      treeObj[i][j]= {};
+      treeObj[i][j].state = newStatePossibilities[j];
+    }
   }
   return treeObj;
 }
