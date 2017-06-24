@@ -1,5 +1,6 @@
-const logic = require('../src/js/pre-logic');
-let mockState = {
+import * as logic from '../src/js/pre-logic';
+
+const mockState = {
   collision: false,
   board: {
     size: 144,
@@ -12,66 +13,43 @@ let mockState = {
       {x: 3, y: 0},
       {x: 8, y: 0},
       {x: 9, y: 0},
-      {x: 10, y: 0},
-      {x: 11, y: 0},
-      {y: 0, x: 0},
-      {y: 1, x: 0},
-      {y: 2, x: 0},
-      {y: 3, x: 0},
-      {y: 8, x: 0},
-      {y: 9, x: 0},
-      {y: 10, x: 0},
-      {y: 11, x: 0},
-      {x: 0, y: 11},
-      {x: 1, y: 11},
-      {x: 2, y: 11},
-      {x: 3, y: 11},
-      {x: 8, y: 11},
-      {x: 9, y: 11},
-      {x: 10, y: 11},
-      {x: 11, y: 11},
-      {y: 0, x: 11},
-      {y: 1, x: 11},
-      {y: 2, x: 11},
-      {y: 3, x: 11},
-      {y: 8, x: 11},
-      {y: 9, x: 11},
-      {y: 10, x: 11},
-      {y: 11, x: 11}
     ]
   },
-  pacman: {
-    x: 5,
-    y: 5,
-    direction: 'nope'
-  },
-  red: {
-    x: 7,
-    y: 10,
-    direction: 'right'
-  },
-  orange: {
-    x: 1,
-    y: 8,
-    direction: 'up'
-  }
+  pacman: {x: 5, y: 5, direction: logic.RIGHT},
+  red: {x: 7, y: 10, direction: logic.RIGHT},
+  orange: {x: 1, y: 8, direction: logic.UP}
 };
 
-test('pacman state updates as expected', () => {
-  let fakeState = {...mockState, pacman: { x: 5, y: 5, direction: 'right'}, red: {x: 9, y: 9, direction: 'right'}, orange: {x: 2, y: 2, direction: 'right'}};
-  let expectedState = {...mockState, pacman: { x: 6, y: 5, direction: 'right'}, red: {x: 10, y: 9, direction: 'right'}, orange: {x: 3, y: 2, direction: 'right'}};
-  expect(logic.crunchState(fakeState, {input: {pacman: 'right', red: 'nope', orange: 'nope'}})).toEqual(expectedState);
+test('state updates as expected', () => {
+  expect(logic.crunchState(mockState, {input: {pacman: logic.RIGHT, red: logic.NONE, orange: logic.NONE}})).toEqual({
+    board: mockState.board,
+    collision: false,
+    pacman: {x: 6, y: 5, direction: logic.RIGHT},
+    red: {x: 8, y: 10, direction: logic.RIGHT},
+    orange: {x: 1, y: 9, direction: logic.UP},
+  });
 });
 
 test('if collision is true expect input === ouput', () => {
-  let fakeState = {...fakeState, collision: true, pacman: {x: 8, y: 10, direction: 'left'}, red: {x: 8, y: 10, direction: 'right'}};
-  expect(logic.crunchState(fakeState, {input: {pacman: 'nope', red: 'nope', orange: 'nope'}})).toEqual(fakeState);
+  const currentState = {...mockState, collision: true};
+  expect(logic.crunchState(currentState, {input: {pacman: logic.NONE, red: logic.NONE, orange: logic.NONE}})).toEqual(currentState);
 });
 
 test('sprites on same square results in collision', () => {
-  let fakeState = {...mockState, collision: false, pacman: {x: 9, y: 7, direction: 'left'}, red: {x: 7, y: 7, direction: 'right'}, orange: {x: 1, y: 7, direction: 'up'}};
-  let collisionState = {...mockState, collision: true, pacman: {x: 8, y: 7, direction: 'left'}, red: {x: 8, y: 7, direction: 'right'}, orange: {x: 1, y: 6, direction: 'up'}};
-  expect(logic.crunchState(fakeState, {input: {pacman: 'left', orange: 'nope', red: 'nope'}})).toEqual(collisionState);
+  const fakeState = {
+    ...mockState,
+    pacman: {x: 9, y: 7, direction: logic.LEFT},
+    red: {x: 7, y: 7, direction: logic.RIGHT},
+    orange: {x: 1, y: 7, direction: logic.UP}
+  };
+  const collisionState = {
+    ...mockState,
+    collision: true,
+    pacman: {x: 8, y: 7, direction: logic.LEFT},
+    red: {x: 8, y: 7, direction: logic.RIGHT},
+    orange: {x: 1, y: 8, direction: logic.UP}
+  };
+  expect(logic.crunchState(fakeState, {input: {pacman: logic.LEFT, orange: logic.NONE, red: logic.NONE}})).toEqual(collisionState);
 });
 
 test('returns true if at edge', () => {
@@ -126,5 +104,6 @@ test('it should test for a valid move', () => {
 });
 
 test('it should generate valid moves', () => {
-  expect(logic.generateMoves({x: 0, y: 0})).toEqual([{x: 0, y: 1}, {x: 1, y: 0}, {x: 0, y: -1}, {x: -1, y: 0}]);
+  expect(logic.generateValidDirections({walls: [], x: 0, y: 0, rows: 12, cols: 12})).toEqual([logic.UP, logic.RIGHT, logic.DOWN, logic.LEFT]);
+  expect(logic.generateValidDirections({walls: [{x: 0, y: 1}, {x: 1, y: 0}], x: 0, y: 0, rows: 12, cols: 12})).toEqual([logic.DOWN, logic.LEFT]);
 });

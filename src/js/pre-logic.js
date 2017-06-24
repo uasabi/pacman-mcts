@@ -4,6 +4,7 @@ export const LEFT = 'left';
 export const RIGHT = 'right';
 export const UP = 'up';
 export const DOWN = 'down';
+export const NONE = 'none';
 
 export let currentState = {
   collision: false,
@@ -84,49 +85,52 @@ export function isWall({walls, x, y}) {
 }
 
 export function crunchState(state, action) {
-  if (!state.collision) {
-    let buildState;
-    currentState.pacman.activeDirection = action.input;
-    const pacManInput = action.input.pacman === 'nope' ? state.pacman.direction : action.input.pacman;
-    const redInput = action.input.red === 'nope' ? state.red.direction : action.input.red;
-    const orangeInput = action.input.orange === 'nope' ? state.orange.direction : action.input.orange;
-    let newPacmanState = crunchSpriteState(state.pacman, pacManInput);
-    let isAWall = isWall({walls: state.board.walls, x: newPacmanState.x, y: newPacmanState.y});
-    if (isAWall) {
-      buildState = state;
-    } else {
-      buildState = {...state, pacman: newPacmanState};
-    }
+  if (state.collision) return state;
 
-    let newGhostState = crunchSpriteState(state.red, redInput);
-    isAWall = isWall({walls: state.board.walls, x: newGhostState.x, y: newGhostState.y});
-    if (isAWall) {
-      let aNewDirection = pickRanDir();
-      buildState = {...buildState, red: {...buildState.red, direction: aNewDirection}};
-    } else {
-      buildState = {...buildState, red: newGhostState};
-    }
+  currentState.pacman.activeDirection = action.input;
+  const pacManInput = action.input.pacman === NONE ? state.pacman.direction : action.input.pacman;
+  const redInput = action.input.red === NONE ? state.red.direction : action.input.red;
+  const orangeInput = action.input.orange === NONE ? state.orange.direction : action.input.orange;
 
-    newGhostState = crunchSpriteState(state.orange, orangeInput);
-    isAWall = isWall({walls: state.board.walls, x: newGhostState.x, y: newGhostState.y});
-    if (isAWall) {
-      let aNewDirection = pickRanDir();
-      buildState = {...buildState, orange: {...buildState.orange, direction: aNewDirection}};
-    } else {
-      buildState = {...buildState, orange: newGhostState};
-    }
+  const newPacmanState = movePlayer({player: state.pacman, direction: pacManInput});
+  const pacmanState = isValidMove({
+    walls: state.board.walls,
+    x: newPacmanState.x,
+    y: newPacmanState.y,
+    rows: state.board.rows,
+    cols: state.board.cols
+  }) ? {...state, pacman: newPacmanState} : state;
 
-    const orangeCollision = collisionDetection(buildState.orange, buildState.pacman);
-    const redCollision = collisionDetection(buildState.red, buildState.pacman);
-    if (orangeCollision || redCollision) {
-      buildState.collision = true;
-      return buildState;
-    } else {
-      return buildState;
-    }
-  } else {
-    return state;
+  const moveGhost = (player, direction) => {
+    const newPositon = movePlayer({player, direction});
+    const isPositionValid = isValidMove({
+      walls: state.board.walls,
+      x: player.x,
+      y: player.y,
+      rows: state.board.rows,
+      cols: state.board.cols
+    });
+    return isPositionValid ?
+    newPositon : movePlayer({
+      player: state.red,
+      direction: generateValidDirections({
+        walls: state.board.walls,
+        x: state.red.x,
+        y: state.red.y,
+        cols: state.board.rows,
+        rows: state.board.rows
+      })[0]
+    });
+  };
+
+  const finalState = {...pacmanState, red: moveGhost(state.red, redInput), orange: moveGhost(state.orange, orangeInput)};
+
+  const orangeCollision = collisionDetection(finalState.orange, finalState.pacman);
+  const redCollision = collisionDetection(finalState.red, finalState.pacman);
+  if (orangeCollision || redCollision) {
+    finalState.collision = true;
   }
+  return finalState;
 }
 
 export function pickRanDir() {
@@ -171,44 +175,13 @@ export function isValidMove({walls, direction, x, y, rows, cols}) {
   return !isWall({walls, x: updatedX, y: updatedY});
 }
 
-export function generateMoves({x, y}) {
-  return [UP, RIGHT, DOWN, LEFT].map(direction => {
-    const {x: plusX, y: plusY} = convertDirectionToCoordinate({direction});
-    return {x: x + plusX, y: y + plusY};
-  });
+export function generateValidDirections({walls, x, y, cols, rows, }) {
+  return [UP, RIGHT, DOWN, LEFT].filter(direction => isValidMove({walls, direction, x, y, cols, rows}));
 }
 
-export function crunchSprite(parentState) {
-  return (state, direction) => {
-    const isAnEdge = isEdge({direction, x: state.x, y: state.y, rows: parentState.rows, cols: parentState.rows});
-    if (isAnEdge) {
-      switch(direction) {
-      case 'left':
-        return {...state, x: parentState.board.rows - 1};
-      case 'up':
-        return {...state, y: parentState.board.rows - 1};
-      case 'right':
-        return {...state, x: 0};
-      case 'down':
-        return {...state, y: 0};
-      default:
-        return state;
-      }
-    } else {
-      switch(direction) {
-      case 'left':
-        return {...state, x: state.x - 1};
-      case 'up':
-        return {...state, y: state.y - 1};
-      case 'right':
-        return {...state, x: state.x + 1};
-      case 'down':
-        return {...state, y: state.y + 1};
-      default:
-        return state;
-      }
-    }
-  };
+export function movePlayer({player, direction}) {
+  const {x: plusX, y: plusY} = convertDirectionToCoordinate({direction});
+  return {...player, x: player.x + plusX, y: player.y + plusY};
 }
 
 export function collisionDetection(spriteOne, pacman) {
@@ -223,8 +196,6 @@ export function collisionDetection(spriteOne, pacman) {
   }
   return (spriteOne.x === pacman.x && spriteOne.y === pacman.y);
 }
-
-export const crunchSpriteState = crunchSprite(currentState);
 
 export function directionGen() {
   let stateArr = [];
