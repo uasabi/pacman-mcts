@@ -135,7 +135,7 @@ export function pickRanDir() {
   return directions[number];
 }
 
-export function directionToCoordinate({direction}) {
+export function convertDirectionToCoordinate({direction}) {
   switch(direction) {
   case LEFT:
     return {x: -1, y: 0};
@@ -164,11 +164,18 @@ export function wrapAroundBoard({cols, rows, x, y}) {
 }
 
 export function isValidMove({walls, direction, x, y, rows, cols}) {
-  const {x: plusX, y: plusY} = directionToCoordinate({direction});
+  const {x: plusX, y: plusY} = convertDirectionToCoordinate({direction});
   const newCoordinates = {x: x + plusX, y: y + plusY};
   const {x: updatedX, y: updatedY} = isInsideBoard({cols, rows, x: x + plusX, y: y + plusY}) ?
     newCoordinates : wrapAroundBoard({rows, cols, x, y});
   return !isWall({walls, x: updatedX, y: updatedY});
+}
+
+export function generateMoves({x, y}) {
+  return [UP, RIGHT, DOWN, LEFT].map(direction => {
+    const {x: plusX, y: plusY} = convertDirectionToCoordinate({direction});
+    return {x: x + plusX, y: y + plusY};
+  });
 }
 
 export function crunchSprite(parentState) {
