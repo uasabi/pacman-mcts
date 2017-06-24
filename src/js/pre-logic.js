@@ -74,49 +74,6 @@ function isEdge(direction, state) {
   }
 }
 
-function makeBoardPiece(id, cellsize, isPermeable = true) {
-  const backgroundColor = isPermeable ? 'black' : 'blue';
-  return `
-  <div
-    id='${id}'
-    style='box-sizing: border-box; display: inline-block; margin: 0; padding: 0; height: ${cellsize}em; width: ${cellsize}em; background-color: ${backgroundColor};'
-  >
-  </div>`;
-}
-
-function makePacman(cellsize) {
-  return `
-   <div
-     style='height: ${cellsize}em; width: ${cellsize}em; background-color: black; display: inline-block;'>
-     <svg viewbox='0 0 100 100' id='pacman-sprite'>
-     <use xlink:href='#pacman' />
-     </svg>
-   </div>
- `;
-}
-
-function makeRed(cellsize) {
-  return `
-    <div
-      style='height: ${cellsize}em; width: ${cellsize}em; background-color: black; display: inline-block;'>
-      <svg viewbox='0 0 100 100' id='pacman-sprite'>
-      <use xlink:href='#red-ghost' />
-      </svg>
-    </div>
-  `;
-}
-
-function makeOrange(cellsize) {
-  return `
-    <div
-      style='height: ${cellsize}em; width: ${cellsize}em; background-color: black; display: inline-block;'>
-      <svg viewbox='0 0 100 100' id='pacman-sprite'>
-      <use xlink:href='#orange-ghost' />
-      </svg>
-    </div>
-  `;
-}
-
 function checkWall(state) {
   return (spriteState) => {
     return state.board.walls.find((element) => {
@@ -282,13 +239,9 @@ module.exports = {
   crunchState: crunchState,
   checkWall: checkWall,
   checkIfWall: checkIfWall,
-  makeBoardPiece: makeBoardPiece,
   isEdge: isEdge,
   lastKeyPressed: lastKeyPressed,
   stateGen,
   directionGen,
   collisionDetection,
-  makeRed,
-  makeOrange,
-  makePacman,
 };

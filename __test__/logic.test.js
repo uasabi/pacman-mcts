@@ -63,26 +63,6 @@ test('pacman state updates as expected', () => {
   expect(logic.crunchState(fakeState, {input: {pacman: 'right', red: 'nope', orange: 'nope'}})).toEqual(expectedState);
 });
 
-test('normal board piece is ok', () => {
-  let expected = `
-  <div
-    id='01x04'
-    style='box-sizing: border-box; display: inline-block; margin: 0; padding: 0; height: 3em; width: 3em; background-color: black;'
-  >
-  </div>`;
-  expect(logic.makeBoardPiece('01x04', 3)).toEqual(expected);
-});
-
-test('wall piece is ok', () => {
-  let expected = `
-  <div
-    id='11x01'
-    style='box-sizing: border-box; display: inline-block; margin: 0; padding: 0; height: 3em; width: 3em; background-color: blue;'
-  >
-  </div>`;
-  expect(logic.makeBoardPiece('11x01', 3, false)).toEqual(expected);
-});
-
 test('returns true if at edge', () => {
   expect(logic.isEdge('down', {x: 5, y: 11})).toBe(true);
 });
