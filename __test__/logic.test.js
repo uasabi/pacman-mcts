@@ -1,4 +1,4 @@
-const logic = require('../src/js/pre-logic.js');
+const logic = require('../src/js/pre-logic');
 let fakeState = {
   collision: false,
   board: {
