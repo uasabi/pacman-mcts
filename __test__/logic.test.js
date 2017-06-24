@@ -1,5 +1,5 @@
 const logic = require('../src/js/pre-logic');
-let fakeState = {
+let mockState = {
   collision: false,
   board: {
     size: 144,
@@ -58,8 +58,8 @@ let fakeState = {
 };
 
 test('pacman state updates as expected', () => {
-  let fakeState = {...fakeState, pacman: { x: 5, y: 5, direction: 'right'}, red: {x: 9, y: 9, direction: 'right'}, orange: {x: 2, y: 2, direction: 'right'}};
-  let expectedState = {...fakeState, pacman: { x: 6, y: 5, direction: 'right'}, red: {x: 10, y: 9, direction: 'right'}, orange: {x: 3, y: 2, direction: 'right'}};
+  let fakeState = {...mockState, pacman: { x: 5, y: 5, direction: 'right'}, red: {x: 9, y: 9, direction: 'right'}, orange: {x: 2, y: 2, direction: 'right'}};
+  let expectedState = {...mockState, pacman: { x: 6, y: 5, direction: 'right'}, red: {x: 10, y: 9, direction: 'right'}, orange: {x: 3, y: 2, direction: 'right'}};
   expect(logic.crunchState(fakeState, {input: {pacman: 'right', red: 'nope', orange: 'nope'}})).toEqual(expectedState);
 });
 
@@ -75,8 +75,11 @@ test('returns true if at edge', () => {
 });
 
 test('wall === wall', () => {
-  let checkIfWall = logic.checkWall(fakeState);
-  expect(checkIfWall(fakeState.pacman)).toBe(false);
+  expect(logic.isWall({walls: [], x: 0, y: 0})).toBe(false);
+  expect(logic.isWall({walls: [{x: 0, y: 0}], x: 0, y: 0})).toBe(true);
+  expect(logic.isWall({walls: [{x: 1, y: 0}, {x: 2, y: 0}], x: 0, y: 0})).toBe(false);
+  expect(logic.isWall({walls: [{x: 1, y: 0}, {x: 2, y: 5}], x: 2, y: 5})).toBe(true);
+  expect(logic.isWall({walls: [{x: 1, y: 0}, {x: 2, y: 5}], x: 0, y: 5})).toBe(false);
 });
 
 test('if collision is true expect input === ouput', () => {
@@ -85,8 +88,8 @@ test('if collision is true expect input === ouput', () => {
 });
 
 test('sprites on same square results in collision', () => {
-  let fakeState = {...fakeState, collision: false, pacman: {x: 9, y: 7, direction: 'left'}, red: {x: 7, y: 7, direction: 'right'}, orange: {x: 1, y: 7, direction: 'up'}};
-  let collisionState = {...fakeState, collision: true, pacman: {x: 8, y: 7, direction: 'left'}, red: {x: 8, y: 7, direction: 'right'}, orange: {x: 1, y: 6, direction: 'up'}};
+  let fakeState = {...mockState, collision: false, pacman: {x: 9, y: 7, direction: 'left'}, red: {x: 7, y: 7, direction: 'right'}, orange: {x: 1, y: 7, direction: 'up'}};
+  let collisionState = {...mockState, collision: true, pacman: {x: 8, y: 7, direction: 'left'}, red: {x: 8, y: 7, direction: 'right'}, orange: {x: 1, y: 6, direction: 'up'}};
   expect(logic.crunchState(fakeState, {input: {pacman: 'left', orange: 'nope', red: 'nope'}})).toEqual(collisionState);
 });
 

@@ -76,8 +76,11 @@ test('create unique possible sets of directions', () => {
   }
 });
 
-test('use the directios to generate states', () => {
+test('use the directions to generate states', () => {
   fakeState = {
+    board: {
+      walls: []
+    },
     pacman: {
       x: 5,
       y: 6,

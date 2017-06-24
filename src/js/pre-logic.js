@@ -79,15 +79,9 @@ export function isEdge({direction, rows, cols, x, y}) {
   }
 }
 
-export function checkWall(state) {
-  return (spriteState) => {
-    return state.board.walls.find((element) => {
-      return element.x === spriteState.x && element.y === spriteState.y;
-    }) !== undefined;
-  };
+export function isWall({walls, x, y}) {
+  return !!walls.find(element => element.x === x && element.y === y);
 }
-
-const checkIfWall = checkWall(currentState);
 
 export function crunchState(state, action) {
   if (!state.collision) {
@@ -97,7 +91,7 @@ export function crunchState(state, action) {
     const redInput = action.input.red === 'nope' ? state.red.direction : action.input.red;
     const orangeInput = action.input.orange === 'nope' ? state.orange.direction : action.input.orange;
     let newPacmanState = crunchSpriteState(state.pacman, pacManInput);
-    let isAWall = checkIfWall(newPacmanState);
+    let isAWall = isWall({walls: state.board.walls, x: newPacmanState.x, y: newPacmanState.y});
     if (isAWall) {
       buildState = state;
     } else {
@@ -105,7 +99,7 @@ export function crunchState(state, action) {
     }
 
     let newGhostState = crunchSpriteState(state.red, redInput);
-    isAWall = checkIfWall(newGhostState);
+    isAWall = isWall({walls: state.board.walls, x: newGhostState.x, y: newGhostState.y});
     if (isAWall) {
       let aNewDirection = pickRanDir();
       buildState = {...buildState, red: {...buildState.red, direction: aNewDirection}};
@@ -114,7 +108,7 @@ export function crunchState(state, action) {
     }
 
     newGhostState = crunchSpriteState(state.orange, orangeInput);
-    isAWall = checkIfWall(newGhostState);
+    isAWall = isWall({walls: state.board.walls, x: newGhostState.x, y: newGhostState.y});
     if (isAWall) {
       let aNewDirection = pickRanDir();
       buildState = {...buildState, orange: {...buildState.orange, direction: aNewDirection}};
