@@ -41,23 +41,36 @@ export function makeOrange(cellsize) {
   `;
 }
 
-export function buildTheBoard(state) {
-  const makeColumnForRow = (rowIndex) => Array(state.board.rows).fill(0)
-  .map((_, columnIndex) => makeBoardPiece(`${rowIndex}x${columnIndex}`, state.board.cellSize));
-  const matrix = Array(state.board.rows).fill(0).map((_, rowIndex) => makeColumnForRow(rowIndex));
-  state.board.walls.forEach(wall => {
-    matrix[wall.y][wall.x] = makeBoardPiece(`${wall.y}x${wall.x}`, state.board.cellSize, false);
-  });
-  matrix[state.pacman.y][state.pacman.x] = makePacman(state.board.cellSize);
-  matrix[state.red.y][state.red.x] = makeRed(state.board.cellSize);
-  matrix[state.orange.y][state.orange.x] = makeOrange(state.board.cellSize);
-  return `
-    <div style='max-width: ${(state.board.rows * state.board.cellSize) + state.board.cellSize}em; min-width: ${(state.board.rows * state.board.cellSize) + state.board.cellSize}em'>
-    ${matrix.map(it => it.join('')).join('')}
-    </div>`;
-}
-
 export function renderBoard(state) {
   const boardHtml = buildTheBoard(state);
   document.getElementById('board-container').innerHTML = boardHtml;
+}
+
+export function buildTheBoard(state) {
+  const matrix = [];
+  const rows = state.board.rows;
+  for(let i = 0, iLen = rows; i < iLen; i += 1) {
+    matrix[i] = [];
+    for(let j = 0, jLen = rows; j < jLen; j += 1) {
+      matrix[i][j] = makeBoardPiece(`${i}x${j}`, state.board.cellSize);
+    }
+  }
+
+  state.board.walls.forEach(wall => {
+    matrix[wall.y][wall.x] = makeBoardPiece(`${wall.y}x${wall.x}`, state.board.cellSize, false);
+  });
+  matrix[state.pacman.x][state.pacman.y] = makePacman(state.board.cellSize);
+  matrix[state.red.x][state.red.y] = makeRed(state.board.cellSize);
+  matrix[state.orange.x][state.orange.y] = makeOrange(state.board.cellSize);
+
+  const renderMatrix = [];
+  for(let j = 0, jLen = rows; j < jLen; j += 1) {
+    for(let i = 0, iLen = rows; i < iLen; i += 1) {
+      renderMatrix.push(matrix[i][rows - j - 1]);
+    }
+  }
+  return `
+    <div style='max-width: ${(state.board.rows * state.board.cellSize) + state.board.cellSize}em; min-width: ${(state.board.rows * state.board.cellSize) + state.board.cellSize}em'>
+    ${renderMatrix.join('')}
+    </div>`;
 }
