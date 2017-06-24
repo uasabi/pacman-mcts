@@ -102,3 +102,25 @@ test('not every movement is a collision', () => {
   let fakeState = {...fakeState, collision: false, pacman: {x: 3, y: 7, direction: 'nope', activeDirection: 'left'}, red: {x: 7, y: 7, direction: 'right'}, orange: {x: 1, y: 7, direction: 'up'}};
   expect(logic.collisionDetection(fakeState.red, fakeState.pacman)).toBe(false);
 });
+
+test('it should wrap around edges', () => {
+  expect(logic.wrapAroundBoard({rows: 12, cols: 12, x: 12, y: 12})).toEqual({x: 0, y: 0});
+  expect(logic.wrapAroundBoard({rows: 12, cols: 12, x: -1, y: -1})).toEqual({x: 11, y: 11});
+  expect(logic.wrapAroundBoard({rows: 12, cols: 12, x: 12, y: 5})).toEqual({x: 0, y: 5});
+});
+
+test('it should detect if the position is out of the board', () => {
+  expect(logic.isInsideBoard({cols: 12, rows: 12, x: 1, y: 1})).toEqual(true);
+  expect(logic.isInsideBoard({cols: 12, rows: 12, x: -1, y: 1})).toBe(false);
+  expect(logic.isInsideBoard({cols: 12, rows: 12, x: -1, y: -1})).toBe(false);
+  expect(logic.isInsideBoard({cols: 12, rows: 12, x: 1, y: -1})).toBe(false);
+  expect(logic.isInsideBoard({cols: 12, rows: 12, x: 13, y: -1})).toBe(false);
+  expect(logic.isInsideBoard({cols: 12, rows: 12, x: 13, y: 13})).toBe(false);
+  expect(logic.isInsideBoard({cols: 12, rows: 12, x: 13, y: -1})).toBe(false);
+});
+
+test('it should test for a valid move', () => {
+  expect(logic.isValidMove({direction: logic.UP, x: 0, y: 0, walls: [], rows: 12, cols: 12})).toBe(true);
+  expect(logic.isValidMove({direction: logic.UP, x: 11, y: 10, walls: [{x: 11, y: 11}], rows: 12, cols: 12})).toBe(false);
+  expect(logic.isValidMove({direction: logic.UP, x: 11, y: 11, walls: [], rows: 12, cols: 12})).toBe(true);
+});

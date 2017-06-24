@@ -135,6 +135,42 @@ export function pickRanDir() {
   return directions[number];
 }
 
+export function directionToCoordinate({direction}) {
+  switch(direction) {
+  case LEFT:
+    return {x: -1, y: 0};
+  case RIGHT:
+    return {x: +1, y: 0};
+  case UP:
+    return {x: 0, y: +1};
+  case DOWN:
+    return {x: 0, y: -1};
+  default:
+    return {x: 0, y: 0};
+  }
+}
+
+export function isInsideBoard({cols, rows, x, y}) {
+  return (x >= 0 && x < cols) && (y >= 0 && y < rows);
+}
+
+export function wrapAroundBoard({cols, rows, x, y}) {
+  let newX, newY;
+  newX = x < 0 ? cols + x : x;
+  newX = x >= cols ? x - cols : newX;
+  newY = y < 0 ? rows + y : y;
+  newY = y >= rows ? y - rows : newY;
+  return {x: newX, y: newY};
+}
+
+export function isValidMove({walls, direction, x, y, rows, cols}) {
+  const {x: plusX, y: plusY} = directionToCoordinate({direction});
+  const newCoordinates = {x: x + plusX, y: y + plusY};
+  const {x: updatedX, y: updatedY} = isInsideBoard({cols, rows, x: x + plusX, y: y + plusY}) ?
+    newCoordinates : wrapAroundBoard({rows, cols, x, y});
+  return !isWall({walls, x: updatedX, y: updatedY});
+}
+
 export function crunchSprite(parentState) {
   return (state, direction) => {
     const isAnEdge = isEdge({direction, x: state.x, y: state.y, rows: parentState.rows, cols: parentState.rows});
