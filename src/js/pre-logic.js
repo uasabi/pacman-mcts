@@ -1,6 +1,11 @@
-let lastKeyPressed = 'nope';
+export let lastKeyPressed = 'nope';
 
-let currentState = {
+export const LEFT = 'left';
+export const RIGHT = 'right';
+export const UP = 'up';
+export const DOWN = 'down';
+
+export let currentState = {
   collision: false,
   board: {
     size: 144,
@@ -59,22 +64,22 @@ let currentState = {
   }
 };
 
-const edges = {
-  left: 1,
-  up: 1,
-  right: currentState.board.rows - 1,
-  down: currentState.board.rows - 1
-};
-
-function isEdge(direction, state) {
-  if (direction === 'left' || direction === 'right') {
-    return edges[direction] === state.x;
-  } else {
-    return edges[direction] === state.y;
+export function isEdge({direction, rows, cols, x, y}) {
+  switch(direction) {
+  case LEFT:
+    return x === 0;
+  case RIGHT:
+    return x === cols - 1;
+  case UP:
+    return y === rows - 1;
+  case DOWN:
+    return y === 0;
+  default:
+    return false;
   }
 }
 
-function checkWall(state) {
+export function checkWall(state) {
   return (spriteState) => {
     return state.board.walls.find((element) => {
       return element.x === spriteState.x && element.y === spriteState.y;
@@ -84,7 +89,7 @@ function checkWall(state) {
 
 const checkIfWall = checkWall(currentState);
 
-function crunchState(state, action) {
+export function crunchState(state, action) {
   if (!state.collision) {
     let buildState;
     currentState.pacman.activeDirection = action.input;
@@ -130,15 +135,15 @@ function crunchState(state, action) {
   }
 }
 
-function pickRanDir() {
+export function pickRanDir() {
   const directions = ['up', 'down', 'left', 'right'];
   let number = Math.floor(Math.random() * directions.length);
   return directions[number];
 }
 
-function crunchSprite(parentState) {
+export function crunchSprite(parentState) {
   return (state, direction) => {
-    const isAnEdge = isEdge(direction, state);
+    const isAnEdge = isEdge({direction, x: state.x, y: state.y, rows: parentState.rows, cols: parentState.rows});
     if (isAnEdge) {
       switch(direction) {
       case 'left':
@@ -169,7 +174,7 @@ function crunchSprite(parentState) {
   };
 }
 
-function collisionDetection(spriteOne, pacman) {
+export function collisionDetection(spriteOne, pacman) {
   const opposites = {'left': 'right', 'right': 'left', 'up': 'down', 'down': 'up'};
   const values = {'left': -1, 'right': 1, 'up': -1, 'down': 1};
   if (opposites[spriteOne.direction] === pacman.activeDirection) {
@@ -182,9 +187,9 @@ function collisionDetection(spriteOne, pacman) {
   return (spriteOne.x === pacman.x && spriteOne.y === pacman.y);
 }
 
-const crunchSpriteState = crunchSprite(currentState);
+export const crunchSpriteState = crunchSprite(currentState);
 
-function directionGen() {
+export function directionGen() {
   let stateArr = [];
   while (stateArr.length < 3) {
     let nextDir = directionArr();
@@ -204,7 +209,7 @@ function directionGen() {
   return stateArr;
 }
 
-function directionArr() {
+export function directionArr() {
   let directions = ['up', 'down', 'right', 'left'];
   let dirArr = [];
   while (dirArr.length < 3) {
@@ -215,7 +220,7 @@ function directionArr() {
   return dirArr;
 }
 
-function stateGen(state) {
+export function stateGen(state) {
   let possibleDirs = directionGen();
   let multiStates = [];
   while (multiStates.length < 3) {
@@ -231,17 +236,3 @@ function stateGen(state) {
   }
   return multiStates;
 }
-
-module.exports = {
-  crunchSpriteState: crunchSpriteState,
-  currentState: currentState,
-  crunchSprite: crunchSprite,
-  crunchState: crunchState,
-  checkWall: checkWall,
-  checkIfWall: checkIfWall,
-  isEdge: isEdge,
-  lastKeyPressed: lastKeyPressed,
-  stateGen,
-  directionGen,
-  collisionDetection,
-};

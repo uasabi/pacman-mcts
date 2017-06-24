@@ -64,7 +64,14 @@ test('pacman state updates as expected', () => {
 });
 
 test('returns true if at edge', () => {
-  expect(logic.isEdge('down', {x: 5, y: 11})).toBe(true);
+  expect(logic.isEdge({x: 5, y: 11, direction: logic.DOWN, rows: 12, cols: 12})).toBe(false);
+  expect(logic.isEdge({x: 5, y: 11, direction: logic.UP, rows: 12, cols: 12})).toBe(true);
+  expect(logic.isEdge({x: 0, y: 11, direction: logic.LEFT, rows: 12, cols: 12})).toBe(true);
+  expect(logic.isEdge({x: 0, y: 11, direction: logic.RIGHT, rows: 12, cols: 12})).toBe(false);
+  expect(logic.isEdge({x: 11, y: 11, direction: logic.RIGHT, rows: 12, cols: 12})).toBe(true);
+  expect(logic.isEdge({x: 11, y: 11, direction: logic.LEFT, rows: 12, cols: 12})).toBe(false);
+  expect(logic.isEdge({x: 5, y: 0, direction: logic.DOWN, rows: 12, cols: 12})).toBe(true);
+  expect(logic.isEdge({x: 5, y: 0, direction: logic.UP, rows: 12, cols: 12})).toBe(false);
 });
 
 test('wall === wall', () => {
