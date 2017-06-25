@@ -1,4 +1,4 @@
-import {TICK, MOVE_PACMAN} from './actions';
+import {TICK, MOVE_PACMAN, MOVE_ORANGE, MOVE_RED} from './actions';
 
 export const LEFT = 'left';
 export const RIGHT = 'right';
@@ -13,6 +13,10 @@ export function crunchState(state, action) {
       {...computeNextState(state), lastRun: action.time} : state;
   case MOVE_PACMAN:
     return {...state, pacman: {...state.pacman, direction: action.direction}};
+  case MOVE_ORANGE:
+    return {...state, orange: {...state.orange, direction: action.direction}};
+  case MOVE_RED:
+    return {...state, red: {...state.red, direction: action.direction}};
   default:
     return state;
   }
