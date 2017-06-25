@@ -59,8 +59,8 @@ export function computeNextState(state) {
     collision: positionState.collision || isPacmanCaughtByRed || isPacmanCaughtByOrange,
     pills: filteredPills,
     pacman: {...positionState.pacman, score: toInt(positionState.pacman.score) + (positionState.pills.length - filteredPills.length)},
-    red: {...positionState.red, score: toInt(positionState.red) + toInt(isPacmanCaughtByRed)},
-    orange: {...positionState.orange, score: toInt(positionState.orange) + toInt(isPacmanCaughtByOrange)},
+    red: {...positionState.red, score: toInt(positionState.red.score) + toInt(isPacmanCaughtByRed)},
+    orange: {...positionState.orange, score: toInt(positionState.orange.score) + toInt(isPacmanCaughtByOrange)},
   };
 }
 

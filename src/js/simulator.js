@@ -37,3 +37,36 @@ export function generateTree({rootState, nestingLevel = 3}, parent = null, curre
       childStates.map(childState => generateTree({rootState: childState, nestingLevel: nestingLevel - 1}, currentState, currentLevel + 1)) : [];
   return currentState;
 }
+
+export function generateMCTree({rootState, nestingLevel = 3}, parent = null, currentLevel = 0) {
+  const currentNode = {
+    accumulatedPacmanScore: rootState.pacman.score,
+    accumulatedRedScore: rootState.red.score,
+    accumulatedOrangeScore: rootState.orange.score,
+    state: rootState,
+    parent,
+    level: currentLevel,
+    children: []
+  };
+  if (!isGameOver(rootState) && nestingLevel >= 1) {
+    const childStates = isGameOver(rootState) ? [] : generateChildStates(rootState, computePossibleDirections(rootState));
+    currentNode.children = childStates.map(childState => {
+      return generateMCTree({rootState: childState, nestingLevel: nestingLevel - 1}, currentNode, currentLevel + 1);
+    });
+  }
+  mutateParentScore(currentNode);
+  return currentNode;
+}
+
+export function mutateParentScore(node) {
+  if (node.children.length > 0) {
+    node.accumulatedPacmanScore = node.children.reduce((totalScore, child) => child.accumulatedPacmanScore + totalScore, 0);
+    node.accumulatedRedScore = node.children.reduce((totalScore, child) => child.accumulatedRedScore + totalScore, 0);
+    node.accumulatedOrangeScore = node.children.reduce((totalScore, child) => child.accumulatedOrangeScore + totalScore, 0);
+  } else {
+    node.accumulatedPacmanScore = node.state.pacman.score;
+    node.accumulatedRedScore = node.state.red.score;
+    node.accumulatedOrangeScore = node.state.orange.score;
+  }
+  if (node.parent) mutateParentScore(node.parent);
+}

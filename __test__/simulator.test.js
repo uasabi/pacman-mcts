@@ -133,3 +133,31 @@ test('it should generate a tree of states', () => {
   expect(tree.children[3].state.red).toEqual({x: 8, y: 7, direction: RIGHT, score: 0});
   expect(tree.children[3].state.orange).toEqual({x: 3, y: 2, direction: DOWN, score: 0});
 });
+
+test('it should generate a Monte Carlo tree of states', () => {
+  const rootState = {
+    collision: false,
+    pills: [{x: 11, y: 10}, {x: 10, y: 11}, {x: 8, y: 10}],
+    board: {
+      rows: 12,
+      walls: []
+    },
+    pacman: {x: 10, y: 10, direction: LEFT, score: 10},
+    red: {x: 7, y: 7, direction: RIGHT, score: 1},
+    orange: {x: 3, y: 3, direction: DOWN, score: 1},
+  };
+  const treeWith0Levels = logic.generateMCTree({rootState, nestingLevel: 0});
+  expect(treeWith0Levels.accumulatedPacmanScore).toEqual(10);
+  expect(treeWith0Levels.accumulatedRedScore).toEqual(1);
+  expect(treeWith0Levels.accumulatedOrangeScore).toEqual(1);
+
+  const treeWith1Level = logic.generateMCTree({rootState, nestingLevel: 1});
+  expect(treeWith1Level.accumulatedPacmanScore).toEqual(42);
+  expect(treeWith1Level.accumulatedRedScore).toEqual(4);
+  expect(treeWith1Level.accumulatedOrangeScore).toEqual(4);
+
+  const treeWith2Level = logic.generateMCTree({rootState, nestingLevel: 2});
+  expect(treeWith2Level.accumulatedPacmanScore).toEqual(169);
+  expect(treeWith2Level.accumulatedRedScore).toEqual(16);
+  expect(treeWith2Level.accumulatedOrangeScore).toEqual(16);
+});
