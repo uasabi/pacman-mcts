@@ -3,6 +3,7 @@ import * as logic from '../src/js/gameLogic';
 const mockState = {
   collision: false,
   lastRun: 0,
+  pills: [],
   board: {
     rows: 12,
     cols: 12,
@@ -41,58 +42,102 @@ const mockState = {
       {y: 11, x: 11}
     ]
   },
-  pacman: {x: 5, y: 5, direction: logic.RIGHT},
-  red: {x: 7, y: 10, direction: logic.RIGHT},
-  orange: {x: 1, y: 8, direction: logic.UP}
+  pacman: {x: 5, y: 5, direction: logic.RIGHT, score: 0},
+  red: {x: 7, y: 10, direction: logic.RIGHT, score: 0},
+  orange: {x: 1, y: 8, direction: logic.UP, score: 0},
 };
 
 test('state updates as expected', () => {
   expect(logic.computeNextState({
     board: mockState.board,
-    pacman: {x: 5, y: 5, direction: logic.RIGHT},
-    red: {x: 7, y: 10, direction: logic.RIGHT},
-    orange: {x: 1, y: 8, direction: logic.UP}
-  }, {input: {pacman: logic.RIGHT, red: logic.NONE, orange: logic.NONE}})).toEqual({
+    pills: mockState.pills,
+    pacman: {x: 5, y: 5, direction: logic.RIGHT, score: 0},
+    red: {x: 7, y: 10, direction: logic.RIGHT, score: 0},
+    orange: {x: 1, y: 8, direction: logic.UP, score: 0},
+  })).toEqual({
     collision: false,
     board: mockState.board,
-    pacman: {x: 6, y: 5, direction: logic.RIGHT},
-    red: {x: 8, y: 10, direction: logic.RIGHT},
-    orange: {x: 1, y: 9, direction: logic.UP},
+    pills: mockState.pills,
+    pacman: {x: 6, y: 5, direction: logic.RIGHT, score: 0},
+    red: {x: 8, y: 10, direction: logic.RIGHT, score: 0},
+    orange: {x: 1, y: 9, direction: logic.UP, score: 0},
   });
   expect(logic.computeNextState({
     board: mockState.board,
-    pacman: {x: 5, y: 5, direction: logic.RIGHT},
-    red: {x: 10, y: 10, direction: logic.RIGHT},
-    orange: {x: 10, y: 10, direction: logic.RIGHT}
-  }, {input: {pacman: logic.RIGHT, red: logic.NONE, orange: logic.NONE}})).toEqual({
+    pills: mockState.pills,
+    pacman: {x: 5, y: 5, direction: logic.RIGHT, score: 0},
+    red: {x: 10, y: 10, direction: logic.RIGHT, score: 0},
+    orange: {x: 10, y: 10, direction: logic.RIGHT, score: 0},
+  })).toEqual({
     collision: false,
     board: mockState.board,
-    pacman: {x: 6, y: 5, direction: logic.RIGHT},
-    red: {x: 10, y: 10, direction: logic.RIGHT},
-    orange: {x: 10, y: 10, direction: logic.RIGHT},
+    pills: mockState.pills,
+    pacman: {x: 6, y: 5, direction: logic.RIGHT, score: 0},
+    red: {x: 10, y: 10, direction: logic.RIGHT, score: 0},
+    orange: {x: 10, y: 10, direction: logic.RIGHT, score: 0},
   });
 });
 
-test('if collision is true expect input === ouput', () => {
-  const currentState = {...mockState, collision: true};
-  expect(logic.computeNextState(currentState, {input: {pacman: logic.NONE, red: logic.NONE, orange: logic.NONE}})).toEqual(currentState);
+test('it should increase the score', () => {
+  expect(logic.computeNextState({
+    board: mockState.board,
+    pills: [{x: 6, y: 5}],
+    pacman: {x: 5, y: 5, direction: logic.RIGHT, score: 0},
+    red: {x: 10, y: 10, direction: logic.RIGHT, score: 0},
+    orange: {x: 10, y: 10, direction: logic.RIGHT, score: 0},
+  })).toEqual({
+    collision: false,
+    board: mockState.board,
+    pills: [],
+    pacman: {x: 6, y: 5, direction: logic.RIGHT, score: 1},
+    red: {x: 10, y: 10, direction: logic.RIGHT, score: 0},
+    orange: {x: 10, y: 10, direction: logic.RIGHT, score: 0},
+  });
+  expect(logic.computeNextState({
+    board: mockState.board,
+    pills: [],
+    pacman: {x: 6, y: 5, direction: logic.LEFT, score: 0},
+    red: {x: 4, y: 5, direction: logic.RIGHT, score: 0},
+    orange: {x: 10, y: 10, direction: logic.RIGHT, score: 0},
+  })).toEqual({
+    collision: true,
+    board: mockState.board,
+    pills: [],
+    pacman: {x: 5, y: 5, direction: logic.LEFT, score: 0},
+    red: {x: 5, y: 5, direction: logic.RIGHT, score: 1},
+    orange: {x: 10, y: 10, direction: logic.RIGHT, score: 0},
+  });
+  expect(logic.computeNextState({
+    board: mockState.board,
+    pills: [],
+    pacman: {x: 6, y: 5, direction: logic.LEFT, score: 0},
+    red: {x: 10, y: 10, direction: logic.RIGHT, score: 0},
+    orange: {x: 4, y: 5, direction: logic.RIGHT, score: 0},
+  })).toEqual({
+    collision: true,
+    board: mockState.board,
+    pills: [],
+    pacman: {x: 5, y: 5, direction: logic.LEFT, score: 0},
+    red: {x: 10, y: 10, direction: logic.RIGHT, score: 0},
+    orange: {x: 5, y: 5, direction: logic.RIGHT, score: 1},
+  });
 });
 
 test('sprites on same square results in collision', () => {
   const currentState = {
     ...mockState,
-    pacman: {x: 9, y: 7, direction: logic.LEFT},
-    red: {x: 7, y: 7, direction: logic.RIGHT},
-    orange: {x: 1, y: 7, direction: logic.UP}
+    pacman: {x: 9, y: 7, direction: logic.LEFT, score: 0},
+    red: {x: 7, y: 7, direction: logic.RIGHT, score: 0},
+    orange: {x: 1, y: 7, direction: logic.UP, score: 0},
   };
   const collisionState = {
     ...mockState,
     collision: true,
-    pacman: {x: 8, y: 7, direction: logic.LEFT},
-    red: {x: 8, y: 7, direction: logic.RIGHT},
-    orange: {x: 1, y: 8, direction: logic.UP}
+    pacman: {x: 8, y: 7, direction: logic.LEFT, score: 0},
+    red: {x: 8, y: 7, direction: logic.RIGHT, score: 1},
+    orange: {x: 1, y: 8, direction: logic.UP, score: 0},
   };
-  expect(logic.computeNextState(currentState, {input: {pacman: logic.LEFT, orange: logic.NONE, red: logic.NONE}})).toEqual(collisionState);
+  expect(logic.computeNextState(currentState)).toEqual(collisionState);
 });
 
 test('wall === wall', () => {
@@ -154,9 +199,9 @@ test('it should move a player', () => {
   expect(logic.movePlayer({player, direction: logic.DOWN, rows: 12, cols: 12})).toEqual({x: 0, y: 11, direction: logic.DOWN});
   expect(logic.movePlayer({player, direction: logic.RIGHT, rows: 12, cols: 12})).toEqual({x: 1, y: 0, direction: logic.RIGHT});
   expect(logic.movePlayer({
-    player: {x: 10, y: 10, direction: logic.RIGHT},
+    player: {x: 10, y: 10, direction: logic.RIGHT, score: 0},
     direction: logic.DOWN,
     rows: 12,
     cols: 12
-  })).toEqual({x: 10, y: 9, direction: logic.DOWN});
+  })).toEqual({x: 10, y: 9, direction: logic.DOWN, score: 0});
 });

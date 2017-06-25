@@ -3,7 +3,7 @@ import {RIGHT, LEFT, UP, DOWN} from '../src/js/gameLogic';
 
 test('it should generate valid directions', () => {
   expect(logic.nextDirection({
-    player: {x: 1, y: 1, direction: LEFT},
+    player: {x: 1, y: 1, direction: LEFT, score: 0},
     direction: DOWN,
     rows: 12,
     cols: 12,
@@ -12,7 +12,7 @@ test('it should generate valid directions', () => {
     ]
   })).toEqual(UP);
   expect(logic.nextDirection({
-    player: {x: 1, y: 1, direction: LEFT},
+    player: {x: 1, y: 1, direction: LEFT, score: 0},
     direction: DOWN,
     rows: 12,
     cols: 12,
@@ -21,7 +21,7 @@ test('it should generate valid directions', () => {
     ]
   })).toEqual(DOWN);
   expect(logic.nextDirection({
-    player: {x: 1, y: 0, direction: LEFT},
+    player: {x: 1, y: 0, direction: LEFT, score: 0},
     direction: DOWN,
     rows: 12,
     cols: 12,
