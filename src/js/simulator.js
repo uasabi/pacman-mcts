@@ -27,11 +27,13 @@ export function generateChildStates(parentState, directionTriplets) {
 
 export function generateTree({rootState, nestingLevel = 3}, parent = null, currentLevel = 0) {
   const childStates = isGameOver(rootState) ? [] : generateChildStates(rootState, computePossibleDirections(rootState));
-  return {
+  const currentState = {
     state: rootState,
     parent,
     level: currentLevel,
-    children: nestingLevel >= 1 ?
-      childStates.map(state => generateTree({rootState: state, nestingLevel: nestingLevel - 1}, rootState, currentLevel + 1)) : []
+    children: []
   };
+  currentState.children = nestingLevel >= 1 ?
+      childStates.map(childState => generateTree({rootState: childState, nestingLevel: nestingLevel - 1}, currentState, currentLevel + 1)) : [];
+  return currentState;
 }

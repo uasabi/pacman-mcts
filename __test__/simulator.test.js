@@ -111,12 +111,12 @@ test('it should generate a tree of states', () => {
   expect(tree.children.length).toEqual(4);
   tree.children.forEach(child => {
     expect(child.level).toEqual(1);
-    expect(child.parent).toBe(rootState);
+    expect(child.parent.state).toBe(rootState);
     expect(child.children.length).toEqual(4);
     child.children.forEach(it => {
       expect(it.children.length).toEqual(0);
       expect(it.level).toEqual(2);
-      expect(it.parent).toEqual(child.state);
+      expect(it.parent.state).toEqual(child.state);
     });
   });
   expect(tree.children[0].state.pacman).toEqual({x: 10, y: 11, direction: UP});
