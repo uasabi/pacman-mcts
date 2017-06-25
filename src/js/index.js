@@ -8,6 +8,9 @@ let lastKeyPressed = NONE;
 let currentState = {
   collision: false,
   lastRun: Date.now(),
+  pills: [
+    {x: 3, y: 8}
+  ],
   board: {
     rows: 12,
     cols: 12,

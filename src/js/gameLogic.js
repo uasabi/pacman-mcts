@@ -33,7 +33,7 @@ export function computeNextState(state) {
     orange: state.orange
   };
 
-  const finalState = Object.keys(playerStates).reduce((state, playerName) => {
+  const positionState = Object.keys(playerStates).reduce((state, playerName) => {
     const playerState = playerStates[playerName];
     const newPlayerState = movePlayer({
       player: playerState,
@@ -50,8 +50,18 @@ export function computeNextState(state) {
     }) ? {...state, [playerName]: newPlayerState} : state;
   }, state);
 
-  finalState.collision = [finalState.red, finalState.orange].some(ghost => collisionDetection(ghost, finalState.pacman));
-  return finalState;
+  const filteredPills = positionState.pills.filter(pill => !collisionDetection(pill, positionState.pacman));
+  const isPacmanCaughtByRed = collisionDetection(positionState.pacman, positionState.red);
+  const isPacmanCaughtByOrange = collisionDetection(positionState.pacman, positionState.orange);
+
+  return {
+    ...positionState,
+    collision: positionState.collision || isPacmanCaughtByRed || isPacmanCaughtByOrange,
+    pills: filteredPills,
+    pacman: {...positionState.pacman, score: toInt(positionState.pacman.score) + (positionState.pills.length - filteredPills.length)},
+    red: {...positionState.red, score: toInt(positionState.red) + toInt(isPacmanCaughtByRed)},
+    orange: {...positionState.orange, score: toInt(positionState.orange) + toInt(isPacmanCaughtByOrange)},
+  };
 }
 
 export function isWall({walls, x, y}) {
@@ -110,4 +120,8 @@ export function collisionDetection(entityA, entityB) {
 
 export function isGameOver(state) {
   return !!state.collision;
+}
+
+export function toInt(value) {
+  return ~~value;
 }

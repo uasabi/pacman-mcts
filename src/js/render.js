@@ -41,6 +41,17 @@ export function makeOrange(cellsize = 4) {
   `;
 }
 
+export function makePill(cellsize = 4) {
+  return `
+    <div
+      style='height: ${cellsize}em; width: ${cellsize}em; background-color: black; display: inline-block;'>
+      <svg viewbox='0 0 100 100' id='pacman-sprite'>
+      <use xlink:href='#pill' />
+      </svg>
+    </div>
+  `;
+}
+
 export function renderBoard(state) {
   const boardHtml = buildTheBoard(state);
   document.getElementById('board-container').innerHTML = boardHtml;
@@ -59,8 +70,9 @@ export function buildTheBoard(state) {
   }
 
   state.board.walls.forEach(wall => {
-    matrix[wall.y][wall.x] = makeBoardPiece(`${wall.y}x${wall.x}`, cellSize, false);
+    matrix[wall.x][wall.y] = makeBoardPiece(`${wall.y}x${wall.x}`, cellSize, false);
   });
+  state.pills.forEach(pill => matrix[pill.x][pill.y] = makePill(cellSize));
   matrix[state.pacman.x][state.pacman.y] = makePacman(cellSize);
   matrix[state.red.x][state.red.y] = makeRed(cellSize);
   matrix[state.orange.x][state.orange.y] = makeOrange(cellSize);
