@@ -1,4 +1,4 @@
-export function makeBoardPiece(id, cellsize, isPermeable = true) {
+export function makeBoardPiece(id, cellsize = 4, isPermeable = true) {
   const backgroundColor = isPermeable ? 'black' : 'blue';
   return `
   <div
@@ -8,7 +8,7 @@ export function makeBoardPiece(id, cellsize, isPermeable = true) {
   </div>`;
 }
 
-export function makePacman(cellsize) {
+export function makePacman(cellsize = 4) {
   return `
    <div
      style='height: ${cellsize}em; width: ${cellsize}em; background-color: black; display: inline-block;'>
@@ -19,7 +19,7 @@ export function makePacman(cellsize) {
  `;
 }
 
-export function makeRed(cellsize) {
+export function makeRed(cellsize = 4) {
   return `
     <div
       style='height: ${cellsize}em; width: ${cellsize}em; background-color: black; display: inline-block;'>
@@ -30,7 +30,7 @@ export function makeRed(cellsize) {
   `;
 }
 
-export function makeOrange(cellsize) {
+export function makeOrange(cellsize = 4) {
   return `
     <div
       style='height: ${cellsize}em; width: ${cellsize}em; background-color: black; display: inline-block;'>
@@ -47,9 +47,11 @@ export function renderBoard(state) {
 }
 
 export function buildTheBoard(state) {
+  const cellSize = 4;
   const matrix = [];
   const rows = state.board.rows;
-  for(let i = 0, iLen = rows; i < iLen; i += 1) {
+  const cols = state.board.cols;
+  for(let i = 0, iLen = cols; i < iLen; i += 1) {
     matrix[i] = [];
     for(let j = 0, jLen = rows; j < jLen; j += 1) {
       matrix[i][j] = makeBoardPiece(`${i}x${j}`, state.board.cellSize);
@@ -57,20 +59,20 @@ export function buildTheBoard(state) {
   }
 
   state.board.walls.forEach(wall => {
-    matrix[wall.y][wall.x] = makeBoardPiece(`${wall.y}x${wall.x}`, state.board.cellSize, false);
+    matrix[wall.y][wall.x] = makeBoardPiece(`${wall.y}x${wall.x}`, cellSize, false);
   });
-  matrix[state.pacman.x][state.pacman.y] = makePacman(state.board.cellSize);
-  matrix[state.red.x][state.red.y] = makeRed(state.board.cellSize);
-  matrix[state.orange.x][state.orange.y] = makeOrange(state.board.cellSize);
+  matrix[state.pacman.x][state.pacman.y] = makePacman(cellSize);
+  matrix[state.red.x][state.red.y] = makeRed(cellSize);
+  matrix[state.orange.x][state.orange.y] = makeOrange(cellSize);
 
   const renderMatrix = [];
-  for(let j = 0, jLen = rows; j < jLen; j += 1) {
+  for(let j = 0, jLen = cols; j < jLen; j += 1) {
     for(let i = 0, iLen = rows; i < iLen; i += 1) {
       renderMatrix.push(matrix[i][rows - j - 1]);
     }
   }
   return `
-    <div style='max-width: ${(state.board.rows * state.board.cellSize) + state.board.cellSize}em; min-width: ${(state.board.rows * state.board.cellSize) + state.board.cellSize}em'>
+    <div style='max-width: ${(state.board.cols * cellSize) + cellSize}em; min-width: ${(state.board.cols * cellSize) + cellSize}em'>
     ${renderMatrix.join('')}
     </div>`;
 }

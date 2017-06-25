@@ -1,11 +1,11 @@
-import * as logic from '../src/js/pre-logic';
+import * as logic from '../src/js/gameLogic';
 
 const mockState = {
   collision: false,
+  lastRun: 0,
   board: {
-    size: 144,
     rows: 12,
-    cellSize: 4,
+    cols: 12,
     walls: [
       {x: 0, y: 0},
       {x: 1, y: 0},
@@ -47,7 +47,7 @@ const mockState = {
 };
 
 test('state updates as expected', () => {
-  expect(logic.crunchState({
+  expect(logic.computeNextState({
     board: mockState.board,
     pacman: {x: 5, y: 5, direction: logic.RIGHT},
     red: {x: 7, y: 10, direction: logic.RIGHT},
@@ -59,7 +59,7 @@ test('state updates as expected', () => {
     red: {x: 8, y: 10, direction: logic.RIGHT},
     orange: {x: 1, y: 9, direction: logic.UP},
   });
-  expect(logic.crunchState({
+  expect(logic.computeNextState({
     board: mockState.board,
     pacman: {x: 5, y: 5, direction: logic.RIGHT},
     red: {x: 10, y: 10, direction: logic.RIGHT},
@@ -68,18 +68,18 @@ test('state updates as expected', () => {
     collision: false,
     board: mockState.board,
     pacman: {x: 6, y: 5, direction: logic.RIGHT},
-    red: {x: 10, y: 9, direction: logic.DOWN},
-    orange: {x: 10, y: 9, direction: logic.DOWN},
+    red: {x: 10, y: 10, direction: logic.RIGHT},
+    orange: {x: 10, y: 10, direction: logic.RIGHT},
   });
 });
 
 test('if collision is true expect input === ouput', () => {
   const currentState = {...mockState, collision: true};
-  expect(logic.crunchState(currentState, {input: {pacman: logic.NONE, red: logic.NONE, orange: logic.NONE}})).toEqual(currentState);
+  expect(logic.computeNextState(currentState, {input: {pacman: logic.NONE, red: logic.NONE, orange: logic.NONE}})).toEqual(currentState);
 });
 
 test('sprites on same square results in collision', () => {
-  const fakeState = {
+  const currentState = {
     ...mockState,
     pacman: {x: 9, y: 7, direction: logic.LEFT},
     red: {x: 7, y: 7, direction: logic.RIGHT},
@@ -92,7 +92,7 @@ test('sprites on same square results in collision', () => {
     red: {x: 8, y: 7, direction: logic.RIGHT},
     orange: {x: 1, y: 8, direction: logic.UP}
   };
-  expect(logic.crunchState(fakeState, {input: {pacman: logic.LEFT, orange: logic.NONE, red: logic.NONE}})).toEqual(collisionState);
+  expect(logic.computeNextState(currentState, {input: {pacman: logic.LEFT, orange: logic.NONE, red: logic.NONE}})).toEqual(collisionState);
 });
 
 test('wall === wall', () => {
