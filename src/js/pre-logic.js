@@ -1,6 +1,12 @@
-let lastKeyPressed = 'nope';
+export let lastKeyPressed = 'nope';
 
-let currentState = {
+export const LEFT = 'left';
+export const RIGHT = 'right';
+export const UP = 'up';
+export const DOWN = 'down';
+export const NONE = 'nope';
+
+export let currentState = {
   collision: false,
   board: {
     size: 144,
@@ -59,175 +65,115 @@ let currentState = {
   }
 };
 
-const edges = {
-  left: 1,
-  up: 1,
-  right: currentState.board.rows - 1,
-  down: currentState.board.rows - 1
-};
-
-function isEdge(direction, state) {
-  if (direction === 'left' || direction === 'right') {
-    return edges[direction] === state.x;
-  } else {
-    return edges[direction] === state.y;
-  }
+export function isWall({walls, x, y}) {
+  return !!walls.find(element => element.x === x && element.y === y);
 }
 
-function makeBoardPiece(id, cellsize, isPermeable = true) {
-  const backgroundColor = isPermeable ? 'black' : 'blue';
-  return `
-  <div
-    id='${id}'
-    style='box-sizing: border-box; display: inline-block; margin: 0; padding: 0; height: ${cellsize}em; width: ${cellsize}em; background-color: ${backgroundColor};'
-  >
-  </div>`;
-}
+export function crunchState(state, action) {
+  if (state.collision) return state;
 
-function makePacman(cellsize) {
-  return `
-   <div
-     style='height: ${cellsize}em; width: ${cellsize}em; background-color: black; display: inline-block;'>
-     <svg viewbox='0 0 100 100' id='pacman-sprite'>
-     <use xlink:href='#pacman' />
-     </svg>
-   </div>
- `;
-}
+  currentState.pacman.activeDirection = action.input;
+  const pacManInput = action.input.pacman === NONE ? state.pacman.direction : action.input.pacman;
+  const redInput = action.input.red === NONE ? state.red.direction : action.input.red;
+  const orangeInput = action.input.orange === NONE ? state.orange.direction : action.input.orange;
 
-function makeRed(cellsize) {
-  return `
-    <div
-      style='height: ${cellsize}em; width: ${cellsize}em; background-color: black; display: inline-block;'>
-      <svg viewbox='0 0 100 100' id='pacman-sprite'>
-      <use xlink:href='#red-ghost' />
-      </svg>
-    </div>
-  `;
-}
+  const newPacmanState = movePlayer({player: state.pacman, direction: pacManInput, rows: state.board.rows, cols: state.board.rows});
+  const pacmanState = isValidMove({
+    walls: state.board.walls,
+    x: newPacmanState.x,
+    y: newPacmanState.y,
+    rows: state.board.rows,
+    cols: state.board.cols
+  }) ? {...state, pacman: newPacmanState} : state;
 
-function makeOrange(cellsize) {
-  return `
-    <div
-      style='height: ${cellsize}em; width: ${cellsize}em; background-color: black; display: inline-block;'>
-      <svg viewbox='0 0 100 100' id='pacman-sprite'>
-      <use xlink:href='#orange-ghost' />
-      </svg>
-    </div>
-  `;
-}
-
-function checkWall(state) {
-  return (spriteState) => {
-    return state.board.walls.find((element) => {
-      return element.x === spriteState.x && element.y === spriteState.y;
-    }) !== undefined;
+  const moveGhost = (player, direction) => {
+    const newPositon = movePlayer({player, direction, rows: state.board.rows, cols: state.board.rows});
+    const isPositionValid = isValidMove({
+      direction,
+      walls: state.board.walls,
+      x: player.x,
+      y: player.y,
+      rows: state.board.rows,
+      cols: state.board.rows
+    });
+    return isPositionValid ?
+    newPositon : movePlayer({
+      rows: state.board.rows,
+      cols: state.board.rows,
+      player: player,
+      direction: generateValidDirections({
+        walls: state.board.walls,
+        x: player.x,
+        y: player.y,
+        cols: state.board.rows,
+        rows: state.board.rows
+      })[0]
+    });
   };
+
+  const finalState = {...pacmanState, red: moveGhost(state.red, redInput), orange: moveGhost(state.orange, orangeInput)};
+
+  finalState.collision = [finalState.red, finalState.orange].some(ghost => collisionDetection(ghost, finalState.pacman));
+  return finalState;
 }
 
-const checkIfWall = checkWall(currentState);
-
-function crunchState(state, action) {
-  if (!state.collision) {
-    let buildState;
-    currentState.pacman.activeDirection = action.input;
-    const pacManInput = action.input.pacman === 'nope' ? state.pacman.direction : action.input.pacman;
-    const redInput = action.input.red === 'nope' ? state.red.direction : action.input.red;
-    const orangeInput = action.input.orange === 'nope' ? state.orange.direction : action.input.orange;
-    let newPacmanState = crunchSpriteState(state.pacman, pacManInput);
-    let isAWall = checkIfWall(newPacmanState);
-    if (isAWall) {
-      buildState = state;
-    } else {
-      buildState = {...state, pacman: newPacmanState};
-    }
-
-    let newGhostState = crunchSpriteState(state.red, redInput);
-    isAWall = checkIfWall(newGhostState);
-    if (isAWall) {
-      let aNewDirection = pickRanDir();
-      buildState = {...buildState, red: {...buildState.red, direction: aNewDirection}};
-    } else {
-      buildState = {...buildState, red: newGhostState};
-    }
-
-    newGhostState = crunchSpriteState(state.orange, orangeInput);
-    isAWall = checkIfWall(newGhostState);
-    if (isAWall) {
-      let aNewDirection = pickRanDir();
-      buildState = {...buildState, orange: {...buildState.orange, direction: aNewDirection}};
-    } else {
-      buildState = {...buildState, orange: newGhostState};
-    }
-
-    const orangeCollision = collisionDetection(buildState.orange, buildState.pacman);
-    const redCollision = collisionDetection(buildState.red, buildState.pacman);
-    if (orangeCollision || redCollision) {
-      buildState.collision = true;
-      return buildState;
-    } else {
-      return buildState;
-    }
-  } else {
-    return state;
+export function convertDirectionToCoordinate({direction}) {
+  switch(direction) {
+  case LEFT:
+    return {x: -1, y: 0};
+  case RIGHT:
+    return {x: +1, y: 0};
+  case UP:
+    return {x: 0, y: +1};
+  case DOWN:
+    return {x: 0, y: -1};
+  default:
+    return {x: 0, y: 0};
   }
 }
 
-function pickRanDir() {
+export function isInsideBoard({cols, rows, x, y}) {
+  return (x >= 0 && x < cols) && (y >= 0 && y < rows);
+}
+
+export function wrapAroundBoard({cols, rows, x, y}) {
+  let newX, newY;
+  newX = x < 0 ? cols + x : x;
+  newX = x >= cols ? x - cols : newX;
+  newY = y < 0 ? rows + y : y;
+  newY = y >= rows ? y - rows : newY;
+  return {x: newX, y: newY};
+}
+
+export function isValidMove({walls, direction, x, y, rows, cols}) {
+  const {x: plusX, y: plusY} = convertDirectionToCoordinate({direction});
+  const newCoordinates = {x: x + plusX, y: y + plusY};
+  const {x: updatedX, y: updatedY} = isInsideBoard({cols, rows, x: x + plusX, y: y + plusY}) ?
+    newCoordinates : wrapAroundBoard({rows, cols, x, y});
+  return !isWall({walls, x: updatedX, y: updatedY});
+}
+
+export function generateValidDirections({walls, x, y, cols, rows, }) {
+  return [UP, RIGHT, DOWN, LEFT].filter(direction => isValidMove({walls, direction, x, y, cols, rows}));
+}
+
+export function movePlayer({player, direction, rows, cols}) {
+  const {x: plusX, y: plusY} = convertDirectionToCoordinate({direction});
+  const {x, y} = wrapAroundBoard({cols, rows, x: player.x + plusX, y: player.y + plusY});
+  return {...player, x, y, direction};
+}
+
+export function collisionDetection(entityA, entityB) {
+  return entityA.x === entityB.x && entityA.y === entityB.y;
+}
+
+export function pickRanDir() {
   const directions = ['up', 'down', 'left', 'right'];
   let number = Math.floor(Math.random() * directions.length);
   return directions[number];
 }
 
-function crunchSprite(parentState) {
-  return (state, direction) => {
-    const isAnEdge = isEdge(direction, state);
-    if (isAnEdge) {
-      switch(direction) {
-      case 'left':
-        return {...state, x: parentState.board.rows - 1};
-      case 'up':
-        return {...state, y: parentState.board.rows - 1};
-      case 'right':
-        return {...state, x: 0};
-      case 'down':
-        return {...state, y: 0};
-      default:
-        return state;
-      }
-    } else {
-      switch(direction) {
-      case 'left':
-        return {...state, x: state.x - 1};
-      case 'up':
-        return {...state, y: state.y - 1};
-      case 'right':
-        return {...state, x: state.x + 1};
-      case 'down':
-        return {...state, y: state.y + 1};
-      default:
-        return state;
-      }
-    }
-  };
-}
-
-function collisionDetection(spriteOne, pacman) {
-  const opposites = {'left': 'right', 'right': 'left', 'up': 'down', 'down': 'up'};
-  const values = {'left': -1, 'right': 1, 'up': -1, 'down': 1};
-  if (opposites[spriteOne.direction] === pacman.activeDirection) {
-    if (spriteOne.direction === 'left' || spriteOne.direction === 'right') {
-      return spriteOne.x + values[spriteOne.direction] === pacman.x;
-    } else if (spriteOne.direction === 'up' || spriteOne.direction === 'down') {
-      return spriteOne.y + values[spriteOne.direction] === pacman.y;
-    }
-  }
-  return (spriteOne.x === pacman.x && spriteOne.y === pacman.y);
-}
-
-const crunchSpriteState = crunchSprite(currentState);
-
-function directionGen() {
+export function directionGen() {
   let stateArr = [];
   while (stateArr.length < 3) {
     let nextDir = directionArr();
@@ -247,7 +193,7 @@ function directionGen() {
   return stateArr;
 }
 
-function directionArr() {
+export function directionArr() {
   let directions = ['up', 'down', 'right', 'left'];
   let dirArr = [];
   while (dirArr.length < 3) {
@@ -258,7 +204,7 @@ function directionArr() {
   return dirArr;
 }
 
-function stateGen(state) {
+export function stateGen(state) {
   let possibleDirs = directionGen();
   let multiStates = [];
   while (multiStates.length < 3) {
@@ -274,21 +220,3 @@ function stateGen(state) {
   }
   return multiStates;
 }
-
-module.exports = {
-  crunchSpriteState: crunchSpriteState,
-  currentState: currentState,
-  crunchSprite: crunchSprite,
-  crunchState: crunchState,
-  checkWall: checkWall,
-  checkIfWall: checkIfWall,
-  makeBoardPiece: makeBoardPiece,
-  isEdge: isEdge,
-  lastKeyPressed: lastKeyPressed,
-  stateGen,
-  directionGen,
-  collisionDetection,
-  makeRed,
-  makeOrange,
-  makePacman,
-};
