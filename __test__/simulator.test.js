@@ -46,54 +46,19 @@ const mockState = {
   pacman: {
     x: 5,
     y: 5,
-    direction: 'nope'
+    direction: LEFT
   },
   red: {
     x: 7,
     y: 10,
-    direction: 'right'
+    direction: RIGHT
   },
   orange: {
     x: 1,
     y: 8,
-    direction: 'up'
+    direction: UP
   }
 };
-
-test('create unique possible sets of directions', () => {
-  let expected = logic.directionGen();
-  if (expected[1] !== expected[2]) {
-    expect(expected[0]).not.toEqual(expected[1]||expected[2]);
-  } else {
-    expect(expected[1]).not.toEqual(expected[2]);
-  }
-});
-
-test('use the directions to generate states', () => {
-  const currentState = {
-    board: {
-      walls: []
-    },
-    pacman: {
-      x: 5,
-      y: 6,
-      direction: 'nope',
-      activeDirection: 'up'
-    },
-    orange: {
-      x: 3,
-      y: 4,
-      direction: 'right'
-    },
-    red: {
-      x: 3,
-      y: 9,
-      direction: 'left'
-    }
-  };
-  let expected = logic.stateGen(currentState);
-  expect(expected).toHaveLength(3);
-});
 
 test('it should generate directions for pacman, red & orange', () => {
   expect(logic.computePossibleDirections({
