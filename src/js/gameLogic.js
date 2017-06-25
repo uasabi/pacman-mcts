@@ -25,55 +25,28 @@ export function crunchState(state, action) {
 export function computeNextState(state) {
   if (state.collision) return state;
 
-  const newPacmanState = movePlayer({
-    player: state.pacman,
-    direction: state.pacman.direction,
-    rows: state.board.rows,
-    cols: state.board.rows
-  });
-  const pacmanState = isValidMove({
-    walls: state.board.walls,
-    x: newPacmanState.x,
-    y: newPacmanState.y,
-    rows: state.board.rows,
-    cols: state.board.cols
-  }) ? {...state, pacman: newPacmanState} : state;
+  const playerStates = {
+    pacman: state.pacman,
+    red: state.red,
+    orange: state.orange
+  };
 
-  const moveGhost = (player, direction) => {
-    const newPositon = movePlayer({
-      player,
-      direction,
+  const finalState = Object.keys(playerStates).reduce((state, playerName) => {
+    const playerState = playerStates[playerName];
+    const newPlayerState = movePlayer({
+      player: playerState,
+      direction: playerState.direction,
       rows: state.board.rows,
       cols: state.board.rows
     });
-    const isPositionValid = isValidMove({
-      direction,
+    return isValidMove({
       walls: state.board.walls,
-      x: player.x,
-      y: player.y,
+      x: newPlayerState.x,
+      y: newPlayerState.y,
       rows: state.board.rows,
-      cols: state.board.rows
-    });
-    return isPositionValid ?
-    newPositon : movePlayer({
-      rows: state.board.rows,
-      cols: state.board.rows,
-      player: player,
-      direction: generateValidDirections({
-        walls: state.board.walls,
-        x: player.x,
-        y: player.y,
-        cols: state.board.rows,
-        rows: state.board.rows
-      })[0]
-    });
-  };
-
-  const finalState = {
-    ...pacmanState,
-    red: moveGhost(state.red, state.red.direction),
-    orange: moveGhost(state.orange, state.orange.direction)
-  };
+      cols: state.board.cols
+    }) ? {...state, [playerName]: newPlayerState} : state;
+  }, state);
 
   finalState.collision = [finalState.red, finalState.orange].some(ghost => collisionDetection(ghost, finalState.pacman));
   return finalState;

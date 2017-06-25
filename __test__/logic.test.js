@@ -69,8 +69,8 @@ test('state updates as expected', () => {
     collision: false,
     board: mockState.board,
     pacman: {x: 6, y: 5, direction: logic.RIGHT},
-    red: {x: 10, y: 9, direction: logic.DOWN},
-    orange: {x: 10, y: 9, direction: logic.DOWN},
+    red: {x: 10, y: 10, direction: logic.RIGHT},
+    orange: {x: 10, y: 10, direction: logic.RIGHT},
   });
 });
 

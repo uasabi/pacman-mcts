@@ -1,6 +1,7 @@
 import {renderBoard} from './render';
 import {crunchState, NONE, LEFT, RIGHT, UP, DOWN} from './gameLogic';
-import {createActionTick, createActionMovePacman} from './actions';
+import {createActionTick, createActionMovePacman, createActionMoveOrange, createActionMoveRed} from './actions';
+import {computeNextDirectionForOrange, computeNextDirectionForRed} from './ghostAi';
 
 let then, fpsInterval, startTime;
 let lastKeyPressed = NONE;
@@ -68,7 +69,9 @@ function mainLoop() {
     requestAnimationFrame(mainLoop) : setImmediate(mainLoop);
 
   const actions = [createActionTick({time: Date.now()})]
-    .concat(lastKeyPressed === NONE ? [] : createActionMovePacman({direction: lastKeyPressed}));
+    .concat(lastKeyPressed === NONE ? [] : createActionMovePacman({direction: lastKeyPressed}))
+    .concat(createActionMoveOrange({direction: computeNextDirectionForOrange(currentState)}))
+    .concat(createActionMoveRed({direction: computeNextDirectionForRed(currentState)}));
   currentState = actions.reduce((state, action) => crunchState(state, action), currentState);
   renderBoard(currentState);
 }
