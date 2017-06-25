@@ -39,7 +39,7 @@ export function computeNextState(state) {
       player: playerState,
       direction: playerState.direction,
       rows: state.board.rows,
-      cols: state.board.rows
+      cols: state.board.cols
     });
     return isValidMove({
       walls: state.board.walls,

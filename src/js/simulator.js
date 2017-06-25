@@ -6,7 +6,7 @@ export function computePossibleDirections(state) {
   return generateValidDirections({
     walls: state.board.walls,
     cols: state.board.rows,
-    rows: state.board.rows,
+    rows: state.board.cols,
     x: state.pacman.x,
     y: state.pacman.y
   }).map(pacmanDirection => {

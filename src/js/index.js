@@ -9,9 +9,8 @@ let currentState = {
   collision: false,
   lastRun: Date.now(),
   board: {
-    size: 144,
     rows: 12,
-    cellSize: 4,
+    cols: 12,
     walls: [
       {x: 0, y: 0},
       {x: 1, y: 0},
