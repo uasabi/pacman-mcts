@@ -1,5 +1,5 @@
 import {renderBoard} from './render';
-import {crunchState, NONE, LEFT, RIGHT, UP, DOWN} from './pre-logic';
+import {crunchState, NONE, LEFT, RIGHT, UP, DOWN} from './gameLogic';
 import {createActionTick, createActionMovePacman} from './actions';
 
 let then, fpsInterval, startTime;

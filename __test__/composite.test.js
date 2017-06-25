@@ -1,4 +1,4 @@
-import * as logic from '../src/js/pre-logic';
+import * as logic from '../src/js/gameLogic';
 
 let fakeState = {
   collision: false,
