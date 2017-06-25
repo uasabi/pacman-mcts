@@ -1,21 +1,32 @@
+import {TICK, MOVE_PACMAN} from './actions';
+
 export const LEFT = 'left';
 export const RIGHT = 'right';
 export const UP = 'up';
 export const DOWN = 'down';
 export const NONE = 'nope';
 
-export function isWall({walls, x, y}) {
-  return !!walls.find(element => element.x === x && element.y === y);
+export function crunchState(state, action) {
+  switch(action.type) {
+  case TICK:
+    return (action.time - state.lastRun > 1000) ?
+      {...computeNextState(state), lastRun: action.time} : state;
+  case MOVE_PACMAN:
+    return {...state, pacman: {...state.pacman, direction: action.direction}};
+  default:
+    return state;
+  }
 }
 
-export function crunchState(state, action) {
+export function computeNextState(state) {
   if (state.collision) return state;
 
-  const pacManInput = action.input.pacman === NONE ? state.pacman.direction : action.input.pacman;
-  const redInput = action.input.red === NONE ? state.red.direction : action.input.red;
-  const orangeInput = action.input.orange === NONE ? state.orange.direction : action.input.orange;
-
-  const newPacmanState = movePlayer({player: state.pacman, direction: pacManInput, rows: state.board.rows, cols: state.board.rows});
+  const newPacmanState = movePlayer({
+    player: state.pacman,
+    direction: state.pacman.direction,
+    rows: state.board.rows,
+    cols: state.board.rows
+  });
   const pacmanState = isValidMove({
     walls: state.board.walls,
     x: newPacmanState.x,
@@ -25,7 +36,12 @@ export function crunchState(state, action) {
   }) ? {...state, pacman: newPacmanState} : state;
 
   const moveGhost = (player, direction) => {
-    const newPositon = movePlayer({player, direction, rows: state.board.rows, cols: state.board.rows});
+    const newPositon = movePlayer({
+      player,
+      direction,
+      rows: state.board.rows,
+      cols: state.board.rows
+    });
     const isPositionValid = isValidMove({
       direction,
       walls: state.board.walls,
@@ -49,10 +65,18 @@ export function crunchState(state, action) {
     });
   };
 
-  const finalState = {...pacmanState, red: moveGhost(state.red, redInput), orange: moveGhost(state.orange, orangeInput)};
+  const finalState = {
+    ...pacmanState,
+    red: moveGhost(state.red, state.red.direction),
+    orange: moveGhost(state.orange, state.orange.direction)
+  };
 
   finalState.collision = [finalState.red, finalState.orange].some(ghost => collisionDetection(ghost, finalState.pacman));
   return finalState;
+}
+
+export function isWall({walls, x, y}) {
+  return !!walls.find(element => element.x === x && element.y === y);
 }
 
 export function convertDirectionToCoordinate({direction}) {

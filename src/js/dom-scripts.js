@@ -1,10 +1,12 @@
 import {renderBoard} from './render';
 import {crunchState, NONE, LEFT, RIGHT, UP, DOWN} from './pre-logic';
+import {createActionTick, createActionMovePacman} from './actions';
 
 let then, fpsInterval, startTime;
 let lastKeyPressed = NONE;
 let currentState = {
   collision: false,
+  lastRun: Date.now(),
   board: {
     size: 144,
     rows: 12,
@@ -61,29 +63,17 @@ let currentState = {
   }
 };
 
-function startAnimating(fps) {
-  fpsInterval = 1000 / fps;
-  then = Date.now();
-  startTime = then;
-  mainLoop();
-}
-
 function mainLoop() {
-  requestAnimationFrame(mainLoop);
-  let now = Date.now();
-  let elapsed = now - then;
-  if (elapsed > fpsInterval) {
-    then = now - (elapsed % fpsInterval);
-    currentState = crunchState(currentState, {type: 'Tick', deltaInMilliseconds: then, input: {
-      pacman: lastKeyPressed,
-      red: NONE,
-      orange: NONE
-    }}) || currentState;
-    renderBoard(currentState);
-  }
+  (typeof requestAnimationFrame !== 'undefined') ?
+    requestAnimationFrame(mainLoop) : setImmediate(mainLoop);
+
+  const actions = [createActionTick({time: Date.now()})]
+    .concat(lastKeyPressed === NONE ? [] : createActionMovePacman({direction: lastKeyPressed}));
+  currentState = actions.reduce((state, action) => crunchState(state, action), currentState);
+  renderBoard(currentState);
 }
 
-document.addEventListener('keydown', (e)=> {
+document.addEventListener('keydown', e => {
   e = e || window.event;
   switch(e.keyCode) {
   case 37:
@@ -101,4 +91,4 @@ document.addEventListener('keydown', (e)=> {
   }
 });
 
-startAnimating(1);
+mainLoop();
