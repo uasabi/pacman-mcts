@@ -1,4 +1,4 @@
-import * as logic from '../src/js/gameLogic';
+import * as logic from '../src/js/simulator';
 
 let fakeState = {
   collision: false,
