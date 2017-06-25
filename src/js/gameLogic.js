@@ -92,7 +92,7 @@ export function isValidMove({walls, direction, x, y, rows, cols}) {
   return !isWall({walls, x: updatedX, y: updatedY});
 }
 
-export function generateValidDirections({walls, x, y, cols, rows, }) {
+export function generateValidDirections({walls, x, y, cols, rows}) {
   return [UP, RIGHT, DOWN, LEFT].filter(direction => isValidMove({walls, direction, x, y, cols, rows}));
 }
 

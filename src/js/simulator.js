@@ -1,7 +1,20 @@
-import {crunchState} from './gameLogic';
+import {crunchState, UP, DOWN, LEFT, RIGHT, generateValidDirections} from './gameLogic';
+import {computeNextDirectionForOrange, computeNextDirectionForRed} from './ghostAi';
 
-export function pickRanDir() {
-  const directions = ['up', 'down', 'left', 'right'];
+export function computePossibleDirections(state) {
+  return generateValidDirections({
+    walls: state.board.walls,
+    cols: state.board.rows,
+    rows: state.board.rows,
+    x: state.pacman.x,
+    y: state.pacman.y
+  }).map(pacmanDirection => {
+    return [pacmanDirection, computeNextDirectionForRed(state), computeNextDirectionForOrange(state)];
+  });
+}
+
+export function pickRandomDirection() {
+  const directions = [UP, DOWN, LEFT, RIGHT];
   let number = Math.floor(Math.random() * directions.length);
   return directions[number];
 }

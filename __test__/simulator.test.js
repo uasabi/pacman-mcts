@@ -1,7 +1,9 @@
 import * as logic from '../src/js/simulator';
+import {UP, DOWN, LEFT, RIGHT} from '../src/js/gameLogic';
 
-let fakeState = {
+const mockState = {
   collision: false,
+  lastRun: 0,
   board: {
     size: 144,
     rows: 12,
@@ -68,7 +70,7 @@ test('create unique possible sets of directions', () => {
 });
 
 test('use the directions to generate states', () => {
-  fakeState = {
+  const currentState = {
     board: {
       walls: []
     },
@@ -89,6 +91,40 @@ test('use the directions to generate states', () => {
       direction: 'left'
     }
   };
-  let expected = logic.stateGen(fakeState);
+  let expected = logic.stateGen(currentState);
   expect(expected).toHaveLength(3);
+});
+
+test('it should generate directions for pacman, red & orange', () => {
+  expect(logic.computePossibleDirections({
+    board: mockState.board,
+    pacman: {x: 5, y: 5, direction: LEFT},
+    red: {x: 10, y: 10, direction: RIGHT},
+    orange: {x: 7, y: 11, direction: RIGHT},
+  })).toEqual([
+    [UP, DOWN, UP],
+    [RIGHT, DOWN, UP],
+    [DOWN, DOWN, UP],
+    [LEFT, DOWN, UP],
+  ]);
+  expect(logic.computePossibleDirections({
+    board: mockState.board,
+    pacman: {x: 5, y: 5, direction: LEFT},
+    red: {x: 7, y: 7, direction: RIGHT},
+    orange: {x: 3, y: 3, direction: DOWN},
+  })).toEqual([
+    [UP, RIGHT, DOWN],
+    [RIGHT, RIGHT, DOWN],
+    [DOWN, RIGHT, DOWN],
+    [LEFT, RIGHT, DOWN],
+  ]);
+  expect(logic.computePossibleDirections({
+    board: mockState.board,
+    pacman: {x: 10, y: 10, direction: LEFT},
+    red: {x: 7, y: 7, direction: RIGHT},
+    orange: {x: 3, y: 3, direction: DOWN},
+  })).toEqual([
+    [DOWN, RIGHT, DOWN],
+    [LEFT, RIGHT, DOWN],
+  ]);
 });
