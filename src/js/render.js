@@ -1,3 +1,5 @@
+import {UP, DOWN, LEFT, RIGHT} from './gameLogic';
+
 export function makeBoardPiece(id, cellsize = 4, isPermeable = true) {
   const backgroundColor = isPermeable ? 'black' : 'blue';
   return `
@@ -8,18 +10,18 @@ export function makeBoardPiece(id, cellsize = 4, isPermeable = true) {
   </div>`;
 }
 
-export function makePacman(cellsize = 4) {
+export function makePacman(pacman, cellsize = 4) {
   return `
    <div
-     style='height: ${cellsize}em; width: ${cellsize}em; background-color: black; display: inline-block;'>
-     <svg viewbox='0 0 100 100' id='pacman-sprite'>
-     <use xlink:href='#pacman' />
-     </svg>
+    style='height: ${cellsize}em; width: ${cellsize}em; background-color: black; display: inline-block;'>
+    <svg viewbox='0 0 100 100' id='pacman-sprite' ${rotate(pacman.direction)}>
+    <use xlink:href='#pacman' />
+    </svg>
    </div>
  `;
 }
 
-export function makeRed(cellsize = 4) {
+export function makeRed(red, cellsize = 4) {
   return `
     <div
       style='height: ${cellsize}em; width: ${cellsize}em; background-color: black; display: inline-block;'>
@@ -30,7 +32,7 @@ export function makeRed(cellsize = 4) {
   `;
 }
 
-export function makeOrange(cellsize = 4) {
+export function makeOrange(orange, cellsize = 4) {
   return `
     <div
       style='height: ${cellsize}em; width: ${cellsize}em; background-color: black; display: inline-block;'>
@@ -50,6 +52,20 @@ export function makePill(cellsize = 4) {
       </svg>
     </div>
   `;
+}
+
+function rotate(direction) {
+  switch(direction) {
+  case UP:
+    return 'transform="rotate(90)"';
+  case DOWN:
+    return 'transform="rotate(270)"';
+  case RIGHT:
+    return 'transform="rotate(180)"';
+  case LEFT:
+  default:
+    return '';
+  }
 }
 
 export function renderBoard(state) {
@@ -73,9 +89,9 @@ export function buildTheBoard(state) {
     matrix[wall.x][wall.y] = makeBoardPiece(`${wall.y}x${wall.x}`, cellSize, false);
   });
   state.pills.forEach(pill => matrix[pill.x][pill.y] = makePill(cellSize));
-  matrix[state.pacman.x][state.pacman.y] = makePacman(cellSize);
-  matrix[state.red.x][state.red.y] = makeRed(cellSize);
-  matrix[state.orange.x][state.orange.y] = makeOrange(cellSize);
+  matrix[state.pacman.x][state.pacman.y] = makePacman(state.pacman);
+  matrix[state.red.x][state.red.y] = makeRed(state.red);
+  matrix[state.orange.x][state.orange.y] = makeOrange(state.orange);
 
   const renderMatrix = [];
   for(let j = 0, jLen = cols; j < jLen; j += 1) {
