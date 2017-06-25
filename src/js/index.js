@@ -2,6 +2,7 @@ import {renderBoard} from './render';
 import {crunchState, NONE, LEFT, RIGHT, UP, DOWN} from './gameLogic';
 import {createActionTick, createActionMovePacman, createActionMoveOrange, createActionMoveRed} from './actions';
 import {computeNextDirectionForOrange, computeNextDirectionForRed} from './ghostAi';
+import {pickNextMove} from './simulator';
 
 let then, fpsInterval, startTime;
 let lastKeyPressed = NONE;
@@ -9,7 +10,25 @@ let currentState = {
   collision: false,
   lastRun: Date.now(),
   pills: [
-    {x: 3, y: 8}
+    {x: 3, y: 8},
+    {x: 4, y: 8},
+    {x: 5, y: 8},
+    {x: 6, y: 8},
+    {x: 7, y: 8},
+    {x: 8, y: 8},
+    {x: 8, y: 7},
+    {x: 8, y: 6},
+    {x: 8, y: 5},
+    {x: 8, y: 4},
+    {x: 8, y: 3},
+    {x: 1, y: 1},
+    {x: 2, y: 1},
+    {x: 1, y: 2},
+    {x: 2, y: 2},
+    {x: 2, y: 6},
+    {x: 2, y: 5},
+    {x: 2, y: 4},
+    {x: 2, y: 3},
   ],
   board: {
     rows: 12,
@@ -53,16 +72,19 @@ let currentState = {
     x: 5,
     y: 5,
     direction: LEFT,
+    score: 0,
   },
   red: {
     x: 7,
     y: 11,
-    direction: RIGHT
+    direction: RIGHT,
+    score: 0,
   },
   orange: {
     x: 1,
     y: 8,
-    direction: UP
+    direction: UP,
+    score: 0,
   }
 };
 
@@ -74,6 +96,19 @@ function mainLoop() {
     .concat(lastKeyPressed === NONE ? [] : createActionMovePacman({direction: lastKeyPressed}))
     .concat(createActionMoveOrange({direction: computeNextDirectionForOrange(currentState)}))
     .concat(createActionMoveRed({direction: computeNextDirectionForRed(currentState)}));
+  currentState = actions.reduce((state, action) => crunchState(state, action), currentState);
+  renderBoard(currentState);
+}
+
+function aiLoop() {
+  setTimeout(aiLoop, 1000 / 10);
+
+  const actions = [
+    createActionTick({time: Date.now()}),
+    createActionMovePacman({direction: pickNextMove(currentState)}),
+    createActionMoveOrange({direction: computeNextDirectionForOrange(currentState)}),
+    createActionMoveRed({direction: computeNextDirectionForRed(currentState)})
+  ];
   currentState = actions.reduce((state, action) => crunchState(state, action), currentState);
   renderBoard(currentState);
 }
@@ -96,4 +131,5 @@ document.addEventListener('keydown', e => {
   }
 });
 
+// aiLoop();
 mainLoop();

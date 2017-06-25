@@ -70,3 +70,9 @@ export function mutateParentScore(node) {
   }
   if (node.parent) mutateParentScore(node.parent);
 }
+
+export function pickNextMove(state, smartness = 5) {
+  const tree = generateMCTree({rootState: state, nestingLevel: smartness});
+  const candidates = tree.children.slice(0).sort((childA, childB) => childB.accumulatedPacmanScore - childA.accumulatedPacmanScore);
+  return candidates[0].state.pacman.direction;
+}
