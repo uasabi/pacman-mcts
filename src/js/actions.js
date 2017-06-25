@@ -1,4 +1,5 @@
 export const TICK = 'Tick';
+export const SIMULATE = 'Simulate';
 export const MOVE_PACMAN = 'move pacman';
 export const MOVE_ORANGE = 'move orange';
 export const MOVE_RED = 'move red';
@@ -7,6 +8,12 @@ export function createActionTick({time}) {
   return {
     type: TICK,
     time
+  };
+}
+
+export function createActionSimulate() {
+  return {
+    type: SIMULATE,
   };
 }
 

@@ -1,4 +1,4 @@
-import {TICK, MOVE_PACMAN, MOVE_ORANGE, MOVE_RED} from './actions';
+import {TICK, MOVE_PACMAN, MOVE_ORANGE, MOVE_RED, SIMULATE} from './actions';
 
 export const LEFT = 'left';
 export const RIGHT = 'right';
@@ -11,6 +11,8 @@ export function crunchState(state, action) {
   case TICK:
     return (action.time - state.lastRun > 1000) ?
       {...computeNextState(state), lastRun: action.time} : state;
+  case SIMULATE:
+    return computeNextState(state);
   case MOVE_PACMAN:
     return {...state, pacman: {...state.pacman, direction: action.direction}};
   case MOVE_ORANGE:
@@ -104,4 +106,8 @@ export function movePlayer({player, direction, rows, cols}) {
 
 export function collisionDetection(entityA, entityB) {
   return entityA.x === entityB.x && entityA.y === entityB.y;
+}
+
+export function isGameOver(state) {
+  return !!state.collision;
 }

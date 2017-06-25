@@ -1,6 +1,6 @@
-import {crunchState, UP, DOWN, LEFT, RIGHT, generateValidDirections} from './gameLogic';
+import {crunchState, UP, DOWN, LEFT, RIGHT, generateValidDirections, isGameOver} from './gameLogic';
 import {computeNextDirectionForOrange, computeNextDirectionForRed} from './ghostAi';
-import {createActionMovePacman, createActionMoveOrange, createActionMoveRed} from './actions';
+import {createActionMovePacman, createActionMoveOrange, createActionMoveRed, createActionSimulate} from './actions';
 
 export function computePossibleDirections(state) {
   return generateValidDirections({
@@ -20,6 +20,18 @@ export function generateChildStates(parentState, directionTriplets) {
       createActionMovePacman({direction: directionPacman}),
       createActionMoveRed({direction: directionRed}),
       createActionMoveOrange({direction: directionOrange}),
+      createActionSimulate(),
     ].reduce((state, action) => crunchState(state, action), parentState);
   });
+}
+
+export function generateTree({rootState, nestingLevel = 3}, parent = null, currentLevel = 0) {
+  const childStates = isGameOver(rootState) ? [] : generateChildStates(rootState, computePossibleDirections(rootState));
+  return {
+    state: rootState,
+    parent,
+    level: currentLevel,
+    children: nestingLevel >= 1 ?
+      childStates.map(state => generateTree({rootState: state, nestingLevel: nestingLevel - 1}, rootState, currentLevel + 1)) : []
+  };
 }

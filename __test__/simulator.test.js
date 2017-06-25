@@ -93,3 +93,42 @@ test('it should generate directions for pacman, red & orange', () => {
     [LEFT, RIGHT, DOWN],
   ]);
 });
+
+test('it should generate a tree of states', () => {
+  const rootState = {
+    collision: false,
+    board: {
+      rows: 12,
+      walls: []
+    },
+    pacman: {x: 10, y: 10, direction: LEFT},
+    red: {x: 7, y: 7, direction: RIGHT},
+    orange: {x: 3, y: 3, direction: DOWN},
+  };
+  const tree = logic.generateTree({rootState, nestingLevel: 2});
+  expect(tree.level).toBe(0);
+  expect(tree.parent).toBe(null);
+  expect(tree.children.length).toEqual(4);
+  tree.children.forEach(child => {
+    expect(child.level).toEqual(1);
+    expect(child.parent).toBe(rootState);
+    expect(child.children.length).toEqual(4);
+    child.children.forEach(it => {
+      expect(it.children.length).toEqual(0);
+      expect(it.level).toEqual(2);
+      expect(it.parent).toEqual(child.state);
+    });
+  });
+  expect(tree.children[0].state.pacman).toEqual({x: 10, y: 11, direction: UP});
+  expect(tree.children[0].state.red).toEqual({x: 8, y: 7, direction: RIGHT});
+  expect(tree.children[0].state.orange).toEqual({x: 3, y: 2, direction: DOWN});
+  expect(tree.children[1].state.pacman).toEqual({x: 11, y: 10, direction: RIGHT});
+  expect(tree.children[1].state.red).toEqual({x: 8, y: 7, direction: RIGHT});
+  expect(tree.children[1].state.orange).toEqual({x: 3, y: 2, direction: DOWN});
+  expect(tree.children[2].state.pacman).toEqual({x: 10, y: 9, direction: DOWN});
+  expect(tree.children[2].state.red).toEqual({x: 8, y: 7, direction: RIGHT});
+  expect(tree.children[2].state.orange).toEqual({x: 3, y: 2, direction: DOWN});
+  expect(tree.children[3].state.pacman).toEqual({x: 9, y: 10, direction: LEFT});
+  expect(tree.children[3].state.red).toEqual({x: 8, y: 7, direction: RIGHT});
+  expect(tree.children[3].state.orange).toEqual({x: 3, y: 2, direction: DOWN});
+});
