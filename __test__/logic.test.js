@@ -53,6 +53,7 @@ test('state updates as expected', () => {
     red: {x: 7, y: 10, direction: logic.RIGHT},
     orange: {x: 1, y: 8, direction: logic.UP}
   }, {input: {pacman: logic.RIGHT, red: logic.NONE, orange: logic.NONE}})).toEqual({
+    collision: false,
     board: mockState.board,
     pacman: {x: 6, y: 5, direction: logic.RIGHT},
     red: {x: 8, y: 10, direction: logic.RIGHT},
@@ -64,6 +65,7 @@ test('state updates as expected', () => {
     red: {x: 10, y: 10, direction: logic.RIGHT},
     orange: {x: 10, y: 10, direction: logic.RIGHT}
   }, {input: {pacman: logic.RIGHT, red: logic.NONE, orange: logic.NONE}})).toEqual({
+    collision: false,
     board: mockState.board,
     pacman: {x: 6, y: 5, direction: logic.RIGHT},
     red: {x: 10, y: 9, direction: logic.DOWN},
@@ -102,8 +104,15 @@ test('wall === wall', () => {
 });
 
 test('ghosts can catch pacman', () => {
-  let fakeState = {...fakeState, collision: false, pacman: {x: 8, y: 7, direction: 'nope', activeDirection: 'left'}, red: {x: 7, y: 7, direction: 'right'}, orange: {x: 1, y: 7, direction: 'up'}};
-  expect(logic.collisionDetection(fakeState.red, fakeState.pacman)).toBe(true);
+  expect(logic.collisionDetection(
+    {x: 8, y: 7, direction: logic.RIGHT},
+    {x: 8, y: 7, direction: logic.NONE, activeDirection: logic.LEFT})).toBe(true);
+  expect(logic.collisionDetection(
+    {x: 8, y: 7, direction: logic.NONE, activeDirection: logic.LEFT},
+    {x: 8, y: 7, direction: logic.RIGHT})).toBe(true);
+  expect(logic.collisionDetection(
+    {x: 9, y: 7, direction: logic.NONE, activeDirection: logic.LEFT},
+    {x: 8, y: 7, direction: logic.RIGHT})).toBe(false);
 });
 
 test('not every movement is a collision', () => {

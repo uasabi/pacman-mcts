@@ -113,11 +113,7 @@ export function crunchState(state, action) {
 
   const finalState = {...pacmanState, red: moveGhost(state.red, redInput), orange: moveGhost(state.orange, orangeInput)};
 
-  const orangeCollision = collisionDetection(finalState.orange, finalState.pacman);
-  const redCollision = collisionDetection(finalState.red, finalState.pacman);
-  if (orangeCollision || redCollision) {
-    finalState.collision = true;
-  }
+  finalState.collision = [finalState.red, finalState.orange].some(ghost => collisionDetection(ghost, finalState.pacman));
   return finalState;
 }
 
@@ -167,17 +163,8 @@ export function movePlayer({player, direction, rows, cols}) {
   return {...player, x, y, direction};
 }
 
-export function collisionDetection(spriteOne, pacman) {
-  const opposites = {'left': 'right', 'right': 'left', 'up': 'down', 'down': 'up'};
-  const values = {'left': -1, 'right': 1, 'up': -1, 'down': 1};
-  if (opposites[spriteOne.direction] === pacman.activeDirection) {
-    if (spriteOne.direction === 'left' || spriteOne.direction === 'right') {
-      return spriteOne.x + values[spriteOne.direction] === pacman.x;
-    } else if (spriteOne.direction === 'up' || spriteOne.direction === 'down') {
-      return spriteOne.y + values[spriteOne.direction] === pacman.y;
-    }
-  }
-  return (spriteOne.x === pacman.x && spriteOne.y === pacman.y);
+export function collisionDetection(entityA, entityB) {
+  return entityA.x === entityB.x && entityA.y === entityB.y;
 }
 
 export function pickRanDir() {
