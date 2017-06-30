@@ -1,6 +1,10 @@
 language: node_js
 node_js:
- - "stable"
+  - "stable"
 script:
- - yarn run test
- - yarn run lint
+  - yarn run test
+  - bash ./deploy.sh
+env:
+  global:
+  - ENCRYPTION_LABEL: "42099b4af021"
+  - COMMIT_AUTHOR_EMAIL: "bot@uasabi.com"
