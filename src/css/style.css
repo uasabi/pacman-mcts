@@ -18,6 +18,24 @@ h1, h2, h3, h4, h5, h6, th, td, caption { font-weight:normal; }
 img { border: 0; }
 
 body {
-  background-color: #fff;
+  background-color: white;
   color: #fff;
+}
+
+.board {
+  background-color: #FFDB7B;
+  padding: 2px;
+  overflow: hidden;
+}
+
+.tile {
+  width: 4em;
+  height: 4em;
+  float: left;
+  background-color: #FBF0C2;
+  border: 1px solid #FFDB7B;
+}
+
+.wall {
+  background-color: #766C6A;
 }

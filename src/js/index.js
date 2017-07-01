@@ -97,7 +97,7 @@ function mainLoop() {
     .concat(createActionMoveOrange({direction: computeNextDirectionForOrange(currentState)}))
     .concat(createActionMoveRed({direction: computeNextDirectionForRed(currentState)}));
   currentState = actions.reduce((state, action) => crunchState(state, action), currentState);
-  renderBoard(currentState);
+  renderBoard(currentState, document.querySelector('body'));
 }
 
 function aiLoop() {
@@ -110,7 +110,7 @@ function aiLoop() {
     createActionMoveRed({direction: computeNextDirectionForRed(currentState)})
   ];
   currentState = actions.reduce((state, action) => crunchState(state, action), currentState);
-  renderBoard(currentState);
+  renderBoard(currentState, document.querySelector('body'));
 }
 
 document.addEventListener('keydown', e => {
