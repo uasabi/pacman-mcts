@@ -1,20 +1,14 @@
 import * as Reveal from 'reveal.js';
-
-const slides = [
-  {
-    content: 'Slide 1'
-  },
-  {
-    content: 'Slide 2'
-  }
-];
+const marked = require('marked');
+import {slides} from './slides';
 
 function render(slides, element) {
-  return element.innerHTML = `<div class="reveal">
-  <div class="slides">
-    ${slides.map(slide => `<section>${slide.content}</section>`)}
-  </div>
+  const container = document.createElement('div');
+  container.className = 'reveal';
+  container.innerHTML = `<div class="slides">
+  ${slides.map(slide => `<section data-markdown>${marked(slide.content)}</section>`).join('\n')}
 </div>`;
+  element.appendChild(container);
 }
 
 render(slides, document.querySelector('body'));
