@@ -89,8 +89,8 @@ let currentState = {
 };
 
 function mainLoop() {
-  (typeof requestAnimationFrame !== 'undefined') ?
-    requestAnimationFrame(mainLoop) : setImmediate(mainLoop);
+  // (typeof requestAnimationFrame !== 'undefined') ?
+  //   requestAnimationFrame(mainLoop) : setImmediate(mainLoop);
 
   const actions = [createActionTick({time: Date.now()})]
     .concat(lastKeyPressed === NONE ? [] : createActionMovePacman({direction: lastKeyPressed}))

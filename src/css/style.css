@@ -1,15 +1,16 @@
 body {
   background-color: #fff;
   color: #fff;
-  text-align: center; }
+  text-align: center;
+}
 
 .svg_logo {
   margin: 0 auto;
   display: block;
-  max-width: 4em; }
+  max-width: 4em;
+}
 
 .board-tile {
   border: 1px solid #fff;
-  display: inline-block; }
-
-/*# sourceMappingURL=style.css.map */
+  display: inline-block;
+}
