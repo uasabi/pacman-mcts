@@ -12,6 +12,7 @@
     "build-deck": "yarn css && browserify src/deck/index.js -t babelify | indexhtmlify --style bundle.css --title pacman > index.html"
   },
   "dependencies": {
+    "emoji-js": "^3.2.2",
     "marked": "^0.3.6",
     "reveal.js": "^3.5.0"
   },
