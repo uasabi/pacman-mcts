@@ -8,3 +8,5 @@ src/js/logic.js
 .sass-cache/
 index.html
 bundle.css
+wallaby.js
+.vscode/

@@ -1,0 +1,17 @@
+<svg width="600px" height="600px" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <pattern x="0" y="0" viewBox="-60 5 200 200" id="grid" width="200" height="200" patternUnits="userSpaceOnUse" style="overflow:visible;">
+      <rect x="-60" y="5" width="200" height="200" fill="#FFDB7B" stroke="#E5C56E" stroke-width="10"></rect>
+    </pattern>
+  </defs>
+  <rect x="0" y="0" width="100%" height="100%" fill="url(#grid)" stroke="#E5C56E" stroke-width="20"></rect>
+  
+<g transform="translate(400, 0)">
+  <path fill="#344975" d="M94,28.7c26.3-2.4,50.9,8.6,66.3,27.6l-58.9,48.4l68.7,33.8c-11.1,22.7-33.8,39.8-61.4,42.2c-42.2,3.8-79.8-27-83.3-68.7S51.8,32.4,94,28.7z"></path>
+</g>
+  
+<g transform="translate(0, 200)">
+  <path fill="#AD402C" d="M104.1,17.6c-38.4,0-69.5,31.2-69.5,69.5v72.7c0,9.5,7.8,17.2,17.2,17.2s17.2-7.8,17.2-17.2c0,9.5,7.8,17.2,17.2,17.2s17.2-7.8,17.2-17.2c0,9.5,7.8,17.2,17.2,17.2s17.2-7.8,17.2-17.2c0,9.5,7.8,17.2,17.2,17.2c9.5,0,17.2-7.8,17.2-17.2V86.5C173.4,48.8,142.3,17.6,104.1,17.6z"></path>
+</g>
+  
+</svg>

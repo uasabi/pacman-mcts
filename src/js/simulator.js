@@ -10,18 +10,21 @@ export function computePossibleDirections(state) {
     x: state.pacman.x,
     y: state.pacman.y
   }).map(pacmanDirection => {
-    return [pacmanDirection, computeNextDirectionForRed(state), computeNextDirectionForOrange(state)];
+    return {
+      pacman: pacmanDirection,
+      red: state.red ? computeNextDirectionForRed(state) : null,
+      orange: state.orange? computeNextDirectionForOrange(state) : null
+    };
   });
 }
 
 export function generateChildStates(parentState, directionTriplets) {
-  return directionTriplets.map(([directionPacman, directionRed, directionOrange]) => {
-    return [
-      createActionMovePacman({direction: directionPacman}),
-      createActionMoveRed({direction: directionRed}),
-      createActionMoveOrange({direction: directionOrange}),
-      createActionSimulate(),
-    ].reduce((state, action) => crunchState(state, action), parentState);
+  return directionTriplets.map(({pacman, red, orange}) => {
+    return [createActionMovePacman({direction: pacman})]
+      .concat(red ? createActionMoveRed({direction: red}) : [])
+      .concat(orange ? createActionMoveOrange({direction: orange}): [])
+      .concat(createActionSimulate())
+      .reduce((state, action) => crunchState(state, action), parentState);
   });
 }
 
@@ -41,8 +44,8 @@ export function generateTree({rootState, nestingLevel = 3}, parent = null, curre
 export function generateMCTree({rootState, nestingLevel = 3}, parent = null, currentLevel = 0) {
   const currentNode = {
     accumulatedPacmanScore: rootState.pacman.score,
-    accumulatedRedScore: rootState.red.score,
-    accumulatedOrangeScore: rootState.orange.score,
+    accumulatedRedScore: (rootState.red || {score: 0}).score,
+    accumulatedOrangeScore: (rootState.orange || {score: 0}).score,
     state: rootState,
     parent,
     level: currentLevel,
@@ -65,8 +68,8 @@ export function mutateParentScore(node) {
     node.accumulatedOrangeScore = node.children.reduce((totalScore, child) => child.accumulatedOrangeScore + totalScore, 0);
   } else {
     node.accumulatedPacmanScore = node.state.pacman.score;
-    node.accumulatedRedScore = node.state.red.score;
-    node.accumulatedOrangeScore = node.state.orange.score;
+    node.accumulatedRedScore = (node.state.red || {score: 0}).score;
+    node.accumulatedOrangeScore = (node.state.orange || {score: 0}).score;
   }
   if (node.parent) mutateParentScore(node.parent);
 }

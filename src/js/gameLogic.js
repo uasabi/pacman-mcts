@@ -33,7 +33,9 @@ export function computeNextState(state) {
     orange: state.orange
   };
 
-  const positionState = Object.keys(playerStates).reduce((state, playerName) => {
+  const positionState = Object.keys(playerStates)
+  .filter(key => !!playerStates[key])
+  .reduce((state, playerName) => {
     const playerState = playerStates[playerName];
     const newPlayerState = movePlayer({
       player: playerState,
@@ -51,17 +53,20 @@ export function computeNextState(state) {
   }, state);
 
   const filteredPills = positionState.pills.filter(pill => !collisionDetection(pill, positionState.pacman));
-  const isPacmanCaughtByRed = collisionDetection(positionState.pacman, positionState.red);
-  const isPacmanCaughtByOrange = collisionDetection(positionState.pacman, positionState.orange);
+  const isPacmanCaughtByRed = state.red ? collisionDetection(positionState.pacman, positionState.red) : false;
+  const isPacmanCaughtByOrange = state.orange ? collisionDetection(positionState.pacman, positionState.orange) : false;
 
-  return {
+  const finalState = {
     ...positionState,
     collision: positionState.collision || isPacmanCaughtByRed || isPacmanCaughtByOrange,
     pills: filteredPills,
     pacman: {...positionState.pacman, score: toInt(positionState.pacman.score) + (positionState.pills.length - filteredPills.length)},
-    red: {...positionState.red, score: toInt(positionState.red.score) + toInt(isPacmanCaughtByRed)},
-    orange: {...positionState.orange, score: toInt(positionState.orange.score) + toInt(isPacmanCaughtByOrange)},
   };
+
+  if (state.red) finalState.red = {...positionState.red, score: toInt(positionState.red.score) + toInt(isPacmanCaughtByRed)};
+  if (state.orange) finalState.orange = {...positionState.orange, score: toInt(positionState.orange.score) + toInt(isPacmanCaughtByOrange)};
+
+  return finalState;
 }
 
 export function isWall({walls, x, y}) {
