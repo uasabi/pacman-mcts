@@ -7,3 +7,4 @@ src/js/logic.js
 .DS_Store
 .sass-cache/
 index.html
+bundle.css
