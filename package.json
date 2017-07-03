@@ -4,17 +4,14 @@
   "main": "src/js/index.js",
   "license": "MIT",
   "scripts": {
-    "css": "cat node_modules/reveal.js/css/reveal.css node_modules/reveal.js/css/theme/white.css src/css/style.css > bundle.css",
-    "start": "yarn css && watchify src/deck/index.js -t babelify -v -o 'indexhtmlify --style bundle.css --title pacman > index.html'",
+    "start": "yarn css && watchify src/js/index.js -t babelify -v -o 'indexhtmlify --style src/css/style.css --title pacman > index.html'",
     "sync": "browser-sync start --proxy 'localhost:8080' --files 'src'",
     "test": "eslint src/js/ && eslint ./__test__/ && jest",
-    "build-game": "browserify src/js/index.js -t babelify | indexhtmlify --style src/css/style.css > game.html",
-    "build-deck": "yarn css && browserify src/deck/index.js -t babelify | indexhtmlify --style bundle.css --title pacman > index.html"
+    "build": "browserify src/js/index.js -t babelify | indexhtmlify --style src/css/style.css > index.html"
   },
   "dependencies": {
-    "emoji-js": "^3.2.2",
-    "marked": "^0.3.6",
-    "reveal.js": "^3.5.0"
+    "d3": "^4.9.1",
+    "svg2png": "^4.1.1"
   },
   "devDependencies": {
     "babel-cli": "^6.24.1",

@@ -2,7 +2,8 @@ import {renderBoard} from './render';
 import {crunchState, NONE, LEFT, RIGHT, UP, DOWN} from './gameLogic';
 import {createActionTick, createActionMovePacman, createActionMoveOrange, createActionMoveRed} from './actions';
 import {computeNextDirectionForOrange, computeNextDirectionForRed} from './ghostAi';
-import {pickNextMove} from './simulator';
+import {pickNextMove, generateMCTree} from './simulator';
+import * as d3 from 'd3';
 
 let then, fpsInterval, startTime;
 let lastKeyPressed = NONE;
@@ -89,8 +90,8 @@ let currentState = {
 };
 
 function mainLoop() {
-  // (typeof requestAnimationFrame !== 'undefined') ?
-  //   requestAnimationFrame(mainLoop) : setImmediate(mainLoop);
+  (typeof requestAnimationFrame !== 'undefined') ?
+    requestAnimationFrame(mainLoop) : setImmediate(mainLoop);
 
   const actions = [createActionTick({time: Date.now()})]
     .concat(lastKeyPressed === NONE ? [] : createActionMovePacman({direction: lastKeyPressed}))
@@ -131,5 +132,5 @@ document.addEventListener('keydown', e => {
   }
 });
 
-// aiLoop();
-mainLoop();
+aiLoop();
+// mainLoop();

@@ -24,8 +24,9 @@ body {
 
 .board {
   background-color: #FFDB7B;
-  padding: 2px;
+  padding: 2px !important;
   overflow: hidden;
+  margin: 0 auto !important;
 }
 
 .tile {
@@ -33,9 +34,25 @@ body {
   height: 4em;
   float: left;
   background-color: #FBF0C2;
-  border: 1px solid #FFDB7B;
+  border: 1px solid #FFDB7B !important;
 }
 
 .wall {
   background-color: #766C6A;
+}
+
+.node circle {
+  fill: #fff;
+  stroke: steelblue;
+  stroke-width: 3px;
+}
+
+.node text {
+  font: 12px sans-serif;
+}
+
+.link {
+  fill: none;
+  stroke: #ccc;
+  stroke-width: 2px;
 }

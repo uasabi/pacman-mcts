@@ -5,7 +5,7 @@ SOURCE_BRANCH="master"
 TARGET_BRANCH="gh-pages"
 
 function doCompile {
-  yarn build-deck
+  yarn build
 }
 
 # Pull requests and commits to other branches shouldn't try to deploy, just build to verify

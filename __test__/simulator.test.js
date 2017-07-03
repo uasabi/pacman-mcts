@@ -67,10 +67,10 @@ test('it should generate directions for pacman, red & orange', () => {
     red: {x: 10, y: 10, direction: RIGHT, score: 0},
     orange: {x: 7, y: 11, direction: RIGHT, score: 0},
   })).toEqual([
-    [UP, DOWN, UP],
-    [RIGHT, DOWN, UP],
-    [DOWN, DOWN, UP],
-    [LEFT, DOWN, UP],
+    {pacman: UP, red: DOWN, orange: UP},
+    {pacman: RIGHT, red: DOWN, orange: UP},
+    {pacman: DOWN, red: DOWN, orange: UP},
+    {pacman: LEFT, red: DOWN, orange: UP},
   ]);
   expect(logic.computePossibleDirections({
     board: mockState.board,
@@ -78,10 +78,10 @@ test('it should generate directions for pacman, red & orange', () => {
     red: {x: 7, y: 7, direction: RIGHT, score: 0},
     orange: {x: 3, y: 3, direction: DOWN, score: 0},
   })).toEqual([
-    [UP, RIGHT, DOWN],
-    [RIGHT, RIGHT, DOWN],
-    [DOWN, RIGHT, DOWN],
-    [LEFT, RIGHT, DOWN],
+    {pacman: UP, red: RIGHT, orange: DOWN},
+    {pacman: RIGHT, red: RIGHT, orange: DOWN},
+    {pacman: DOWN, red: RIGHT, orange: DOWN},
+    {pacman: LEFT, red: RIGHT, orange: DOWN},
   ]);
   expect(logic.computePossibleDirections({
     board: mockState.board,
@@ -89,8 +89,16 @@ test('it should generate directions for pacman, red & orange', () => {
     red: {x: 7, y: 7, direction: RIGHT, score: 0},
     orange: {x: 3, y: 3, direction: DOWN, score: 0},
   })).toEqual([
-    [DOWN, RIGHT, DOWN],
-    [LEFT, RIGHT, DOWN],
+    {pacman: DOWN, red: RIGHT, orange: DOWN},
+    {pacman: LEFT, red: RIGHT, orange: DOWN},
+  ]);
+  expect(logic.computePossibleDirections({
+    board: mockState.board,
+    pacman: {x: 10, y: 10, direction: LEFT, score: 0},
+    red: {x: 7, y: 7, direction: RIGHT, score: 0},
+  })).toEqual([
+    {pacman: DOWN, red: RIGHT, orange: null},
+    {pacman: LEFT, red: RIGHT, orange: null},
   ]);
 });
 
