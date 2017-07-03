@@ -1,0 +1,1718 @@
+<svg width="10000" height="10000"><g transform="translate(90,20)"><g transform="translate(90, 20)" class="graph"><path class="link" fill="none" stroke="#ccc" stroke-width="2px" d="M 180 1326.6666666666665
+        C 90 1326.6666666666665,
+          90 5174,
+          0 5174"></path><path class="link" fill="none" stroke="#ccc" stroke-width="2px" d="M 180 3979.9999999999995
+        C 90 3979.9999999999995,
+          90 5174,
+          0 5174"></path><path class="link" fill="none" stroke="#ccc" stroke-width="2px" d="M 180 6633.333333333333
+        C 90 6633.333333333333,
+          90 5174,
+          0 5174"></path><path class="link" fill="none" stroke="#ccc" stroke-width="2px" d="M 180 9021.333333333332
+        C 90 9021.333333333332,
+          90 5174,
+          0 5174"></path><path class="link" fill="none" stroke="#ccc" stroke-width="2px" d="M 360 331.66666666666663
+        C 270 331.66666666666663,
+          270 1326.6666666666665,
+          180 1326.6666666666665"></path><path class="link" fill="none" stroke="#ccc" stroke-width="2px" d="M 360 994.9999999999999
+        C 270 994.9999999999999,
+          270 1326.6666666666665,
+          180 1326.6666666666665"></path><path class="link" fill="none" stroke="#ccc" stroke-width="2px" d="M 360 1658.3333333333333
+        C 270 1658.3333333333333,
+          270 1326.6666666666665,
+          180 1326.6666666666665"></path><path class="link" fill="none" stroke="#ccc" stroke-width="2px" d="M 360 2321.6666666666665
+        C 270 2321.6666666666665,
+          270 1326.6666666666665,
+          180 1326.6666666666665"></path><path class="link" fill="none" stroke="#ccc" stroke-width="2px" d="M 360 2985
+        C 270 2985,
+          270 3979.9999999999995,
+          180 3979.9999999999995"></path><path class="link" fill="none" stroke="#ccc" stroke-width="2px" d="M 360 3648.333333333333
+        C 270 3648.333333333333,
+          270 3979.9999999999995,
+          180 3979.9999999999995"></path><path class="link" fill="none" stroke="#ccc" stroke-width="2px" d="M 360 4311.666666666666
+        C 270 4311.666666666666,
+          270 3979.9999999999995,
+          180 3979.9999999999995"></path><path class="link" fill="none" stroke="#ccc" stroke-width="2px" d="M 360 4975
+        C 270 4975,
+          270 3979.9999999999995,
+          180 3979.9999999999995"></path><path class="link" fill="none" stroke="#ccc" stroke-width="2px" d="M 360 5638.333333333333
+        C 270 5638.333333333333,
+          270 6633.333333333333,
+          180 6633.333333333333"></path><path class="link" fill="none" stroke="#ccc" stroke-width="2px" d="M 360 6301.666666666666
+        C 270 6301.666666666666,
+          270 6633.333333333333,
+          180 6633.333333333333"></path><path class="link" fill="none" stroke="#ccc" stroke-width="2px" d="M 360 6964.999999999999
+        C 270 6964.999999999999,
+          270 6633.333333333333,
+          180 6633.333333333333"></path><path class="link" fill="none" stroke="#ccc" stroke-width="2px" d="M 360 7628.333333333333
+        C 270 7628.333333333333,
+          270 6633.333333333333,
+          180 6633.333333333333"></path><path class="link" fill="none" stroke="#ccc" stroke-width="2px" d="M 360 8291.666666666666
+        C 270 8291.666666666666,
+          270 9021.333333333332,
+          180 9021.333333333332"></path><path class="link" fill="none" stroke="#ccc" stroke-width="2px" d="M 360 8955
+        C 270 8955,
+          270 9021.333333333332,
+          180 9021.333333333332"></path><path class="link" fill="none" stroke="#ccc" stroke-width="2px" d="M 360 9618.333333333332
+        C 270 9618.333333333332,
+          270 9021.333333333332,
+          180 9021.333333333332"></path><path class="link" fill="none" stroke="#ccc" stroke-width="2px" d="M 360 9751
+        C 270 9751,
+          270 9021.333333333332,
+          180 9021.333333333332"></path><path class="link" fill="none" stroke="#ccc" stroke-width="2px" d="M 540 132.66666666666666
+        C 450 132.66666666666666,
+          450 331.66666666666663,
+          360 331.66666666666663"></path><path class="link" fill="none" stroke="#ccc" stroke-width="2px" d="M 540 265.3333333333333
+        C 450 265.3333333333333,
+          450 331.66666666666663,
+          360 331.66666666666663"></path><path class="link" fill="none" stroke="#ccc" stroke-width="2px" d="M 540 398
+        C 450 398,
+          450 331.66666666666663,
+          360 331.66666666666663"></path><path class="link" fill="none" stroke="#ccc" stroke-width="2px" d="M 540 530.6666666666666
+        C 450 530.6666666666666,
+          450 331.66666666666663,
+          360 331.66666666666663"></path><path class="link" fill="none" stroke="#ccc" stroke-width="2px" d="M 540 796
+        C 450 796,
+          450 994.9999999999999,
+          360 994.9999999999999"></path><path class="link" fill="none" stroke="#ccc" stroke-width="2px" d="M 540 928.6666666666666
+        C 450 928.6666666666666,
+          450 994.9999999999999,
+          360 994.9999999999999"></path><path class="link" fill="none" stroke="#ccc" stroke-width="2px" d="M 540 1061.3333333333333
+        C 450 1061.3333333333333,
+          450 994.9999999999999,
+          360 994.9999999999999"></path><path class="link" fill="none" stroke="#ccc" stroke-width="2px" d="M 540 1194
+        C 450 1194,
+          450 994.9999999999999,
+          360 994.9999999999999"></path><path class="link" fill="none" stroke="#ccc" stroke-width="2px" d="M 540 1459.3333333333333
+        C 450 1459.3333333333333,
+          450 1658.3333333333333,
+          360 1658.3333333333333"></path><path class="link" fill="none" stroke="#ccc" stroke-width="2px" d="M 540 1592
+        C 450 1592,
+          450 1658.3333333333333,
+          360 1658.3333333333333"></path><path class="link" fill="none" stroke="#ccc" stroke-width="2px" d="M 540 1724.6666666666665
+        C 450 1724.6666666666665,
+          450 1658.3333333333333,
+          360 1658.3333333333333"></path><path class="link" fill="none" stroke="#ccc" stroke-width="2px" d="M 540 1857.3333333333333
+        C 450 1857.3333333333333,
+          450 1658.3333333333333,
+          360 1658.3333333333333"></path><path class="link" fill="none" stroke="#ccc" stroke-width="2px" d="M 540 2122.6666666666665
+        C 450 2122.6666666666665,
+          450 2321.6666666666665,
+          360 2321.6666666666665"></path><path class="link" fill="none" stroke="#ccc" stroke-width="2px" d="M 540 2255.333333333333
+        C 450 2255.333333333333,
+          450 2321.6666666666665,
+          360 2321.6666666666665"></path><path class="link" fill="none" stroke="#ccc" stroke-width="2px" d="M 540 2388
+        C 450 2388,
+          450 2321.6666666666665,
+          360 2321.6666666666665"></path><path class="link" fill="none" stroke="#ccc" stroke-width="2px" d="M 540 2520.6666666666665
+        C 450 2520.6666666666665,
+          450 2321.6666666666665,
+          360 2321.6666666666665"></path><path class="link" fill="none" stroke="#ccc" stroke-width="2px" d="M 540 2786
+        C 450 2786,
+          450 2985,
+          360 2985"></path><path class="link" fill="none" stroke="#ccc" stroke-width="2px" d="M 540 2918.6666666666665
+        C 450 2918.6666666666665,
+          450 2985,
+          360 2985"></path><path class="link" fill="none" stroke="#ccc" stroke-width="2px" d="M 540 3051.333333333333
+        C 450 3051.333333333333,
+          450 2985,
+          360 2985"></path><path class="link" fill="none" stroke="#ccc" stroke-width="2px" d="M 540 3184
+        C 450 3184,
+          450 2985,
+          360 2985"></path><path class="link" fill="none" stroke="#ccc" stroke-width="2px" d="M 540 3449.333333333333
+        C 450 3449.333333333333,
+          450 3648.333333333333,
+          360 3648.333333333333"></path><path class="link" fill="none" stroke="#ccc" stroke-width="2px" d="M 540 3581.9999999999995
+        C 450 3581.9999999999995,
+          450 3648.333333333333,
+          360 3648.333333333333"></path><path class="link" fill="none" stroke="#ccc" stroke-width="2px" d="M 540 3714.6666666666665
+        C 450 3714.6666666666665,
+          450 3648.333333333333,
+          360 3648.333333333333"></path><path class="link" fill="none" stroke="#ccc" stroke-width="2px" d="M 540 3847.333333333333
+        C 450 3847.333333333333,
+          450 3648.333333333333,
+          360 3648.333333333333"></path><path class="link" fill="none" stroke="#ccc" stroke-width="2px" d="M 540 4112.666666666666
+        C 450 4112.666666666666,
+          450 4311.666666666666,
+          360 4311.666666666666"></path><path class="link" fill="none" stroke="#ccc" stroke-width="2px" d="M 540 4245.333333333333
+        C 450 4245.333333333333,
+          450 4311.666666666666,
+          360 4311.666666666666"></path><path class="link" fill="none" stroke="#ccc" stroke-width="2px" d="M 540 4378
+        C 450 4378,
+          450 4311.666666666666,
+          360 4311.666666666666"></path><path class="link" fill="none" stroke="#ccc" stroke-width="2px" d="M 540 4510.666666666666
+        C 450 4510.666666666666,
+          450 4311.666666666666,
+          360 4311.666666666666"></path><path class="link" fill="none" stroke="#ccc" stroke-width="2px" d="M 540 4776
+        C 450 4776,
+          450 4975,
+          360 4975"></path><path class="link" fill="none" stroke="#ccc" stroke-width="2px" d="M 540 4908.666666666666
+        C 450 4908.666666666666,
+          450 4975,
+          360 4975"></path><path class="link" fill="none" stroke="#ccc" stroke-width="2px" d="M 540 5041.333333333333
+        C 450 5041.333333333333,
+          450 4975,
+          360 4975"></path><path class="link" fill="none" stroke="#ccc" stroke-width="2px" d="M 540 5174
+        C 450 5174,
+          450 4975,
+          360 4975"></path><path class="link" fill="none" stroke="#ccc" stroke-width="2px" d="M 540 5439.333333333333
+        C 450 5439.333333333333,
+          450 5638.333333333333,
+          360 5638.333333333333"></path><path class="link" fill="none" stroke="#ccc" stroke-width="2px" d="M 540 5572
+        C 450 5572,
+          450 5638.333333333333,
+          360 5638.333333333333"></path><path class="link" fill="none" stroke="#ccc" stroke-width="2px" d="M 540 5704.666666666666
+        C 450 5704.666666666666,
+          450 5638.333333333333,
+          360 5638.333333333333"></path><path class="link" fill="none" stroke="#ccc" stroke-width="2px" d="M 540 5837.333333333333
+        C 450 5837.333333333333,
+          450 5638.333333333333,
+          360 5638.333333333333"></path><path class="link" fill="none" stroke="#ccc" stroke-width="2px" d="M 540 6102.666666666666
+        C 450 6102.666666666666,
+          450 6301.666666666666,
+          360 6301.666666666666"></path><path class="link" fill="none" stroke="#ccc" stroke-width="2px" d="M 540 6235.333333333333
+        C 450 6235.333333333333,
+          450 6301.666666666666,
+          360 6301.666666666666"></path><path class="link" fill="none" stroke="#ccc" stroke-width="2px" d="M 540 6368
+        C 450 6368,
+          450 6301.666666666666,
+          360 6301.666666666666"></path><path class="link" fill="none" stroke="#ccc" stroke-width="2px" d="M 540 6500.666666666666
+        C 450 6500.666666666666,
+          450 6301.666666666666,
+          360 6301.666666666666"></path><path class="link" fill="none" stroke="#ccc" stroke-width="2px" d="M 540 6765.999999999999
+        C 450 6765.999999999999,
+          450 6964.999999999999,
+          360 6964.999999999999"></path><path class="link" fill="none" stroke="#ccc" stroke-width="2px" d="M 540 6898.666666666666
+        C 450 6898.666666666666,
+          450 6964.999999999999,
+          360 6964.999999999999"></path><path class="link" fill="none" stroke="#ccc" stroke-width="2px" d="M 540 7031.333333333333
+        C 450 7031.333333333333,
+          450 6964.999999999999,
+          360 6964.999999999999"></path><path class="link" fill="none" stroke="#ccc" stroke-width="2px" d="M 540 7163.999999999999
+        C 450 7163.999999999999,
+          450 6964.999999999999,
+          360 6964.999999999999"></path><path class="link" fill="none" stroke="#ccc" stroke-width="2px" d="M 540 7429.333333333333
+        C 450 7429.333333333333,
+          450 7628.333333333333,
+          360 7628.333333333333"></path><path class="link" fill="none" stroke="#ccc" stroke-width="2px" d="M 540 7561.999999999999
+        C 450 7561.999999999999,
+          450 7628.333333333333,
+          360 7628.333333333333"></path><path class="link" fill="none" stroke="#ccc" stroke-width="2px" d="M 540 7694.666666666666
+        C 450 7694.666666666666,
+          450 7628.333333333333,
+          360 7628.333333333333"></path><path class="link" fill="none" stroke="#ccc" stroke-width="2px" d="M 540 7827.333333333333
+        C 450 7827.333333333333,
+          450 7628.333333333333,
+          360 7628.333333333333"></path><path class="link" fill="none" stroke="#ccc" stroke-width="2px" d="M 540 8092.666666666666
+        C 450 8092.666666666666,
+          450 8291.666666666666,
+          360 8291.666666666666"></path><path class="link" fill="none" stroke="#ccc" stroke-width="2px" d="M 540 8225.333333333332
+        C 450 8225.333333333332,
+          450 8291.666666666666,
+          360 8291.666666666666"></path><path class="link" fill="none" stroke="#ccc" stroke-width="2px" d="M 540 8358
+        C 450 8358,
+          450 8291.666666666666,
+          360 8291.666666666666"></path><path class="link" fill="none" stroke="#ccc" stroke-width="2px" d="M 540 8490.666666666666
+        C 450 8490.666666666666,
+          450 8291.666666666666,
+          360 8291.666666666666"></path><path class="link" fill="none" stroke="#ccc" stroke-width="2px" d="M 540 8756
+        C 450 8756,
+          450 8955,
+          360 8955"></path><path class="link" fill="none" stroke="#ccc" stroke-width="2px" d="M 540 8888.666666666666
+        C 450 8888.666666666666,
+          450 8955,
+          360 8955"></path><path class="link" fill="none" stroke="#ccc" stroke-width="2px" d="M 540 9021.333333333332
+        C 450 9021.333333333332,
+          450 8955,
+          360 8955"></path><path class="link" fill="none" stroke="#ccc" stroke-width="2px" d="M 540 9154
+        C 450 9154,
+          450 8955,
+          360 8955"></path><path class="link" fill="none" stroke="#ccc" stroke-width="2px" d="M 540 9419.333333333332
+        C 450 9419.333333333332,
+          450 9618.333333333332,
+          360 9618.333333333332"></path><path class="link" fill="none" stroke="#ccc" stroke-width="2px" d="M 540 9552
+        C 450 9552,
+          450 9618.333333333332,
+          360 9618.333333333332"></path><path class="link" fill="none" stroke="#ccc" stroke-width="2px" d="M 540 9684.666666666666
+        C 450 9684.666666666666,
+          450 9618.333333333332,
+          360 9618.333333333332"></path><path class="link" fill="none" stroke="#ccc" stroke-width="2px" d="M 540 9817.333333333332
+        C 450 9817.333333333332,
+          450 9618.333333333332,
+          360 9618.333333333332"></path><g class="node" transform="translate(0,5174)"><svg width="50px" height="50px" viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <pattern x="0" y="0" viewBox="-6.166666666666667 1 16.666666666666668 16.666666666666668" id="grid" width="16.666666666666668" height="16.666666666666668" patternUnits="userSpaceOnUse" style="overflow:visible;">
+      <rect x="-6.166666666666667" y="1" width="16.666666666666668" height="16.666666666666668" fill="#FFDB7B" stroke="#E5C56E" stroke-width="2"></rect>
+    </pattern>
+  </defs>
+  <rect x="0" y="0" width="100%" height="100%" fill="url(#grid)" stroke="#E5C56E" stroke-width="4"></rect>
+  
+<g transform="translate(33.333333333333336, 0) scale(0.08333333333333333,0.08333333333333333)">
+  <path fill="#344975" d="M94,28.7c26.3-2.4,50.9,8.6,66.3,27.6l-58.9,48.4l68.7,33.8c-11.1,22.7-33.8,39.8-61.4,42.2c-42.2,3.8-79.8-27-83.3-68.7S51.8,32.4,94,28.7z"></path>
+</g>
+  
+<g transform="translate(0, 33.333333333333336) scale(0.08333333333333333,0.08333333333333333)">
+  <path fill="#AD402C" d="M104.1,17.6c-38.4,0-69.5,31.2-69.5,69.5v72.7c0,9.5,7.8,17.2,17.2,17.2s17.2-7.8,17.2-17.2c0,9.5,7.8,17.2,17.2,17.2s17.2-7.8,17.2-17.2c0,9.5,7.8,17.2,17.2,17.2s17.2-7.8,17.2-17.2c0,9.5,7.8,17.2,17.2,17.2c9.5,0,17.2-7.8,17.2-17.2V86.5C173.4,48.8,142.3,17.6,104.1,17.6z"></path>
+</g>
+  
+  <g transform="translate(33.333333333333336, 33.333333333333336)">
+    <circle fill="#846785" cx="0.6944444444444444" cy="0.6944444444444444" r="1.6666666666666665"></circle>
+</g>
+</svg></g><g class="node" transform="translate(180,1326.6666666666665)"><svg width="50px" height="50px" viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <pattern x="0" y="0" viewBox="-6.166666666666667 1 16.666666666666668 16.666666666666668" id="grid" width="16.666666666666668" height="16.666666666666668" patternUnits="userSpaceOnUse" style="overflow:visible;">
+      <rect x="-6.166666666666667" y="1" width="16.666666666666668" height="16.666666666666668" fill="#FFDB7B" stroke="#E5C56E" stroke-width="2"></rect>
+    </pattern>
+  </defs>
+  <rect x="0" y="0" width="100%" height="100%" fill="url(#grid)" stroke="#E5C56E" stroke-width="4"></rect>
+  
+<g transform="translate(33.333333333333336, 33.333333333333336) scale(0.08333333333333333,0.08333333333333333)">
+  <path fill="#344975" d="M94,28.7c26.3-2.4,50.9,8.6,66.3,27.6l-58.9,48.4l68.7,33.8c-11.1,22.7-33.8,39.8-61.4,42.2c-42.2,3.8-79.8-27-83.3-68.7S51.8,32.4,94,28.7z"></path>
+</g>
+  
+<g transform="translate(0, 16.666666666666668) scale(0.08333333333333333,0.08333333333333333)">
+  <path fill="#AD402C" d="M104.1,17.6c-38.4,0-69.5,31.2-69.5,69.5v72.7c0,9.5,7.8,17.2,17.2,17.2s17.2-7.8,17.2-17.2c0,9.5,7.8,17.2,17.2,17.2s17.2-7.8,17.2-17.2c0,9.5,7.8,17.2,17.2,17.2s17.2-7.8,17.2-17.2c0,9.5,7.8,17.2,17.2,17.2c9.5,0,17.2-7.8,17.2-17.2V86.5C173.4,48.8,142.3,17.6,104.1,17.6z"></path>
+</g>
+  
+  
+</svg></g><g class="node" transform="translate(180,3979.9999999999995)"><svg width="50px" height="50px" viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <pattern x="0" y="0" viewBox="-6.166666666666667 1 16.666666666666668 16.666666666666668" id="grid" width="16.666666666666668" height="16.666666666666668" patternUnits="userSpaceOnUse" style="overflow:visible;">
+      <rect x="-6.166666666666667" y="1" width="16.666666666666668" height="16.666666666666668" fill="#FFDB7B" stroke="#E5C56E" stroke-width="2"></rect>
+    </pattern>
+  </defs>
+  <rect x="0" y="0" width="100%" height="100%" fill="url(#grid)" stroke="#E5C56E" stroke-width="4"></rect>
+  
+<g transform="translate(0, 0) scale(0.08333333333333333,0.08333333333333333)">
+  <path fill="#344975" d="M94,28.7c26.3-2.4,50.9,8.6,66.3,27.6l-58.9,48.4l68.7,33.8c-11.1,22.7-33.8,39.8-61.4,42.2c-42.2,3.8-79.8-27-83.3-68.7S51.8,32.4,94,28.7z"></path>
+</g>
+  
+<g transform="translate(0, 16.666666666666668) scale(0.08333333333333333,0.08333333333333333)">
+  <path fill="#AD402C" d="M104.1,17.6c-38.4,0-69.5,31.2-69.5,69.5v72.7c0,9.5,7.8,17.2,17.2,17.2s17.2-7.8,17.2-17.2c0,9.5,7.8,17.2,17.2,17.2s17.2-7.8,17.2-17.2c0,9.5,7.8,17.2,17.2,17.2s17.2-7.8,17.2-17.2c0,9.5,7.8,17.2,17.2,17.2c9.5,0,17.2-7.8,17.2-17.2V86.5C173.4,48.8,142.3,17.6,104.1,17.6z"></path>
+</g>
+  
+  <g transform="translate(33.333333333333336, 33.333333333333336)">
+    <circle fill="#846785" cx="0.6944444444444444" cy="0.6944444444444444" r="1.6666666666666665"></circle>
+</g>
+</svg></g><g class="node" transform="translate(180,6633.333333333333)"><svg width="50px" height="50px" viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <pattern x="0" y="0" viewBox="-6.166666666666667 1 16.666666666666668 16.666666666666668" id="grid" width="16.666666666666668" height="16.666666666666668" patternUnits="userSpaceOnUse" style="overflow:visible;">
+      <rect x="-6.166666666666667" y="1" width="16.666666666666668" height="16.666666666666668" fill="#FFDB7B" stroke="#E5C56E" stroke-width="2"></rect>
+    </pattern>
+  </defs>
+  <rect x="0" y="0" width="100%" height="100%" fill="url(#grid)" stroke="#E5C56E" stroke-width="4"></rect>
+  
+<g transform="translate(33.333333333333336, 16.666666666666668) scale(0.08333333333333333,0.08333333333333333)">
+  <path fill="#344975" d="M94,28.7c26.3-2.4,50.9,8.6,66.3,27.6l-58.9,48.4l68.7,33.8c-11.1,22.7-33.8,39.8-61.4,42.2c-42.2,3.8-79.8-27-83.3-68.7S51.8,32.4,94,28.7z"></path>
+</g>
+  
+<g transform="translate(0, 16.666666666666668) scale(0.08333333333333333,0.08333333333333333)">
+  <path fill="#AD402C" d="M104.1,17.6c-38.4,0-69.5,31.2-69.5,69.5v72.7c0,9.5,7.8,17.2,17.2,17.2s17.2-7.8,17.2-17.2c0,9.5,7.8,17.2,17.2,17.2s17.2-7.8,17.2-17.2c0,9.5,7.8,17.2,17.2,17.2s17.2-7.8,17.2-17.2c0,9.5,7.8,17.2,17.2,17.2c9.5,0,17.2-7.8,17.2-17.2V86.5C173.4,48.8,142.3,17.6,104.1,17.6z"></path>
+</g>
+  
+  <g transform="translate(33.333333333333336, 33.333333333333336)">
+    <circle fill="#846785" cx="0.6944444444444444" cy="0.6944444444444444" r="1.6666666666666665"></circle>
+</g>
+</svg></g><g class="node" transform="translate(180,9021.333333333332)"><svg width="50px" height="50px" viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <pattern x="0" y="0" viewBox="-6.166666666666667 1 16.666666666666668 16.666666666666668" id="grid" width="16.666666666666668" height="16.666666666666668" patternUnits="userSpaceOnUse" style="overflow:visible;">
+      <rect x="-6.166666666666667" y="1" width="16.666666666666668" height="16.666666666666668" fill="#FFDB7B" stroke="#E5C56E" stroke-width="2"></rect>
+    </pattern>
+  </defs>
+  <rect x="0" y="0" width="100%" height="100%" fill="url(#grid)" stroke="#E5C56E" stroke-width="4"></rect>
+  
+<g transform="translate(16.666666666666668, 0) scale(0.08333333333333333,0.08333333333333333)">
+  <path fill="#344975" d="M94,28.7c26.3-2.4,50.9,8.6,66.3,27.6l-58.9,48.4l68.7,33.8c-11.1,22.7-33.8,39.8-61.4,42.2c-42.2,3.8-79.8-27-83.3-68.7S51.8,32.4,94,28.7z"></path>
+</g>
+  
+<g transform="translate(0, 16.666666666666668) scale(0.08333333333333333,0.08333333333333333)">
+  <path fill="#AD402C" d="M104.1,17.6c-38.4,0-69.5,31.2-69.5,69.5v72.7c0,9.5,7.8,17.2,17.2,17.2s17.2-7.8,17.2-17.2c0,9.5,7.8,17.2,17.2,17.2s17.2-7.8,17.2-17.2c0,9.5,7.8,17.2,17.2,17.2s17.2-7.8,17.2-17.2c0,9.5,7.8,17.2,17.2,17.2c9.5,0,17.2-7.8,17.2-17.2V86.5C173.4,48.8,142.3,17.6,104.1,17.6z"></path>
+</g>
+  
+  <g transform="translate(33.333333333333336, 33.333333333333336)">
+    <circle fill="#846785" cx="0.6944444444444444" cy="0.6944444444444444" r="1.6666666666666665"></circle>
+</g>
+</svg></g><g class="node" transform="translate(360,331.66666666666663)"><svg width="50px" height="50px" viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <pattern x="0" y="0" viewBox="-6.166666666666667 1 16.666666666666668 16.666666666666668" id="grid" width="16.666666666666668" height="16.666666666666668" patternUnits="userSpaceOnUse" style="overflow:visible;">
+      <rect x="-6.166666666666667" y="1" width="16.666666666666668" height="16.666666666666668" fill="#FFDB7B" stroke="#E5C56E" stroke-width="2"></rect>
+    </pattern>
+  </defs>
+  <rect x="0" y="0" width="100%" height="100%" fill="url(#grid)" stroke="#E5C56E" stroke-width="4"></rect>
+  
+<g transform="translate(33.333333333333336, 16.666666666666668) scale(0.08333333333333333,0.08333333333333333)">
+  <path fill="#344975" d="M94,28.7c26.3-2.4,50.9,8.6,66.3,27.6l-58.9,48.4l68.7,33.8c-11.1,22.7-33.8,39.8-61.4,42.2c-42.2,3.8-79.8-27-83.3-68.7S51.8,32.4,94,28.7z"></path>
+</g>
+  
+<g transform="translate(0, 0) scale(0.08333333333333333,0.08333333333333333)">
+  <path fill="#AD402C" d="M104.1,17.6c-38.4,0-69.5,31.2-69.5,69.5v72.7c0,9.5,7.8,17.2,17.2,17.2s17.2-7.8,17.2-17.2c0,9.5,7.8,17.2,17.2,17.2s17.2-7.8,17.2-17.2c0,9.5,7.8,17.2,17.2,17.2s17.2-7.8,17.2-17.2c0,9.5,7.8,17.2,17.2,17.2c9.5,0,17.2-7.8,17.2-17.2V86.5C173.4,48.8,142.3,17.6,104.1,17.6z"></path>
+</g>
+  
+  
+</svg></g><g class="node" transform="translate(360,994.9999999999999)"><svg width="50px" height="50px" viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <pattern x="0" y="0" viewBox="-6.166666666666667 1 16.666666666666668 16.666666666666668" id="grid" width="16.666666666666668" height="16.666666666666668" patternUnits="userSpaceOnUse" style="overflow:visible;">
+      <rect x="-6.166666666666667" y="1" width="16.666666666666668" height="16.666666666666668" fill="#FFDB7B" stroke="#E5C56E" stroke-width="2"></rect>
+    </pattern>
+  </defs>
+  <rect x="0" y="0" width="100%" height="100%" fill="url(#grid)" stroke="#E5C56E" stroke-width="4"></rect>
+  
+<g transform="translate(0, 33.333333333333336) scale(0.08333333333333333,0.08333333333333333)">
+  <path fill="#344975" d="M94,28.7c26.3-2.4,50.9,8.6,66.3,27.6l-58.9,48.4l68.7,33.8c-11.1,22.7-33.8,39.8-61.4,42.2c-42.2,3.8-79.8-27-83.3-68.7S51.8,32.4,94,28.7z"></path>
+</g>
+  
+<g transform="translate(0, 0) scale(0.08333333333333333,0.08333333333333333)">
+  <path fill="#AD402C" d="M104.1,17.6c-38.4,0-69.5,31.2-69.5,69.5v72.7c0,9.5,7.8,17.2,17.2,17.2s17.2-7.8,17.2-17.2c0,9.5,7.8,17.2,17.2,17.2s17.2-7.8,17.2-17.2c0,9.5,7.8,17.2,17.2,17.2s17.2-7.8,17.2-17.2c0,9.5,7.8,17.2,17.2,17.2c9.5,0,17.2-7.8,17.2-17.2V86.5C173.4,48.8,142.3,17.6,104.1,17.6z"></path>
+</g>
+  
+  
+</svg></g><g class="node" transform="translate(360,1658.3333333333333)"><svg width="50px" height="50px" viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <pattern x="0" y="0" viewBox="-6.166666666666667 1 16.666666666666668 16.666666666666668" id="grid" width="16.666666666666668" height="16.666666666666668" patternUnits="userSpaceOnUse" style="overflow:visible;">
+      <rect x="-6.166666666666667" y="1" width="16.666666666666668" height="16.666666666666668" fill="#FFDB7B" stroke="#E5C56E" stroke-width="2"></rect>
+    </pattern>
+  </defs>
+  <rect x="0" y="0" width="100%" height="100%" fill="url(#grid)" stroke="#E5C56E" stroke-width="4"></rect>
+  
+<g transform="translate(33.333333333333336, 0) scale(0.08333333333333333,0.08333333333333333)">
+  <path fill="#344975" d="M94,28.7c26.3-2.4,50.9,8.6,66.3,27.6l-58.9,48.4l68.7,33.8c-11.1,22.7-33.8,39.8-61.4,42.2c-42.2,3.8-79.8-27-83.3-68.7S51.8,32.4,94,28.7z"></path>
+</g>
+  
+<g transform="translate(0, 0) scale(0.08333333333333333,0.08333333333333333)">
+  <path fill="#AD402C" d="M104.1,17.6c-38.4,0-69.5,31.2-69.5,69.5v72.7c0,9.5,7.8,17.2,17.2,17.2s17.2-7.8,17.2-17.2c0,9.5,7.8,17.2,17.2,17.2s17.2-7.8,17.2-17.2c0,9.5,7.8,17.2,17.2,17.2s17.2-7.8,17.2-17.2c0,9.5,7.8,17.2,17.2,17.2c9.5,0,17.2-7.8,17.2-17.2V86.5C173.4,48.8,142.3,17.6,104.1,17.6z"></path>
+</g>
+  
+  
+</svg></g><g class="node" transform="translate(360,2321.6666666666665)"><svg width="50px" height="50px" viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <pattern x="0" y="0" viewBox="-6.166666666666667 1 16.666666666666668 16.666666666666668" id="grid" width="16.666666666666668" height="16.666666666666668" patternUnits="userSpaceOnUse" style="overflow:visible;">
+      <rect x="-6.166666666666667" y="1" width="16.666666666666668" height="16.666666666666668" fill="#FFDB7B" stroke="#E5C56E" stroke-width="2"></rect>
+    </pattern>
+  </defs>
+  <rect x="0" y="0" width="100%" height="100%" fill="url(#grid)" stroke="#E5C56E" stroke-width="4"></rect>
+  
+<g transform="translate(16.666666666666668, 33.333333333333336) scale(0.08333333333333333,0.08333333333333333)">
+  <path fill="#344975" d="M94,28.7c26.3-2.4,50.9,8.6,66.3,27.6l-58.9,48.4l68.7,33.8c-11.1,22.7-33.8,39.8-61.4,42.2c-42.2,3.8-79.8-27-83.3-68.7S51.8,32.4,94,28.7z"></path>
+</g>
+  
+<g transform="translate(0, 0) scale(0.08333333333333333,0.08333333333333333)">
+  <path fill="#AD402C" d="M104.1,17.6c-38.4,0-69.5,31.2-69.5,69.5v72.7c0,9.5,7.8,17.2,17.2,17.2s17.2-7.8,17.2-17.2c0,9.5,7.8,17.2,17.2,17.2s17.2-7.8,17.2-17.2c0,9.5,7.8,17.2,17.2,17.2s17.2-7.8,17.2-17.2c0,9.5,7.8,17.2,17.2,17.2c9.5,0,17.2-7.8,17.2-17.2V86.5C173.4,48.8,142.3,17.6,104.1,17.6z"></path>
+</g>
+  
+  
+</svg></g><g class="node" transform="translate(360,2985)"><svg width="50px" height="50px" viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <pattern x="0" y="0" viewBox="-6.166666666666667 1 16.666666666666668 16.666666666666668" id="grid" width="16.666666666666668" height="16.666666666666668" patternUnits="userSpaceOnUse" style="overflow:visible;">
+      <rect x="-6.166666666666667" y="1" width="16.666666666666668" height="16.666666666666668" fill="#FFDB7B" stroke="#E5C56E" stroke-width="2"></rect>
+    </pattern>
+  </defs>
+  <rect x="0" y="0" width="100%" height="100%" fill="url(#grid)" stroke="#E5C56E" stroke-width="4"></rect>
+  
+<g transform="translate(0, 33.333333333333336) scale(0.08333333333333333,0.08333333333333333)">
+  <path fill="#344975" d="M94,28.7c26.3-2.4,50.9,8.6,66.3,27.6l-58.9,48.4l68.7,33.8c-11.1,22.7-33.8,39.8-61.4,42.2c-42.2,3.8-79.8-27-83.3-68.7S51.8,32.4,94,28.7z"></path>
+</g>
+  
+<g transform="translate(0, 0) scale(0.08333333333333333,0.08333333333333333)">
+  <path fill="#AD402C" d="M104.1,17.6c-38.4,0-69.5,31.2-69.5,69.5v72.7c0,9.5,7.8,17.2,17.2,17.2s17.2-7.8,17.2-17.2c0,9.5,7.8,17.2,17.2,17.2s17.2-7.8,17.2-17.2c0,9.5,7.8,17.2,17.2,17.2s17.2-7.8,17.2-17.2c0,9.5,7.8,17.2,17.2,17.2c9.5,0,17.2-7.8,17.2-17.2V86.5C173.4,48.8,142.3,17.6,104.1,17.6z"></path>
+</g>
+  
+  <g transform="translate(33.333333333333336, 33.333333333333336)">
+    <circle fill="#846785" cx="0.6944444444444444" cy="0.6944444444444444" r="1.6666666666666665"></circle>
+</g>
+</svg></g><g class="node" transform="translate(360,3648.333333333333)"><svg width="50px" height="50px" viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <pattern x="0" y="0" viewBox="-6.166666666666667 1 16.666666666666668 16.666666666666668" id="grid" width="16.666666666666668" height="16.666666666666668" patternUnits="userSpaceOnUse" style="overflow:visible;">
+      <rect x="-6.166666666666667" y="1" width="16.666666666666668" height="16.666666666666668" fill="#FFDB7B" stroke="#E5C56E" stroke-width="2"></rect>
+    </pattern>
+  </defs>
+  <rect x="0" y="0" width="100%" height="100%" fill="url(#grid)" stroke="#E5C56E" stroke-width="4"></rect>
+  
+<g transform="translate(16.666666666666668, 0) scale(0.08333333333333333,0.08333333333333333)">
+  <path fill="#344975" d="M94,28.7c26.3-2.4,50.9,8.6,66.3,27.6l-58.9,48.4l68.7,33.8c-11.1,22.7-33.8,39.8-61.4,42.2c-42.2,3.8-79.8-27-83.3-68.7S51.8,32.4,94,28.7z"></path>
+</g>
+  
+<g transform="translate(0, 0) scale(0.08333333333333333,0.08333333333333333)">
+  <path fill="#AD402C" d="M104.1,17.6c-38.4,0-69.5,31.2-69.5,69.5v72.7c0,9.5,7.8,17.2,17.2,17.2s17.2-7.8,17.2-17.2c0,9.5,7.8,17.2,17.2,17.2s17.2-7.8,17.2-17.2c0,9.5,7.8,17.2,17.2,17.2s17.2-7.8,17.2-17.2c0,9.5,7.8,17.2,17.2,17.2c9.5,0,17.2-7.8,17.2-17.2V86.5C173.4,48.8,142.3,17.6,104.1,17.6z"></path>
+</g>
+  
+  <g transform="translate(33.333333333333336, 33.333333333333336)">
+    <circle fill="#846785" cx="0.6944444444444444" cy="0.6944444444444444" r="1.6666666666666665"></circle>
+</g>
+</svg></g><g class="node" transform="translate(360,4311.666666666666)"><svg width="50px" height="50px" viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <pattern x="0" y="0" viewBox="-6.166666666666667 1 16.666666666666668 16.666666666666668" id="grid" width="16.666666666666668" height="16.666666666666668" patternUnits="userSpaceOnUse" style="overflow:visible;">
+      <rect x="-6.166666666666667" y="1" width="16.666666666666668" height="16.666666666666668" fill="#FFDB7B" stroke="#E5C56E" stroke-width="2"></rect>
+    </pattern>
+  </defs>
+  <rect x="0" y="0" width="100%" height="100%" fill="url(#grid)" stroke="#E5C56E" stroke-width="4"></rect>
+  
+<g transform="translate(0, 16.666666666666668) scale(0.08333333333333333,0.08333333333333333)">
+  <path fill="#344975" d="M94,28.7c26.3-2.4,50.9,8.6,66.3,27.6l-58.9,48.4l68.7,33.8c-11.1,22.7-33.8,39.8-61.4,42.2c-42.2,3.8-79.8-27-83.3-68.7S51.8,32.4,94,28.7z"></path>
+</g>
+  
+<g transform="translate(0, 0) scale(0.08333333333333333,0.08333333333333333)">
+  <path fill="#AD402C" d="M104.1,17.6c-38.4,0-69.5,31.2-69.5,69.5v72.7c0,9.5,7.8,17.2,17.2,17.2s17.2-7.8,17.2-17.2c0,9.5,7.8,17.2,17.2,17.2s17.2-7.8,17.2-17.2c0,9.5,7.8,17.2,17.2,17.2s17.2-7.8,17.2-17.2c0,9.5,7.8,17.2,17.2,17.2c9.5,0,17.2-7.8,17.2-17.2V86.5C173.4,48.8,142.3,17.6,104.1,17.6z"></path>
+</g>
+  
+  <g transform="translate(33.333333333333336, 33.333333333333336)">
+    <circle fill="#846785" cx="0.6944444444444444" cy="0.6944444444444444" r="1.6666666666666665"></circle>
+</g>
+</svg></g><g class="node" transform="translate(360,4975)"><svg width="50px" height="50px" viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <pattern x="0" y="0" viewBox="-6.166666666666667 1 16.666666666666668 16.666666666666668" id="grid" width="16.666666666666668" height="16.666666666666668" patternUnits="userSpaceOnUse" style="overflow:visible;">
+      <rect x="-6.166666666666667" y="1" width="16.666666666666668" height="16.666666666666668" fill="#FFDB7B" stroke="#E5C56E" stroke-width="2"></rect>
+    </pattern>
+  </defs>
+  <rect x="0" y="0" width="100%" height="100%" fill="url(#grid)" stroke="#E5C56E" stroke-width="4"></rect>
+  
+<g transform="translate(33.333333333333336, 0) scale(0.08333333333333333,0.08333333333333333)">
+  <path fill="#344975" d="M94,28.7c26.3-2.4,50.9,8.6,66.3,27.6l-58.9,48.4l68.7,33.8c-11.1,22.7-33.8,39.8-61.4,42.2c-42.2,3.8-79.8-27-83.3-68.7S51.8,32.4,94,28.7z"></path>
+</g>
+  
+<g transform="translate(0, 0) scale(0.08333333333333333,0.08333333333333333)">
+  <path fill="#AD402C" d="M104.1,17.6c-38.4,0-69.5,31.2-69.5,69.5v72.7c0,9.5,7.8,17.2,17.2,17.2s17.2-7.8,17.2-17.2c0,9.5,7.8,17.2,17.2,17.2s17.2-7.8,17.2-17.2c0,9.5,7.8,17.2,17.2,17.2s17.2-7.8,17.2-17.2c0,9.5,7.8,17.2,17.2,17.2c9.5,0,17.2-7.8,17.2-17.2V86.5C173.4,48.8,142.3,17.6,104.1,17.6z"></path>
+</g>
+  
+  <g transform="translate(33.333333333333336, 33.333333333333336)">
+    <circle fill="#846785" cx="0.6944444444444444" cy="0.6944444444444444" r="1.6666666666666665"></circle>
+</g>
+</svg></g><g class="node" transform="translate(360,5638.333333333333)"><svg width="50px" height="50px" viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <pattern x="0" y="0" viewBox="-6.166666666666667 1 16.666666666666668 16.666666666666668" id="grid" width="16.666666666666668" height="16.666666666666668" patternUnits="userSpaceOnUse" style="overflow:visible;">
+      <rect x="-6.166666666666667" y="1" width="16.666666666666668" height="16.666666666666668" fill="#FFDB7B" stroke="#E5C56E" stroke-width="2"></rect>
+    </pattern>
+  </defs>
+  <rect x="0" y="0" width="100%" height="100%" fill="url(#grid)" stroke="#E5C56E" stroke-width="4"></rect>
+  
+<g transform="translate(33.333333333333336, 0) scale(0.08333333333333333,0.08333333333333333)">
+  <path fill="#344975" d="M94,28.7c26.3-2.4,50.9,8.6,66.3,27.6l-58.9,48.4l68.7,33.8c-11.1,22.7-33.8,39.8-61.4,42.2c-42.2,3.8-79.8-27-83.3-68.7S51.8,32.4,94,28.7z"></path>
+</g>
+  
+<g transform="translate(0, 0) scale(0.08333333333333333,0.08333333333333333)">
+  <path fill="#AD402C" d="M104.1,17.6c-38.4,0-69.5,31.2-69.5,69.5v72.7c0,9.5,7.8,17.2,17.2,17.2s17.2-7.8,17.2-17.2c0,9.5,7.8,17.2,17.2,17.2s17.2-7.8,17.2-17.2c0,9.5,7.8,17.2,17.2,17.2s17.2-7.8,17.2-17.2c0,9.5,7.8,17.2,17.2,17.2c9.5,0,17.2-7.8,17.2-17.2V86.5C173.4,48.8,142.3,17.6,104.1,17.6z"></path>
+</g>
+  
+  <g transform="translate(33.333333333333336, 33.333333333333336)">
+    <circle fill="#846785" cx="0.6944444444444444" cy="0.6944444444444444" r="1.6666666666666665"></circle>
+</g>
+</svg></g><g class="node" transform="translate(360,6301.666666666666)"><svg width="50px" height="50px" viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <pattern x="0" y="0" viewBox="-6.166666666666667 1 16.666666666666668 16.666666666666668" id="grid" width="16.666666666666668" height="16.666666666666668" patternUnits="userSpaceOnUse" style="overflow:visible;">
+      <rect x="-6.166666666666667" y="1" width="16.666666666666668" height="16.666666666666668" fill="#FFDB7B" stroke="#E5C56E" stroke-width="2"></rect>
+    </pattern>
+  </defs>
+  <rect x="0" y="0" width="100%" height="100%" fill="url(#grid)" stroke="#E5C56E" stroke-width="4"></rect>
+  
+<g transform="translate(0, 16.666666666666668) scale(0.08333333333333333,0.08333333333333333)">
+  <path fill="#344975" d="M94,28.7c26.3-2.4,50.9,8.6,66.3,27.6l-58.9,48.4l68.7,33.8c-11.1,22.7-33.8,39.8-61.4,42.2c-42.2,3.8-79.8-27-83.3-68.7S51.8,32.4,94,28.7z"></path>
+</g>
+  
+<g transform="translate(0, 0) scale(0.08333333333333333,0.08333333333333333)">
+  <path fill="#AD402C" d="M104.1,17.6c-38.4,0-69.5,31.2-69.5,69.5v72.7c0,9.5,7.8,17.2,17.2,17.2s17.2-7.8,17.2-17.2c0,9.5,7.8,17.2,17.2,17.2s17.2-7.8,17.2-17.2c0,9.5,7.8,17.2,17.2,17.2s17.2-7.8,17.2-17.2c0,9.5,7.8,17.2,17.2,17.2c9.5,0,17.2-7.8,17.2-17.2V86.5C173.4,48.8,142.3,17.6,104.1,17.6z"></path>
+</g>
+  
+  <g transform="translate(33.333333333333336, 33.333333333333336)">
+    <circle fill="#846785" cx="0.6944444444444444" cy="0.6944444444444444" r="1.6666666666666665"></circle>
+</g>
+</svg></g><g class="node" transform="translate(360,6964.999999999999)"><svg width="50px" height="50px" viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <pattern x="0" y="0" viewBox="-6.166666666666667 1 16.666666666666668 16.666666666666668" id="grid" width="16.666666666666668" height="16.666666666666668" patternUnits="userSpaceOnUse" style="overflow:visible;">
+      <rect x="-6.166666666666667" y="1" width="16.666666666666668" height="16.666666666666668" fill="#FFDB7B" stroke="#E5C56E" stroke-width="2"></rect>
+    </pattern>
+  </defs>
+  <rect x="0" y="0" width="100%" height="100%" fill="url(#grid)" stroke="#E5C56E" stroke-width="4"></rect>
+  
+<g transform="translate(33.333333333333336, 33.333333333333336) scale(0.08333333333333333,0.08333333333333333)">
+  <path fill="#344975" d="M94,28.7c26.3-2.4,50.9,8.6,66.3,27.6l-58.9,48.4l68.7,33.8c-11.1,22.7-33.8,39.8-61.4,42.2c-42.2,3.8-79.8-27-83.3-68.7S51.8,32.4,94,28.7z"></path>
+</g>
+  
+<g transform="translate(0, 0) scale(0.08333333333333333,0.08333333333333333)">
+  <path fill="#AD402C" d="M104.1,17.6c-38.4,0-69.5,31.2-69.5,69.5v72.7c0,9.5,7.8,17.2,17.2,17.2s17.2-7.8,17.2-17.2c0,9.5,7.8,17.2,17.2,17.2s17.2-7.8,17.2-17.2c0,9.5,7.8,17.2,17.2,17.2s17.2-7.8,17.2-17.2c0,9.5,7.8,17.2,17.2,17.2c9.5,0,17.2-7.8,17.2-17.2V86.5C173.4,48.8,142.3,17.6,104.1,17.6z"></path>
+</g>
+  
+  
+</svg></g><g class="node" transform="translate(360,7628.333333333333)"><svg width="50px" height="50px" viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <pattern x="0" y="0" viewBox="-6.166666666666667 1 16.666666666666668 16.666666666666668" id="grid" width="16.666666666666668" height="16.666666666666668" patternUnits="userSpaceOnUse" style="overflow:visible;">
+      <rect x="-6.166666666666667" y="1" width="16.666666666666668" height="16.666666666666668" fill="#FFDB7B" stroke="#E5C56E" stroke-width="2"></rect>
+    </pattern>
+  </defs>
+  <rect x="0" y="0" width="100%" height="100%" fill="url(#grid)" stroke="#E5C56E" stroke-width="4"></rect>
+  
+<g transform="translate(16.666666666666668, 16.666666666666668) scale(0.08333333333333333,0.08333333333333333)">
+  <path fill="#344975" d="M94,28.7c26.3-2.4,50.9,8.6,66.3,27.6l-58.9,48.4l68.7,33.8c-11.1,22.7-33.8,39.8-61.4,42.2c-42.2,3.8-79.8-27-83.3-68.7S51.8,32.4,94,28.7z"></path>
+</g>
+  
+<g transform="translate(0, 0) scale(0.08333333333333333,0.08333333333333333)">
+  <path fill="#AD402C" d="M104.1,17.6c-38.4,0-69.5,31.2-69.5,69.5v72.7c0,9.5,7.8,17.2,17.2,17.2s17.2-7.8,17.2-17.2c0,9.5,7.8,17.2,17.2,17.2s17.2-7.8,17.2-17.2c0,9.5,7.8,17.2,17.2,17.2s17.2-7.8,17.2-17.2c0,9.5,7.8,17.2,17.2,17.2c9.5,0,17.2-7.8,17.2-17.2V86.5C173.4,48.8,142.3,17.6,104.1,17.6z"></path>
+</g>
+  
+  <g transform="translate(33.333333333333336, 33.333333333333336)">
+    <circle fill="#846785" cx="0.6944444444444444" cy="0.6944444444444444" r="1.6666666666666665"></circle>
+</g>
+</svg></g><g class="node" transform="translate(360,8291.666666666666)"><svg width="50px" height="50px" viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <pattern x="0" y="0" viewBox="-6.166666666666667 1 16.666666666666668 16.666666666666668" id="grid" width="16.666666666666668" height="16.666666666666668" patternUnits="userSpaceOnUse" style="overflow:visible;">
+      <rect x="-6.166666666666667" y="1" width="16.666666666666668" height="16.666666666666668" fill="#FFDB7B" stroke="#E5C56E" stroke-width="2"></rect>
+    </pattern>
+  </defs>
+  <rect x="0" y="0" width="100%" height="100%" fill="url(#grid)" stroke="#E5C56E" stroke-width="4"></rect>
+  
+<g transform="translate(16.666666666666668, 33.333333333333336) scale(0.08333333333333333,0.08333333333333333)">
+  <path fill="#344975" d="M94,28.7c26.3-2.4,50.9,8.6,66.3,27.6l-58.9,48.4l68.7,33.8c-11.1,22.7-33.8,39.8-61.4,42.2c-42.2,3.8-79.8-27-83.3-68.7S51.8,32.4,94,28.7z"></path>
+</g>
+  
+<g transform="translate(0, 0) scale(0.08333333333333333,0.08333333333333333)">
+  <path fill="#AD402C" d="M104.1,17.6c-38.4,0-69.5,31.2-69.5,69.5v72.7c0,9.5,7.8,17.2,17.2,17.2s17.2-7.8,17.2-17.2c0,9.5,7.8,17.2,17.2,17.2s17.2-7.8,17.2-17.2c0,9.5,7.8,17.2,17.2,17.2s17.2-7.8,17.2-17.2c0,9.5,7.8,17.2,17.2,17.2c9.5,0,17.2-7.8,17.2-17.2V86.5C173.4,48.8,142.3,17.6,104.1,17.6z"></path>
+</g>
+  
+  <g transform="translate(33.333333333333336, 33.333333333333336)">
+    <circle fill="#846785" cx="0.6944444444444444" cy="0.6944444444444444" r="1.6666666666666665"></circle>
+</g>
+</svg></g><g class="node" transform="translate(360,8955)"><svg width="50px" height="50px" viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <pattern x="0" y="0" viewBox="-6.166666666666667 1 16.666666666666668 16.666666666666668" id="grid" width="16.666666666666668" height="16.666666666666668" patternUnits="userSpaceOnUse" style="overflow:visible;">
+      <rect x="-6.166666666666667" y="1" width="16.666666666666668" height="16.666666666666668" fill="#FFDB7B" stroke="#E5C56E" stroke-width="2"></rect>
+    </pattern>
+  </defs>
+  <rect x="0" y="0" width="100%" height="100%" fill="url(#grid)" stroke="#E5C56E" stroke-width="4"></rect>
+  
+<g transform="translate(33.333333333333336, 0) scale(0.08333333333333333,0.08333333333333333)">
+  <path fill="#344975" d="M94,28.7c26.3-2.4,50.9,8.6,66.3,27.6l-58.9,48.4l68.7,33.8c-11.1,22.7-33.8,39.8-61.4,42.2c-42.2,3.8-79.8-27-83.3-68.7S51.8,32.4,94,28.7z"></path>
+</g>
+  
+<g transform="translate(0, 0) scale(0.08333333333333333,0.08333333333333333)">
+  <path fill="#AD402C" d="M104.1,17.6c-38.4,0-69.5,31.2-69.5,69.5v72.7c0,9.5,7.8,17.2,17.2,17.2s17.2-7.8,17.2-17.2c0,9.5,7.8,17.2,17.2,17.2s17.2-7.8,17.2-17.2c0,9.5,7.8,17.2,17.2,17.2s17.2-7.8,17.2-17.2c0,9.5,7.8,17.2,17.2,17.2c9.5,0,17.2-7.8,17.2-17.2V86.5C173.4,48.8,142.3,17.6,104.1,17.6z"></path>
+</g>
+  
+  <g transform="translate(33.333333333333336, 33.333333333333336)">
+    <circle fill="#846785" cx="0.6944444444444444" cy="0.6944444444444444" r="1.6666666666666665"></circle>
+</g>
+</svg></g><g class="node" transform="translate(360,9618.333333333332)"><svg width="50px" height="50px" viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <pattern x="0" y="0" viewBox="-6.166666666666667 1 16.666666666666668 16.666666666666668" id="grid" width="16.666666666666668" height="16.666666666666668" patternUnits="userSpaceOnUse" style="overflow:visible;">
+      <rect x="-6.166666666666667" y="1" width="16.666666666666668" height="16.666666666666668" fill="#FFDB7B" stroke="#E5C56E" stroke-width="2"></rect>
+    </pattern>
+  </defs>
+  <rect x="0" y="0" width="100%" height="100%" fill="url(#grid)" stroke="#E5C56E" stroke-width="4"></rect>
+  
+<g transform="translate(16.666666666666668, 16.666666666666668) scale(0.08333333333333333,0.08333333333333333)">
+  <path fill="#344975" d="M94,28.7c26.3-2.4,50.9,8.6,66.3,27.6l-58.9,48.4l68.7,33.8c-11.1,22.7-33.8,39.8-61.4,42.2c-42.2,3.8-79.8-27-83.3-68.7S51.8,32.4,94,28.7z"></path>
+</g>
+  
+<g transform="translate(0, 0) scale(0.08333333333333333,0.08333333333333333)">
+  <path fill="#AD402C" d="M104.1,17.6c-38.4,0-69.5,31.2-69.5,69.5v72.7c0,9.5,7.8,17.2,17.2,17.2s17.2-7.8,17.2-17.2c0,9.5,7.8,17.2,17.2,17.2s17.2-7.8,17.2-17.2c0,9.5,7.8,17.2,17.2,17.2s17.2-7.8,17.2-17.2c0,9.5,7.8,17.2,17.2,17.2c9.5,0,17.2-7.8,17.2-17.2V86.5C173.4,48.8,142.3,17.6,104.1,17.6z"></path>
+</g>
+  
+  <g transform="translate(33.333333333333336, 33.333333333333336)">
+    <circle fill="#846785" cx="0.6944444444444444" cy="0.6944444444444444" r="1.6666666666666665"></circle>
+</g>
+</svg></g><g class="node" transform="translate(360,9751)"><svg width="50px" height="50px" viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <pattern x="0" y="0" viewBox="-6.166666666666667 1 16.666666666666668 16.666666666666668" id="grid" width="16.666666666666668" height="16.666666666666668" patternUnits="userSpaceOnUse" style="overflow:visible;">
+      <rect x="-6.166666666666667" y="1" width="16.666666666666668" height="16.666666666666668" fill="#FFDB7B" stroke="#E5C56E" stroke-width="2"></rect>
+    </pattern>
+  </defs>
+  <rect x="0" y="0" width="100%" height="100%" fill="url(#grid)" stroke="#E5C56E" stroke-width="4"></rect>
+  
+<g transform="translate(0, 0) scale(0.08333333333333333,0.08333333333333333)">
+  <path fill="#344975" d="M94,28.7c26.3-2.4,50.9,8.6,66.3,27.6l-58.9,48.4l68.7,33.8c-11.1,22.7-33.8,39.8-61.4,42.2c-42.2,3.8-79.8-27-83.3-68.7S51.8,32.4,94,28.7z"></path>
+</g>
+  
+<g transform="translate(0, 0) scale(0.08333333333333333,0.08333333333333333)">
+  <path fill="#AD402C" d="M104.1,17.6c-38.4,0-69.5,31.2-69.5,69.5v72.7c0,9.5,7.8,17.2,17.2,17.2s17.2-7.8,17.2-17.2c0,9.5,7.8,17.2,17.2,17.2s17.2-7.8,17.2-17.2c0,9.5,7.8,17.2,17.2,17.2s17.2-7.8,17.2-17.2c0,9.5,7.8,17.2,17.2,17.2c9.5,0,17.2-7.8,17.2-17.2V86.5C173.4,48.8,142.3,17.6,104.1,17.6z"></path>
+</g>
+  
+  <g transform="translate(33.333333333333336, 33.333333333333336)">
+    <circle fill="#846785" cx="0.6944444444444444" cy="0.6944444444444444" r="1.6666666666666665"></circle>
+</g>
+</svg></g><g class="node" transform="translate(540,132.66666666666666)"><svg width="50px" height="50px" viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <pattern x="0" y="0" viewBox="-6.166666666666667 1 16.666666666666668 16.666666666666668" id="grid" width="16.666666666666668" height="16.666666666666668" patternUnits="userSpaceOnUse" style="overflow:visible;">
+      <rect x="-6.166666666666667" y="1" width="16.666666666666668" height="16.666666666666668" fill="#FFDB7B" stroke="#E5C56E" stroke-width="2"></rect>
+    </pattern>
+  </defs>
+  <rect x="0" y="0" width="100%" height="100%" fill="url(#grid)" stroke="#E5C56E" stroke-width="4"></rect>
+  
+<g transform="translate(33.333333333333336, 0) scale(0.08333333333333333,0.08333333333333333)">
+  <path fill="#344975" d="M94,28.7c26.3-2.4,50.9,8.6,66.3,27.6l-58.9,48.4l68.7,33.8c-11.1,22.7-33.8,39.8-61.4,42.2c-42.2,3.8-79.8-27-83.3-68.7S51.8,32.4,94,28.7z"></path>
+</g>
+  
+<g transform="translate(0, 33.333333333333336) scale(0.08333333333333333,0.08333333333333333)">
+  <path fill="#AD402C" d="M104.1,17.6c-38.4,0-69.5,31.2-69.5,69.5v72.7c0,9.5,7.8,17.2,17.2,17.2s17.2-7.8,17.2-17.2c0,9.5,7.8,17.2,17.2,17.2s17.2-7.8,17.2-17.2c0,9.5,7.8,17.2,17.2,17.2s17.2-7.8,17.2-17.2c0,9.5,7.8,17.2,17.2,17.2c9.5,0,17.2-7.8,17.2-17.2V86.5C173.4,48.8,142.3,17.6,104.1,17.6z"></path>
+</g>
+  
+  
+</svg></g><g class="node" transform="translate(540,265.3333333333333)"><svg width="50px" height="50px" viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <pattern x="0" y="0" viewBox="-6.166666666666667 1 16.666666666666668 16.666666666666668" id="grid" width="16.666666666666668" height="16.666666666666668" patternUnits="userSpaceOnUse" style="overflow:visible;">
+      <rect x="-6.166666666666667" y="1" width="16.666666666666668" height="16.666666666666668" fill="#FFDB7B" stroke="#E5C56E" stroke-width="2"></rect>
+    </pattern>
+  </defs>
+  <rect x="0" y="0" width="100%" height="100%" fill="url(#grid)" stroke="#E5C56E" stroke-width="4"></rect>
+  
+<g transform="translate(0, 16.666666666666668) scale(0.08333333333333333,0.08333333333333333)">
+  <path fill="#344975" d="M94,28.7c26.3-2.4,50.9,8.6,66.3,27.6l-58.9,48.4l68.7,33.8c-11.1,22.7-33.8,39.8-61.4,42.2c-42.2,3.8-79.8-27-83.3-68.7S51.8,32.4,94,28.7z"></path>
+</g>
+  
+<g transform="translate(0, 33.333333333333336) scale(0.08333333333333333,0.08333333333333333)">
+  <path fill="#AD402C" d="M104.1,17.6c-38.4,0-69.5,31.2-69.5,69.5v72.7c0,9.5,7.8,17.2,17.2,17.2s17.2-7.8,17.2-17.2c0,9.5,7.8,17.2,17.2,17.2s17.2-7.8,17.2-17.2c0,9.5,7.8,17.2,17.2,17.2s17.2-7.8,17.2-17.2c0,9.5,7.8,17.2,17.2,17.2c9.5,0,17.2-7.8,17.2-17.2V86.5C173.4,48.8,142.3,17.6,104.1,17.6z"></path>
+</g>
+  
+  
+</svg></g><g class="node" transform="translate(540,398)"><svg width="50px" height="50px" viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <pattern x="0" y="0" viewBox="-6.166666666666667 1 16.666666666666668 16.666666666666668" id="grid" width="16.666666666666668" height="16.666666666666668" patternUnits="userSpaceOnUse" style="overflow:visible;">
+      <rect x="-6.166666666666667" y="1" width="16.666666666666668" height="16.666666666666668" fill="#FFDB7B" stroke="#E5C56E" stroke-width="2"></rect>
+    </pattern>
+  </defs>
+  <rect x="0" y="0" width="100%" height="100%" fill="url(#grid)" stroke="#E5C56E" stroke-width="4"></rect>
+  
+<g transform="translate(33.333333333333336, 33.333333333333336) scale(0.08333333333333333,0.08333333333333333)">
+  <path fill="#344975" d="M94,28.7c26.3-2.4,50.9,8.6,66.3,27.6l-58.9,48.4l68.7,33.8c-11.1,22.7-33.8,39.8-61.4,42.2c-42.2,3.8-79.8-27-83.3-68.7S51.8,32.4,94,28.7z"></path>
+</g>
+  
+<g transform="translate(0, 33.333333333333336) scale(0.08333333333333333,0.08333333333333333)">
+  <path fill="#AD402C" d="M104.1,17.6c-38.4,0-69.5,31.2-69.5,69.5v72.7c0,9.5,7.8,17.2,17.2,17.2s17.2-7.8,17.2-17.2c0,9.5,7.8,17.2,17.2,17.2s17.2-7.8,17.2-17.2c0,9.5,7.8,17.2,17.2,17.2s17.2-7.8,17.2-17.2c0,9.5,7.8,17.2,17.2,17.2c9.5,0,17.2-7.8,17.2-17.2V86.5C173.4,48.8,142.3,17.6,104.1,17.6z"></path>
+</g>
+  
+  
+</svg></g><g class="node" transform="translate(540,530.6666666666666)"><svg width="50px" height="50px" viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <pattern x="0" y="0" viewBox="-6.166666666666667 1 16.666666666666668 16.666666666666668" id="grid" width="16.666666666666668" height="16.666666666666668" patternUnits="userSpaceOnUse" style="overflow:visible;">
+      <rect x="-6.166666666666667" y="1" width="16.666666666666668" height="16.666666666666668" fill="#FFDB7B" stroke="#E5C56E" stroke-width="2"></rect>
+    </pattern>
+  </defs>
+  <rect x="0" y="0" width="100%" height="100%" fill="url(#grid)" stroke="#E5C56E" stroke-width="4"></rect>
+  
+<g transform="translate(16.666666666666668, 16.666666666666668) scale(0.08333333333333333,0.08333333333333333)">
+  <path fill="#344975" d="M94,28.7c26.3-2.4,50.9,8.6,66.3,27.6l-58.9,48.4l68.7,33.8c-11.1,22.7-33.8,39.8-61.4,42.2c-42.2,3.8-79.8-27-83.3-68.7S51.8,32.4,94,28.7z"></path>
+</g>
+  
+<g transform="translate(0, 33.333333333333336) scale(0.08333333333333333,0.08333333333333333)">
+  <path fill="#AD402C" d="M104.1,17.6c-38.4,0-69.5,31.2-69.5,69.5v72.7c0,9.5,7.8,17.2,17.2,17.2s17.2-7.8,17.2-17.2c0,9.5,7.8,17.2,17.2,17.2s17.2-7.8,17.2-17.2c0,9.5,7.8,17.2,17.2,17.2s17.2-7.8,17.2-17.2c0,9.5,7.8,17.2,17.2,17.2c9.5,0,17.2-7.8,17.2-17.2V86.5C173.4,48.8,142.3,17.6,104.1,17.6z"></path>
+</g>
+  
+  
+</svg></g><g class="node" transform="translate(540,796)"><svg width="50px" height="50px" viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <pattern x="0" y="0" viewBox="-6.166666666666667 1 16.666666666666668 16.666666666666668" id="grid" width="16.666666666666668" height="16.666666666666668" patternUnits="userSpaceOnUse" style="overflow:visible;">
+      <rect x="-6.166666666666667" y="1" width="16.666666666666668" height="16.666666666666668" fill="#FFDB7B" stroke="#E5C56E" stroke-width="2"></rect>
+    </pattern>
+  </defs>
+  <rect x="0" y="0" width="100%" height="100%" fill="url(#grid)" stroke="#E5C56E" stroke-width="4"></rect>
+  
+<g transform="translate(0, 16.666666666666668) scale(0.08333333333333333,0.08333333333333333)">
+  <path fill="#344975" d="M94,28.7c26.3-2.4,50.9,8.6,66.3,27.6l-58.9,48.4l68.7,33.8c-11.1,22.7-33.8,39.8-61.4,42.2c-42.2,3.8-79.8-27-83.3-68.7S51.8,32.4,94,28.7z"></path>
+</g>
+  
+<g transform="translate(0, 33.333333333333336) scale(0.08333333333333333,0.08333333333333333)">
+  <path fill="#AD402C" d="M104.1,17.6c-38.4,0-69.5,31.2-69.5,69.5v72.7c0,9.5,7.8,17.2,17.2,17.2s17.2-7.8,17.2-17.2c0,9.5,7.8,17.2,17.2,17.2s17.2-7.8,17.2-17.2c0,9.5,7.8,17.2,17.2,17.2s17.2-7.8,17.2-17.2c0,9.5,7.8,17.2,17.2,17.2c9.5,0,17.2-7.8,17.2-17.2V86.5C173.4,48.8,142.3,17.6,104.1,17.6z"></path>
+</g>
+  
+  
+</svg></g><g class="node" transform="translate(540,928.6666666666666)"><svg width="50px" height="50px" viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <pattern x="0" y="0" viewBox="-6.166666666666667 1 16.666666666666668 16.666666666666668" id="grid" width="16.666666666666668" height="16.666666666666668" patternUnits="userSpaceOnUse" style="overflow:visible;">
+      <rect x="-6.166666666666667" y="1" width="16.666666666666668" height="16.666666666666668" fill="#FFDB7B" stroke="#E5C56E" stroke-width="2"></rect>
+    </pattern>
+  </defs>
+  <rect x="0" y="0" width="100%" height="100%" fill="url(#grid)" stroke="#E5C56E" stroke-width="4"></rect>
+  
+<g transform="translate(16.666666666666668, 33.333333333333336) scale(0.08333333333333333,0.08333333333333333)">
+  <path fill="#344975" d="M94,28.7c26.3-2.4,50.9,8.6,66.3,27.6l-58.9,48.4l68.7,33.8c-11.1,22.7-33.8,39.8-61.4,42.2c-42.2,3.8-79.8-27-83.3-68.7S51.8,32.4,94,28.7z"></path>
+</g>
+  
+<g transform="translate(0, 33.333333333333336) scale(0.08333333333333333,0.08333333333333333)">
+  <path fill="#AD402C" d="M104.1,17.6c-38.4,0-69.5,31.2-69.5,69.5v72.7c0,9.5,7.8,17.2,17.2,17.2s17.2-7.8,17.2-17.2c0,9.5,7.8,17.2,17.2,17.2s17.2-7.8,17.2-17.2c0,9.5,7.8,17.2,17.2,17.2s17.2-7.8,17.2-17.2c0,9.5,7.8,17.2,17.2,17.2c9.5,0,17.2-7.8,17.2-17.2V86.5C173.4,48.8,142.3,17.6,104.1,17.6z"></path>
+</g>
+  
+  
+</svg></g><g class="node" transform="translate(540,1061.3333333333333)"><svg width="50px" height="50px" viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <pattern x="0" y="0" viewBox="-6.166666666666667 1 16.666666666666668 16.666666666666668" id="grid" width="16.666666666666668" height="16.666666666666668" patternUnits="userSpaceOnUse" style="overflow:visible;">
+      <rect x="-6.166666666666667" y="1" width="16.666666666666668" height="16.666666666666668" fill="#FFDB7B" stroke="#E5C56E" stroke-width="2"></rect>
+    </pattern>
+  </defs>
+  <rect x="0" y="0" width="100%" height="100%" fill="url(#grid)" stroke="#E5C56E" stroke-width="4"></rect>
+  
+<g transform="translate(0, 0) scale(0.08333333333333333,0.08333333333333333)">
+  <path fill="#344975" d="M94,28.7c26.3-2.4,50.9,8.6,66.3,27.6l-58.9,48.4l68.7,33.8c-11.1,22.7-33.8,39.8-61.4,42.2c-42.2,3.8-79.8-27-83.3-68.7S51.8,32.4,94,28.7z"></path>
+</g>
+  
+<g transform="translate(0, 33.333333333333336) scale(0.08333333333333333,0.08333333333333333)">
+  <path fill="#AD402C" d="M104.1,17.6c-38.4,0-69.5,31.2-69.5,69.5v72.7c0,9.5,7.8,17.2,17.2,17.2s17.2-7.8,17.2-17.2c0,9.5,7.8,17.2,17.2,17.2s17.2-7.8,17.2-17.2c0,9.5,7.8,17.2,17.2,17.2s17.2-7.8,17.2-17.2c0,9.5,7.8,17.2,17.2,17.2c9.5,0,17.2-7.8,17.2-17.2V86.5C173.4,48.8,142.3,17.6,104.1,17.6z"></path>
+</g>
+  
+  
+</svg></g><g class="node" transform="translate(540,1194)"><svg width="50px" height="50px" viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <pattern x="0" y="0" viewBox="-6.166666666666667 1 16.666666666666668 16.666666666666668" id="grid" width="16.666666666666668" height="16.666666666666668" patternUnits="userSpaceOnUse" style="overflow:visible;">
+      <rect x="-6.166666666666667" y="1" width="16.666666666666668" height="16.666666666666668" fill="#FFDB7B" stroke="#E5C56E" stroke-width="2"></rect>
+    </pattern>
+  </defs>
+  <rect x="0" y="0" width="100%" height="100%" fill="url(#grid)" stroke="#E5C56E" stroke-width="4"></rect>
+  
+<g transform="translate(33.333333333333336, 33.333333333333336) scale(0.08333333333333333,0.08333333333333333)">
+  <path fill="#344975" d="M94,28.7c26.3-2.4,50.9,8.6,66.3,27.6l-58.9,48.4l68.7,33.8c-11.1,22.7-33.8,39.8-61.4,42.2c-42.2,3.8-79.8-27-83.3-68.7S51.8,32.4,94,28.7z"></path>
+</g>
+  
+<g transform="translate(0, 33.333333333333336) scale(0.08333333333333333,0.08333333333333333)">
+  <path fill="#AD402C" d="M104.1,17.6c-38.4,0-69.5,31.2-69.5,69.5v72.7c0,9.5,7.8,17.2,17.2,17.2s17.2-7.8,17.2-17.2c0,9.5,7.8,17.2,17.2,17.2s17.2-7.8,17.2-17.2c0,9.5,7.8,17.2,17.2,17.2s17.2-7.8,17.2-17.2c0,9.5,7.8,17.2,17.2,17.2c9.5,0,17.2-7.8,17.2-17.2V86.5C173.4,48.8,142.3,17.6,104.1,17.6z"></path>
+</g>
+  
+  
+</svg></g><g class="node" transform="translate(540,1459.3333333333333)"><svg width="50px" height="50px" viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <pattern x="0" y="0" viewBox="-6.166666666666667 1 16.666666666666668 16.666666666666668" id="grid" width="16.666666666666668" height="16.666666666666668" patternUnits="userSpaceOnUse" style="overflow:visible;">
+      <rect x="-6.166666666666667" y="1" width="16.666666666666668" height="16.666666666666668" fill="#FFDB7B" stroke="#E5C56E" stroke-width="2"></rect>
+    </pattern>
+  </defs>
+  <rect x="0" y="0" width="100%" height="100%" fill="url(#grid)" stroke="#E5C56E" stroke-width="4"></rect>
+  
+<g transform="translate(33.333333333333336, 33.333333333333336) scale(0.08333333333333333,0.08333333333333333)">
+  <path fill="#344975" d="M94,28.7c26.3-2.4,50.9,8.6,66.3,27.6l-58.9,48.4l68.7,33.8c-11.1,22.7-33.8,39.8-61.4,42.2c-42.2,3.8-79.8-27-83.3-68.7S51.8,32.4,94,28.7z"></path>
+</g>
+  
+<g transform="translate(0, 33.333333333333336) scale(0.08333333333333333,0.08333333333333333)">
+  <path fill="#AD402C" d="M104.1,17.6c-38.4,0-69.5,31.2-69.5,69.5v72.7c0,9.5,7.8,17.2,17.2,17.2s17.2-7.8,17.2-17.2c0,9.5,7.8,17.2,17.2,17.2s17.2-7.8,17.2-17.2c0,9.5,7.8,17.2,17.2,17.2s17.2-7.8,17.2-17.2c0,9.5,7.8,17.2,17.2,17.2c9.5,0,17.2-7.8,17.2-17.2V86.5C173.4,48.8,142.3,17.6,104.1,17.6z"></path>
+</g>
+  
+  
+</svg></g><g class="node" transform="translate(540,1592)"><svg width="50px" height="50px" viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <pattern x="0" y="0" viewBox="-6.166666666666667 1 16.666666666666668 16.666666666666668" id="grid" width="16.666666666666668" height="16.666666666666668" patternUnits="userSpaceOnUse" style="overflow:visible;">
+      <rect x="-6.166666666666667" y="1" width="16.666666666666668" height="16.666666666666668" fill="#FFDB7B" stroke="#E5C56E" stroke-width="2"></rect>
+    </pattern>
+  </defs>
+  <rect x="0" y="0" width="100%" height="100%" fill="url(#grid)" stroke="#E5C56E" stroke-width="4"></rect>
+  
+<g transform="translate(0, 0) scale(0.08333333333333333,0.08333333333333333)">
+  <path fill="#344975" d="M94,28.7c26.3-2.4,50.9,8.6,66.3,27.6l-58.9,48.4l68.7,33.8c-11.1,22.7-33.8,39.8-61.4,42.2c-42.2,3.8-79.8-27-83.3-68.7S51.8,32.4,94,28.7z"></path>
+</g>
+  
+<g transform="translate(0, 33.333333333333336) scale(0.08333333333333333,0.08333333333333333)">
+  <path fill="#AD402C" d="M104.1,17.6c-38.4,0-69.5,31.2-69.5,69.5v72.7c0,9.5,7.8,17.2,17.2,17.2s17.2-7.8,17.2-17.2c0,9.5,7.8,17.2,17.2,17.2s17.2-7.8,17.2-17.2c0,9.5,7.8,17.2,17.2,17.2s17.2-7.8,17.2-17.2c0,9.5,7.8,17.2,17.2,17.2c9.5,0,17.2-7.8,17.2-17.2V86.5C173.4,48.8,142.3,17.6,104.1,17.6z"></path>
+</g>
+  
+  
+</svg></g><g class="node" transform="translate(540,1724.6666666666665)"><svg width="50px" height="50px" viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <pattern x="0" y="0" viewBox="-6.166666666666667 1 16.666666666666668 16.666666666666668" id="grid" width="16.666666666666668" height="16.666666666666668" patternUnits="userSpaceOnUse" style="overflow:visible;">
+      <rect x="-6.166666666666667" y="1" width="16.666666666666668" height="16.666666666666668" fill="#FFDB7B" stroke="#E5C56E" stroke-width="2"></rect>
+    </pattern>
+  </defs>
+  <rect x="0" y="0" width="100%" height="100%" fill="url(#grid)" stroke="#E5C56E" stroke-width="4"></rect>
+  
+<g transform="translate(33.333333333333336, 16.666666666666668) scale(0.08333333333333333,0.08333333333333333)">
+  <path fill="#344975" d="M94,28.7c26.3-2.4,50.9,8.6,66.3,27.6l-58.9,48.4l68.7,33.8c-11.1,22.7-33.8,39.8-61.4,42.2c-42.2,3.8-79.8-27-83.3-68.7S51.8,32.4,94,28.7z"></path>
+</g>
+  
+<g transform="translate(0, 33.333333333333336) scale(0.08333333333333333,0.08333333333333333)">
+  <path fill="#AD402C" d="M104.1,17.6c-38.4,0-69.5,31.2-69.5,69.5v72.7c0,9.5,7.8,17.2,17.2,17.2s17.2-7.8,17.2-17.2c0,9.5,7.8,17.2,17.2,17.2s17.2-7.8,17.2-17.2c0,9.5,7.8,17.2,17.2,17.2s17.2-7.8,17.2-17.2c0,9.5,7.8,17.2,17.2,17.2c9.5,0,17.2-7.8,17.2-17.2V86.5C173.4,48.8,142.3,17.6,104.1,17.6z"></path>
+</g>
+  
+  
+</svg></g><g class="node" transform="translate(540,1857.3333333333333)"><svg width="50px" height="50px" viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <pattern x="0" y="0" viewBox="-6.166666666666667 1 16.666666666666668 16.666666666666668" id="grid" width="16.666666666666668" height="16.666666666666668" patternUnits="userSpaceOnUse" style="overflow:visible;">
+      <rect x="-6.166666666666667" y="1" width="16.666666666666668" height="16.666666666666668" fill="#FFDB7B" stroke="#E5C56E" stroke-width="2"></rect>
+    </pattern>
+  </defs>
+  <rect x="0" y="0" width="100%" height="100%" fill="url(#grid)" stroke="#E5C56E" stroke-width="4"></rect>
+  
+<g transform="translate(16.666666666666668, 0) scale(0.08333333333333333,0.08333333333333333)">
+  <path fill="#344975" d="M94,28.7c26.3-2.4,50.9,8.6,66.3,27.6l-58.9,48.4l68.7,33.8c-11.1,22.7-33.8,39.8-61.4,42.2c-42.2,3.8-79.8-27-83.3-68.7S51.8,32.4,94,28.7z"></path>
+</g>
+  
+<g transform="translate(0, 33.333333333333336) scale(0.08333333333333333,0.08333333333333333)">
+  <path fill="#AD402C" d="M104.1,17.6c-38.4,0-69.5,31.2-69.5,69.5v72.7c0,9.5,7.8,17.2,17.2,17.2s17.2-7.8,17.2-17.2c0,9.5,7.8,17.2,17.2,17.2s17.2-7.8,17.2-17.2c0,9.5,7.8,17.2,17.2,17.2s17.2-7.8,17.2-17.2c0,9.5,7.8,17.2,17.2,17.2c9.5,0,17.2-7.8,17.2-17.2V86.5C173.4,48.8,142.3,17.6,104.1,17.6z"></path>
+</g>
+  
+  
+</svg></g><g class="node" transform="translate(540,2122.6666666666665)"><svg width="50px" height="50px" viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <pattern x="0" y="0" viewBox="-6.166666666666667 1 16.666666666666668 16.666666666666668" id="grid" width="16.666666666666668" height="16.666666666666668" patternUnits="userSpaceOnUse" style="overflow:visible;">
+      <rect x="-6.166666666666667" y="1" width="16.666666666666668" height="16.666666666666668" fill="#FFDB7B" stroke="#E5C56E" stroke-width="2"></rect>
+    </pattern>
+  </defs>
+  <rect x="0" y="0" width="100%" height="100%" fill="url(#grid)" stroke="#E5C56E" stroke-width="4"></rect>
+  
+<g transform="translate(16.666666666666668, 16.666666666666668) scale(0.08333333333333333,0.08333333333333333)">
+  <path fill="#344975" d="M94,28.7c26.3-2.4,50.9,8.6,66.3,27.6l-58.9,48.4l68.7,33.8c-11.1,22.7-33.8,39.8-61.4,42.2c-42.2,3.8-79.8-27-83.3-68.7S51.8,32.4,94,28.7z"></path>
+</g>
+  
+<g transform="translate(0, 33.333333333333336) scale(0.08333333333333333,0.08333333333333333)">
+  <path fill="#AD402C" d="M104.1,17.6c-38.4,0-69.5,31.2-69.5,69.5v72.7c0,9.5,7.8,17.2,17.2,17.2s17.2-7.8,17.2-17.2c0,9.5,7.8,17.2,17.2,17.2s17.2-7.8,17.2-17.2c0,9.5,7.8,17.2,17.2,17.2s17.2-7.8,17.2-17.2c0,9.5,7.8,17.2,17.2,17.2c9.5,0,17.2-7.8,17.2-17.2V86.5C173.4,48.8,142.3,17.6,104.1,17.6z"></path>
+</g>
+  
+  
+</svg></g><g class="node" transform="translate(540,2255.333333333333)"><svg width="50px" height="50px" viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <pattern x="0" y="0" viewBox="-6.166666666666667 1 16.666666666666668 16.666666666666668" id="grid" width="16.666666666666668" height="16.666666666666668" patternUnits="userSpaceOnUse" style="overflow:visible;">
+      <rect x="-6.166666666666667" y="1" width="16.666666666666668" height="16.666666666666668" fill="#FFDB7B" stroke="#E5C56E" stroke-width="2"></rect>
+    </pattern>
+  </defs>
+  <rect x="0" y="0" width="100%" height="100%" fill="url(#grid)" stroke="#E5C56E" stroke-width="4"></rect>
+  
+<g transform="translate(33.333333333333336, 33.333333333333336) scale(0.08333333333333333,0.08333333333333333)">
+  <path fill="#344975" d="M94,28.7c26.3-2.4,50.9,8.6,66.3,27.6l-58.9,48.4l68.7,33.8c-11.1,22.7-33.8,39.8-61.4,42.2c-42.2,3.8-79.8-27-83.3-68.7S51.8,32.4,94,28.7z"></path>
+</g>
+  
+<g transform="translate(0, 33.333333333333336) scale(0.08333333333333333,0.08333333333333333)">
+  <path fill="#AD402C" d="M104.1,17.6c-38.4,0-69.5,31.2-69.5,69.5v72.7c0,9.5,7.8,17.2,17.2,17.2s17.2-7.8,17.2-17.2c0,9.5,7.8,17.2,17.2,17.2s17.2-7.8,17.2-17.2c0,9.5,7.8,17.2,17.2,17.2s17.2-7.8,17.2-17.2c0,9.5,7.8,17.2,17.2,17.2c9.5,0,17.2-7.8,17.2-17.2V86.5C173.4,48.8,142.3,17.6,104.1,17.6z"></path>
+</g>
+  
+  
+</svg></g><g class="node" transform="translate(540,2388)"><svg width="50px" height="50px" viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <pattern x="0" y="0" viewBox="-6.166666666666667 1 16.666666666666668 16.666666666666668" id="grid" width="16.666666666666668" height="16.666666666666668" patternUnits="userSpaceOnUse" style="overflow:visible;">
+      <rect x="-6.166666666666667" y="1" width="16.666666666666668" height="16.666666666666668" fill="#FFDB7B" stroke="#E5C56E" stroke-width="2"></rect>
+    </pattern>
+  </defs>
+  <rect x="0" y="0" width="100%" height="100%" fill="url(#grid)" stroke="#E5C56E" stroke-width="4"></rect>
+  
+<g transform="translate(16.666666666666668, 0) scale(0.08333333333333333,0.08333333333333333)">
+  <path fill="#344975" d="M94,28.7c26.3-2.4,50.9,8.6,66.3,27.6l-58.9,48.4l68.7,33.8c-11.1,22.7-33.8,39.8-61.4,42.2c-42.2,3.8-79.8-27-83.3-68.7S51.8,32.4,94,28.7z"></path>
+</g>
+  
+<g transform="translate(0, 33.333333333333336) scale(0.08333333333333333,0.08333333333333333)">
+  <path fill="#AD402C" d="M104.1,17.6c-38.4,0-69.5,31.2-69.5,69.5v72.7c0,9.5,7.8,17.2,17.2,17.2s17.2-7.8,17.2-17.2c0,9.5,7.8,17.2,17.2,17.2s17.2-7.8,17.2-17.2c0,9.5,7.8,17.2,17.2,17.2s17.2-7.8,17.2-17.2c0,9.5,7.8,17.2,17.2,17.2c9.5,0,17.2-7.8,17.2-17.2V86.5C173.4,48.8,142.3,17.6,104.1,17.6z"></path>
+</g>
+  
+  
+</svg></g><g class="node" transform="translate(540,2520.6666666666665)"><svg width="50px" height="50px" viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <pattern x="0" y="0" viewBox="-6.166666666666667 1 16.666666666666668 16.666666666666668" id="grid" width="16.666666666666668" height="16.666666666666668" patternUnits="userSpaceOnUse" style="overflow:visible;">
+      <rect x="-6.166666666666667" y="1" width="16.666666666666668" height="16.666666666666668" fill="#FFDB7B" stroke="#E5C56E" stroke-width="2"></rect>
+    </pattern>
+  </defs>
+  <rect x="0" y="0" width="100%" height="100%" fill="url(#grid)" stroke="#E5C56E" stroke-width="4"></rect>
+  
+<g transform="translate(0, 33.333333333333336) scale(0.08333333333333333,0.08333333333333333)">
+  <path fill="#344975" d="M94,28.7c26.3-2.4,50.9,8.6,66.3,27.6l-58.9,48.4l68.7,33.8c-11.1,22.7-33.8,39.8-61.4,42.2c-42.2,3.8-79.8-27-83.3-68.7S51.8,32.4,94,28.7z"></path>
+</g>
+  
+<g transform="translate(0, 33.333333333333336) scale(0.08333333333333333,0.08333333333333333)">
+  <path fill="#AD402C" d="M104.1,17.6c-38.4,0-69.5,31.2-69.5,69.5v72.7c0,9.5,7.8,17.2,17.2,17.2s17.2-7.8,17.2-17.2c0,9.5,7.8,17.2,17.2,17.2s17.2-7.8,17.2-17.2c0,9.5,7.8,17.2,17.2,17.2s17.2-7.8,17.2-17.2c0,9.5,7.8,17.2,17.2,17.2c9.5,0,17.2-7.8,17.2-17.2V86.5C173.4,48.8,142.3,17.6,104.1,17.6z"></path>
+</g>
+  
+  
+</svg></g><g class="node" transform="translate(540,2786)"><svg width="50px" height="50px" viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <pattern x="0" y="0" viewBox="-6.166666666666667 1 16.666666666666668 16.666666666666668" id="grid" width="16.666666666666668" height="16.666666666666668" patternUnits="userSpaceOnUse" style="overflow:visible;">
+      <rect x="-6.166666666666667" y="1" width="16.666666666666668" height="16.666666666666668" fill="#FFDB7B" stroke="#E5C56E" stroke-width="2"></rect>
+    </pattern>
+  </defs>
+  <rect x="0" y="0" width="100%" height="100%" fill="url(#grid)" stroke="#E5C56E" stroke-width="4"></rect>
+  
+<g transform="translate(0, 16.666666666666668) scale(0.08333333333333333,0.08333333333333333)">
+  <path fill="#344975" d="M94,28.7c26.3-2.4,50.9,8.6,66.3,27.6l-58.9,48.4l68.7,33.8c-11.1,22.7-33.8,39.8-61.4,42.2c-42.2,3.8-79.8-27-83.3-68.7S51.8,32.4,94,28.7z"></path>
+</g>
+  
+<g transform="translate(0, 33.333333333333336) scale(0.08333333333333333,0.08333333333333333)">
+  <path fill="#AD402C" d="M104.1,17.6c-38.4,0-69.5,31.2-69.5,69.5v72.7c0,9.5,7.8,17.2,17.2,17.2s17.2-7.8,17.2-17.2c0,9.5,7.8,17.2,17.2,17.2s17.2-7.8,17.2-17.2c0,9.5,7.8,17.2,17.2,17.2s17.2-7.8,17.2-17.2c0,9.5,7.8,17.2,17.2,17.2c9.5,0,17.2-7.8,17.2-17.2V86.5C173.4,48.8,142.3,17.6,104.1,17.6z"></path>
+</g>
+  
+  <g transform="translate(33.333333333333336, 33.333333333333336)">
+    <circle fill="#846785" cx="0.6944444444444444" cy="0.6944444444444444" r="1.6666666666666665"></circle>
+</g>
+</svg></g><g class="node" transform="translate(540,2918.6666666666665)"><svg width="50px" height="50px" viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <pattern x="0" y="0" viewBox="-6.166666666666667 1 16.666666666666668 16.666666666666668" id="grid" width="16.666666666666668" height="16.666666666666668" patternUnits="userSpaceOnUse" style="overflow:visible;">
+      <rect x="-6.166666666666667" y="1" width="16.666666666666668" height="16.666666666666668" fill="#FFDB7B" stroke="#E5C56E" stroke-width="2"></rect>
+    </pattern>
+  </defs>
+  <rect x="0" y="0" width="100%" height="100%" fill="url(#grid)" stroke="#E5C56E" stroke-width="4"></rect>
+  
+<g transform="translate(16.666666666666668, 33.333333333333336) scale(0.08333333333333333,0.08333333333333333)">
+  <path fill="#344975" d="M94,28.7c26.3-2.4,50.9,8.6,66.3,27.6l-58.9,48.4l68.7,33.8c-11.1,22.7-33.8,39.8-61.4,42.2c-42.2,3.8-79.8-27-83.3-68.7S51.8,32.4,94,28.7z"></path>
+</g>
+  
+<g transform="translate(0, 33.333333333333336) scale(0.08333333333333333,0.08333333333333333)">
+  <path fill="#AD402C" d="M104.1,17.6c-38.4,0-69.5,31.2-69.5,69.5v72.7c0,9.5,7.8,17.2,17.2,17.2s17.2-7.8,17.2-17.2c0,9.5,7.8,17.2,17.2,17.2s17.2-7.8,17.2-17.2c0,9.5,7.8,17.2,17.2,17.2s17.2-7.8,17.2-17.2c0,9.5,7.8,17.2,17.2,17.2c9.5,0,17.2-7.8,17.2-17.2V86.5C173.4,48.8,142.3,17.6,104.1,17.6z"></path>
+</g>
+  
+  <g transform="translate(33.333333333333336, 33.333333333333336)">
+    <circle fill="#846785" cx="0.6944444444444444" cy="0.6944444444444444" r="1.6666666666666665"></circle>
+</g>
+</svg></g><g class="node" transform="translate(540,3051.333333333333)"><svg width="50px" height="50px" viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <pattern x="0" y="0" viewBox="-6.166666666666667 1 16.666666666666668 16.666666666666668" id="grid" width="16.666666666666668" height="16.666666666666668" patternUnits="userSpaceOnUse" style="overflow:visible;">
+      <rect x="-6.166666666666667" y="1" width="16.666666666666668" height="16.666666666666668" fill="#FFDB7B" stroke="#E5C56E" stroke-width="2"></rect>
+    </pattern>
+  </defs>
+  <rect x="0" y="0" width="100%" height="100%" fill="url(#grid)" stroke="#E5C56E" stroke-width="4"></rect>
+  
+<g transform="translate(0, 0) scale(0.08333333333333333,0.08333333333333333)">
+  <path fill="#344975" d="M94,28.7c26.3-2.4,50.9,8.6,66.3,27.6l-58.9,48.4l68.7,33.8c-11.1,22.7-33.8,39.8-61.4,42.2c-42.2,3.8-79.8-27-83.3-68.7S51.8,32.4,94,28.7z"></path>
+</g>
+  
+<g transform="translate(0, 33.333333333333336) scale(0.08333333333333333,0.08333333333333333)">
+  <path fill="#AD402C" d="M104.1,17.6c-38.4,0-69.5,31.2-69.5,69.5v72.7c0,9.5,7.8,17.2,17.2,17.2s17.2-7.8,17.2-17.2c0,9.5,7.8,17.2,17.2,17.2s17.2-7.8,17.2-17.2c0,9.5,7.8,17.2,17.2,17.2s17.2-7.8,17.2-17.2c0,9.5,7.8,17.2,17.2,17.2c9.5,0,17.2-7.8,17.2-17.2V86.5C173.4,48.8,142.3,17.6,104.1,17.6z"></path>
+</g>
+  
+  <g transform="translate(33.333333333333336, 33.333333333333336)">
+    <circle fill="#846785" cx="0.6944444444444444" cy="0.6944444444444444" r="1.6666666666666665"></circle>
+</g>
+</svg></g><g class="node" transform="translate(540,3184)"><svg width="50px" height="50px" viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <pattern x="0" y="0" viewBox="-6.166666666666667 1 16.666666666666668 16.666666666666668" id="grid" width="16.666666666666668" height="16.666666666666668" patternUnits="userSpaceOnUse" style="overflow:visible;">
+      <rect x="-6.166666666666667" y="1" width="16.666666666666668" height="16.666666666666668" fill="#FFDB7B" stroke="#E5C56E" stroke-width="2"></rect>
+    </pattern>
+  </defs>
+  <rect x="0" y="0" width="100%" height="100%" fill="url(#grid)" stroke="#E5C56E" stroke-width="4"></rect>
+  
+<g transform="translate(33.333333333333336, 33.333333333333336) scale(0.08333333333333333,0.08333333333333333)">
+  <path fill="#344975" d="M94,28.7c26.3-2.4,50.9,8.6,66.3,27.6l-58.9,48.4l68.7,33.8c-11.1,22.7-33.8,39.8-61.4,42.2c-42.2,3.8-79.8-27-83.3-68.7S51.8,32.4,94,28.7z"></path>
+</g>
+  
+<g transform="translate(0, 33.333333333333336) scale(0.08333333333333333,0.08333333333333333)">
+  <path fill="#AD402C" d="M104.1,17.6c-38.4,0-69.5,31.2-69.5,69.5v72.7c0,9.5,7.8,17.2,17.2,17.2s17.2-7.8,17.2-17.2c0,9.5,7.8,17.2,17.2,17.2s17.2-7.8,17.2-17.2c0,9.5,7.8,17.2,17.2,17.2s17.2-7.8,17.2-17.2c0,9.5,7.8,17.2,17.2,17.2c9.5,0,17.2-7.8,17.2-17.2V86.5C173.4,48.8,142.3,17.6,104.1,17.6z"></path>
+</g>
+  
+  
+</svg></g><g class="node" transform="translate(540,3449.333333333333)"><svg width="50px" height="50px" viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <pattern x="0" y="0" viewBox="-6.166666666666667 1 16.666666666666668 16.666666666666668" id="grid" width="16.666666666666668" height="16.666666666666668" patternUnits="userSpaceOnUse" style="overflow:visible;">
+      <rect x="-6.166666666666667" y="1" width="16.666666666666668" height="16.666666666666668" fill="#FFDB7B" stroke="#E5C56E" stroke-width="2"></rect>
+    </pattern>
+  </defs>
+  <rect x="0" y="0" width="100%" height="100%" fill="url(#grid)" stroke="#E5C56E" stroke-width="4"></rect>
+  
+<g transform="translate(16.666666666666668, 33.333333333333336) scale(0.08333333333333333,0.08333333333333333)">
+  <path fill="#344975" d="M94,28.7c26.3-2.4,50.9,8.6,66.3,27.6l-58.9,48.4l68.7,33.8c-11.1,22.7-33.8,39.8-61.4,42.2c-42.2,3.8-79.8-27-83.3-68.7S51.8,32.4,94,28.7z"></path>
+</g>
+  
+<g transform="translate(0, 33.333333333333336) scale(0.08333333333333333,0.08333333333333333)">
+  <path fill="#AD402C" d="M104.1,17.6c-38.4,0-69.5,31.2-69.5,69.5v72.7c0,9.5,7.8,17.2,17.2,17.2s17.2-7.8,17.2-17.2c0,9.5,7.8,17.2,17.2,17.2s17.2-7.8,17.2-17.2c0,9.5,7.8,17.2,17.2,17.2s17.2-7.8,17.2-17.2c0,9.5,7.8,17.2,17.2,17.2c9.5,0,17.2-7.8,17.2-17.2V86.5C173.4,48.8,142.3,17.6,104.1,17.6z"></path>
+</g>
+  
+  <g transform="translate(33.333333333333336, 33.333333333333336)">
+    <circle fill="#846785" cx="0.6944444444444444" cy="0.6944444444444444" r="1.6666666666666665"></circle>
+</g>
+</svg></g><g class="node" transform="translate(540,3581.9999999999995)"><svg width="50px" height="50px" viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <pattern x="0" y="0" viewBox="-6.166666666666667 1 16.666666666666668 16.666666666666668" id="grid" width="16.666666666666668" height="16.666666666666668" patternUnits="userSpaceOnUse" style="overflow:visible;">
+      <rect x="-6.166666666666667" y="1" width="16.666666666666668" height="16.666666666666668" fill="#FFDB7B" stroke="#E5C56E" stroke-width="2"></rect>
+    </pattern>
+  </defs>
+  <rect x="0" y="0" width="100%" height="100%" fill="url(#grid)" stroke="#E5C56E" stroke-width="4"></rect>
+  
+<g transform="translate(33.333333333333336, 0) scale(0.08333333333333333,0.08333333333333333)">
+  <path fill="#344975" d="M94,28.7c26.3-2.4,50.9,8.6,66.3,27.6l-58.9,48.4l68.7,33.8c-11.1,22.7-33.8,39.8-61.4,42.2c-42.2,3.8-79.8-27-83.3-68.7S51.8,32.4,94,28.7z"></path>
+</g>
+  
+<g transform="translate(0, 33.333333333333336) scale(0.08333333333333333,0.08333333333333333)">
+  <path fill="#AD402C" d="M104.1,17.6c-38.4,0-69.5,31.2-69.5,69.5v72.7c0,9.5,7.8,17.2,17.2,17.2s17.2-7.8,17.2-17.2c0,9.5,7.8,17.2,17.2,17.2s17.2-7.8,17.2-17.2c0,9.5,7.8,17.2,17.2,17.2s17.2-7.8,17.2-17.2c0,9.5,7.8,17.2,17.2,17.2c9.5,0,17.2-7.8,17.2-17.2V86.5C173.4,48.8,142.3,17.6,104.1,17.6z"></path>
+</g>
+  
+  <g transform="translate(33.333333333333336, 33.333333333333336)">
+    <circle fill="#846785" cx="0.6944444444444444" cy="0.6944444444444444" r="1.6666666666666665"></circle>
+</g>
+</svg></g><g class="node" transform="translate(540,3714.6666666666665)"><svg width="50px" height="50px" viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <pattern x="0" y="0" viewBox="-6.166666666666667 1 16.666666666666668 16.666666666666668" id="grid" width="16.666666666666668" height="16.666666666666668" patternUnits="userSpaceOnUse" style="overflow:visible;">
+      <rect x="-6.166666666666667" y="1" width="16.666666666666668" height="16.666666666666668" fill="#FFDB7B" stroke="#E5C56E" stroke-width="2"></rect>
+    </pattern>
+  </defs>
+  <rect x="0" y="0" width="100%" height="100%" fill="url(#grid)" stroke="#E5C56E" stroke-width="4"></rect>
+  
+<g transform="translate(16.666666666666668, 16.666666666666668) scale(0.08333333333333333,0.08333333333333333)">
+  <path fill="#344975" d="M94,28.7c26.3-2.4,50.9,8.6,66.3,27.6l-58.9,48.4l68.7,33.8c-11.1,22.7-33.8,39.8-61.4,42.2c-42.2,3.8-79.8-27-83.3-68.7S51.8,32.4,94,28.7z"></path>
+</g>
+  
+<g transform="translate(0, 33.333333333333336) scale(0.08333333333333333,0.08333333333333333)">
+  <path fill="#AD402C" d="M104.1,17.6c-38.4,0-69.5,31.2-69.5,69.5v72.7c0,9.5,7.8,17.2,17.2,17.2s17.2-7.8,17.2-17.2c0,9.5,7.8,17.2,17.2,17.2s17.2-7.8,17.2-17.2c0,9.5,7.8,17.2,17.2,17.2s17.2-7.8,17.2-17.2c0,9.5,7.8,17.2,17.2,17.2c9.5,0,17.2-7.8,17.2-17.2V86.5C173.4,48.8,142.3,17.6,104.1,17.6z"></path>
+</g>
+  
+  <g transform="translate(33.333333333333336, 33.333333333333336)">
+    <circle fill="#846785" cx="0.6944444444444444" cy="0.6944444444444444" r="1.6666666666666665"></circle>
+</g>
+</svg></g><g class="node" transform="translate(540,3847.333333333333)"><svg width="50px" height="50px" viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <pattern x="0" y="0" viewBox="-6.166666666666667 1 16.666666666666668 16.666666666666668" id="grid" width="16.666666666666668" height="16.666666666666668" patternUnits="userSpaceOnUse" style="overflow:visible;">
+      <rect x="-6.166666666666667" y="1" width="16.666666666666668" height="16.666666666666668" fill="#FFDB7B" stroke="#E5C56E" stroke-width="2"></rect>
+    </pattern>
+  </defs>
+  <rect x="0" y="0" width="100%" height="100%" fill="url(#grid)" stroke="#E5C56E" stroke-width="4"></rect>
+  
+<g transform="translate(0, 0) scale(0.08333333333333333,0.08333333333333333)">
+  <path fill="#344975" d="M94,28.7c26.3-2.4,50.9,8.6,66.3,27.6l-58.9,48.4l68.7,33.8c-11.1,22.7-33.8,39.8-61.4,42.2c-42.2,3.8-79.8-27-83.3-68.7S51.8,32.4,94,28.7z"></path>
+</g>
+  
+<g transform="translate(0, 33.333333333333336) scale(0.08333333333333333,0.08333333333333333)">
+  <path fill="#AD402C" d="M104.1,17.6c-38.4,0-69.5,31.2-69.5,69.5v72.7c0,9.5,7.8,17.2,17.2,17.2s17.2-7.8,17.2-17.2c0,9.5,7.8,17.2,17.2,17.2s17.2-7.8,17.2-17.2c0,9.5,7.8,17.2,17.2,17.2s17.2-7.8,17.2-17.2c0,9.5,7.8,17.2,17.2,17.2c9.5,0,17.2-7.8,17.2-17.2V86.5C173.4,48.8,142.3,17.6,104.1,17.6z"></path>
+</g>
+  
+  <g transform="translate(33.333333333333336, 33.333333333333336)">
+    <circle fill="#846785" cx="0.6944444444444444" cy="0.6944444444444444" r="1.6666666666666665"></circle>
+</g>
+</svg></g><g class="node" transform="translate(540,4112.666666666666)"><svg width="50px" height="50px" viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <pattern x="0" y="0" viewBox="-6.166666666666667 1 16.666666666666668 16.666666666666668" id="grid" width="16.666666666666668" height="16.666666666666668" patternUnits="userSpaceOnUse" style="overflow:visible;">
+      <rect x="-6.166666666666667" y="1" width="16.666666666666668" height="16.666666666666668" fill="#FFDB7B" stroke="#E5C56E" stroke-width="2"></rect>
+    </pattern>
+  </defs>
+  <rect x="0" y="0" width="100%" height="100%" fill="url(#grid)" stroke="#E5C56E" stroke-width="4"></rect>
+  
+<g transform="translate(0, 0) scale(0.08333333333333333,0.08333333333333333)">
+  <path fill="#344975" d="M94,28.7c26.3-2.4,50.9,8.6,66.3,27.6l-58.9,48.4l68.7,33.8c-11.1,22.7-33.8,39.8-61.4,42.2c-42.2,3.8-79.8-27-83.3-68.7S51.8,32.4,94,28.7z"></path>
+</g>
+  
+<g transform="translate(0, 33.333333333333336) scale(0.08333333333333333,0.08333333333333333)">
+  <path fill="#AD402C" d="M104.1,17.6c-38.4,0-69.5,31.2-69.5,69.5v72.7c0,9.5,7.8,17.2,17.2,17.2s17.2-7.8,17.2-17.2c0,9.5,7.8,17.2,17.2,17.2s17.2-7.8,17.2-17.2c0,9.5,7.8,17.2,17.2,17.2s17.2-7.8,17.2-17.2c0,9.5,7.8,17.2,17.2,17.2c9.5,0,17.2-7.8,17.2-17.2V86.5C173.4,48.8,142.3,17.6,104.1,17.6z"></path>
+</g>
+  
+  <g transform="translate(33.333333333333336, 33.333333333333336)">
+    <circle fill="#846785" cx="0.6944444444444444" cy="0.6944444444444444" r="1.6666666666666665"></circle>
+</g>
+</svg></g><g class="node" transform="translate(540,4245.333333333333)"><svg width="50px" height="50px" viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <pattern x="0" y="0" viewBox="-6.166666666666667 1 16.666666666666668 16.666666666666668" id="grid" width="16.666666666666668" height="16.666666666666668" patternUnits="userSpaceOnUse" style="overflow:visible;">
+      <rect x="-6.166666666666667" y="1" width="16.666666666666668" height="16.666666666666668" fill="#FFDB7B" stroke="#E5C56E" stroke-width="2"></rect>
+    </pattern>
+  </defs>
+  <rect x="0" y="0" width="100%" height="100%" fill="url(#grid)" stroke="#E5C56E" stroke-width="4"></rect>
+  
+<g transform="translate(16.666666666666668, 16.666666666666668) scale(0.08333333333333333,0.08333333333333333)">
+  <path fill="#344975" d="M94,28.7c26.3-2.4,50.9,8.6,66.3,27.6l-58.9,48.4l68.7,33.8c-11.1,22.7-33.8,39.8-61.4,42.2c-42.2,3.8-79.8-27-83.3-68.7S51.8,32.4,94,28.7z"></path>
+</g>
+  
+<g transform="translate(0, 33.333333333333336) scale(0.08333333333333333,0.08333333333333333)">
+  <path fill="#AD402C" d="M104.1,17.6c-38.4,0-69.5,31.2-69.5,69.5v72.7c0,9.5,7.8,17.2,17.2,17.2s17.2-7.8,17.2-17.2c0,9.5,7.8,17.2,17.2,17.2s17.2-7.8,17.2-17.2c0,9.5,7.8,17.2,17.2,17.2s17.2-7.8,17.2-17.2c0,9.5,7.8,17.2,17.2,17.2c9.5,0,17.2-7.8,17.2-17.2V86.5C173.4,48.8,142.3,17.6,104.1,17.6z"></path>
+</g>
+  
+  <g transform="translate(33.333333333333336, 33.333333333333336)">
+    <circle fill="#846785" cx="0.6944444444444444" cy="0.6944444444444444" r="1.6666666666666665"></circle>
+</g>
+</svg></g><g class="node" transform="translate(540,4378)"><svg width="50px" height="50px" viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <pattern x="0" y="0" viewBox="-6.166666666666667 1 16.666666666666668 16.666666666666668" id="grid" width="16.666666666666668" height="16.666666666666668" patternUnits="userSpaceOnUse" style="overflow:visible;">
+      <rect x="-6.166666666666667" y="1" width="16.666666666666668" height="16.666666666666668" fill="#FFDB7B" stroke="#E5C56E" stroke-width="2"></rect>
+    </pattern>
+  </defs>
+  <rect x="0" y="0" width="100%" height="100%" fill="url(#grid)" stroke="#E5C56E" stroke-width="4"></rect>
+  
+<g transform="translate(0, 33.333333333333336) scale(0.08333333333333333,0.08333333333333333)">
+  <path fill="#344975" d="M94,28.7c26.3-2.4,50.9,8.6,66.3,27.6l-58.9,48.4l68.7,33.8c-11.1,22.7-33.8,39.8-61.4,42.2c-42.2,3.8-79.8-27-83.3-68.7S51.8,32.4,94,28.7z"></path>
+</g>
+  
+<g transform="translate(0, 33.333333333333336) scale(0.08333333333333333,0.08333333333333333)">
+  <path fill="#AD402C" d="M104.1,17.6c-38.4,0-69.5,31.2-69.5,69.5v72.7c0,9.5,7.8,17.2,17.2,17.2s17.2-7.8,17.2-17.2c0,9.5,7.8,17.2,17.2,17.2s17.2-7.8,17.2-17.2c0,9.5,7.8,17.2,17.2,17.2s17.2-7.8,17.2-17.2c0,9.5,7.8,17.2,17.2,17.2c9.5,0,17.2-7.8,17.2-17.2V86.5C173.4,48.8,142.3,17.6,104.1,17.6z"></path>
+</g>
+  
+  <g transform="translate(33.333333333333336, 33.333333333333336)">
+    <circle fill="#846785" cx="0.6944444444444444" cy="0.6944444444444444" r="1.6666666666666665"></circle>
+</g>
+</svg></g><g class="node" transform="translate(540,4510.666666666666)"><svg width="50px" height="50px" viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <pattern x="0" y="0" viewBox="-6.166666666666667 1 16.666666666666668 16.666666666666668" id="grid" width="16.666666666666668" height="16.666666666666668" patternUnits="userSpaceOnUse" style="overflow:visible;">
+      <rect x="-6.166666666666667" y="1" width="16.666666666666668" height="16.666666666666668" fill="#FFDB7B" stroke="#E5C56E" stroke-width="2"></rect>
+    </pattern>
+  </defs>
+  <rect x="0" y="0" width="100%" height="100%" fill="url(#grid)" stroke="#E5C56E" stroke-width="4"></rect>
+  
+<g transform="translate(33.333333333333336, 16.666666666666668) scale(0.08333333333333333,0.08333333333333333)">
+  <path fill="#344975" d="M94,28.7c26.3-2.4,50.9,8.6,66.3,27.6l-58.9,48.4l68.7,33.8c-11.1,22.7-33.8,39.8-61.4,42.2c-42.2,3.8-79.8-27-83.3-68.7S51.8,32.4,94,28.7z"></path>
+</g>
+  
+<g transform="translate(0, 33.333333333333336) scale(0.08333333333333333,0.08333333333333333)">
+  <path fill="#AD402C" d="M104.1,17.6c-38.4,0-69.5,31.2-69.5,69.5v72.7c0,9.5,7.8,17.2,17.2,17.2s17.2-7.8,17.2-17.2c0,9.5,7.8,17.2,17.2,17.2s17.2-7.8,17.2-17.2c0,9.5,7.8,17.2,17.2,17.2s17.2-7.8,17.2-17.2c0,9.5,7.8,17.2,17.2,17.2c9.5,0,17.2-7.8,17.2-17.2V86.5C173.4,48.8,142.3,17.6,104.1,17.6z"></path>
+</g>
+  
+  <g transform="translate(33.333333333333336, 33.333333333333336)">
+    <circle fill="#846785" cx="0.6944444444444444" cy="0.6944444444444444" r="1.6666666666666665"></circle>
+</g>
+</svg></g><g class="node" transform="translate(540,4776)"><svg width="50px" height="50px" viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <pattern x="0" y="0" viewBox="-6.166666666666667 1 16.666666666666668 16.666666666666668" id="grid" width="16.666666666666668" height="16.666666666666668" patternUnits="userSpaceOnUse" style="overflow:visible;">
+      <rect x="-6.166666666666667" y="1" width="16.666666666666668" height="16.666666666666668" fill="#FFDB7B" stroke="#E5C56E" stroke-width="2"></rect>
+    </pattern>
+  </defs>
+  <rect x="0" y="0" width="100%" height="100%" fill="url(#grid)" stroke="#E5C56E" stroke-width="4"></rect>
+  
+<g transform="translate(33.333333333333336, 33.333333333333336) scale(0.08333333333333333,0.08333333333333333)">
+  <path fill="#344975" d="M94,28.7c26.3-2.4,50.9,8.6,66.3,27.6l-58.9,48.4l68.7,33.8c-11.1,22.7-33.8,39.8-61.4,42.2c-42.2,3.8-79.8-27-83.3-68.7S51.8,32.4,94,28.7z"></path>
+</g>
+  
+<g transform="translate(0, 33.333333333333336) scale(0.08333333333333333,0.08333333333333333)">
+  <path fill="#AD402C" d="M104.1,17.6c-38.4,0-69.5,31.2-69.5,69.5v72.7c0,9.5,7.8,17.2,17.2,17.2s17.2-7.8,17.2-17.2c0,9.5,7.8,17.2,17.2,17.2s17.2-7.8,17.2-17.2c0,9.5,7.8,17.2,17.2,17.2s17.2-7.8,17.2-17.2c0,9.5,7.8,17.2,17.2,17.2c9.5,0,17.2-7.8,17.2-17.2V86.5C173.4,48.8,142.3,17.6,104.1,17.6z"></path>
+</g>
+  
+  
+</svg></g><g class="node" transform="translate(540,4908.666666666666)"><svg width="50px" height="50px" viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <pattern x="0" y="0" viewBox="-6.166666666666667 1 16.666666666666668 16.666666666666668" id="grid" width="16.666666666666668" height="16.666666666666668" patternUnits="userSpaceOnUse" style="overflow:visible;">
+      <rect x="-6.166666666666667" y="1" width="16.666666666666668" height="16.666666666666668" fill="#FFDB7B" stroke="#E5C56E" stroke-width="2"></rect>
+    </pattern>
+  </defs>
+  <rect x="0" y="0" width="100%" height="100%" fill="url(#grid)" stroke="#E5C56E" stroke-width="4"></rect>
+  
+<g transform="translate(0, 0) scale(0.08333333333333333,0.08333333333333333)">
+  <path fill="#344975" d="M94,28.7c26.3-2.4,50.9,8.6,66.3,27.6l-58.9,48.4l68.7,33.8c-11.1,22.7-33.8,39.8-61.4,42.2c-42.2,3.8-79.8-27-83.3-68.7S51.8,32.4,94,28.7z"></path>
+</g>
+  
+<g transform="translate(0, 33.333333333333336) scale(0.08333333333333333,0.08333333333333333)">
+  <path fill="#AD402C" d="M104.1,17.6c-38.4,0-69.5,31.2-69.5,69.5v72.7c0,9.5,7.8,17.2,17.2,17.2s17.2-7.8,17.2-17.2c0,9.5,7.8,17.2,17.2,17.2s17.2-7.8,17.2-17.2c0,9.5,7.8,17.2,17.2,17.2s17.2-7.8,17.2-17.2c0,9.5,7.8,17.2,17.2,17.2c9.5,0,17.2-7.8,17.2-17.2V86.5C173.4,48.8,142.3,17.6,104.1,17.6z"></path>
+</g>
+  
+  <g transform="translate(33.333333333333336, 33.333333333333336)">
+    <circle fill="#846785" cx="0.6944444444444444" cy="0.6944444444444444" r="1.6666666666666665"></circle>
+</g>
+</svg></g><g class="node" transform="translate(540,5041.333333333333)"><svg width="50px" height="50px" viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <pattern x="0" y="0" viewBox="-6.166666666666667 1 16.666666666666668 16.666666666666668" id="grid" width="16.666666666666668" height="16.666666666666668" patternUnits="userSpaceOnUse" style="overflow:visible;">
+      <rect x="-6.166666666666667" y="1" width="16.666666666666668" height="16.666666666666668" fill="#FFDB7B" stroke="#E5C56E" stroke-width="2"></rect>
+    </pattern>
+  </defs>
+  <rect x="0" y="0" width="100%" height="100%" fill="url(#grid)" stroke="#E5C56E" stroke-width="4"></rect>
+  
+<g transform="translate(33.333333333333336, 16.666666666666668) scale(0.08333333333333333,0.08333333333333333)">
+  <path fill="#344975" d="M94,28.7c26.3-2.4,50.9,8.6,66.3,27.6l-58.9,48.4l68.7,33.8c-11.1,22.7-33.8,39.8-61.4,42.2c-42.2,3.8-79.8-27-83.3-68.7S51.8,32.4,94,28.7z"></path>
+</g>
+  
+<g transform="translate(0, 33.333333333333336) scale(0.08333333333333333,0.08333333333333333)">
+  <path fill="#AD402C" d="M104.1,17.6c-38.4,0-69.5,31.2-69.5,69.5v72.7c0,9.5,7.8,17.2,17.2,17.2s17.2-7.8,17.2-17.2c0,9.5,7.8,17.2,17.2,17.2s17.2-7.8,17.2-17.2c0,9.5,7.8,17.2,17.2,17.2s17.2-7.8,17.2-17.2c0,9.5,7.8,17.2,17.2,17.2c9.5,0,17.2-7.8,17.2-17.2V86.5C173.4,48.8,142.3,17.6,104.1,17.6z"></path>
+</g>
+  
+  <g transform="translate(33.333333333333336, 33.333333333333336)">
+    <circle fill="#846785" cx="0.6944444444444444" cy="0.6944444444444444" r="1.6666666666666665"></circle>
+</g>
+</svg></g><g class="node" transform="translate(540,5174)"><svg width="50px" height="50px" viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <pattern x="0" y="0" viewBox="-6.166666666666667 1 16.666666666666668 16.666666666666668" id="grid" width="16.666666666666668" height="16.666666666666668" patternUnits="userSpaceOnUse" style="overflow:visible;">
+      <rect x="-6.166666666666667" y="1" width="16.666666666666668" height="16.666666666666668" fill="#FFDB7B" stroke="#E5C56E" stroke-width="2"></rect>
+    </pattern>
+  </defs>
+  <rect x="0" y="0" width="100%" height="100%" fill="url(#grid)" stroke="#E5C56E" stroke-width="4"></rect>
+  
+<g transform="translate(16.666666666666668, 0) scale(0.08333333333333333,0.08333333333333333)">
+  <path fill="#344975" d="M94,28.7c26.3-2.4,50.9,8.6,66.3,27.6l-58.9,48.4l68.7,33.8c-11.1,22.7-33.8,39.8-61.4,42.2c-42.2,3.8-79.8-27-83.3-68.7S51.8,32.4,94,28.7z"></path>
+</g>
+  
+<g transform="translate(0, 33.333333333333336) scale(0.08333333333333333,0.08333333333333333)">
+  <path fill="#AD402C" d="M104.1,17.6c-38.4,0-69.5,31.2-69.5,69.5v72.7c0,9.5,7.8,17.2,17.2,17.2s17.2-7.8,17.2-17.2c0,9.5,7.8,17.2,17.2,17.2s17.2-7.8,17.2-17.2c0,9.5,7.8,17.2,17.2,17.2s17.2-7.8,17.2-17.2c0,9.5,7.8,17.2,17.2,17.2c9.5,0,17.2-7.8,17.2-17.2V86.5C173.4,48.8,142.3,17.6,104.1,17.6z"></path>
+</g>
+  
+  <g transform="translate(33.333333333333336, 33.333333333333336)">
+    <circle fill="#846785" cx="0.6944444444444444" cy="0.6944444444444444" r="1.6666666666666665"></circle>
+</g>
+</svg></g><g class="node" transform="translate(540,5439.333333333333)"><svg width="50px" height="50px" viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <pattern x="0" y="0" viewBox="-6.166666666666667 1 16.666666666666668 16.666666666666668" id="grid" width="16.666666666666668" height="16.666666666666668" patternUnits="userSpaceOnUse" style="overflow:visible;">
+      <rect x="-6.166666666666667" y="1" width="16.666666666666668" height="16.666666666666668" fill="#FFDB7B" stroke="#E5C56E" stroke-width="2"></rect>
+    </pattern>
+  </defs>
+  <rect x="0" y="0" width="100%" height="100%" fill="url(#grid)" stroke="#E5C56E" stroke-width="4"></rect>
+  
+<g transform="translate(33.333333333333336, 33.333333333333336) scale(0.08333333333333333,0.08333333333333333)">
+  <path fill="#344975" d="M94,28.7c26.3-2.4,50.9,8.6,66.3,27.6l-58.9,48.4l68.7,33.8c-11.1,22.7-33.8,39.8-61.4,42.2c-42.2,3.8-79.8-27-83.3-68.7S51.8,32.4,94,28.7z"></path>
+</g>
+  
+<g transform="translate(0, 33.333333333333336) scale(0.08333333333333333,0.08333333333333333)">
+  <path fill="#AD402C" d="M104.1,17.6c-38.4,0-69.5,31.2-69.5,69.5v72.7c0,9.5,7.8,17.2,17.2,17.2s17.2-7.8,17.2-17.2c0,9.5,7.8,17.2,17.2,17.2s17.2-7.8,17.2-17.2c0,9.5,7.8,17.2,17.2,17.2s17.2-7.8,17.2-17.2c0,9.5,7.8,17.2,17.2,17.2c9.5,0,17.2-7.8,17.2-17.2V86.5C173.4,48.8,142.3,17.6,104.1,17.6z"></path>
+</g>
+  
+  
+</svg></g><g class="node" transform="translate(540,5572)"><svg width="50px" height="50px" viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <pattern x="0" y="0" viewBox="-6.166666666666667 1 16.666666666666668 16.666666666666668" id="grid" width="16.666666666666668" height="16.666666666666668" patternUnits="userSpaceOnUse" style="overflow:visible;">
+      <rect x="-6.166666666666667" y="1" width="16.666666666666668" height="16.666666666666668" fill="#FFDB7B" stroke="#E5C56E" stroke-width="2"></rect>
+    </pattern>
+  </defs>
+  <rect x="0" y="0" width="100%" height="100%" fill="url(#grid)" stroke="#E5C56E" stroke-width="4"></rect>
+  
+<g transform="translate(0, 0) scale(0.08333333333333333,0.08333333333333333)">
+  <path fill="#344975" d="M94,28.7c26.3-2.4,50.9,8.6,66.3,27.6l-58.9,48.4l68.7,33.8c-11.1,22.7-33.8,39.8-61.4,42.2c-42.2,3.8-79.8-27-83.3-68.7S51.8,32.4,94,28.7z"></path>
+</g>
+  
+<g transform="translate(0, 33.333333333333336) scale(0.08333333333333333,0.08333333333333333)">
+  <path fill="#AD402C" d="M104.1,17.6c-38.4,0-69.5,31.2-69.5,69.5v72.7c0,9.5,7.8,17.2,17.2,17.2s17.2-7.8,17.2-17.2c0,9.5,7.8,17.2,17.2,17.2s17.2-7.8,17.2-17.2c0,9.5,7.8,17.2,17.2,17.2s17.2-7.8,17.2-17.2c0,9.5,7.8,17.2,17.2,17.2c9.5,0,17.2-7.8,17.2-17.2V86.5C173.4,48.8,142.3,17.6,104.1,17.6z"></path>
+</g>
+  
+  <g transform="translate(33.333333333333336, 33.333333333333336)">
+    <circle fill="#846785" cx="0.6944444444444444" cy="0.6944444444444444" r="1.6666666666666665"></circle>
+</g>
+</svg></g><g class="node" transform="translate(540,5704.666666666666)"><svg width="50px" height="50px" viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <pattern x="0" y="0" viewBox="-6.166666666666667 1 16.666666666666668 16.666666666666668" id="grid" width="16.666666666666668" height="16.666666666666668" patternUnits="userSpaceOnUse" style="overflow:visible;">
+      <rect x="-6.166666666666667" y="1" width="16.666666666666668" height="16.666666666666668" fill="#FFDB7B" stroke="#E5C56E" stroke-width="2"></rect>
+    </pattern>
+  </defs>
+  <rect x="0" y="0" width="100%" height="100%" fill="url(#grid)" stroke="#E5C56E" stroke-width="4"></rect>
+  
+<g transform="translate(33.333333333333336, 16.666666666666668) scale(0.08333333333333333,0.08333333333333333)">
+  <path fill="#344975" d="M94,28.7c26.3-2.4,50.9,8.6,66.3,27.6l-58.9,48.4l68.7,33.8c-11.1,22.7-33.8,39.8-61.4,42.2c-42.2,3.8-79.8-27-83.3-68.7S51.8,32.4,94,28.7z"></path>
+</g>
+  
+<g transform="translate(0, 33.333333333333336) scale(0.08333333333333333,0.08333333333333333)">
+  <path fill="#AD402C" d="M104.1,17.6c-38.4,0-69.5,31.2-69.5,69.5v72.7c0,9.5,7.8,17.2,17.2,17.2s17.2-7.8,17.2-17.2c0,9.5,7.8,17.2,17.2,17.2s17.2-7.8,17.2-17.2c0,9.5,7.8,17.2,17.2,17.2s17.2-7.8,17.2-17.2c0,9.5,7.8,17.2,17.2,17.2c9.5,0,17.2-7.8,17.2-17.2V86.5C173.4,48.8,142.3,17.6,104.1,17.6z"></path>
+</g>
+  
+  <g transform="translate(33.333333333333336, 33.333333333333336)">
+    <circle fill="#846785" cx="0.6944444444444444" cy="0.6944444444444444" r="1.6666666666666665"></circle>
+</g>
+</svg></g><g class="node" transform="translate(540,5837.333333333333)"><svg width="50px" height="50px" viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <pattern x="0" y="0" viewBox="-6.166666666666667 1 16.666666666666668 16.666666666666668" id="grid" width="16.666666666666668" height="16.666666666666668" patternUnits="userSpaceOnUse" style="overflow:visible;">
+      <rect x="-6.166666666666667" y="1" width="16.666666666666668" height="16.666666666666668" fill="#FFDB7B" stroke="#E5C56E" stroke-width="2"></rect>
+    </pattern>
+  </defs>
+  <rect x="0" y="0" width="100%" height="100%" fill="url(#grid)" stroke="#E5C56E" stroke-width="4"></rect>
+  
+<g transform="translate(16.666666666666668, 0) scale(0.08333333333333333,0.08333333333333333)">
+  <path fill="#344975" d="M94,28.7c26.3-2.4,50.9,8.6,66.3,27.6l-58.9,48.4l68.7,33.8c-11.1,22.7-33.8,39.8-61.4,42.2c-42.2,3.8-79.8-27-83.3-68.7S51.8,32.4,94,28.7z"></path>
+</g>
+  
+<g transform="translate(0, 33.333333333333336) scale(0.08333333333333333,0.08333333333333333)">
+  <path fill="#AD402C" d="M104.1,17.6c-38.4,0-69.5,31.2-69.5,69.5v72.7c0,9.5,7.8,17.2,17.2,17.2s17.2-7.8,17.2-17.2c0,9.5,7.8,17.2,17.2,17.2s17.2-7.8,17.2-17.2c0,9.5,7.8,17.2,17.2,17.2s17.2-7.8,17.2-17.2c0,9.5,7.8,17.2,17.2,17.2c9.5,0,17.2-7.8,17.2-17.2V86.5C173.4,48.8,142.3,17.6,104.1,17.6z"></path>
+</g>
+  
+  <g transform="translate(33.333333333333336, 33.333333333333336)">
+    <circle fill="#846785" cx="0.6944444444444444" cy="0.6944444444444444" r="1.6666666666666665"></circle>
+</g>
+</svg></g><g class="node" transform="translate(540,6102.666666666666)"><svg width="50px" height="50px" viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <pattern x="0" y="0" viewBox="-6.166666666666667 1 16.666666666666668 16.666666666666668" id="grid" width="16.666666666666668" height="16.666666666666668" patternUnits="userSpaceOnUse" style="overflow:visible;">
+      <rect x="-6.166666666666667" y="1" width="16.666666666666668" height="16.666666666666668" fill="#FFDB7B" stroke="#E5C56E" stroke-width="2"></rect>
+    </pattern>
+  </defs>
+  <rect x="0" y="0" width="100%" height="100%" fill="url(#grid)" stroke="#E5C56E" stroke-width="4"></rect>
+  
+<g transform="translate(0, 0) scale(0.08333333333333333,0.08333333333333333)">
+  <path fill="#344975" d="M94,28.7c26.3-2.4,50.9,8.6,66.3,27.6l-58.9,48.4l68.7,33.8c-11.1,22.7-33.8,39.8-61.4,42.2c-42.2,3.8-79.8-27-83.3-68.7S51.8,32.4,94,28.7z"></path>
+</g>
+  
+<g transform="translate(0, 33.333333333333336) scale(0.08333333333333333,0.08333333333333333)">
+  <path fill="#AD402C" d="M104.1,17.6c-38.4,0-69.5,31.2-69.5,69.5v72.7c0,9.5,7.8,17.2,17.2,17.2s17.2-7.8,17.2-17.2c0,9.5,7.8,17.2,17.2,17.2s17.2-7.8,17.2-17.2c0,9.5,7.8,17.2,17.2,17.2s17.2-7.8,17.2-17.2c0,9.5,7.8,17.2,17.2,17.2c9.5,0,17.2-7.8,17.2-17.2V86.5C173.4,48.8,142.3,17.6,104.1,17.6z"></path>
+</g>
+  
+  <g transform="translate(33.333333333333336, 33.333333333333336)">
+    <circle fill="#846785" cx="0.6944444444444444" cy="0.6944444444444444" r="1.6666666666666665"></circle>
+</g>
+</svg></g><g class="node" transform="translate(540,6235.333333333333)"><svg width="50px" height="50px" viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <pattern x="0" y="0" viewBox="-6.166666666666667 1 16.666666666666668 16.666666666666668" id="grid" width="16.666666666666668" height="16.666666666666668" patternUnits="userSpaceOnUse" style="overflow:visible;">
+      <rect x="-6.166666666666667" y="1" width="16.666666666666668" height="16.666666666666668" fill="#FFDB7B" stroke="#E5C56E" stroke-width="2"></rect>
+    </pattern>
+  </defs>
+  <rect x="0" y="0" width="100%" height="100%" fill="url(#grid)" stroke="#E5C56E" stroke-width="4"></rect>
+  
+<g transform="translate(16.666666666666668, 16.666666666666668) scale(0.08333333333333333,0.08333333333333333)">
+  <path fill="#344975" d="M94,28.7c26.3-2.4,50.9,8.6,66.3,27.6l-58.9,48.4l68.7,33.8c-11.1,22.7-33.8,39.8-61.4,42.2c-42.2,3.8-79.8-27-83.3-68.7S51.8,32.4,94,28.7z"></path>
+</g>
+  
+<g transform="translate(0, 33.333333333333336) scale(0.08333333333333333,0.08333333333333333)">
+  <path fill="#AD402C" d="M104.1,17.6c-38.4,0-69.5,31.2-69.5,69.5v72.7c0,9.5,7.8,17.2,17.2,17.2s17.2-7.8,17.2-17.2c0,9.5,7.8,17.2,17.2,17.2s17.2-7.8,17.2-17.2c0,9.5,7.8,17.2,17.2,17.2s17.2-7.8,17.2-17.2c0,9.5,7.8,17.2,17.2,17.2c9.5,0,17.2-7.8,17.2-17.2V86.5C173.4,48.8,142.3,17.6,104.1,17.6z"></path>
+</g>
+  
+  <g transform="translate(33.333333333333336, 33.333333333333336)">
+    <circle fill="#846785" cx="0.6944444444444444" cy="0.6944444444444444" r="1.6666666666666665"></circle>
+</g>
+</svg></g><g class="node" transform="translate(540,6368)"><svg width="50px" height="50px" viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <pattern x="0" y="0" viewBox="-6.166666666666667 1 16.666666666666668 16.666666666666668" id="grid" width="16.666666666666668" height="16.666666666666668" patternUnits="userSpaceOnUse" style="overflow:visible;">
+      <rect x="-6.166666666666667" y="1" width="16.666666666666668" height="16.666666666666668" fill="#FFDB7B" stroke="#E5C56E" stroke-width="2"></rect>
+    </pattern>
+  </defs>
+  <rect x="0" y="0" width="100%" height="100%" fill="url(#grid)" stroke="#E5C56E" stroke-width="4"></rect>
+  
+<g transform="translate(0, 33.333333333333336) scale(0.08333333333333333,0.08333333333333333)">
+  <path fill="#344975" d="M94,28.7c26.3-2.4,50.9,8.6,66.3,27.6l-58.9,48.4l68.7,33.8c-11.1,22.7-33.8,39.8-61.4,42.2c-42.2,3.8-79.8-27-83.3-68.7S51.8,32.4,94,28.7z"></path>
+</g>
+  
+<g transform="translate(0, 33.333333333333336) scale(0.08333333333333333,0.08333333333333333)">
+  <path fill="#AD402C" d="M104.1,17.6c-38.4,0-69.5,31.2-69.5,69.5v72.7c0,9.5,7.8,17.2,17.2,17.2s17.2-7.8,17.2-17.2c0,9.5,7.8,17.2,17.2,17.2s17.2-7.8,17.2-17.2c0,9.5,7.8,17.2,17.2,17.2s17.2-7.8,17.2-17.2c0,9.5,7.8,17.2,17.2,17.2c9.5,0,17.2-7.8,17.2-17.2V86.5C173.4,48.8,142.3,17.6,104.1,17.6z"></path>
+</g>
+  
+  <g transform="translate(33.333333333333336, 33.333333333333336)">
+    <circle fill="#846785" cx="0.6944444444444444" cy="0.6944444444444444" r="1.6666666666666665"></circle>
+</g>
+</svg></g><g class="node" transform="translate(540,6500.666666666666)"><svg width="50px" height="50px" viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <pattern x="0" y="0" viewBox="-6.166666666666667 1 16.666666666666668 16.666666666666668" id="grid" width="16.666666666666668" height="16.666666666666668" patternUnits="userSpaceOnUse" style="overflow:visible;">
+      <rect x="-6.166666666666667" y="1" width="16.666666666666668" height="16.666666666666668" fill="#FFDB7B" stroke="#E5C56E" stroke-width="2"></rect>
+    </pattern>
+  </defs>
+  <rect x="0" y="0" width="100%" height="100%" fill="url(#grid)" stroke="#E5C56E" stroke-width="4"></rect>
+  
+<g transform="translate(33.333333333333336, 16.666666666666668) scale(0.08333333333333333,0.08333333333333333)">
+  <path fill="#344975" d="M94,28.7c26.3-2.4,50.9,8.6,66.3,27.6l-58.9,48.4l68.7,33.8c-11.1,22.7-33.8,39.8-61.4,42.2c-42.2,3.8-79.8-27-83.3-68.7S51.8,32.4,94,28.7z"></path>
+</g>
+  
+<g transform="translate(0, 33.333333333333336) scale(0.08333333333333333,0.08333333333333333)">
+  <path fill="#AD402C" d="M104.1,17.6c-38.4,0-69.5,31.2-69.5,69.5v72.7c0,9.5,7.8,17.2,17.2,17.2s17.2-7.8,17.2-17.2c0,9.5,7.8,17.2,17.2,17.2s17.2-7.8,17.2-17.2c0,9.5,7.8,17.2,17.2,17.2s17.2-7.8,17.2-17.2c0,9.5,7.8,17.2,17.2,17.2c9.5,0,17.2-7.8,17.2-17.2V86.5C173.4,48.8,142.3,17.6,104.1,17.6z"></path>
+</g>
+  
+  <g transform="translate(33.333333333333336, 33.333333333333336)">
+    <circle fill="#846785" cx="0.6944444444444444" cy="0.6944444444444444" r="1.6666666666666665"></circle>
+</g>
+</svg></g><g class="node" transform="translate(540,6765.999999999999)"><svg width="50px" height="50px" viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <pattern x="0" y="0" viewBox="-6.166666666666667 1 16.666666666666668 16.666666666666668" id="grid" width="16.666666666666668" height="16.666666666666668" patternUnits="userSpaceOnUse" style="overflow:visible;">
+      <rect x="-6.166666666666667" y="1" width="16.666666666666668" height="16.666666666666668" fill="#FFDB7B" stroke="#E5C56E" stroke-width="2"></rect>
+    </pattern>
+  </defs>
+  <rect x="0" y="0" width="100%" height="100%" fill="url(#grid)" stroke="#E5C56E" stroke-width="4"></rect>
+  
+<g transform="translate(33.333333333333336, 16.666666666666668) scale(0.08333333333333333,0.08333333333333333)">
+  <path fill="#344975" d="M94,28.7c26.3-2.4,50.9,8.6,66.3,27.6l-58.9,48.4l68.7,33.8c-11.1,22.7-33.8,39.8-61.4,42.2c-42.2,3.8-79.8-27-83.3-68.7S51.8,32.4,94,28.7z"></path>
+</g>
+  
+<g transform="translate(0, 33.333333333333336) scale(0.08333333333333333,0.08333333333333333)">
+  <path fill="#AD402C" d="M104.1,17.6c-38.4,0-69.5,31.2-69.5,69.5v72.7c0,9.5,7.8,17.2,17.2,17.2s17.2-7.8,17.2-17.2c0,9.5,7.8,17.2,17.2,17.2s17.2-7.8,17.2-17.2c0,9.5,7.8,17.2,17.2,17.2s17.2-7.8,17.2-17.2c0,9.5,7.8,17.2,17.2,17.2c9.5,0,17.2-7.8,17.2-17.2V86.5C173.4,48.8,142.3,17.6,104.1,17.6z"></path>
+</g>
+  
+  
+</svg></g><g class="node" transform="translate(540,6898.666666666666)"><svg width="50px" height="50px" viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <pattern x="0" y="0" viewBox="-6.166666666666667 1 16.666666666666668 16.666666666666668" id="grid" width="16.666666666666668" height="16.666666666666668" patternUnits="userSpaceOnUse" style="overflow:visible;">
+      <rect x="-6.166666666666667" y="1" width="16.666666666666668" height="16.666666666666668" fill="#FFDB7B" stroke="#E5C56E" stroke-width="2"></rect>
+    </pattern>
+  </defs>
+  <rect x="0" y="0" width="100%" height="100%" fill="url(#grid)" stroke="#E5C56E" stroke-width="4"></rect>
+  
+<g transform="translate(0, 33.333333333333336) scale(0.08333333333333333,0.08333333333333333)">
+  <path fill="#344975" d="M94,28.7c26.3-2.4,50.9,8.6,66.3,27.6l-58.9,48.4l68.7,33.8c-11.1,22.7-33.8,39.8-61.4,42.2c-42.2,3.8-79.8-27-83.3-68.7S51.8,32.4,94,28.7z"></path>
+</g>
+  
+<g transform="translate(0, 33.333333333333336) scale(0.08333333333333333,0.08333333333333333)">
+  <path fill="#AD402C" d="M104.1,17.6c-38.4,0-69.5,31.2-69.5,69.5v72.7c0,9.5,7.8,17.2,17.2,17.2s17.2-7.8,17.2-17.2c0,9.5,7.8,17.2,17.2,17.2s17.2-7.8,17.2-17.2c0,9.5,7.8,17.2,17.2,17.2s17.2-7.8,17.2-17.2c0,9.5,7.8,17.2,17.2,17.2c9.5,0,17.2-7.8,17.2-17.2V86.5C173.4,48.8,142.3,17.6,104.1,17.6z"></path>
+</g>
+  
+  
+</svg></g><g class="node" transform="translate(540,7031.333333333333)"><svg width="50px" height="50px" viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <pattern x="0" y="0" viewBox="-6.166666666666667 1 16.666666666666668 16.666666666666668" id="grid" width="16.666666666666668" height="16.666666666666668" patternUnits="userSpaceOnUse" style="overflow:visible;">
+      <rect x="-6.166666666666667" y="1" width="16.666666666666668" height="16.666666666666668" fill="#FFDB7B" stroke="#E5C56E" stroke-width="2"></rect>
+    </pattern>
+  </defs>
+  <rect x="0" y="0" width="100%" height="100%" fill="url(#grid)" stroke="#E5C56E" stroke-width="4"></rect>
+  
+<g transform="translate(33.333333333333336, 0) scale(0.08333333333333333,0.08333333333333333)">
+  <path fill="#344975" d="M94,28.7c26.3-2.4,50.9,8.6,66.3,27.6l-58.9,48.4l68.7,33.8c-11.1,22.7-33.8,39.8-61.4,42.2c-42.2,3.8-79.8-27-83.3-68.7S51.8,32.4,94,28.7z"></path>
+</g>
+  
+<g transform="translate(0, 33.333333333333336) scale(0.08333333333333333,0.08333333333333333)">
+  <path fill="#AD402C" d="M104.1,17.6c-38.4,0-69.5,31.2-69.5,69.5v72.7c0,9.5,7.8,17.2,17.2,17.2s17.2-7.8,17.2-17.2c0,9.5,7.8,17.2,17.2,17.2s17.2-7.8,17.2-17.2c0,9.5,7.8,17.2,17.2,17.2s17.2-7.8,17.2-17.2c0,9.5,7.8,17.2,17.2,17.2c9.5,0,17.2-7.8,17.2-17.2V86.5C173.4,48.8,142.3,17.6,104.1,17.6z"></path>
+</g>
+  
+  
+</svg></g><g class="node" transform="translate(540,7163.999999999999)"><svg width="50px" height="50px" viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <pattern x="0" y="0" viewBox="-6.166666666666667 1 16.666666666666668 16.666666666666668" id="grid" width="16.666666666666668" height="16.666666666666668" patternUnits="userSpaceOnUse" style="overflow:visible;">
+      <rect x="-6.166666666666667" y="1" width="16.666666666666668" height="16.666666666666668" fill="#FFDB7B" stroke="#E5C56E" stroke-width="2"></rect>
+    </pattern>
+  </defs>
+  <rect x="0" y="0" width="100%" height="100%" fill="url(#grid)" stroke="#E5C56E" stroke-width="4"></rect>
+  
+<g transform="translate(16.666666666666668, 33.333333333333336) scale(0.08333333333333333,0.08333333333333333)">
+  <path fill="#344975" d="M94,28.7c26.3-2.4,50.9,8.6,66.3,27.6l-58.9,48.4l68.7,33.8c-11.1,22.7-33.8,39.8-61.4,42.2c-42.2,3.8-79.8-27-83.3-68.7S51.8,32.4,94,28.7z"></path>
+</g>
+  
+<g transform="translate(0, 33.333333333333336) scale(0.08333333333333333,0.08333333333333333)">
+  <path fill="#AD402C" d="M104.1,17.6c-38.4,0-69.5,31.2-69.5,69.5v72.7c0,9.5,7.8,17.2,17.2,17.2s17.2-7.8,17.2-17.2c0,9.5,7.8,17.2,17.2,17.2s17.2-7.8,17.2-17.2c0,9.5,7.8,17.2,17.2,17.2s17.2-7.8,17.2-17.2c0,9.5,7.8,17.2,17.2,17.2c9.5,0,17.2-7.8,17.2-17.2V86.5C173.4,48.8,142.3,17.6,104.1,17.6z"></path>
+</g>
+  
+  
+</svg></g><g class="node" transform="translate(540,7429.333333333333)"><svg width="50px" height="50px" viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <pattern x="0" y="0" viewBox="-6.166666666666667 1 16.666666666666668 16.666666666666668" id="grid" width="16.666666666666668" height="16.666666666666668" patternUnits="userSpaceOnUse" style="overflow:visible;">
+      <rect x="-6.166666666666667" y="1" width="16.666666666666668" height="16.666666666666668" fill="#FFDB7B" stroke="#E5C56E" stroke-width="2"></rect>
+    </pattern>
+  </defs>
+  <rect x="0" y="0" width="100%" height="100%" fill="url(#grid)" stroke="#E5C56E" stroke-width="4"></rect>
+  
+<g transform="translate(16.666666666666668, 0) scale(0.08333333333333333,0.08333333333333333)">
+  <path fill="#344975" d="M94,28.7c26.3-2.4,50.9,8.6,66.3,27.6l-58.9,48.4l68.7,33.8c-11.1,22.7-33.8,39.8-61.4,42.2c-42.2,3.8-79.8-27-83.3-68.7S51.8,32.4,94,28.7z"></path>
+</g>
+  
+<g transform="translate(0, 33.333333333333336) scale(0.08333333333333333,0.08333333333333333)">
+  <path fill="#AD402C" d="M104.1,17.6c-38.4,0-69.5,31.2-69.5,69.5v72.7c0,9.5,7.8,17.2,17.2,17.2s17.2-7.8,17.2-17.2c0,9.5,7.8,17.2,17.2,17.2s17.2-7.8,17.2-17.2c0,9.5,7.8,17.2,17.2,17.2s17.2-7.8,17.2-17.2c0,9.5,7.8,17.2,17.2,17.2c9.5,0,17.2-7.8,17.2-17.2V86.5C173.4,48.8,142.3,17.6,104.1,17.6z"></path>
+</g>
+  
+  <g transform="translate(33.333333333333336, 33.333333333333336)">
+    <circle fill="#846785" cx="0.6944444444444444" cy="0.6944444444444444" r="1.6666666666666665"></circle>
+</g>
+</svg></g><g class="node" transform="translate(540,7561.999999999999)"><svg width="50px" height="50px" viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <pattern x="0" y="0" viewBox="-6.166666666666667 1 16.666666666666668 16.666666666666668" id="grid" width="16.666666666666668" height="16.666666666666668" patternUnits="userSpaceOnUse" style="overflow:visible;">
+      <rect x="-6.166666666666667" y="1" width="16.666666666666668" height="16.666666666666668" fill="#FFDB7B" stroke="#E5C56E" stroke-width="2"></rect>
+    </pattern>
+  </defs>
+  <rect x="0" y="0" width="100%" height="100%" fill="url(#grid)" stroke="#E5C56E" stroke-width="4"></rect>
+  
+<g transform="translate(33.333333333333336, 16.666666666666668) scale(0.08333333333333333,0.08333333333333333)">
+  <path fill="#344975" d="M94,28.7c26.3-2.4,50.9,8.6,66.3,27.6l-58.9,48.4l68.7,33.8c-11.1,22.7-33.8,39.8-61.4,42.2c-42.2,3.8-79.8-27-83.3-68.7S51.8,32.4,94,28.7z"></path>
+</g>
+  
+<g transform="translate(0, 33.333333333333336) scale(0.08333333333333333,0.08333333333333333)">
+  <path fill="#AD402C" d="M104.1,17.6c-38.4,0-69.5,31.2-69.5,69.5v72.7c0,9.5,7.8,17.2,17.2,17.2s17.2-7.8,17.2-17.2c0,9.5,7.8,17.2,17.2,17.2s17.2-7.8,17.2-17.2c0,9.5,7.8,17.2,17.2,17.2s17.2-7.8,17.2-17.2c0,9.5,7.8,17.2,17.2,17.2c9.5,0,17.2-7.8,17.2-17.2V86.5C173.4,48.8,142.3,17.6,104.1,17.6z"></path>
+</g>
+  
+  <g transform="translate(33.333333333333336, 33.333333333333336)">
+    <circle fill="#846785" cx="0.6944444444444444" cy="0.6944444444444444" r="1.6666666666666665"></circle>
+</g>
+</svg></g><g class="node" transform="translate(540,7694.666666666666)"><svg width="50px" height="50px" viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <pattern x="0" y="0" viewBox="-6.166666666666667 1 16.666666666666668 16.666666666666668" id="grid" width="16.666666666666668" height="16.666666666666668" patternUnits="userSpaceOnUse" style="overflow:visible;">
+      <rect x="-6.166666666666667" y="1" width="16.666666666666668" height="16.666666666666668" fill="#FFDB7B" stroke="#E5C56E" stroke-width="2"></rect>
+    </pattern>
+  </defs>
+  <rect x="0" y="0" width="100%" height="100%" fill="url(#grid)" stroke="#E5C56E" stroke-width="4"></rect>
+  
+<g transform="translate(16.666666666666668, 33.333333333333336) scale(0.08333333333333333,0.08333333333333333)">
+  <path fill="#344975" d="M94,28.7c26.3-2.4,50.9,8.6,66.3,27.6l-58.9,48.4l68.7,33.8c-11.1,22.7-33.8,39.8-61.4,42.2c-42.2,3.8-79.8-27-83.3-68.7S51.8,32.4,94,28.7z"></path>
+</g>
+  
+<g transform="translate(0, 33.333333333333336) scale(0.08333333333333333,0.08333333333333333)">
+  <path fill="#AD402C" d="M104.1,17.6c-38.4,0-69.5,31.2-69.5,69.5v72.7c0,9.5,7.8,17.2,17.2,17.2s17.2-7.8,17.2-17.2c0,9.5,7.8,17.2,17.2,17.2s17.2-7.8,17.2-17.2c0,9.5,7.8,17.2,17.2,17.2s17.2-7.8,17.2-17.2c0,9.5,7.8,17.2,17.2,17.2c9.5,0,17.2-7.8,17.2-17.2V86.5C173.4,48.8,142.3,17.6,104.1,17.6z"></path>
+</g>
+  
+  <g transform="translate(33.333333333333336, 33.333333333333336)">
+    <circle fill="#846785" cx="0.6944444444444444" cy="0.6944444444444444" r="1.6666666666666665"></circle>
+</g>
+</svg></g><g class="node" transform="translate(540,7827.333333333333)"><svg width="50px" height="50px" viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <pattern x="0" y="0" viewBox="-6.166666666666667 1 16.666666666666668 16.666666666666668" id="grid" width="16.666666666666668" height="16.666666666666668" patternUnits="userSpaceOnUse" style="overflow:visible;">
+      <rect x="-6.166666666666667" y="1" width="16.666666666666668" height="16.666666666666668" fill="#FFDB7B" stroke="#E5C56E" stroke-width="2"></rect>
+    </pattern>
+  </defs>
+  <rect x="0" y="0" width="100%" height="100%" fill="url(#grid)" stroke="#E5C56E" stroke-width="4"></rect>
+  
+<g transform="translate(0, 16.666666666666668) scale(0.08333333333333333,0.08333333333333333)">
+  <path fill="#344975" d="M94,28.7c26.3-2.4,50.9,8.6,66.3,27.6l-58.9,48.4l68.7,33.8c-11.1,22.7-33.8,39.8-61.4,42.2c-42.2,3.8-79.8-27-83.3-68.7S51.8,32.4,94,28.7z"></path>
+</g>
+  
+<g transform="translate(0, 33.333333333333336) scale(0.08333333333333333,0.08333333333333333)">
+  <path fill="#AD402C" d="M104.1,17.6c-38.4,0-69.5,31.2-69.5,69.5v72.7c0,9.5,7.8,17.2,17.2,17.2s17.2-7.8,17.2-17.2c0,9.5,7.8,17.2,17.2,17.2s17.2-7.8,17.2-17.2c0,9.5,7.8,17.2,17.2,17.2s17.2-7.8,17.2-17.2c0,9.5,7.8,17.2,17.2,17.2c9.5,0,17.2-7.8,17.2-17.2V86.5C173.4,48.8,142.3,17.6,104.1,17.6z"></path>
+</g>
+  
+  <g transform="translate(33.333333333333336, 33.333333333333336)">
+    <circle fill="#846785" cx="0.6944444444444444" cy="0.6944444444444444" r="1.6666666666666665"></circle>
+</g>
+</svg></g><g class="node" transform="translate(540,8092.666666666666)"><svg width="50px" height="50px" viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <pattern x="0" y="0" viewBox="-6.166666666666667 1 16.666666666666668 16.666666666666668" id="grid" width="16.666666666666668" height="16.666666666666668" patternUnits="userSpaceOnUse" style="overflow:visible;">
+      <rect x="-6.166666666666667" y="1" width="16.666666666666668" height="16.666666666666668" fill="#FFDB7B" stroke="#E5C56E" stroke-width="2"></rect>
+    </pattern>
+  </defs>
+  <rect x="0" y="0" width="100%" height="100%" fill="url(#grid)" stroke="#E5C56E" stroke-width="4"></rect>
+  
+<g transform="translate(16.666666666666668, 16.666666666666668) scale(0.08333333333333333,0.08333333333333333)">
+  <path fill="#344975" d="M94,28.7c26.3-2.4,50.9,8.6,66.3,27.6l-58.9,48.4l68.7,33.8c-11.1,22.7-33.8,39.8-61.4,42.2c-42.2,3.8-79.8-27-83.3-68.7S51.8,32.4,94,28.7z"></path>
+</g>
+  
+<g transform="translate(0, 33.333333333333336) scale(0.08333333333333333,0.08333333333333333)">
+  <path fill="#AD402C" d="M104.1,17.6c-38.4,0-69.5,31.2-69.5,69.5v72.7c0,9.5,7.8,17.2,17.2,17.2s17.2-7.8,17.2-17.2c0,9.5,7.8,17.2,17.2,17.2s17.2-7.8,17.2-17.2c0,9.5,7.8,17.2,17.2,17.2s17.2-7.8,17.2-17.2c0,9.5,7.8,17.2,17.2,17.2c9.5,0,17.2-7.8,17.2-17.2V86.5C173.4,48.8,142.3,17.6,104.1,17.6z"></path>
+</g>
+  
+  <g transform="translate(33.333333333333336, 33.333333333333336)">
+    <circle fill="#846785" cx="0.6944444444444444" cy="0.6944444444444444" r="1.6666666666666665"></circle>
+</g>
+</svg></g><g class="node" transform="translate(540,8225.333333333332)"><svg width="50px" height="50px" viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <pattern x="0" y="0" viewBox="-6.166666666666667 1 16.666666666666668 16.666666666666668" id="grid" width="16.666666666666668" height="16.666666666666668" patternUnits="userSpaceOnUse" style="overflow:visible;">
+      <rect x="-6.166666666666667" y="1" width="16.666666666666668" height="16.666666666666668" fill="#FFDB7B" stroke="#E5C56E" stroke-width="2"></rect>
+    </pattern>
+  </defs>
+  <rect x="0" y="0" width="100%" height="100%" fill="url(#grid)" stroke="#E5C56E" stroke-width="4"></rect>
+  
+<g transform="translate(33.333333333333336, 33.333333333333336) scale(0.08333333333333333,0.08333333333333333)">
+  <path fill="#344975" d="M94,28.7c26.3-2.4,50.9,8.6,66.3,27.6l-58.9,48.4l68.7,33.8c-11.1,22.7-33.8,39.8-61.4,42.2c-42.2,3.8-79.8-27-83.3-68.7S51.8,32.4,94,28.7z"></path>
+</g>
+  
+<g transform="translate(0, 33.333333333333336) scale(0.08333333333333333,0.08333333333333333)">
+  <path fill="#AD402C" d="M104.1,17.6c-38.4,0-69.5,31.2-69.5,69.5v72.7c0,9.5,7.8,17.2,17.2,17.2s17.2-7.8,17.2-17.2c0,9.5,7.8,17.2,17.2,17.2s17.2-7.8,17.2-17.2c0,9.5,7.8,17.2,17.2,17.2s17.2-7.8,17.2-17.2c0,9.5,7.8,17.2,17.2,17.2c9.5,0,17.2-7.8,17.2-17.2V86.5C173.4,48.8,142.3,17.6,104.1,17.6z"></path>
+</g>
+  
+  
+</svg></g><g class="node" transform="translate(540,8358)"><svg width="50px" height="50px" viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <pattern x="0" y="0" viewBox="-6.166666666666667 1 16.666666666666668 16.666666666666668" id="grid" width="16.666666666666668" height="16.666666666666668" patternUnits="userSpaceOnUse" style="overflow:visible;">
+      <rect x="-6.166666666666667" y="1" width="16.666666666666668" height="16.666666666666668" fill="#FFDB7B" stroke="#E5C56E" stroke-width="2"></rect>
+    </pattern>
+  </defs>
+  <rect x="0" y="0" width="100%" height="100%" fill="url(#grid)" stroke="#E5C56E" stroke-width="4"></rect>
+  
+<g transform="translate(16.666666666666668, 0) scale(0.08333333333333333,0.08333333333333333)">
+  <path fill="#344975" d="M94,28.7c26.3-2.4,50.9,8.6,66.3,27.6l-58.9,48.4l68.7,33.8c-11.1,22.7-33.8,39.8-61.4,42.2c-42.2,3.8-79.8-27-83.3-68.7S51.8,32.4,94,28.7z"></path>
+</g>
+  
+<g transform="translate(0, 33.333333333333336) scale(0.08333333333333333,0.08333333333333333)">
+  <path fill="#AD402C" d="M104.1,17.6c-38.4,0-69.5,31.2-69.5,69.5v72.7c0,9.5,7.8,17.2,17.2,17.2s17.2-7.8,17.2-17.2c0,9.5,7.8,17.2,17.2,17.2s17.2-7.8,17.2-17.2c0,9.5,7.8,17.2,17.2,17.2s17.2-7.8,17.2-17.2c0,9.5,7.8,17.2,17.2,17.2c9.5,0,17.2-7.8,17.2-17.2V86.5C173.4,48.8,142.3,17.6,104.1,17.6z"></path>
+</g>
+  
+  <g transform="translate(33.333333333333336, 33.333333333333336)">
+    <circle fill="#846785" cx="0.6944444444444444" cy="0.6944444444444444" r="1.6666666666666665"></circle>
+</g>
+</svg></g><g class="node" transform="translate(540,8490.666666666666)"><svg width="50px" height="50px" viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <pattern x="0" y="0" viewBox="-6.166666666666667 1 16.666666666666668 16.666666666666668" id="grid" width="16.666666666666668" height="16.666666666666668" patternUnits="userSpaceOnUse" style="overflow:visible;">
+      <rect x="-6.166666666666667" y="1" width="16.666666666666668" height="16.666666666666668" fill="#FFDB7B" stroke="#E5C56E" stroke-width="2"></rect>
+    </pattern>
+  </defs>
+  <rect x="0" y="0" width="100%" height="100%" fill="url(#grid)" stroke="#E5C56E" stroke-width="4"></rect>
+  
+<g transform="translate(0, 33.333333333333336) scale(0.08333333333333333,0.08333333333333333)">
+  <path fill="#344975" d="M94,28.7c26.3-2.4,50.9,8.6,66.3,27.6l-58.9,48.4l68.7,33.8c-11.1,22.7-33.8,39.8-61.4,42.2c-42.2,3.8-79.8-27-83.3-68.7S51.8,32.4,94,28.7z"></path>
+</g>
+  
+<g transform="translate(0, 33.333333333333336) scale(0.08333333333333333,0.08333333333333333)">
+  <path fill="#AD402C" d="M104.1,17.6c-38.4,0-69.5,31.2-69.5,69.5v72.7c0,9.5,7.8,17.2,17.2,17.2s17.2-7.8,17.2-17.2c0,9.5,7.8,17.2,17.2,17.2s17.2-7.8,17.2-17.2c0,9.5,7.8,17.2,17.2,17.2s17.2-7.8,17.2-17.2c0,9.5,7.8,17.2,17.2,17.2c9.5,0,17.2-7.8,17.2-17.2V86.5C173.4,48.8,142.3,17.6,104.1,17.6z"></path>
+</g>
+  
+  <g transform="translate(33.333333333333336, 33.333333333333336)">
+    <circle fill="#846785" cx="0.6944444444444444" cy="0.6944444444444444" r="1.6666666666666665"></circle>
+</g>
+</svg></g><g class="node" transform="translate(540,8756)"><svg width="50px" height="50px" viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <pattern x="0" y="0" viewBox="-6.166666666666667 1 16.666666666666668 16.666666666666668" id="grid" width="16.666666666666668" height="16.666666666666668" patternUnits="userSpaceOnUse" style="overflow:visible;">
+      <rect x="-6.166666666666667" y="1" width="16.666666666666668" height="16.666666666666668" fill="#FFDB7B" stroke="#E5C56E" stroke-width="2"></rect>
+    </pattern>
+  </defs>
+  <rect x="0" y="0" width="100%" height="100%" fill="url(#grid)" stroke="#E5C56E" stroke-width="4"></rect>
+  
+<g transform="translate(33.333333333333336, 33.333333333333336) scale(0.08333333333333333,0.08333333333333333)">
+  <path fill="#344975" d="M94,28.7c26.3-2.4,50.9,8.6,66.3,27.6l-58.9,48.4l68.7,33.8c-11.1,22.7-33.8,39.8-61.4,42.2c-42.2,3.8-79.8-27-83.3-68.7S51.8,32.4,94,28.7z"></path>
+</g>
+  
+<g transform="translate(0, 33.333333333333336) scale(0.08333333333333333,0.08333333333333333)">
+  <path fill="#AD402C" d="M104.1,17.6c-38.4,0-69.5,31.2-69.5,69.5v72.7c0,9.5,7.8,17.2,17.2,17.2s17.2-7.8,17.2-17.2c0,9.5,7.8,17.2,17.2,17.2s17.2-7.8,17.2-17.2c0,9.5,7.8,17.2,17.2,17.2s17.2-7.8,17.2-17.2c0,9.5,7.8,17.2,17.2,17.2c9.5,0,17.2-7.8,17.2-17.2V86.5C173.4,48.8,142.3,17.6,104.1,17.6z"></path>
+</g>
+  
+  
+</svg></g><g class="node" transform="translate(540,8888.666666666666)"><svg width="50px" height="50px" viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <pattern x="0" y="0" viewBox="-6.166666666666667 1 16.666666666666668 16.666666666666668" id="grid" width="16.666666666666668" height="16.666666666666668" patternUnits="userSpaceOnUse" style="overflow:visible;">
+      <rect x="-6.166666666666667" y="1" width="16.666666666666668" height="16.666666666666668" fill="#FFDB7B" stroke="#E5C56E" stroke-width="2"></rect>
+    </pattern>
+  </defs>
+  <rect x="0" y="0" width="100%" height="100%" fill="url(#grid)" stroke="#E5C56E" stroke-width="4"></rect>
+  
+<g transform="translate(0, 0) scale(0.08333333333333333,0.08333333333333333)">
+  <path fill="#344975" d="M94,28.7c26.3-2.4,50.9,8.6,66.3,27.6l-58.9,48.4l68.7,33.8c-11.1,22.7-33.8,39.8-61.4,42.2c-42.2,3.8-79.8-27-83.3-68.7S51.8,32.4,94,28.7z"></path>
+</g>
+  
+<g transform="translate(0, 33.333333333333336) scale(0.08333333333333333,0.08333333333333333)">
+  <path fill="#AD402C" d="M104.1,17.6c-38.4,0-69.5,31.2-69.5,69.5v72.7c0,9.5,7.8,17.2,17.2,17.2s17.2-7.8,17.2-17.2c0,9.5,7.8,17.2,17.2,17.2s17.2-7.8,17.2-17.2c0,9.5,7.8,17.2,17.2,17.2s17.2-7.8,17.2-17.2c0,9.5,7.8,17.2,17.2,17.2c9.5,0,17.2-7.8,17.2-17.2V86.5C173.4,48.8,142.3,17.6,104.1,17.6z"></path>
+</g>
+  
+  <g transform="translate(33.333333333333336, 33.333333333333336)">
+    <circle fill="#846785" cx="0.6944444444444444" cy="0.6944444444444444" r="1.6666666666666665"></circle>
+</g>
+</svg></g><g class="node" transform="translate(540,9021.333333333332)"><svg width="50px" height="50px" viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <pattern x="0" y="0" viewBox="-6.166666666666667 1 16.666666666666668 16.666666666666668" id="grid" width="16.666666666666668" height="16.666666666666668" patternUnits="userSpaceOnUse" style="overflow:visible;">
+      <rect x="-6.166666666666667" y="1" width="16.666666666666668" height="16.666666666666668" fill="#FFDB7B" stroke="#E5C56E" stroke-width="2"></rect>
+    </pattern>
+  </defs>
+  <rect x="0" y="0" width="100%" height="100%" fill="url(#grid)" stroke="#E5C56E" stroke-width="4"></rect>
+  
+<g transform="translate(33.333333333333336, 16.666666666666668) scale(0.08333333333333333,0.08333333333333333)">
+  <path fill="#344975" d="M94,28.7c26.3-2.4,50.9,8.6,66.3,27.6l-58.9,48.4l68.7,33.8c-11.1,22.7-33.8,39.8-61.4,42.2c-42.2,3.8-79.8-27-83.3-68.7S51.8,32.4,94,28.7z"></path>
+</g>
+  
+<g transform="translate(0, 33.333333333333336) scale(0.08333333333333333,0.08333333333333333)">
+  <path fill="#AD402C" d="M104.1,17.6c-38.4,0-69.5,31.2-69.5,69.5v72.7c0,9.5,7.8,17.2,17.2,17.2s17.2-7.8,17.2-17.2c0,9.5,7.8,17.2,17.2,17.2s17.2-7.8,17.2-17.2c0,9.5,7.8,17.2,17.2,17.2s17.2-7.8,17.2-17.2c0,9.5,7.8,17.2,17.2,17.2c9.5,0,17.2-7.8,17.2-17.2V86.5C173.4,48.8,142.3,17.6,104.1,17.6z"></path>
+</g>
+  
+  <g transform="translate(33.333333333333336, 33.333333333333336)">
+    <circle fill="#846785" cx="0.6944444444444444" cy="0.6944444444444444" r="1.6666666666666665"></circle>
+</g>
+</svg></g><g class="node" transform="translate(540,9154)"><svg width="50px" height="50px" viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <pattern x="0" y="0" viewBox="-6.166666666666667 1 16.666666666666668 16.666666666666668" id="grid" width="16.666666666666668" height="16.666666666666668" patternUnits="userSpaceOnUse" style="overflow:visible;">
+      <rect x="-6.166666666666667" y="1" width="16.666666666666668" height="16.666666666666668" fill="#FFDB7B" stroke="#E5C56E" stroke-width="2"></rect>
+    </pattern>
+  </defs>
+  <rect x="0" y="0" width="100%" height="100%" fill="url(#grid)" stroke="#E5C56E" stroke-width="4"></rect>
+  
+<g transform="translate(16.666666666666668, 0) scale(0.08333333333333333,0.08333333333333333)">
+  <path fill="#344975" d="M94,28.7c26.3-2.4,50.9,8.6,66.3,27.6l-58.9,48.4l68.7,33.8c-11.1,22.7-33.8,39.8-61.4,42.2c-42.2,3.8-79.8-27-83.3-68.7S51.8,32.4,94,28.7z"></path>
+</g>
+  
+<g transform="translate(0, 33.333333333333336) scale(0.08333333333333333,0.08333333333333333)">
+  <path fill="#AD402C" d="M104.1,17.6c-38.4,0-69.5,31.2-69.5,69.5v72.7c0,9.5,7.8,17.2,17.2,17.2s17.2-7.8,17.2-17.2c0,9.5,7.8,17.2,17.2,17.2s17.2-7.8,17.2-17.2c0,9.5,7.8,17.2,17.2,17.2s17.2-7.8,17.2-17.2c0,9.5,7.8,17.2,17.2,17.2c9.5,0,17.2-7.8,17.2-17.2V86.5C173.4,48.8,142.3,17.6,104.1,17.6z"></path>
+</g>
+  
+  <g transform="translate(33.333333333333336, 33.333333333333336)">
+    <circle fill="#846785" cx="0.6944444444444444" cy="0.6944444444444444" r="1.6666666666666665"></circle>
+</g>
+</svg></g><g class="node" transform="translate(540,9419.333333333332)"><svg width="50px" height="50px" viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <pattern x="0" y="0" viewBox="-6.166666666666667 1 16.666666666666668 16.666666666666668" id="grid" width="16.666666666666668" height="16.666666666666668" patternUnits="userSpaceOnUse" style="overflow:visible;">
+      <rect x="-6.166666666666667" y="1" width="16.666666666666668" height="16.666666666666668" fill="#FFDB7B" stroke="#E5C56E" stroke-width="2"></rect>
+    </pattern>
+  </defs>
+  <rect x="0" y="0" width="100%" height="100%" fill="url(#grid)" stroke="#E5C56E" stroke-width="4"></rect>
+  
+<g transform="translate(16.666666666666668, 0) scale(0.08333333333333333,0.08333333333333333)">
+  <path fill="#344975" d="M94,28.7c26.3-2.4,50.9,8.6,66.3,27.6l-58.9,48.4l68.7,33.8c-11.1,22.7-33.8,39.8-61.4,42.2c-42.2,3.8-79.8-27-83.3-68.7S51.8,32.4,94,28.7z"></path>
+</g>
+  
+<g transform="translate(0, 33.333333333333336) scale(0.08333333333333333,0.08333333333333333)">
+  <path fill="#AD402C" d="M104.1,17.6c-38.4,0-69.5,31.2-69.5,69.5v72.7c0,9.5,7.8,17.2,17.2,17.2s17.2-7.8,17.2-17.2c0,9.5,7.8,17.2,17.2,17.2s17.2-7.8,17.2-17.2c0,9.5,7.8,17.2,17.2,17.2s17.2-7.8,17.2-17.2c0,9.5,7.8,17.2,17.2,17.2c9.5,0,17.2-7.8,17.2-17.2V86.5C173.4,48.8,142.3,17.6,104.1,17.6z"></path>
+</g>
+  
+  <g transform="translate(33.333333333333336, 33.333333333333336)">
+    <circle fill="#846785" cx="0.6944444444444444" cy="0.6944444444444444" r="1.6666666666666665"></circle>
+</g>
+</svg></g><g class="node" transform="translate(540,9552)"><svg width="50px" height="50px" viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <pattern x="0" y="0" viewBox="-6.166666666666667 1 16.666666666666668 16.666666666666668" id="grid" width="16.666666666666668" height="16.666666666666668" patternUnits="userSpaceOnUse" style="overflow:visible;">
+      <rect x="-6.166666666666667" y="1" width="16.666666666666668" height="16.666666666666668" fill="#FFDB7B" stroke="#E5C56E" stroke-width="2"></rect>
+    </pattern>
+  </defs>
+  <rect x="0" y="0" width="100%" height="100%" fill="url(#grid)" stroke="#E5C56E" stroke-width="4"></rect>
+  
+<g transform="translate(33.333333333333336, 16.666666666666668) scale(0.08333333333333333,0.08333333333333333)">
+  <path fill="#344975" d="M94,28.7c26.3-2.4,50.9,8.6,66.3,27.6l-58.9,48.4l68.7,33.8c-11.1,22.7-33.8,39.8-61.4,42.2c-42.2,3.8-79.8-27-83.3-68.7S51.8,32.4,94,28.7z"></path>
+</g>
+  
+<g transform="translate(0, 33.333333333333336) scale(0.08333333333333333,0.08333333333333333)">
+  <path fill="#AD402C" d="M104.1,17.6c-38.4,0-69.5,31.2-69.5,69.5v72.7c0,9.5,7.8,17.2,17.2,17.2s17.2-7.8,17.2-17.2c0,9.5,7.8,17.2,17.2,17.2s17.2-7.8,17.2-17.2c0,9.5,7.8,17.2,17.2,17.2s17.2-7.8,17.2-17.2c0,9.5,7.8,17.2,17.2,17.2c9.5,0,17.2-7.8,17.2-17.2V86.5C173.4,48.8,142.3,17.6,104.1,17.6z"></path>
+</g>
+  
+  <g transform="translate(33.333333333333336, 33.333333333333336)">
+    <circle fill="#846785" cx="0.6944444444444444" cy="0.6944444444444444" r="1.6666666666666665"></circle>
+</g>
+</svg></g><g class="node" transform="translate(540,9684.666666666666)"><svg width="50px" height="50px" viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <pattern x="0" y="0" viewBox="-6.166666666666667 1 16.666666666666668 16.666666666666668" id="grid" width="16.666666666666668" height="16.666666666666668" patternUnits="userSpaceOnUse" style="overflow:visible;">
+      <rect x="-6.166666666666667" y="1" width="16.666666666666668" height="16.666666666666668" fill="#FFDB7B" stroke="#E5C56E" stroke-width="2"></rect>
+    </pattern>
+  </defs>
+  <rect x="0" y="0" width="100%" height="100%" fill="url(#grid)" stroke="#E5C56E" stroke-width="4"></rect>
+  
+<g transform="translate(16.666666666666668, 33.333333333333336) scale(0.08333333333333333,0.08333333333333333)">
+  <path fill="#344975" d="M94,28.7c26.3-2.4,50.9,8.6,66.3,27.6l-58.9,48.4l68.7,33.8c-11.1,22.7-33.8,39.8-61.4,42.2c-42.2,3.8-79.8-27-83.3-68.7S51.8,32.4,94,28.7z"></path>
+</g>
+  
+<g transform="translate(0, 33.333333333333336) scale(0.08333333333333333,0.08333333333333333)">
+  <path fill="#AD402C" d="M104.1,17.6c-38.4,0-69.5,31.2-69.5,69.5v72.7c0,9.5,7.8,17.2,17.2,17.2s17.2-7.8,17.2-17.2c0,9.5,7.8,17.2,17.2,17.2s17.2-7.8,17.2-17.2c0,9.5,7.8,17.2,17.2,17.2s17.2-7.8,17.2-17.2c0,9.5,7.8,17.2,17.2,17.2c9.5,0,17.2-7.8,17.2-17.2V86.5C173.4,48.8,142.3,17.6,104.1,17.6z"></path>
+</g>
+  
+  <g transform="translate(33.333333333333336, 33.333333333333336)">
+    <circle fill="#846785" cx="0.6944444444444444" cy="0.6944444444444444" r="1.6666666666666665"></circle>
+</g>
+</svg></g><g class="node" transform="translate(540,9817.333333333332)"><svg width="50px" height="50px" viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <pattern x="0" y="0" viewBox="-6.166666666666667 1 16.666666666666668 16.666666666666668" id="grid" width="16.666666666666668" height="16.666666666666668" patternUnits="userSpaceOnUse" style="overflow:visible;">
+      <rect x="-6.166666666666667" y="1" width="16.666666666666668" height="16.666666666666668" fill="#FFDB7B" stroke="#E5C56E" stroke-width="2"></rect>
+    </pattern>
+  </defs>
+  <rect x="0" y="0" width="100%" height="100%" fill="url(#grid)" stroke="#E5C56E" stroke-width="4"></rect>
+  
+<g transform="translate(0, 16.666666666666668) scale(0.08333333333333333,0.08333333333333333)">
+  <path fill="#344975" d="M94,28.7c26.3-2.4,50.9,8.6,66.3,27.6l-58.9,48.4l68.7,33.8c-11.1,22.7-33.8,39.8-61.4,42.2c-42.2,3.8-79.8-27-83.3-68.7S51.8,32.4,94,28.7z"></path>
+</g>
+  
+<g transform="translate(0, 33.333333333333336) scale(0.08333333333333333,0.08333333333333333)">
+  <path fill="#AD402C" d="M104.1,17.6c-38.4,0-69.5,31.2-69.5,69.5v72.7c0,9.5,7.8,17.2,17.2,17.2s17.2-7.8,17.2-17.2c0,9.5,7.8,17.2,17.2,17.2s17.2-7.8,17.2-17.2c0,9.5,7.8,17.2,17.2,17.2s17.2-7.8,17.2-17.2c0,9.5,7.8,17.2,17.2,17.2c9.5,0,17.2-7.8,17.2-17.2V86.5C173.4,48.8,142.3,17.6,104.1,17.6z"></path>
+</g>
+  
+  <g transform="translate(33.333333333333336, 33.333333333333336)">
+    <circle fill="#846785" cx="0.6944444444444444" cy="0.6944444444444444" r="1.6666666666666665"></circle>
+</g>
+</svg></g></g></g></svg>
