@@ -1,17 +1,21 @@
 # playing pacman
-## with
+### with
 # monte carlo :evergreen_tree: search
-#### @danielepolencic, Eleanor Keane
+#### @danielepolencic & Eleanor Keane
 
 ---
 
-# [fit] i :heart: strategy games
+![80%](assets/uasabi-logo.pdf)
 
 ---
 
 ![Chess](assets/chess.png)
 ![Carcassone](assets/carcassone.jpg)
 ![Hearthstone](assets/hearthstone.jpg)
+
+---
+
+# [fit] i :heart: strategy games
 
 ---
 
@@ -184,15 +188,15 @@
 
 ---
 
-![90%](assets/play_01.pdf)
+![fit](assets/play_01.pdf)
 
 ---
 
-![90%](assets/play_02.pdf)
+![fit](assets/play_02.pdf)
 
 ---
 
-![90%](assets/play_03.pdf)
+![fit](assets/play_03.pdf)
 
 ---
 
@@ -272,6 +276,10 @@
 
 ---
 
+# let's play the game
+
+---
+
 ![fit](assets/play_21.pdf)
 
 ---
@@ -288,281 +296,185 @@
 
 ---
 
-TODO
+![fit](assets/play_25.pdf)
 
 ---
 
-can I apply the same process before a move?
+![fit](assets/play_26.pdf)
 
 ---
 
-of course
+![fit](assets/play_27.pdf)
 
 ---
 
-1. explore states
-2. map winning/losing states
-3. count
-4. profit
+![fit](assets/play_28.pdf)
 
 ---
 
-# [fit] monte carlo :evergreen_tree: search
+# …and if pacman is distracted
 
 ---
 
-problem: when do I stop
-problem: # of states per node (branching)
+![fit](assets/play_29.pdf)
 
 ---
 
-solution: do it iteratively
+![fit](assets/play_30.pdf)
 
 ---
 
-# [fit] 1. expansion
-# [fit] **2. selection**
-# [fit] **3. simulation**
-# [fit] **4. backpropagation**
+![fit](assets/play_31.pdf)
 
 ---
 
-# [fit] **1. expansion**
-# [fit] 2. selection
-# [fit] **3. simulation**
-# [fit] **4. backpropagation**
+![fit](assets/play_32.pdf)
 
 ---
 
-# [fit] **1. expansion**
-# [fit] **2. selection**
-# [fit] 3. simulation
-# [fit] **4. backpropagation**
+# :bulb: like a human!
 
 ---
 
-# [fit] **1. expansion**
-# [fit] **2. selection**
-# [fit] **3. simulation**
-# [fit] 4. backpropagation
+## 1. explore states
+## 2. map winning/losing states
+## 3. count
 
 ---
 
-![fit](play_01.pdf)
+## __easy to implement?__
+## skilled ai player?
+## fast?
 
 ---
 
-# [fit] expand
+## coding involved:
+## 1. movements
+## 2. win/lose
 
 ---
 
-![fit](play_02.pdf)
+## __easy to implement__ :white_check_mark:
+## skilled ai player?
+## fast?
 
 ---
 
-![fit](play_03.pdf)
+## __easy to implement__ :white_check_mark:
+## __skilled ai player__ :white_check_mark:
+## fast?
 
 ---
 
-# [fit] <sup>:musical_note:</sup> Erase and Rewind <sub>:musical_note:</sub>
+## when should I stop?
+## how many children per node?
+## full :evergreen_tree: for every move?
 
 ---
 
-# [fit] select
+## fast :x:
 
 ---
 
-![fit](play_03_selected.pdf)
+# __unelss__ iterative
 
 ---
 
-![fit](play_03_left.pdf)
+![fit](assets/iterative-play_01.pdf)
 
 ---
 
-# [fit] simulate
+![fit](assets/iterative-play_03.pdf)
 
 ---
 
-![fit](play_03_left.pdf)
+![fit](assets/iterative-play_04.pdf)
 
 ---
 
-# [fit] ghost **0** - pacman **0**
-## matches played: 1
+![fit](assets/iterative-play_05.pdf)
 
 ---
 
-# [fit] backpropagate
+![fit](assets/iterative-play_06.pdf)
 
 ---
 
-![fit](play_03_left_score1.pdf)
+![fit](assets/iterative-play_07.pdf)
 
 ---
 
-![fit](play_03_left_score2.pdf)
+![fit](assets/iterative-play_08.pdf)
 
 ---
 
-# [fit] <sup>:musical_note:</sup> one more time <sub>:musical_note:</sub>
+![fit](assets/iterative-play_09.pdf)
 
 ---
 
-# [fit] select
+![fit](assets/iterative-play_10.pdf)
 
 ---
 
-![fit](play_03_selected_with_score.pdf)
+![fit](assets/iterative-play_11.pdf)
 
 ---
 
-![fit](play_03_left_score2.pdf)
+![fit](assets/iterative-play_12.pdf)
 
 ---
 
-# [fit] expand
+![fit](assets/iterative-play_13.pdf)
 
 ---
 
-![fit](play_05_expand_with_score.pdf)
+![fit](assets/iterative-play_14.pdf)
 
 ---
 
-# [fit] <sup>:musical_note:</sup> baby one more time <sub>:musical_note:</sub>
+![fit](assets/iterative-play_15.pdf)
 
 ---
 
-# [fit] select
+![fit](assets/iterative-play_16.pdf)
 
 ---
 
-![fit](play_05_select1.pdf)
+# <sub>:musical_note:</sub> one more time <sup>:musical_note:</sup>
 
 ---
 
-![fit](play_05_select2.pdf)
+![fit](assets/iterative-play_17.pdf)
 
 ---
 
-![fit](play_05_select3.pdf)
+![fit](assets/iterative-play_18.pdf)
 
 ---
 
-# [fit] simulate
+![fit](assets/iterative-play_19.pdf)
 
 ---
 
-# [fit] ghost **0** - pacman **0**
-## matches played: 2
+## stop at any time
+## explore only *promising* branches
+## reuse previous states
 
 ---
 
-# [fit] backpropagate
+![fit](assets/iterative-play_20.pdf)
 
 ---
 
-![fit](play_05_select3_with_score1.pdf)
+![fit](assets/iterative-play_21.pdf)
 
 ---
 
-![fit](play_05_select3_with_score2.pdf)
+![fit](assets/iterative-play_22.pdf)
 
 ---
 
-![fit](play_05_select3_with_score3.pdf)
-
----
-
-# [fit] <sup>:musical_note:</sup> again **&** again <sub>:musical_note:</sub>
-
----
-
-# [fit] ghost **1** - pacman **0**
-## matches played: 3
-
----
-
-# [fit] ghost **2** - pacman **0**
-## matches played: 5
-
----
-
-# [fit] ghost **2** - pacman **1**
-## matches played: 11
-
----
-
-# [fit] ghost **2** - pacman **1**
-## matches played: 21
-
----
-
-# [fit] ghost **3** - pacman **1**
-## matches played: 34
-
----
-
-# [fit] ghost **5** - pacman **2**
-## matches played: 67
-
----
-
-# [fit] ghost **15** - pacman **9**
-## matches played: 823
-
----
-
-# [fit] ghost **45** - pacman **92**
-## matches played: 3177
-
----
-
-![fit](play_05_select3_with_score3.pdf)
-
----
-
-![fit](play_05_select3_only_tree.pdf)
-
----
-
-![fit](play_05_select3_only_tree2.pdf)
-
----
-
-![fit](play_05_select3_only_tree3.pdf)
-
----
-
-![fit](play_05_select3_only_tree4.pdf)
-
----
-
-![fit](aggregated1.pdf)
-
----
-
-![fit](aggregated2.pdf)
-
----
-
-![fit](aggregated3.pdf)
-
----
-
-# [fit] you lost?
-
----
-
-![fit](play_07.pdf)
-
----
-
-![fit](play_03.pdf)
-
----
-
-![fit](aggregated3.pdf)
+# incremental is fast :white_check_mark:
 
 ---
 
@@ -574,43 +486,93 @@ solution: do it iteratively
 
 ---
 
-# [fit] 1. testing
-# [fit] is **hard**
+# 1. testing ai is **hard**
 
 ---
 
-# [fit] 2. scary **algorithms**
-# [fit] ain't scary anymore
+## is it a bug or feature?
+## unit & integration test not enough
 
 ---
 
-# [fit] 3. immutability & **redux**
-# [fit] ftw
+- image state dump with graphs
 
 ---
 
-![fit](redux_plan.pdf)
+## easy to inspect
+## extra tooling
+## still time consuming
 
 ---
 
-# [fit] Immutability
-## [fit] **FEL made x many**
-## 31<sub>st</sub> of March
+# 2. ƛ functional
 
 ---
 
-# [fit] 4. **playing chess**
-# [fit] against a pc :rage:
+## 𝒻(state, message) -> state
 
 ---
 
-![fit](chess.png)
+```js
+function update(state, message) {
+  switch(action.type) {
+
+  case PACMAN_MOVES:
+    /* ... */
+
+  default:
+  return state;
+  }
+}
+```
 
 ---
 
-# [fit] thanks
+```js
+const message = {
+  type: PACMAN_MOVES,
+  direction: 'left'
+};
+
+const state = {
+  pacman: {x: 1, y: 0},
+  red: {x: 0, y: 2}
+};
+```
 
 ---
 
-# @danielepolencic
+## no implicit state
+## no need to serialise classes
+## memoisation
 
+---
+
+# 3. time travel
+
+---
+
+```js
+const list_of_actions = [
+  createAction_movePacman('left'),
+  createAction_movePacman('right'),
+  createAction_movePacman('right')
+];
+
+const initial_state = {
+  pacman: {x: 1, y: 0},
+  red: {x: 0, y: 2}
+};
+
+list_of_actions.reduce(update, initial_state);
+```
+
+---
+
+## easier to debug
+## easier to reproduce bugs/features
+## easier to test
+
+---
+
+# thanks
