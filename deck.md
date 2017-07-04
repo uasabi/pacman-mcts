@@ -276,7 +276,7 @@
 
 ---
 
-# let's play the game
+## the next move for pacman is…
 
 ---
 
@@ -336,6 +336,10 @@
 
 ---
 
+# recap
+
+---
+
 ## 1. explore states
 ## 2. map winning/losing states
 ## 3. count
@@ -376,7 +380,7 @@
 
 ---
 
-# __unelss__ iterative
+# __unelss__ incremental
 
 ---
 
@@ -440,7 +444,7 @@
 
 ---
 
-# <sub>:musical_note:</sub> one more time <sup>:musical_note:</sup>
+## the next move for pacman is…
 
 ---
 
@@ -495,7 +499,11 @@
 
 ---
 
-- image state dump with graphs
+![fit](assets/3levels.png)
+
+---
+
+![fit](assets/4levels.png)
 
 ---
 
