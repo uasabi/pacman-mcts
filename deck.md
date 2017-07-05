@@ -1,7 +1,7 @@
 # playing pacman
 ### with
 # monte carlo :evergreen_tree: search
-#### @danielepolencic & Eleanor Keane
+#### @danielepolencic & @ek_codes
 
 ---
 
@@ -15,13 +15,13 @@
 
 ---
 
-# [fit] i :heart: strategy games
+![Actual Scripts](assets/scripts.jpg)
+![Scripts ? ? ?](assets/scripts_2.jpg)
 
 ---
 
-## …does it think _for real_?
-## …can I build one?
-
+## ...does it think _for real_?
+## ...can I build one?
 ---
 
 # [fit] the challenge
@@ -48,7 +48,7 @@
 ---
 
 ## avg game ~150 moves
-## 386356909593 games __with 2x2__
+## 386,356,909,593 games __with 2x2__
 ## __19x19 -__ 10<sup>10<sup>48</sup></sup> possible games
 
 ---
@@ -158,6 +158,18 @@
 # __Brute force__ :muscle:
 # __Heuristic__
 # Neural networks
+
+---
+
+## __fast__ :white_check_mark:
+## __easy to implement__
+## __skilled ai player__
+
+---
+
+## __fast__ :white_check_mark:
+## __easy to implement__ :x:
+## __skilled ai player__
 
 ---
 
@@ -583,4 +595,10 @@ list_of_actions.reduce(update, initial_state);
 
 ---
 
+## [fit]hungry for more ?
+* http://aigamedev.com/open/coverage/mcts-rome-ii/
+* https://chessprogramming.wikispaces.com/Monte-Carlo+Tree+Search
+* https://pathak22.github.io/noreward-rl/
+
+---
 # thanks
