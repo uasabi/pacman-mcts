@@ -3,11 +3,9 @@
 ## Running the app
 Run `yarn install` to install the dependencies and then `yarn start` to continuously build the game. Open `index.html` in your browser to play the game.
 
-## Pac-man research
-### Game mechanics
-#### Ghost behaviour
-(from the [pacman wikipedia article](https://en.wikipedia.org/wiki/Pac-Man#Enemies))
-* Red ghost chases Pacman
-* Pink ghost aims for position infront of Pacman's mouth
-* Blue ghost sometimes heads towards Pacman, sometimes away
-* Orange ghost alternates between red enemy when far from Pacman and when close to Pacman aims to lower-left corner of the maze
+## Monte Carlo Tree Search
+### Further Reading
+
+* [An overview of the Monte-Carlo Tree Search in Total War: Rome II](http://aigamedev.com/open/coverage/mcts-rome-ii/)
+* [Some interesting reading on Monte-Carlo Tree Search from a Chess Perspective + a large bibliography](https://chessprogramming.wikispaces.com/Monte-Carlo+Tree+Search)
+* [Building curious computers with Monte-Carlo Tree Search](https://pathak22.github.io/noreward-rl/)
