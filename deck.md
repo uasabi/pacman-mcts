@@ -57,23 +57,11 @@
 
 ---
 
-## 4 directions
-## walls, pills, pacman & ghosts
-## 1-5 lives
-## score
+# interesting because...
 
 ---
 
-## real time
-## ∞ possbile games
-## sequence of moves
-
----
-
-# interesting because…
-
----
-
+![](assets/pacman-original.jpg)
 ## deterministic movements
 ## simple to understand
 ## real time
