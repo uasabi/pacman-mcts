@@ -498,7 +498,7 @@
 
 ---
 
-# [fit] learnings
+# :books: lessons learned
 
 ---
 
