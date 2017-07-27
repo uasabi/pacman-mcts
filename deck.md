@@ -577,16 +577,22 @@ list_of_actions.reduce(update, initial_state);
 
 ---
 
+![fit](assets/timetravel.gif)
+
+---
+
 ## easier to debug
 ## easier to reproduce bugs/features
 ## easier to test
 
 ---
 
-## [fit]hungry for more ?
+## [fit] hungry for more?
 * http://aigamedev.com/open/coverage/mcts-rome-ii/
 * https://chessprogramming.wikispaces.com/Monte-Carlo+Tree+Search
 * https://pathak22.github.io/noreward-rl/
 
 ---
 # thanks
+
+### @danielepolencic @ek_codes
