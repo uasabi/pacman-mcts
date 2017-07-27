@@ -4,8 +4,3 @@ node_js:
   - "stable"
 script:
   - yarn run test
-  - bash ./deploy.sh
-env:
-  global:
-  - ENCRYPTION_LABEL: "42099b4af021"
-  - COMMIT_AUTHOR_EMAIL: "bot@uasabi.com"
