@@ -1,4 +1,6 @@
 # Monte Carlo Tree Search Pacman Game
+
+[![Greenkeeper badge](https://badges.greenkeeper.io/uasabi/pacman-mcts.svg)](https://greenkeeper.io/)
 [![Build Status](https://travis-ci.org/uasabi/pacman-mcts.svg?branch=master)](https://travis-ci.org/uasabi/pacman-mcts)
 ## Running the app
 Run `yarn install` to install the dependencies and then `yarn start` to continuously build the game. Open `index.html` in your browser to play the game.
